@@ -9,3 +9,14 @@ C:\dev\git\EigeneSeite\api\obj\Debug\netcoreapp2.0\api.AssemblyInfoInputs.cache
 C:\dev\git\EigeneSeite\api\obj\Debug\netcoreapp2.0\api.AssemblyInfo.cs
 C:\dev\git\EigeneSeite\api\obj\Debug\netcoreapp2.0\api.dll
 C:\dev\git\EigeneSeite\api\obj\Debug\netcoreapp2.0\api.pdb
+F:\Dev\Eigene Homepage\api\bin\Debug\netcoreapp2.0\api.deps.json
+F:\Dev\Eigene Homepage\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.json
+F:\Dev\Eigene Homepage\api\bin\Debug\netcoreapp2.0\api.runtimeconfig.dev.json
+F:\Dev\Eigene Homepage\api\bin\Debug\netcoreapp2.0\api.dll
+F:\Dev\Eigene Homepage\api\bin\Debug\netcoreapp2.0\api.pdb
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.csprojAssemblyReference.cache
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.csproj.CoreCompileInputs.cache
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.AssemblyInfoInputs.cache
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.AssemblyInfo.cs
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.dll
+F:\Dev\Eigene Homepage\api\obj\Debug\netcoreapp2.0\api.pdb
