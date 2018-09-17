@@ -1,8 +1,0 @@
-C:\Users\matth\Documents\GIT\Eigene Homepage\bin\Debug\netcoreapp1.1\Eigene Homepage.deps.json
-C:\Users\matth\Documents\GIT\Eigene Homepage\bin\Debug\netcoreapp1.1\Eigene Homepage.runtimeconfig.json
-C:\Users\matth\Documents\GIT\Eigene Homepage\bin\Debug\netcoreapp1.1\Eigene Homepage.runtimeconfig.dev.json
-C:\Users\matth\Documents\GIT\Eigene Homepage\bin\Debug\netcoreapp1.1\Eigene Homepage.dll
-C:\Users\matth\Documents\GIT\Eigene Homepage\bin\Debug\netcoreapp1.1\Eigene Homepage.pdb
-C:\Users\matth\Documents\GIT\Eigene Homepage\obj\Debug\netcoreapp1.1\Eigene Homepage.AssemblyInfo.cs
-C:\Users\matth\Documents\GIT\Eigene Homepage\obj\Debug\netcoreapp1.1\Eigene Homepage.dll
-C:\Users\matth\Documents\GIT\Eigene Homepage\obj\Debug\netcoreapp1.1\Eigene Homepage.pdb
