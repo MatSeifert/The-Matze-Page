@@ -25,6 +25,7 @@ a:visited, a:active {
 
 a:hover {
     color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
 }
 
 h1 {
@@ -58,6 +59,11 @@ h1:after {
     grid-template-columns: 1fr 1fr;  
 }
 
+.grid-1-1-1-1 {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+}
+
 .grid-2-1-1 {
     -ms-grid-columns: 2fr 1fr 1fr;
     grid-template-columns: 2fr 1fr 1fr;
@@ -65,6 +71,71 @@ h1:after {
 
 .v-padding-m {
     padding: 20px 0;
+}
+
+.realign {
+    transform: rotate(-4deg);
+}
+
+/* Header styles */
+.header {
+    overflow: hidden;
+    padding-bottom: 4%;
+}
+
+.header-nav {
+    display: grid;
+    padding: 0 80px;
+}
+
+.header-nav a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 5px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.header .rotated-background {
+    background: linear-gradient(160deg, #08A24D 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
+    transform: rotate(4deg);
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-top: -100px;  
+    padding: 100px 0 40px;
+}
+
+.introduction {
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.introduction .intro-s {
+    font-family: 'Abril Fatface', serif;
+    font-variant-ligatures: none;
+    font-size: 30px;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.introduction .intro-l {
+    font-family: 'Abril Fatface', serif;
+    font-variant-ligatures: none;
+    font-size: 100px;
+    margin-top: -30px;
+    color: #fff;
+}
+
+.introduction .intro-sub {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 24px;
+    margin-top: -20px;
+    font-weight: 500;
 }
 
 /* Footer styles */
@@ -75,7 +146,7 @@ h1:after {
 }
 
 .footer .rotated-background {
-    background: linear-gradient(to right, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+    background: linear-gradient(110deg, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
     transform: rotate(4deg);
     width: calc(100% + 60px);
     margin-left: -30px;
