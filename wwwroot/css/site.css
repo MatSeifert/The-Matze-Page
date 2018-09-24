@@ -14,6 +14,19 @@
     margin: auto;
 }
 
+a {
+    font-weight: 700;
+    color: #fff;
+}
+
+a:visited, a:active {
+    color: #fff;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
 h1 {
     font-family: 'Abril Fatface', serif;
     z-index: 0;
@@ -50,23 +63,29 @@ h1:after {
     grid-template-columns: 2fr 1fr 1fr;
 }
 
+.v-padding-m {
+    padding: 20px 0;
+}
+
 /* Footer styles */
 .footer {
     color: #fff;
     overflow: hidden;
+    max-height: 520px;
 }
 
 .footer .rotated-background {
     background: linear-gradient(to right, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
     transform: rotate(4deg);
-    width: calc(100% + 40px);
-    margin-left: -20px;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    padding-bottom: 100px;
 }
 
 .footer .rotated-background .wrapper {
     transform: rotate(-4deg);
-    margin: 3em auto;
-    padding: 40px 0;
+    margin: 4% auto;
+    padding-top: 40px;
 }
 
 .footer h1 {
@@ -76,4 +95,12 @@ h1:after {
 .footer h1:after {
     background: #34660B;
     opacity: 0.5;
+}
+
+.subfooter {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+    color: rgba(255,255,255,0.5);
 }
