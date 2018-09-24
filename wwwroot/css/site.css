@@ -83,6 +83,10 @@ h1:after {
     padding-bottom: 4%;
 }
 
+.header .realign {
+    padding-bottom: 200px;
+}
+
 .header-nav {
     display: grid;
     padding: 0 80px;
@@ -106,6 +110,7 @@ h1:after {
     margin-left: -30px;
     margin-top: -100px;  
     padding: 100px 0 40px;
+    max-height: 650px;
 }
 
 .introduction {
@@ -136,6 +141,36 @@ h1:after {
     font-size: 24px;
     margin-top: -20px;
     font-weight: 500;
+    position: relative;
+}
+
+.intro-sub:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 400px;
+    border-bottom: 2px solid rgba(255,255,255,0.8);
+}
+
+.intro-sub:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 400px;
+    border-bottom: 2px solid rgba(255,255,255,0.8);
+}
+
+.profile-image img {
+    border-radius: 50%;
+    border: 15px solid #fff;
+}
+
+/* Index styles */
+.profile-image img {
+    margin-top: 100px;
+    z-index: 1;
 }
 
 /* Footer styles */
