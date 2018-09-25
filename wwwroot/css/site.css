@@ -47,6 +47,11 @@ h1:after {
     z-index: -1;
 }
 
+h2 {
+    font-size: 24px;
+    color: #5B5B5B;
+}
+
 .bold {
     font-weight: 500;
 }
@@ -57,6 +62,14 @@ h1:after {
 
 .large {
     font-size: 24px;
+}
+
+.center {
+    text-align: center;
+}
+
+.offset-top-s {
+    margin-top: 20px;
 }
 
 .offset-top-m {
@@ -84,14 +97,19 @@ h1:after {
     grid-template-columns: 1fr 1fr;  
 }
 
-.grid-1-2 {
-    -ms-grid-columns: 1fr 2fr;
-    grid-template-columns: 1fr 2fr;  
+.grid-1-1-1 {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;  
 }
 
 .grid-1-1-1-1 {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;  
+}
+
+.grid-1-2 {
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;  
 }
 
 .grid-2-1-1 {
@@ -270,6 +288,73 @@ h1:after {
     transform: scale(2);
 }
 
+/* Section styles */
+.section {
+    padding: 70px 0 20px 0;;
+}
+
+.section h1 {
+    color: #5B5B5B;
+    letter-spacing: 1px;
+}
+
+.section h1:after {
+    background: #C1DBAC;
+}
+
+/* Skills section (what i do) */
+.skill-item {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.skill-item:first-child {
+    padding: 40px 50px 40px 0;
+}
+
+.skill-item:last-child {
+    padding: 40px 0 40px 50px;
+}
+
+.skill-item img {
+    display: block;
+    margin: auto;
+}
+
+.skill-item h2 {
+    padding: 20px 0;
+}
+
+/* rotated section */
+.section-rotated-background {
+    background: #ECF9F1;
+    transform: rotate(-1deg);
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+
+/* projects section */
+.project-item:first-child {
+    padding: 50px 50px 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-item:last-child {
+    padding: 50px 0 50px 50px;
+}
+
+p.tags {
+    color: #28A35F;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.section-rotated-background .wrapper {
+    transform: rotate(1deg);
+}
+
 /* Footer styles */
 .footer {
     color: #fff;
@@ -293,6 +378,7 @@ h1:after {
 
 .footer h1 {
     color: #fff;
+    letter-spacing: 1px;
 }
 
 .footer h1:after {
@@ -308,6 +394,7 @@ h1:after {
     color: rgba(255,255,255,0.5);
 }
 
-.social-links img {
+.social-links-footer img {
     margin-top: -4px;
+    transform: scale(1);
 }
