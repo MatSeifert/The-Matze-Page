@@ -3,6 +3,7 @@
     font-family: 'Fira Sans', sans-serif;
     line-height: 180%;
     font-size: 20px;
+    font-variant-ligatures: none;
 }
 
 .two-rows {
@@ -70,6 +71,10 @@ h1:after {
     margin-left: 130px;
 }
 
+.lspacing-2 {
+    letter-spacing: 2px;
+}
+
 .grid {
     display: grid;
 }
@@ -102,6 +107,20 @@ h1:after {
     transform: rotate(-4deg);
 }
 
+.flex {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.flex div {
+    flex: 1;
+    text-align: right;
+}
+
 /* Button styles */
 .btn {
     border: 1px solid;
@@ -114,6 +133,10 @@ h1:after {
     background: #fff;
     border: 1px solid #28A35F;
     color: #28A35F;
+}
+
+.btn:not(.btn-primary) {
+    transition: background-color 0.2s ease;
 }
 
 .btn-primary {
@@ -243,6 +266,10 @@ h1:after {
     line-height: 160%;
 }
 
+.social-links img {
+    transform: scale(2);
+}
+
 /* Footer styles */
 .footer {
     color: #fff;
@@ -279,4 +306,8 @@ h1:after {
     margin: 20px 0;
     padding: 10px 0;
     color: rgba(255,255,255,0.5);
+}
+
+.social-links img {
+    margin-top: -4px;
 }
