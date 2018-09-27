@@ -107,6 +107,11 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;  
 }
 
+.grid-1-1-1-1-1 {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  
+}
+
 .grid-1-2 {
     -ms-grid-columns: 1fr 2fr;
     grid-template-columns: 1fr 2fr;  
@@ -194,6 +199,31 @@ h2 {
     color: rgba(255, 255, 255, 0.85);
 }
 
+.header-nav .logo-background {
+    text-align: center;
+}
+
+.header-nav .logo-background div {
+    width: 174px;
+    height: 174px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    padding: 12px;
+    margin-top: -65px;
+    transform: scale(0.8);
+}
+
+.header-nav .logo-background a {
+    background: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.header-nav .logo {
+    margin-top: 20px;
+}
+
 .header .rotated-background {
     background: linear-gradient(160deg, #08A24D 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
     transform: rotate(4deg);
@@ -207,7 +237,7 @@ h2 {
     background-position-y: 50%;
     background-size:100%;       
     margin-top: -100px;  
-    padding: 100px 0 40px;
+    padding: 100px 0 20px;
     max-height: 700px;
 }
 
@@ -220,7 +250,6 @@ h2 {
     font-family: 'Abril Fatface', serif;
     font-variant-ligatures: none;
     font-size: 30px;
-    margin-top: 30px;
     color: rgba(255, 255, 255, 0.6);
 }
 
