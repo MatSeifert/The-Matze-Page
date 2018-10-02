@@ -1,0 +1,23 @@
+{
+    "menu.aboutMe": "Über mich",
+    "menu.portfolio": "Portfolio",
+    "menu.blog": "Blog",
+    "menu.contact": "Kontakt",
+    "header.greeting": "Hi, ich bin",
+    "header.skills": "Entwickler & Designer",
+    "headline.whatIDo": "Was ich biete",
+    "headline.projects": "Projekte & Case Studies",
+    "headline.latestPosts": "Letzte Blogeinträge",
+    "hireMe": "Interessiert an einer Zusammenarbeit?",
+    "contactMe": "Schreiben Sie mir",
+    "download.cv": "CV herunterladen",
+    "discoverProject": "Projekt erkunden",
+    "allProjects": "ALle Projekte",
+    "allPosts": "Weitere Beiträge",
+    "headline.UiDesign": "UI Design",
+    "content.UiDesign": "Klar und strukturiert, simpel aber nicht von der Stange. Designs, die Sie lieben werden!",
+    "headline.FrontendDevelopment": "Frontend Entwicklung",
+    "content.FrontendDevelopment": "Angular, React oder klassische CMS wie Wordpress & Co. Alles aus einer Hand, vom Konzept bis zur fertigen Seite.",
+    "headline.BackendDevelopment": "Backend Entwicklung",
+    "content.BackendDevelopment": "Von der Datenverwaltung zum Nutzer. Datenbanken, Schnitt- stellen, alles aus einer Hand."
+}

@@ -1,24 +1,26 @@
+@model WebApp.Models.HomeViewModel
+
 <div class="header">
   <div class="rotated-background">
     <div class="background-img">
       <div class="realign">
         <div class="wrapper">
           <div class="header-nav grid grid-1-1-1-1-1">
-            <a href="#">Über mich</a>
-            <a href="#">Blog</a>
+            <a href="#">@Model.UiStrings["menu.aboutMe"]</a>
+            <a href="#">@Model.UiStrings["menu.blog"]</a>
             <div class="logo-background">
               <div>
                 <a href="#"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
               </div>
             </div>
-            <a href="#">Portfolio</a>
-            <a href="#">Kontakt</a>
+            <a href="#">@Model.UiStrings["menu.portfolio"]</a>
+            <a href="#">@Model.UiStrings["menu.contact"]</a>
           </div>
 
           <div class="introduction">
-            <div class="intro-s">Hi, ich bin</div>
-            <div class="intro-l">Matthias Seifert</div>
-            <div class="intro-sub">Entwickler & Designer</div>
+            <div class="intro-s">@Model.UiStrings["header.greeting"]</div>
+            <div class="intro-l">@Model.CoreData.FirstName @Model.CoreData.LastName</div>
+            <div class="intro-sub">@Model.UiStrings["header.skills"]</div>
           </div>
         </div>
       </div>

@@ -384,6 +384,23 @@ p.tags {
     transform: rotate(1deg);
 }
 
+/* Blog styles */
+.blog {
+    padding: 50px 0;
+}
+
+.blog .blog-post:first-child {
+    padding: 0 100px 0 0;
+}
+
+.blog .blog-post:last-child {
+    padding: 0 0 0 100px;
+}
+
+.blog-post img {
+    width: 100%;
+}
+
 /* Footer styles */
 .footer {
     color: #fff;

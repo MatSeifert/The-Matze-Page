@@ -1,7 +1,9 @@
+@model WebApp.Models.HomeViewModel
+
 <div class="section-rotated-background">
     <div class="wrapper">
         <div class="section">
-            <h1>Projekte & Case Studies</h1>
+            <h1>@Model.UiStrings["headline.projects"]</h1>
             <div class="grid grid-1-1">
                 <div class="project-item">
                     <img src="images/laptop_m.png" alt="Screenshot des Projektes">
@@ -15,7 +17,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor.
                     </p>
-                    <button class="btn btn-primary offset-top-s">Projekt erkunden</button>
+                    <button class="btn btn-primary offset-top-s">@Model.UiStrings["discoverProject"]</button>
                 </div>
             </div>
         </div>
@@ -23,5 +25,5 @@
 </div>
 
 <div class="center">
-    <button class="btn offset-top-m">Alle Projekte</button>
+    <button class="btn offset-top-m">@Model.UiStrings["allProjects"]</button>
 </div>

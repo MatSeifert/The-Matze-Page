@@ -18,14 +18,18 @@ namespace WebApp.Controllers
     {
         private string ConnectionString { get; set; }
 
+        private Dictionary<string, string> UiStrings { get; set; }
+
         public HomeController()
         {
             this.ConnectionString = Utils.GetConnectionString();
+            this.UiStrings = Utils.GetUiStrings("de");
         }
 
         public async Task<IActionResult> Index()
         {
             var model = new HomeViewModel();
+            model.UiStrings = this.UiStrings;
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {

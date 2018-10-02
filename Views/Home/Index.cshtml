@@ -1,6 +1,6 @@
 ﻿@model WebApp.Models.HomeViewModel
 
-<partial name="_header-main" />
+@await Html.PartialAsync("_header-main", Model)
 
 <div class="wrapper main-content grid grid-1-2">
     <div class="profile-image">
@@ -8,11 +8,11 @@
     </div>
     <div class="description-wrapper">
         <div class="description">
-            Hi, ich bin Matthias, freiberuflicher Designer und Softwareentwickler aus Dresden. Neben ansprechenden und 
+            Hi, ich bin @Model.CoreData.FirstName, freiberuflicher Designer und Softwareentwickler aus Dresden. Neben ansprechenden und 
             modernen Designarbeiten entwickle ich auch Software im Bereich Web und Mobile, sowohl Frontend als auch Backend.
         
             <h2 class="offset-top-m">
-                Interessiert an einer Zusammenarbeit?
+                @Model.UiStrings["hireMe"]
             </h2>
         </div>
     </div>
@@ -29,19 +29,19 @@
       </div>
       <div class="offset-left-xl">
           <button class="btn btn-primary offset-right-m">
-            <span>Schreiben Sie mir</span>
+            <span>@Model.UiStrings["contactMe"]</span>
           </button>
           <button class="btn">
-            <span>CV Herunterladen</span>
+            <span>@Model.UiStrings["download.cv"]</span>
           </button>
       </div>
     </div>
 
-    <partial name="_whatido"/>
+    @await Html.PartialAsync("_whatido", Model)
 </div>
 
-<partial name="_projects"/>
+@await Html.PartialAsync("_projects", Model)
 
 <div class="wrapper">
-    <partial name="_blog"/>
+    @await Html.PartialAsync("_blog", Model)
 </div>
