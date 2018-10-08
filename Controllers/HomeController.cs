@@ -29,14 +29,21 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var model = new HomeViewModel();
-            model.UiStrings = this.UiStrings;
+            ViewBag.UiStrings = this.UiStrings;
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
                 model.CoreData = await db.CoreData.FirstOrDefaultAsync();
+                ViewBag.CoreData = model.CoreData;
             }
 
             return this.View(model);
         }
     }
 }
+
+/*
+Login                 https://localhost:5001/Identity/Account/Login
+Register              https://localhost:5001/Identity/Account/Register
+Profilseite           https://localhost:5001/Identity/Account/Manage
+*/

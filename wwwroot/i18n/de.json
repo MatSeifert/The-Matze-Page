@@ -19,5 +19,13 @@
     "headline.FrontendDevelopment": "Frontend Entwicklung",
     "content.FrontendDevelopment": "Angular, React oder klassische CMS wie Wordpress & Co. Alles aus einer Hand, vom Konzept bis zur fertigen Seite.",
     "headline.BackendDevelopment": "Backend Entwicklung",
-    "content.BackendDevelopment": "Von der Datenverwaltung zum Nutzer. Datenbanken, Schnitt- stellen, alles aus einer Hand."
+    "content.BackendDevelopment": "Von der Datenverwaltung zum Nutzer. Datenbanken, Schnitt- stellen, alles aus einer Hand.",
+    "headline.impress": "Impressum",
+    "impress.disclaimer": "Angaben gemäß §5 TMG",
+    "impress.disclaimer.content": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+    "headline.disclaimer": "Rechtliches",
+    "privcy": "Datenschutz",
+    "disclaimer": "Haftungsausschluss",
+    "pictureCredits": "Bildnachweise",
+    "subfooter": "Design & Entwicklung"
 }

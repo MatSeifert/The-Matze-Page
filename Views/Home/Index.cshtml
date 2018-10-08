@@ -12,7 +12,7 @@
             modernen Designarbeiten entwickle ich auch Software im Bereich Web und Mobile, sowohl Frontend als auch Backend.
         
             <h2 class="offset-top-m">
-                @Model.UiStrings["hireMe"]
+                @ViewBag.UiStrings["hireMe"]
             </h2>
         </div>
     </div>
@@ -21,18 +21,38 @@
 <div class="wrapper">
     <div class=" grid grid-1-2 offset-top-m social-links">
       <div class="flex">
-        <div><img src="images/twitter_colored.svg" alt="Logo of Twitter"></div>
-        <div><img src="images/xing_colored.svg" alt="Logo of Xing"></div>
-        <div><img src="images/github_colored.svg" alt="Logo of GitHub"></div>
-        <div><img src="images/dribbble_colored.svg" alt="Logo of Dribbble"></div>
-        <div><img src="images/stackoverflow_colored.svg" alt="Logo of StackOverflow"></div>
+        <div>
+            <a href="@Model.CoreData.Twitter" target="_blank" alt="Twitter Profil">
+                <img src="images/twitter_colored.svg" alt="Logo of Twitter">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Xing" target="_blank" alt="Xing Profil">
+                <img src="images/xing_colored.svg" alt="Logo of Xing">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Github" target="_blank" alt="GitHub Profil">
+                <img src="images/github_colored.svg" alt="Logo of GitHub">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Dribbble" target="_blank" alt="Dribbble Profil">
+                <img src="images/dribbble_colored.svg" alt="Logo of Dribbble">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Stackoverflow" target="_blank" alt="StackOverflow Profil">
+                <img src="images/stackoverflow_colored.svg" alt="Logo of Stackoverflow">
+            </a>
+        </div>
       </div>
       <div class="offset-left-xl">
           <button class="btn btn-primary offset-right-m">
-            <span>@Model.UiStrings["contactMe"]</span>
+            <span>@ViewBag.UiStrings["contactMe"]</span>
           </button>
           <button class="btn">
-            <span>@Model.UiStrings["download.cv"]</span>
+            <span>@ViewBag.UiStrings["download.cv"]</span>
           </button>
       </div>
     </div>

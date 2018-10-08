@@ -1,7 +1,7 @@
 @model WebApp.Models.HomeViewModel
 
 <div class="section">
-    <h1>@Model.UiStrings["headline.latestPosts"]</h1>
+    <h1>@ViewBag.UiStrings["headline.latestPosts"]</h1>
     <div class="grid grid-1-1-1 blog offset-top-m">
         <div class="blog-post">
             <div class="blog-post-wrapper">
@@ -42,6 +42,6 @@
     </div>
 
     <div class="center">
-        <button class="btn offset-top-m">@Model.UiStrings["allPosts"]</button>
+        <button class="btn offset-top-m">@ViewBag.UiStrings["allPosts"]</button>
     </div>
 </div>
