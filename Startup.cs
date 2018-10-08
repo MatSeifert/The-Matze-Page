@@ -68,6 +68,12 @@ namespace WebApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                
+                routes.MapRoute(
+                    name: "pagination", 
+                    template: "{controller}/{action}/{page?}",
+                    defaults: new { controller = "Blog", action = "All", page = "" }
+                );
             });
         }
     }

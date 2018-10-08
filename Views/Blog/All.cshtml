@@ -1,0 +1,10 @@
+@model WebApp.Models.BlogAllViewModel
+
+@await Html.PartialAsync("_header", Model)
+
+@{
+    foreach(var p in Model.AllBlogPosts) 
+    {
+        <div>@p.Title</div>
+    }
+}
