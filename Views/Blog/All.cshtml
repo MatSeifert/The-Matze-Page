@@ -21,23 +21,71 @@
         <img src="~/images/blog/@Model.FeaturedPost.TitleImage.Url" alt="test" class="hero-shot">
         <div class="blogpost-featured-gradient">
             <div class="wrapper">
-                <h1>@Model.FeaturedPost.Post.Title</h1>
-                <div><img src="~/images/icon_posted.png" alt="alter"> gepostet am 12.12.2019</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                <button class="btn">Weiterlesen</button>
+                <div class="blogpost-featured-content">
+                    <h1>@Model.FeaturedPost.Post.Title</h1>
+                    <div class="blogpost-featured-date">
+                        <img src="~/images/icon_posted.svg" alt="alter"> gepostet am @Model.FeaturedPost.Post.Date.ToString("dd. MMMM yyyy")
+                    </div>
+                    <div class="blogpost-featured-snippet">
+                        @Model.FeaturedPost.Post.Snippet
+                    </div>
+                    <a href='@Url.Action("post", "blog", new { id = Model.FeaturedPost.Post.Id })'>
+                        <button class="btn btn-light">Weiterlesen</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="wrapper" style="margin-top: 500px;">
-    <h1>Ältere Beiträge</h1>
+    <div class="grid grid-3-1">
+        <div>
+            <h1>Ältere Beiträge</h1>
 
-    @{
-        foreach(var p in Model.BlogItems) 
-        {
-            
-        }
-    }
+            @{
+                var i = 1;
 
+                foreach(var p in Model.BlogItems) 
+                {
+                    if (i != 0 && i % 2 != 0) {
+                        <div class="grid grid-1-1point5 offset-top-m offset-bottom-s">
+                            <div class="blogpost-thumbnail">
+                                <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="test">
+                            </div>
+                            <div class="blogpost-content">
+                                <h2>@p.Post.Title</h2>
+                                <div class="blogpost-content-date">
+                                    <img src="~/images/icon_posted-black.png" alt="alter"> gepostet am @p.Post.Date.ToString("dd. MMMM yyyy")
+                                </div>
+                                <div class="blogpost-content-snippet">
+                                    @p.Post.Snippet
+                                </div>
+                            </div>
+                        </div>
+                    } else if (i != 0) {
+                        <div class="grid grid-1point5-1 offset-top-m offset-bottom-s">
+                            <div class="blogpost-content">
+                                <h2>@p.Post.Title</h2>
+                                <div class="blogpost-content-date">
+                                    <img src="~/images/icon_posted-black.png" alt="alter"> gepostet am @p.Post.Date.ToString("dd. MMMM yyyy")
+                                </div>
+                                <div class="blogpost-content-snippet">
+                                    @p.Post.Snippet
+                                </div>
+                            </div>
+                            <div class="blogpost-thumbnail">
+                                <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="test">
+                            </div>
+                        </div>
+                    }
+
+                    i++;
+                }
+            }
+        </div>
+        <div>
+            <h1>Archiv</h1>
+        </div>
+    </div>
 </div>
