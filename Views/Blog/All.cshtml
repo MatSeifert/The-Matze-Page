@@ -1,10 +1,43 @@
 @model WebApp.Models.BlogAllViewModel
 
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="additional-fab" title="Neuen Blogeintrag verfassen">
+        <div>
+            <img src="~/images/icon_edit.png" alt="Neuen Beitrag schreiben">
+        </div>
+    </div>
+}
+
 @await Html.PartialAsync("_header", Model)
 
-@{
-    foreach(var p in Model.AllBlogPosts) 
-    {
-        <div>@p.Title</div>
+<div class="blogpost-featured">
+    <div class="blogpost-featured-rotated">
+        <img src="~/images/blog/@Model.FeaturedPost.TitleImage.Url" alt="test" class="hero-shot">
+        <div class="blogpost-featured-gradient">
+            <div class="wrapper">
+                <h1>@Model.FeaturedPost.Post.Title</h1>
+                <div><img src="~/images/icon_posted.png" alt="alter"> gepostet am 12.12.2019</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                <button class="btn">Weiterlesen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper" style="margin-top: 500px;">
+    <h1>Ältere Beiträge</h1>
+
+    @{
+        foreach(var p in Model.BlogItems) 
+        {
+            
+        }
     }
-}
+
+</div>

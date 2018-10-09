@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
 
-namespace WebApp.Models {
+using WebApp.Models.Data; 
+
+namespace WebApp.Models.Data {
     public class Post {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -10,5 +13,6 @@ namespace WebApp.Models {
         public int TitleImage { get; set; }
         public string Content { get; set; }
         public string Tags { get; set; }
+        public int? Gallery { get; set; }
     }
 }

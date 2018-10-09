@@ -1,3 +1,22 @@
-<div>
-    header works also pretty gudi
-</div>
+@if (ViewBag.UiStrings != null) 
+{
+    <div class="header header-default">
+        <div class="rotated-background">
+            <div class="realign">
+                <div class="wrapper">
+                    <div class="header-nav grid grid-1-1-1-1-1">
+                        <a href="/" class="menu-link">@ViewBag.UiStrings["menu.aboutMe"]</a>
+                        <a href="/blog/all" class="menu-link">@ViewBag.UiStrings["menu.blog"]</a>
+                        <div class="logo-background">
+                        <div>
+                            <a href="#"><img src="../images/logo.svg" alt="Logo" class="logo"></a>
+                        </div>
+                        </div>
+                        <a href="#" class="menu-link">@ViewBag.UiStrings["menu.portfolio"]</a>
+                        <a href="#" class="menu-link">@ViewBag.UiStrings["menu.contact"]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

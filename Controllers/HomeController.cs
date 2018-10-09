@@ -30,6 +30,7 @@ namespace WebApp.Controllers
         {
             var model = new HomeViewModel();
             ViewBag.UiStrings = this.UiStrings;
+            ViewBag.Title = this.UiStrings["title.home"];
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {

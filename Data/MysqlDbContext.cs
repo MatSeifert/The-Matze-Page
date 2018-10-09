@@ -18,6 +18,7 @@ namespace WebApp.Models.Data
         // DB definitions
         public DbSet<CoreData> CoreData { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Media> Media { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
           => optionBuilder.UseMySql(ConnectionString);

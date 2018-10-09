@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using WebApp.Models.Data;
 
 namespace WebApp.Models {
     public class BlogAllViewModel {
-        public IEnumerable<Post> AllBlogPosts { get; set; }
+        public IEnumerable<BlogItem> BlogItems { get; set; }
+        public BlogItem FeaturedPost { get; set; }
     }
 }

@@ -26,17 +26,35 @@ namespace WebApp.Controllers
             this.UiStrings = Utils.GetUiStrings("de");
         }
 
-        public async Task<IActionResult> All(int? page)
+        public async Task<IActionResult> All(int? id)
         {
             var model = new BlogAllViewModel();
             ViewBag.UiStrings = this.UiStrings;
+            ViewBag.Title = this.UiStrings["title.blog"];
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
                 // Coredata for footer
                 ViewBag.CoreData = await db.CoreData.FirstOrDefaultAsync();
 
-                model.AllBlogPosts = await db.Posts.ToListAsync();
+                // Get Posts from DB
+                var posts = await db.Posts.ToListAsync();
+                var blogItems = new List<BlogItem>();
+
+                // Get related mediafiles
+                foreach (var b in posts) {
+                    var blogItem = new BlogItem();
+
+                    blogItem.Post = b;
+                    blogItem.TitleImage = await db.Media.FirstOrDefaultAsync(m => m.Id == b.TitleImage);
+                    // TODO: add galleries below!
+
+                    blogItems.Add(blogItem);
+                }
+
+                blogItems.OrderBy(d => d.Post.Date).ToList();
+                model.FeaturedPost = blogItems.FirstOrDefault();
+                model.BlogItems = blogItems;
             }
 
             return this.View(model);
