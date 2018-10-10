@@ -29,5 +29,11 @@
     "pictureCredits": "Bildnachweise",
     "subfooter": "Design & Entwicklung",
     "title.blog": "Blog | Matthias Seifert - Entwickler & Designer",
-    "title.home": "Matthias Seifert - Entwickler & Designer"
+    "title.home": "Matthias Seifert - Entwickler & Designer",
+    "blog.postedAt": "verfasst am",
+    "readmore": "weiterlesen",
+    "blog.headline.olderPosts": "Weitere Beiträge",
+    "blog.headline.archive": "Archiv",
+    "blog.headline.categories": "Kategorien",
+    "blog.headline.popularPosts": "Oft gelesen"
 }

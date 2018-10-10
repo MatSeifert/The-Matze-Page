@@ -18,19 +18,19 @@
 
 <div class="blogpost-featured">
     <div class="blogpost-featured-rotated">
-        <img src="~/images/blog/@Model.FeaturedPost.TitleImage.Url" alt="test" class="hero-shot">
+        <img src="~/images/blog/@Model.FeaturedPost.TitleImage.Url" alt="@Model.FeaturedPost.TitleImage.Label" class="hero-shot">
         <div class="blogpost-featured-gradient">
             <div class="wrapper">
                 <div class="blogpost-featured-content">
                     <h1>@Model.FeaturedPost.Post.Title</h1>
                     <div class="blogpost-featured-date">
-                        <img src="~/images/icon_posted.svg" alt="alter"> gepostet am @Model.FeaturedPost.Post.Date.ToString("dd. MMMM yyyy")
+                        <img src="~/images/icon_posted.svg" alt="Post Icon"> @ViewBag.UiStrings["blog.postedAt"] @Model.FeaturedPost.Post.Date.ToString("dd. MMMM yyyy")
                     </div>
                     <div class="blogpost-featured-snippet">
                         @Model.FeaturedPost.Post.Snippet
                     </div>
                     <a href='@Url.Action("post", "blog", new { id = Model.FeaturedPost.Post.Id })'>
-                        <button class="btn btn-light">Weiterlesen</button>
+                        <button class="btn btn-light">@ViewBag.UiStrings["readmore"]</button>
                     </a>
                 </div>
             </div>
@@ -38,44 +38,52 @@
     </div>
 </div>
 
-<div class="wrapper" style="margin-top: 500px;">
+<div class="wrapper" style="margin-top: 675px;">
     <div class="grid grid-3-1">
         <div>
-            <h1>Ältere Beiträge</h1>
+            <h1>@ViewBag.UiStrings["blog.headline.olderPosts"]</h1>
 
             @{
-                var i = 1;
+                var i = 0;
 
                 foreach(var p in Model.BlogItems) 
                 {
                     if (i != 0 && i % 2 != 0) {
-                        <div class="grid grid-1-1point5 offset-top-m offset-bottom-s">
+                        <div class='grid grid-1-2 offset-top-m offset-bottom-s @(i != 1 ? "seperator" : "")'>
                             <div class="blogpost-thumbnail">
-                                <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="test">
+                                <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                                    <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="@p.TitleImage.Label">
+                                </a>
                             </div>
-                            <div class="blogpost-content">
-                                <h2>@p.Post.Title</h2>
+                            <div class="blogpost-content offset-left-m offset-right-m">
+                                <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                                    <h2>@p.Post.Title</h2>
+                                </a>
                                 <div class="blogpost-content-date">
-                                    <img src="~/images/icon_posted-black.png" alt="alter"> gepostet am @p.Post.Date.ToString("dd. MMMM yyyy")
+                                    <img src="~/images/icon_posted-black.png" alt="Post Icon"> @ViewBag.UiStrings["blog.postedAt"] @p.Post.Date.ToString("dd. MMMM yyyy")
                                 </div>
                                 <div class="blogpost-content-snippet">
-                                    @p.Post.Snippet
+                                    <p>@p.Post.Snippet</p>
                                 </div>
                             </div>
                         </div>
                     } else if (i != 0) {
-                        <div class="grid grid-1point5-1 offset-top-m offset-bottom-s">
-                            <div class="blogpost-content">
-                                <h2>@p.Post.Title</h2>
+                        <div class="grid grid-2-1 offset-top-m offset-bottom-s offset-right-m seperator">
+                            <div class="blogpost-content offset-right-m">
+                                <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                                    <h2>@p.Post.Title</h2>
+                                </a>
                                 <div class="blogpost-content-date">
-                                    <img src="~/images/icon_posted-black.png" alt="alter"> gepostet am @p.Post.Date.ToString("dd. MMMM yyyy")
+                                    <img src="~/images/icon_posted-black.png" alt="Post Icon"> @ViewBag.UiStrings["blog.postedAt"] @p.Post.Date.ToString("dd. MMMM yyyy")
                                 </div>
                                 <div class="blogpost-content-snippet">
                                     @p.Post.Snippet
                                 </div>
                             </div>
                             <div class="blogpost-thumbnail">
-                                <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="test">
+                                <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                                    <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="@p.TitleImage.Label">
+                                </a>
                             </div>
                         </div>
                     }
@@ -85,7 +93,8 @@
             }
         </div>
         <div>
-            <h1>Archiv</h1>
+            <h1>@ViewBag.UiStrings["blog.headline.popularPosts"]</h1>
+            <h1>@ViewBag.UiStrings["blog.headline.categories"]</h1>
         </div>
     </div>
 </div>

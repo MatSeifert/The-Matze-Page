@@ -31,6 +31,7 @@ namespace WebApp.Controllers
             var model = new BlogAllViewModel();
             ViewBag.UiStrings = this.UiStrings;
             ViewBag.Title = this.UiStrings["title.blog"];
+            ViewBag.ActiveLink = 1;
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
