@@ -35,6 +35,23 @@ namespace WebApp.Controllers
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
                 model.CoreData = await db.CoreData.FirstOrDefaultAsync();
+                var latestPosts = db.Posts.OrderByDescending(p => p.Date).Take(3);
+
+                var blogItems = new List<BlogItem>();
+
+                // Get related mediafiles
+                foreach (var b in latestPosts) {
+                    var blogItem = new BlogItem();
+
+                    blogItem.Post = b;
+                    blogItem.TitleImage = await db.Media.FirstOrDefaultAsync(m => m.Id == b.TitleImage);
+                    // TODO: add galleries below!
+
+                    blogItems.Add(blogItem);
+                }
+
+                model.LatestPosts = blogItems;
+
                 ViewBag.CoreData = model.CoreData;
             }
 

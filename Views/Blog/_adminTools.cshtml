@@ -1,0 +1,13 @@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="additional-fab" title="Neuen Blogeintrag verfassen">
+        <div>
+            <img src="~/images/icon_edit.png" alt="Neuen Beitrag schreiben">
+        </div>
+    </div>
+}

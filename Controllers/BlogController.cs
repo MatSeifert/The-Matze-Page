@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 using WebApp.Helper;
@@ -26,7 +27,7 @@ namespace WebApp.Controllers
             this.UiStrings = Utils.GetUiStrings("de");
         }
 
-        public async Task<IActionResult> All(int? id)
+        public async Task<IActionResult> Index(int? id)
         {
             var model = new BlogAllViewModel();
             ViewBag.UiStrings = this.UiStrings;
@@ -59,6 +60,37 @@ namespace WebApp.Controllers
             }
 
             return this.View(model);
+        }
+
+        public async Task<IActionResult> Post(int id) 
+        {
+            var model = new BlogPostViewModel();
+            ViewBag.UiStrings = this.UiStrings;
+            ViewBag.ActiveLink = 1;
+
+            var postItem = new BlogItem();
+
+            using (var db = new MysqlDbContext(this.ConnectionString))
+            {
+                // Coredata for footer
+                ViewBag.CoreData = await db.CoreData.FirstOrDefaultAsync();
+
+                var post = await db.Posts.SingleOrDefaultAsync(b => b.Id == id);
+                var titleImage = await db.Media.SingleOrDefaultAsync(i => i.Id == post.TitleImage);
+                // TODO: add gallery
+                postItem.Post = post;
+                postItem.TitleImage = titleImage;
+            }
+
+            model.Post = postItem;
+
+            return this.View(model);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> CreatePost()
+        {
+            return this.View();
         }
     }
 }

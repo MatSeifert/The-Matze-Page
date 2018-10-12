@@ -20,8 +20,8 @@
     letter-spacing: 1px;
 }
 
-.wrapper h1:after {
-    background: #C1DBAC;
+.wrapper h1 span {
+    background-image: linear-gradient(to right, #C1DBAC 0%, #C1DBAC 100%);
 }
 
 a {
@@ -71,21 +71,22 @@ h1 {
     display: inline-block;
     letter-spacing: 1px;
     padding: 0 5px;
+    margin-left: -5px;
 }
 
-h1:after {
-    content: " ";
-    width: 100%;
-    height: 10px;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    z-index: -1;
+h1 span {
+    font-family: inherit;
+    font-size: inherit;
+    background-repeat: repeat-x;
+    background-position: 0 80%;
+    background-size: 100% 10px;
+    padding: 0 5px;
 }
 
 h2 {
     font-size: 24px;
     color: #5B5B5B;
+    line-height: 140%;
 }
 
 .bold {
@@ -220,6 +221,10 @@ h2 {
 .flex div {
     flex: 1;
     text-align: right;
+}
+
+.blur {
+    filter: blur(10px);
 }
 
 /* Button styles */
@@ -638,9 +643,8 @@ p.tags {
     letter-spacing: 1px;
 }
 
-.footer h1:after {
-    background: #34660B;
-    opacity: 0.5;
+.footer h1 span {
+    background-image: linear-gradient(to right, rgba(52,102,11,0.5) 0%, rgba(52,102,11,0.5) 100%);
 }
 
 .subfooter {
@@ -731,13 +735,13 @@ p.tags {
 }
 
 .blogpost-featured .blogpost-featured-rotated img.hero-shot {
-    filter: blur(5px);
     width: 100%;
+    margin-top: -20%;
 }
 
 .blogpost-featured .blogpost-featured-gradient {
   height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -755,8 +759,8 @@ p.tags {
     color: #fff;
 }
 
-.blogpost-featured h1:after {
-    background: rgba(52, 102, 11, 0.5);
+.blogpost-featured h1 span {
+    background-image: linear-gradient(to right, rgba(52, 102, 11, 0.5) 0%, rgba(52, 102, 11, 0.5) 100%);
 }
 
 .blogpost-featured-content {

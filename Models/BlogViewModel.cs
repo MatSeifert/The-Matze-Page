@@ -6,4 +6,8 @@ namespace WebApp.Models {
         public IEnumerable<BlogItem> BlogItems { get; set; }
         public BlogItem FeaturedPost { get; set; }
     }
+
+    public class BlogPostViewModel {
+        public BlogItem Post { get; set; }
+    }
 }

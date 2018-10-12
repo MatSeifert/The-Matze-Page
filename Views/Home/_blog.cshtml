@@ -1,47 +1,28 @@
 @model WebApp.Models.HomeViewModel
 
 <div class="section">
-    <h1>@ViewBag.UiStrings["headline.latestPosts"]</h1>
+    <h1><span>@ViewBag.UiStrings["headline.latestPosts"]</span></h1>
     <div class="grid grid-1-1-1 blog offset-top-m">
-        <div class="blog-post">
-            <div class="blog-post-wrapper">
-                 <div class="blog-post-overlay">
-                    <div>
-                        04. Okt
+
+        @foreach(var p in Model.LatestPosts) {
+            <div class="blog-post">
+                <div class="blog-post-wrapper">
+                    <div class="blog-post-overlay">
+                        <div>
+                            @p.Post.Date.ToString("dd. MMM")
+                        </div>
                     </div>
+                    <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="Blogcover">
                 </div>
-                <img src="images/blog_01.jpg" alt="Blogcover">
+                <h2>@p.Post.Title</h2>
+                <p>@p.Post.Snippet</p>
             </div>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet, cons- ectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et</p>
-        </div>
-        <div class="blog-post">
-            <div class="blog-post-wrapper">
-                 <div class="blog-post-overlay">
-                    <div>
-                        04. Okt
-                    </div>
-                </div>
-                <img src="images/blog_02.jpg" alt="Blogcover">
-            </div>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet, cons- ectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et</p>
-        </div>
-         <div class="blog-post">
-            <div class="blog-post-wrapper">
-                <div class="blog-post-overlay">
-                    <div>
-                        04. Okt
-                    </div>
-                </div>
-                <img src="images/blog_03.jpg" alt="Blogcover">
-            </div>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet, cons- ectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et</p>
-        </div>
+        }
     </div>
 
     <div class="center">
-        <button class="btn offset-top-m">@ViewBag.UiStrings["allPosts"]</button>
+        <a href='@Url.Action("index", "blog")' title='@ViewBag.UiStrings["allPosts"]'>
+            <button class="btn offset-top-m">@ViewBag.UiStrings["allPosts"]</button>
+        </a>
     </div>
 </div>
