@@ -90,19 +90,35 @@ namespace WebApp.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> CreatePost()
+        public IActionResult CreatePost()
         {
             ViewBag.UiStrings = this.UiStrings;
             ViewBag.ActiveLink = 1;
+            ViewBag.Title = this.UiStrings["title.blog.create"];
 
             return this.View();
         }
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> SavePost(BlogItem post)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SavePost(BlogItem blogItem)
         {
-            return this.View();
+            using (var db = new MysqlDbContext(this.ConnectionString))
+            {
+                var addedBlogPost = await db.Posts.AddAsync(blogItem.Post);
+                var addedTitleImage = await db.Media.AddAsync(blogItem.TitleImage);
+
+                // redirectto home if no entities were saved (because whatever)
+                // TODO: return to specific error page
+                if (await db.SaveChangesAsync() == 0)
+                {
+                    return this.RedirectToAction("index", "home");
+                }
+
+                // redirect directly to new blogpost
+                return this.RedirectToAction("index", "blog", new { id = addedBlogPost.Entity.Id });
+            }
         }
     }
 }

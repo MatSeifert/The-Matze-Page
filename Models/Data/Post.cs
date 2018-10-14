@@ -14,5 +14,7 @@ namespace WebApp.Models.Data {
         public string Content { get; set; }
         public string Tags { get; set; }
         public int? Gallery { get; set; }
+        public int ReadCount { get; set; }
+        public int LikeCount { get; set; }
     }
 }

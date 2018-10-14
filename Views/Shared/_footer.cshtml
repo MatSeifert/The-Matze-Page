@@ -1,4 +1,4 @@
-@if (ViewBag.UiStrings != null && ViewBag.CoreData != null)
+@if (ViewBag.UiStrings != null)
 {
     <div class="footer">
         <div class="rotated-background">
@@ -10,17 +10,17 @@
                             <div>
                                 <div class="two-rows bold">@ViewBag.UiStrings["impress.disclaimer"]</div>
 
-                                <span class="bold">@ViewBag.CoreData.FirstName @ViewBag.CoreData.LastName</span> <br>
-                                @ViewBag.CoreData.StreetName @ViewBag.CoreData.StreetNumber <br>
-                                @ViewBag.CoreData.ZipCode @ViewBag.CoreData.City <br>
-                                @ViewBag.CoreData.Mobile <br>
-                                @ViewBag.CoreData.Email
+                                <span class="bold">Matthias Seifert</span> <br>
+                                Reisewitzer Straße 5 <br>
+                                01159 Dresden <br>
+                                01525 5911161 <br>
+                                matthe.seifert@gmail.com
                             </div>
                             <div>
                                 <div class="bold v-padding-m">@ViewBag.UiStrings["impress.disclaimer.content"]</div>
-                                <span class="bold">@ViewBag.CoreData.FirstName @ViewBag.CoreData.LastName</span> <br>
-                                @ViewBag.CoreData.StreetName @ViewBag.CoreData.StreetNumber <br>
-                                @ViewBag.CoreData.ZipCode @ViewBag.CoreData.City
+                                <span class="bold">Matthias Seifert</span> <br>
+                                Reisewitzer Straße 5 <br>
+                                01159 Dresden
                             </div>
                         </div>
                     </div>
@@ -35,11 +35,11 @@
                     <div class="grid-item">
                         <h1><span>@ViewBag.UiStrings["headline.social"]</span></h1>
                         <div class="v-padding-m social-links-footer lspacing-2">
-                            <a href="@ViewBag.CoreData.Twitter" target="_blank"><img src="~/images/twitter.svg"> Twitter</a> <br>
-                            <a href="@ViewBag.CoreData.Xing" target="_blank"><img src="~/images/xing.svg"> Xing</a> <br>
-                            <a href="@ViewBag.CoreData.Github" target="_blank"><img src="~/images/github.svg"> GitHub</a> <br>
-                            <a href="@ViewBag.CoreData.Dribbble" target="_blank"><img src="~/images/dribbble.svg"> dribbble</a> <br>
-                            <a href="@ViewBag.CoreData.Stackoverflow" target="_blank"><img src="~/images/stackoverflow.svg"> StackOverflow</a> <br>
+                            <a href="https://twitter.com/einMATZEmalig" target="_blank"><img src="~/images/twitter.svg"> Twitter</a> <br>
+                            <a href="https://www.xing.com/profile/Matthias_Seifert29/" target="_blank"><img src="~/images/xing.svg"> Xing</a> <br>
+                            <a href="https://github.com/MatSeifert" target="_blank"><img src="~/images/github.svg"> GitHub</a> <br>
+                            <a href="https://dribbble.com/thematze" target="_blank"><img src="~/images/dribbble.svg"> dribbble</a> <br>
+                            <a href="https://stackoverflow.com/users/3775858/matthias-seifert" target="_blank"><img src="~/images/stackoverflow.svg"> StackOverflow</a> <br>
                         </div>
                     </div>
                 </div>
