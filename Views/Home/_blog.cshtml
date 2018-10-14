@@ -7,14 +7,18 @@
         @foreach(var p in Model.LatestPosts) {
             <div class="blog-post">
                 <div class="blog-post-wrapper">
-                    <div class="blog-post-overlay">
-                        <div>
-                            @p.Post.Date.ToString("dd. MMM")
+                    <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                        <div class="blog-post-overlay">
+                            <div>
+                                @p.Post.Date.ToString("dd. MMM")
+                            </div>
                         </div>
-                    </div>
-                    <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="Blogcover">
+                        <img src="~/images/blog/thumbnail-@p.TitleImage.Url" alt="Blogcover">
+                    </a>
                 </div>
-                <h2>@p.Post.Title</h2>
+                <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
+                    <h2>@p.Post.Title</h2>
+                </a>
                 <p>@p.Post.Snippet</p>
             </div>
         }

@@ -7,7 +7,9 @@
 {
     <div class="additional-fab" title="Neuen Blogeintrag verfassen">
         <div>
-            <img src="~/images/icon_edit.png" alt="Neuen Beitrag schreiben">
+            <a href='@Url.Action("createpost", "blog")' title="Neuen Post verfassen">
+                <img src="~/images/icon_edit.png" alt="Neuen Beitrag schreiben">
+            </a>
         </div>
     </div>
 }

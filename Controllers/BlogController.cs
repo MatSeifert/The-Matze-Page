@@ -80,6 +80,8 @@ namespace WebApp.Controllers
                 // TODO: add gallery
                 postItem.Post = post;
                 postItem.TitleImage = titleImage;
+
+                ViewBag.Title = $"{post.Title} | {this.UiStrings["title.blog"]} ";
             }
 
             model.Post = postItem;
@@ -89,6 +91,16 @@ namespace WebApp.Controllers
 
         [Authorize]
         public async Task<IActionResult> CreatePost()
+        {
+            ViewBag.UiStrings = this.UiStrings;
+            ViewBag.ActiveLink = 1;
+
+            return this.View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> SavePost(BlogItem post)
         {
             return this.View();
         }

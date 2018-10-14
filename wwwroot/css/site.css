@@ -450,7 +450,7 @@ h2 {
 /* Index styles */
 .main-content {
     position: relative;
-    margin-top: -250px;
+    margin-top: -230px;
     color: #5b5b5b;
 }
 
@@ -595,7 +595,7 @@ p.tags {
 }
 
 .blog-post-overlay:hover div:before {
-    width: 60%;
+    width: 40%;
     height: 60%;
 }
 
@@ -613,7 +613,7 @@ p.tags {
 }
 
 .blog-post-overlay:hover div:after {
-    width: 60%;
+    width: 40%;
     height: 60%;
 }
 
@@ -795,12 +795,12 @@ p.tags {
     overflow: hidden;
 }
 
-.blogpost-content h2 {
+.blogpost-content , .blog-post a h2 {
     line-height: 130%;
     transition: color 0.3s;
 }
 
-.blogpost-content a:hover h2 {
+.blogpost-content a:hover h2, .blog-post a:hover h2 {
     color: #08A24D;
 }
 
