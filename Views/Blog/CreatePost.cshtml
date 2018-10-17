@@ -9,6 +9,12 @@
     <form asp-controller="blog" asp-action="savepost" method="POST">
         @Html.TextBoxFor(p => p.Title)
 
+        @Html.TextBoxFor(p => p.Snippet)
+
+        @Html.TextBoxFor(p => p.Content)
+
+        
+
         <button type="submit" class="btn btn-primary">
             veröffentlichen
         </button>

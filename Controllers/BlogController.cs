@@ -89,6 +89,7 @@ namespace WebApp.Controllers
             return this.View(model);
         }
 
+        [HttpGet]
         [Authorize]
         public IActionResult CreatePost()
         {
@@ -102,8 +103,13 @@ namespace WebApp.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> SavePost(BlogItem blogItem)
+        public async Task<IActionResult> CreatePost(BlogItem blogItem)
         {
+            if (!ModelState.IsValid) 
+            {
+                // Fehlerbehandlung
+            }
+
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
                 var addedBlogPost = await db.Posts.AddAsync(blogItem.Post);
