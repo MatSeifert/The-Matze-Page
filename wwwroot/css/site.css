@@ -853,6 +853,23 @@ p.tags {
         margin-top: 40px;
     }
 
+    .introduction .intro-s {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .introduction .intro-l {
+        font-size: 40px;
+        margin-top: -10px;
+        letter-spacing: 2px;
+    }
+
+    .introduction .intro-sub {
+        font-size: 16px;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
     .intro-sub:before, .intro-sub:after {
         width: 20%;
     }
@@ -863,7 +880,7 @@ p.tags {
 
     .profile-image img {
         width: 30%;
-        min-width: 250px;
+        min-width: 200px;
         border-width: 10px;
     }
 
@@ -874,5 +891,40 @@ p.tags {
     .wrapper.main-content .description {
         position: initial;
     }
-    
+}
+
+@media ( max-width: 1250px ) {
+    * {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .wrapper {
+        padding: 0 25px;
+    }
+
+    .header .wrapper {
+        padding: 0 60px;
+    }
+
+    .intro-sub:before, .intro-sub:after {
+        width: 16%;
+        margin-top: -10px;
+        border-width: 1px;
+    }
+
+    .profile-image img {
+        border-width: 5px;
+    }
+
+    .wrapper.main-content {
+        margin-top: -110px;
+    }
 }
