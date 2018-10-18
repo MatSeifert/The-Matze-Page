@@ -6,6 +6,10 @@
     font-variant-ligatures: none;
 }
 
+.mobile, .mobile.flex {
+    display: none;
+}
+
 .two-rows {
     line-height: 380%; 
 }
@@ -267,6 +271,10 @@ h2 {
     color: #5B5B5B;
 }
 
+.btn img {
+   transform: scale(1); 
+}
+
 .additional-fab {
     position: fixed;
     top: 160px;
@@ -466,7 +474,7 @@ h2 {
     line-height: 160%;
 }
 
-.social-links img {
+.social-links img.social-icon {
     transform: scale(2);
 }
 
@@ -832,9 +840,36 @@ p.tags {
 
 /* Responsive Styles */
 @media ( max-width: 1250px ) {
+    /* Overrides */
+    * {font-size: 17px;}
+    .desktop {display: none;}
+    .mobile {display: block;}
+    .offset-left-xl {margin-left: 60px;}
+    .offset-right-m {margin-right: 20px}
+    .btn {letter-spacing: 1px; padding: 0 20px;}
+    .offset-mobile-none {margin-right: 0; margin-left: 0; margin-top: 0; margin-bottom: 0}
+
+    .mobile.flex {
+        display: flex;
+    }
+
+    .mobile.flex div {
+        text-align: center;
+        transform: scale(2);
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
     .wrapper {
         width: 100%;
-        padding: 0 50px;
+        padding: 0 100px;
     }
 
     .grid {
@@ -847,6 +882,10 @@ p.tags {
 
     .header .realign {
         padding-bottom: 100px;
+    }
+
+    .header .wrapper {
+        padding: 0 140px;
     }
 
     .introduction {
@@ -871,6 +910,8 @@ p.tags {
     }
 
     .intro-sub:before, .intro-sub:after {
+        margin-top: -8px;
+        border-width: 1px;
         width: 20%;
     }
 
@@ -891,40 +932,30 @@ p.tags {
     .wrapper.main-content .description {
         position: initial;
     }
+
+    .social-links {
+        text-align: center;
+    }
 }
 
-@media ( max-width: 1250px ) {
-    * {
-        font-size: 17px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 20px;
+@media ( max-width: 600px ) {
+    .intro-sub:before, .intro-sub:after {
+        width: 16%;
     }
 
     .wrapper {
         padding: 0 25px;
     }
 
-    .header .wrapper {
-        padding: 0 60px;
-    }
-
-    .intro-sub:before, .intro-sub:after {
-        width: 16%;
-        margin-top: -10px;
-        border-width: 1px;
+    .wrapper.main-content {
+        margin-top: -110px;
     }
 
     .profile-image img {
         border-width: 5px;
     }
 
-    .wrapper.main-content {
-        margin-top: -110px;
+    .header .wrapper {
+        padding: 0 60px;
     }
 }

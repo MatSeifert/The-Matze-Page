@@ -7,6 +7,34 @@
         <img src="images/profile.jpg" alt="Profile Image">
     </div>
     <div class="description-wrapper">
+      <div class="flex mobile">
+        <div>
+            <a href="@Model.CoreData.Twitter" target="_blank" alt="Twitter Profil">
+                <img src="images/twitter_colored.svg" alt="Logo of Twitter" class="social-icon">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Xing" target="_blank" alt="Xing Profil">
+                <img src="images/xing_colored.svg" alt="Logo of Xing" class="social-icon">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Github" target="_blank" alt="GitHub Profil">
+                <img src="images/github_colored.svg" alt="Logo of GitHub" class="social-icon">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Dribbble" target="_blank" alt="Dribbble Profil">
+                <img src="images/dribbble_colored.svg" alt="Logo of Dribbble" class="social-icon">
+            </a>
+        </div>
+        <div>
+            <a href="@Model.CoreData.Stackoverflow" target="_blank" alt="StackOverflow Profil">
+                <img src="images/stackoverflow_colored.svg" alt="Logo of Stackoverflow" class="social-icon">
+            </a>
+        </div>
+      </div>
+
         <div class="description">
             Hi, ich bin @Model.CoreData.FirstName, freiberuflicher Designer und Softwareentwickler aus Dresden. Neben ansprechenden und 
             modernen Designarbeiten entwickle ich auch Software im Bereich Web und Mobile, sowohl Frontend als auch Backend.
@@ -20,39 +48,40 @@
 
 <div class="wrapper">
     <div class=" grid grid-1-2 offset-top-m social-links">
-      <div class="flex">
+      <div class="flex desktop">
         <div>
             <a href="@Model.CoreData.Twitter" target="_blank" alt="Twitter Profil">
-                <img src="images/twitter_colored.svg" alt="Logo of Twitter">
+                <img src="images/twitter_colored.svg" alt="Logo of Twitter" class="social-icon">
             </a>
         </div>
         <div>
             <a href="@Model.CoreData.Xing" target="_blank" alt="Xing Profil">
-                <img src="images/xing_colored.svg" alt="Logo of Xing">
+                <img src="images/xing_colored.svg" alt="Logo of Xing" class="social-icon">
             </a>
         </div>
         <div>
             <a href="@Model.CoreData.Github" target="_blank" alt="GitHub Profil">
-                <img src="images/github_colored.svg" alt="Logo of GitHub">
+                <img src="images/github_colored.svg" alt="Logo of GitHub" class="social-icon">
             </a>
         </div>
         <div>
             <a href="@Model.CoreData.Dribbble" target="_blank" alt="Dribbble Profil">
-                <img src="images/dribbble_colored.svg" alt="Logo of Dribbble">
+                <img src="images/dribbble_colored.svg" alt="Logo of Dribbble" class="social-icon">
             </a>
         </div>
         <div>
             <a href="@Model.CoreData.Stackoverflow" target="_blank" alt="StackOverflow Profil">
-                <img src="images/stackoverflow_colored.svg" alt="Logo of Stackoverflow">
+                <img src="images/stackoverflow_colored.svg" alt="Logo of Stackoverflow" class="social-icon">
             </a>
         </div>
       </div>
-      <div class="offset-left-xl">
+      <div class="offset-left-xl offset-mobile-none">
           <button class="btn btn-primary offset-right-m">
             <span>@ViewBag.UiStrings["contactMe"]</span>
           </button>
           <button class="btn">
-            <span>@ViewBag.UiStrings["download.cv"]</span>
+            <span class="desktop">@ViewBag.UiStrings["download.cv"]</span>
+            <span class="mobile"><img src="~/images/icon-download.svg" alt="Download"> @ViewBag.UiStrings["cv"]</span>
           </button>
       </div>
     </div>

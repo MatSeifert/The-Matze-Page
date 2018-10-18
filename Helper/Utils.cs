@@ -12,34 +12,41 @@ namespace WebApp.Helper
     {
         public static IConfiguration Configuration { get; set; }
 
-        public static string GetConnectionString()
+        private static void ReadAppConfig()
         {
-            // Get Connection String from Config
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json");
 
             Configuration = builder.Build();
+        }
 
+        public static string GetConnectionString()
+        {
+            ReadAppConfig();
             return Configuration["ConnectionStrings:DefaultConnection"];
         }
 
-        public static Dictionary<string, string> GetUiStrings(string lang) {
-            // Get Connection String from Config
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
+        public static Dictionary<string, string> GetUiStrings(string lang) 
+        {
+            ReadAppConfig();
 
-            Configuration = builder.Build();
+            var rfp = Configuration[$"UiStrings:{lang}"];
 
-            string content;
             using (StreamReader reader = File.OpenText(Configuration[$"UiStrings:{lang}"])) {
-                content = reader.ReadToEnd();
+                string content = reader.ReadToEnd();
+
+                var uiStrings = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+
+                return uiStrings;  
             }
+        }
 
-            var uiStrings = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+        public static string GetDebugUrl()
+        {
+            ReadAppConfig();
 
-            return uiStrings;  
+            return Configuration["DevSettings:DebugUrl"];
         }
     }
 }

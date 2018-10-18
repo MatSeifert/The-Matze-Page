@@ -35,7 +35,7 @@ namespace WebApp.Controllers
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
                 model.CoreData = await db.CoreData.FirstOrDefaultAsync();
-                var latestPosts = db.Posts.OrderByDescending(p => p.Date).Take(3);
+                var latestPosts = db.Posts.Where(p => p.IsPublished).Take(3);
 
                 var blogItems = new List<BlogItem>();
 

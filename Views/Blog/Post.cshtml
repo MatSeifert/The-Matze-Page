@@ -20,16 +20,16 @@
                 <img src="~/images/icon_posted-black.png" alt="Post Icon"> @ViewBag.UiStrings["blog.postedAt"] @Model.Post.Post.Date.ToString("dd. MMMM yyyy")
             </div>
 
-            <div class="blogpost-featured-snippet bold">
-                @Model.Post.Post.Snippet
-            </div>
-            <div>
-                @Model.Post.Post.Content
-            </div>
+            <div class="blogpost-featured-snippet bold">@Model.Post.Post.Snippet</div>
+            <div id="content">@Model.Post.Post.Content</div>
         </div>
-        <div>
+        <div id="1">
 
         </div>
     </div>
 </div>
 
+<script>
+    var converter = new showdown.Converter();
+    $('#content').html(converter.makeHtml($('#content').text()));
+</script>

@@ -16,5 +16,6 @@ namespace WebApp.Models.Data {
         public int? Gallery { get; set; }
         public int ReadCount { get; set; }
         public int LikeCount { get; set; }
+        public bool IsPublished { get; set; }
     }
 }
