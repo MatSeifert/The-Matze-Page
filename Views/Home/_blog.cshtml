@@ -17,7 +17,10 @@
                     </a>
                 </div>
                 <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
-                    <h2>@p.Post.Title</h2>
+                    <div>
+                        <span class="post-date mobile">@ViewBag.UiStrings["blog.postedAt"] @p.Post.Date.ToString("dd. MMMM")</span>
+                        <h2>@p.Post.Title</h2>
+                    </div>
                 </a>
                 <p>@p.Post.Snippet</p>
             </div>
@@ -26,7 +29,7 @@
 
     <div class="center">
         <a href='@Url.Action("index", "blog")' title='@ViewBag.UiStrings["allPosts"]'>
-            <button class="btn offset-top-m">@ViewBag.UiStrings["allPosts"]</button>
+            <button class="btn offset-top-m offset-mobile-none">@ViewBag.UiStrings["allPosts"]</button>
         </a>
     </div>
 </div>
