@@ -4,13 +4,13 @@
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "aboutme")'>
           <img src="~/images/heroicon-user.svg" alt="Über mich">
-          über mich
+          @ViewBag.UiStrings["menu.aboutMe"]
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "blog")'>
           <img src="~/images/heroicon-edit.svg" alt="Über mich">
-          blog
+          @ViewBag.UiStrings["menu.blog"]
         </a>
       </div>
       <div class="bottom-menu--item logo">
@@ -23,13 +23,13 @@
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "portfolio")'>
           <img src="~/images/heroicon-desktop.svg" alt="Über mich">
-          portfolio
+          @ViewBag.UiStrings["menu.portfolio"]
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "contact")'>
           <img src="~/images/heroicon-at-symbol.svg" alt="Über mich">
-          kontakt
+          @ViewBag.UiStrings["menu.contact"]
         </a>
       </div>
     </div>
