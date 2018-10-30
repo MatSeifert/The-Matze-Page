@@ -863,10 +863,7 @@ p.tags {
     .offset-right-m {margin-right: 20px}
     .btn {letter-spacing: 1px; padding: 0 20px;}
     .offset-mobile-none {margin-right: 0; margin-left: 0; margin-top: 0; margin-bottom: 0}
-
-    .mobile.flex {
-        display: flex;
-    }
+    .mobile.flex {display: flex;}
 
     .mobile.flex div {
         text-align: center;
@@ -884,28 +881,61 @@ p.tags {
 
     .wrapper {
         width: 100%;
-        padding: 0 100px;
+        padding: 0 50px;
     }
 
     .header .realign {
         padding-bottom: 100px;
     }
 
+    .header-nav a {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .header-nav .logo-background div {
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+        margin-top: -45px;
+    }
+
+    .header-nav .logo-background a {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-nav .logo {
+        margin-top: -5px;
+        transform: scale(0.8);
+    }
+
+    .header-nav .logo-background div:hover {
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+        margin-top: -50px;
+      }
+
     .header .wrapper {
-        padding: 0 140px;
+        padding: 0 80px;
+    }
+
+    .header .header-nav {
+        padding: 0;
     }
 
     .introduction {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .introduction .intro-s {
-        font-size: 18px;
+        font-size: 22px;
         letter-spacing: 1px;
     }
 
     .introduction .intro-l {
-        font-size: 40px;
+        font-size: 55px;
         margin-top: -10px;
         letter-spacing: 2px;
     }
@@ -919,7 +949,7 @@ p.tags {
     .intro-sub:before, .intro-sub:after {
         margin-top: -8px;
         border-width: 1px;
-        width: 20%;
+        width: calc(50% - 130px);
     }
 
     .profile-image {
@@ -927,7 +957,7 @@ p.tags {
     }
 
     .profile-image img {
-        width: 30%;
+        width: 100%;
         min-width: 200px;
         border-width: 10px;
     }
@@ -936,8 +966,13 @@ p.tags {
         margin-top: -130px;
     }
 
+    .description-wrapper {
+        padding-top: 130px;
+    }
+
     .wrapper.main-content .description {
         position: initial;
+        margin-left: -50%;
     }
 
     .social-links {
@@ -949,7 +984,7 @@ p.tags {
     }
 }
 
-@media ( max-width: 600px ) {
+@media ( max-width: 750px ) {
     .desktop {display: none;}
     .tablet {display: none;}
     .mobile {display: block;}
@@ -961,7 +996,7 @@ p.tags {
     }
 
     .intro-sub:before, .intro-sub:after {
-        width: 16%;
+        width: calc(50% - 125px);
     }
 
     .wrapper {
@@ -973,6 +1008,7 @@ p.tags {
     }
 
     .profile-image img {
+        width: 30%;
         border-width: 5px;
     }
 
