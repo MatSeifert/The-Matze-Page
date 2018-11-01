@@ -972,15 +972,91 @@ p.tags {
 
     .wrapper.main-content .description {
         position: initial;
-        margin-left: -50%;
+    }
+
+    .grid.grid-1-2.social-links {
+        display: block;
     }
 
     .social-links {
         text-align: center;
     }
 
+    .skill-item {
+        padding: 0 !important;
+        margin: 40px 10px;
+    }
+
     .section-rotated-background h1 {
         margin-left: 25px;
+    }
+
+    .project-item img {
+        width: 100%;
+    }
+
+    .footer {
+        max-height: 430px;
+    }
+}
+
+@media ( max-width: 1000px ) {
+    .wrapper.main-content .description {
+        margin-left: -50%;
+        margin-top: 15%;
+    }
+
+    .skill-section .grid {
+        display: block;
+        padding: 0 200px;
+    }
+
+    .latest-blog-posts .grid {
+        display: block;
+    }
+
+    .blog .blog-post {
+        position: relative;
+        margin: 40px 0;
+        padding: 0 !important;
+    }
+
+    .blog .blog-post h2 {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+    }
+
+    .blog .blog-post p {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+    }
+
+    .blog-post .blog-post-wrapper {
+        width: calc(50% - 20px);
+        margin-right: 30px;
+    }
+
+    .footer {
+        max-height: 680px;
+    }
+
+    .footer .grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer .grid .grid-item {
+        flex-basis: 50%;
+    }
+
+    .footer .grid .grid-item:first-child {
+        flex-basis: 100%;
+    }
+
+    .footer .grid-1-1 div {
+        width: 50%;
     }
 }
 
