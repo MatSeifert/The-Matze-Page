@@ -4,7 +4,7 @@
 
 @await Html.PartialAsync("_header", Model)
 
-<div class="blogpost-featured">
+<div class="blogpost-featured blog-main-page">
     <div class="blogpost-featured-rotated">
         <img src="~/images/blog/@Model.FeaturedPost.TitleImage.Url" alt="@Model.FeaturedPost.TitleImage.Label" class="hero-shot blur">
         <div class="blogpost-featured-gradient">
@@ -26,8 +26,8 @@
     </div>
 </div>
 
-<div class="wrapper" style="margin-top: 675px;">
-    <div class="grid grid-3-1">
+<div class="wrapper blog-page blog-main-page">
+    <div class="grid grid-3-1 block-m">
         <div>
             <h1><span>@ViewBag.UiStrings["blog.headline.olderPosts"]</span></h1>
 
@@ -80,7 +80,7 @@
                 }
             }
         </div>
-        <div>
+        <div class="hide-m">
             <h1><span>@ViewBag.UiStrings["blog.headline.popularPosts"]</span></h1>
             <h1><span>@ViewBag.UiStrings["blog.headline.categories"]</span></h1>
         </div>

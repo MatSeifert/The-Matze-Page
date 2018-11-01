@@ -4,13 +4,13 @@
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "aboutme")'>
           <img src="~/images/heroicon-user.svg" alt="Über mich">
-          @ViewBag.UiStrings["menu.aboutMe"]
+          Über mich
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "blog")'>
-          <img src="~/images/heroicon-edit.svg" alt="Über mich">
-          @ViewBag.UiStrings["menu.blog"]
+          <img src="~/images/heroicon-edit.svg" alt="Blog">
+          Blog
         </a>
       </div>
       <div class="bottom-menu--item logo">
@@ -19,17 +19,23 @@
             <a href='@Url.Action("index", "home")'><img src="~/images/logo.svg" alt="Logo" class="logo"></a>
           </div>
         </div>
+        <div class="mobile-xs">
+          <a href='@Url.Action("index", "home")'>
+          <img src="~/images/heroicon-home.svg" alt="Start">
+          Home
+        </a>
+        </div>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "portfolio")'>
-          <img src="~/images/heroicon-desktop.svg" alt="Über mich">
-          @ViewBag.UiStrings["menu.portfolio"]
+          <img src="~/images/heroicon-desktop.svg" alt="Portfolio">
+          Portfolio
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "contact")'>
-          <img src="~/images/heroicon-at-symbol.svg" alt="Über mich">
-          @ViewBag.UiStrings["menu.contact"]
+          <img src="~/images/heroicon-at-symbol.svg" alt="Kontakt">
+          Kontakt
         </a>
       </div>
     </div>
