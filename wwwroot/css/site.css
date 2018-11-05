@@ -312,6 +312,30 @@ h2 {
     width: 36px;
 }
 
+.headline-sidelined {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.headline-sidelined:before, .headline-sidelined:after {
+    content: " ";
+    position: absolute;
+    width: 25%; /* Default */ 
+    border-bottom: 1px solid #000;
+    top: 35px;
+}
+
+.headline-sidelined:before {
+    left: 0;
+}
+
+.headline-sidelined:after {
+    right: 0;
+}
+
 /* Header styles */
 .header {
     overflow: hidden;
@@ -867,6 +891,164 @@ p.tags {
 
 .blogpost-content-date img {
     width: 18px;
+}
+
+/* Abotu Me Page */
+.wrapper.about-me {
+    margin-top: 150px;
+}
+
+.about-me .quote {
+    font-family: 'Abril Fatface', serif;
+    font-size: 48px;
+    text-align: center;
+    color: #5B5B5B;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.section-rotated-background.about-me {
+    margin-top: -10px;
+    padding: 40px 0;
+}
+
+.direct-contact .headline-sidelined {
+    color: #ABABAB;
+    padding: 30px 0 10px 0;
+}
+
+.direct-contact .headline-sidelined:before, .direct-contact .headline-sidelined:after {
+    width: 22%;
+    border-color: #CCC;
+    top: 45px;
+}
+
+.direct-contact div:not(.headline-sidelined) {
+    color: #5B5B5B;
+}
+
+.direct-contact img {
+    opacity: 0.6;
+    width: 20px;
+    margin-top: -1px;
+}
+
+.cv-wrapper {
+    margin-top: 20px;
+    width: 50%;
+    border-right: 4px solid #EEE;
+}
+
+.cv-item {
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.cv-item:not(:first-child) {
+    margin-top: -50px;
+}
+
+.cv-item:nth-child(even) {
+    margin-left: 100%;
+    border-right: 4px solid #08A24D;
+    padding-left: 50px;
+}
+
+.cv-item:nth-child(odd) {
+    border-left: 4px solid #08A24D;
+    padding-right: 50px;
+}
+
+.cv-item .timeline-dot {
+    border: 3px solid #08A24D;
+    background: #FFF;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cv-item .timeline-dot img {
+    margin-top: -4px;
+}
+
+.cv-item:not(:first-child) .timeline-dot {
+    margin-top: 25px;
+}
+
+.cv-item:nth-child(odd) .timeline-dot:before {
+    content:"\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #08A24D transparent transparent;
+    position: absolute;
+    left: -15px;
+    top: 6px;
+}
+
+.cv-item:nth-child(even) .timeline-dot:after {
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #08A24D;
+    position: absolute;
+    right: -15px;
+    top: 6px;
+}
+
+.cv-item:nth-child(even) .timeline-dot {
+    left: -18px;
+}
+
+.cv-item:nth-child(odd) .timeline-dot {
+    right: -20px;
+}
+
+.cv-item .flex {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.cv-item .flex div {
+    flex: 0;
+}
+
+.cv-item-img {
+    height: 90px;
+}
+
+.cv-item div.cv-item-header {
+    text-align: left !important;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.cv-item h2 {
+    margin: 0;
+}
+
+.cv-employer, .cv-date {
+    text-align: left !important;
+}
+
+.cv-employer a {
+    color: #08A24D;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s;
+}  
+
+.cv-employer a:hover {
+    color: #5B5B5B;
+}
+
+.cv-date {
+    color: #ABABAB;
+    font-size: 14px;
 }
 
 /* Responsive Styles */
