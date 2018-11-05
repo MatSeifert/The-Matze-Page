@@ -34,62 +34,70 @@
   <h1><span>Karriere & Ausbildung</span></h1>
 
   <div class="cv-wrapper">
-    <div class="cv-item">
-      <div class="timeline-dot">
-        <img src="~/images/heroicon-briefcase_g.svg">
-      </div>
-      <div class="flex">
-        <div>
-          <img src="~/images/favicon.png" class="cv-item-img">
+    @foreach(var cv in Model.CvEntries)
+    {
+      <div class="cv-item">
+        <div class="timeline-dot">
+          <img src="~/images/heroicon-briefcase_g.svg">
         </div>
-        <div class="cv-item-header">
-          <h2>Softwareentwicklung & UI Design</h2>
-          <div class="cv-employer">
-            <a href="#">Nebenberuflich Selbstständig</a></div>
-          <div class="cv-date">seit August 2018</div>
+        <div class="flex">
+          <div>
+            <img src="~/images/favicon.png" class="cv-item-img">
+          </div>
+          <div class="cv-item-header">
+            <h2>Softwareentwicklung & UI Design</h2>
+            <div class="cv-employer">
+              <a href="#">Nebenberuflich Selbstständig</a></div>
+            <div class="cv-date">seit August 2018</div>
+          </div>
         </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
-    <div class="cv-item">
-      <div class="timeline-dot">
-        <img src="~/images/heroicon-briefcase_g.svg">
-      </div>
-      <div class="flex">
-        <div>
-          <img src="~/images/cv-forum.png" class="cv-item-img">
-        </div>
-        <div class="cv-item-header">
-          <h2>Softwareentwicklung Frontend</h2>
-          <div class="cv-employer">
-            <a href="#">FORUM Gesellschaft für Informationssicherheit mbH</a></div>
-          <div class="cv-date">seit Mai 2017</div>
-        </div>
-      </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
-    <div class="cv-item">
-      <div class="timeline-dot">
-        <img src="~/images/heroicon-briefcase_g.svg">
-      </div>
-      <div class="flex">
-        <div>
-          <img src="~/images/cv-develappers.png" class="cv-item-img">
-        </div>
-        <div class="cv-item-header">
-          <h2>Werkstudent Softwareentwicklung</h2>
-          <div class="cv-employer">
-            <a href="#">Develappers GmbH</a></div>
-          <div class="cv-date">Februar 2014 - April 2017</div>
-        </div>
-      </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-    </div>
+    }
   </div>
+</div>
+
+<div class="section-rotated-background rotated-gradient offset-top-l">
+  <div class="wrapper wrapper-dark offset-top-m">
+    <h1>
+      <span>Womit ich arbeite</span></h1>
+      <div class="grid grid-1-1-1-1 overwidth">
+        <div class="tech-stack">
+          <img src="~/images/skill_csharp.svg" alt="C#">
+          <h2>C#, .NET, .NET Core</h2>
+          <p>
+            Web-API's, ASP.NET Websites oder brandneue Techniken wie Blazor. Mit Microsofts mächtigem Framework lassen sich stabile, zuverlässige und zukunftsorientierte Web Anwendungen und Seiten umsetzen. Mit .NET Core auch ganz ohne Windows Server!
+          </p>
+        </div>
+        <div class="tech-stack">
+          <img src="~/images/skill_javascript.svg" alt="JavaScript">
+          <h2>JavaScript, TypeScript</h2>
+          <p>
+            Frameworks bzw. Libraries wie React, Angular oder Vue verhelfen JavaScript zur Zeit einen beachtlichen Aufschwung. Zudem ist die eigentlich auf dem CLient ausgeführte Sprache mit Node.js auch auf dem Server lauffähig.
+          </p>
+        </div>
+        <div class="tech-stack">
+          <img src="~/images/skill_html.svg" alt="HTML">
+          <h2>HTML 5</h2>
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+        <div class="tech-stack">
+          <img src="~/images/skill_css.svg" alt="CSS">
+          <h2>CSS, Less, SASS, Stylus</h2>
+          <p>
+            CSS ist ein mächtiges Tool, um aus einer Webseite ein optisches Highlight zu machen. In modernen Browsern können faszinierende Effekte erreicht werden, und CSS-Präprozessoren machen das Erstellen effizient und gut wartbar.
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <h1>
+    <span>Letzte Sektion</span>
+  </h1>
 </div>

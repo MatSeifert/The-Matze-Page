@@ -691,12 +691,12 @@ p.tags {
     padding-top: 40px;
 }
 
-.footer h1 {
+.footer h1, .wrapper-dark h1 {
     color: #fff;
     letter-spacing: 1px;
 }
 
-.footer h1 span {
+.footer h1 span, .wrapper-dark h1 span {
     background-image: linear-gradient(to right, rgba(52,102,11,0.5) 0%, rgba(52,102,11,0.5) 100%);
 }
 
@@ -1049,6 +1049,44 @@ p.tags {
 .cv-date {
     color: #ABABAB;
     font-size: 14px;
+}
+
+.section-rotated-background.rotated-gradient {
+    background: linear-gradient(110deg, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+    transform: rotate(1deg);
+}
+
+.section-rotated-background.rotated-gradient .wrapper {
+    transform: rotate(-1deg);
+    width: 1240px;
+    padding: 0 20px;
+}
+
+.section-rotated-background .overwidth {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-bottom: 40px;
+}
+
+.tech-stack {
+    padding: 0 20px;
+}
+
+.tech-stack img {
+    transform: scale(0.8);
+    margin: auto;
+    display: block;
+}
+
+.tech-stack h2 {
+    color: #FFF;
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.tech-stack p {
+    color: #FFF;
 }
 
 /* Responsive Styles */

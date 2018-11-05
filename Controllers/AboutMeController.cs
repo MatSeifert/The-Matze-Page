@@ -31,7 +31,8 @@ namespace WebApp.Controllers
 
       using (var db = new MysqlDbContext(this.ConnectionString))
       {
-        // Do DB related Stuff
+        var cvEntries = await db.Cv.ToListAsync();
+        model.CvEntries = cvEntries;
       }
 
       return this.View(model);
