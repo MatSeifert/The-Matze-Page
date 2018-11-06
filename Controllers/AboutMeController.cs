@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +33,7 @@ namespace WebApp.Controllers
       using (var db = new MysqlDbContext(this.ConnectionString))
       {
         var cvEntries = await db.Cv.ToListAsync();
-        model.CvEntries = cvEntries;
+        model.CvEntries = cvEntries.OrderByDescending(c => c.StartDate).ToList();
       }
 
       return this.View(model);

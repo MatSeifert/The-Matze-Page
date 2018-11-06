@@ -949,7 +949,7 @@ p.tags {
 }
 
 .cv-item:not(:first-child) {
-    margin-top: -50px;
+    margin-top: -100px;
 }
 
 .cv-item:nth-child(even) {
@@ -1046,7 +1046,7 @@ p.tags {
     color: #5B5B5B;
 }
 
-.cv-date {
+.cv-date span {
     color: #ABABAB;
     font-size: 14px;
 }
