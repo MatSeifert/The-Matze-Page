@@ -907,6 +907,7 @@ p.tags {
     justify-content: center;
     flex-direction: column;
     padding: 0 50px;
+    letter-spacing: 2px;
 }
 
 .section-rotated-background.about-me {
@@ -1029,6 +1030,7 @@ p.tags {
 
 .cv-item h2 {
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .cv-employer, .cv-date {
