@@ -1018,13 +1018,16 @@ p.tags {
     flex: 0;
 }
 
+.cv-item .cv-item-thumbnail {
+    margin-right: 20px;
+}
+
 .cv-item-img {
     height: 90px;
 }
 
 .cv-item div.cv-item-header {
     text-align: left !important;
-    padding-left: 20px;
     flex: 1;
 }
 
@@ -1055,11 +1058,11 @@ p.tags {
 
 .section-rotated-background.rotated-gradient {
     background: linear-gradient(110deg, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
-    transform: rotate(1deg);
+    transform: rotate(2deg);
 }
 
 .section-rotated-background.rotated-gradient .wrapper {
-    transform: rotate(-1deg);
+    transform: rotate(-2deg);
     width: 1240px;
     padding: 0 20px;
 }

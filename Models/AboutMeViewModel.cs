@@ -6,6 +6,6 @@ namespace WebApp.Models
 {
   public class AboutMeViewModel 
   {
-    public IEnumerable<Cv> CvEntries { get; set; }
+    public IEnumerable<CvItem> CvEntries { get; set; }
   }
 }

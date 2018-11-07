@@ -33,7 +33,31 @@ namespace WebApp.Controllers
       using (var db = new MysqlDbContext(this.ConnectionString))
       {
         var cvEntries = await db.Cv.ToListAsync();
-        model.CvEntries = cvEntries.OrderByDescending(c => c.StartDate).ToList();
+        cvEntries = cvEntries.OrderByDescending(c => c.StartDate).ToList();
+        var cvItems = new List<CvItem>();
+
+        foreach(var cv in cvEntries) 
+        {
+          var cvItem = new CvItem();
+          cvItem.Entry = cv;
+
+          var attachment = await db.Media.FirstOrDefaultAsync(m => m.Id == cv.Attachment);
+          var thumbnail = await db.Media.FirstOrDefaultAsync(m => m.Id == cv.Thumbnail);
+
+          if (attachment != null) 
+          {
+            cvItem.Attachment = attachment;
+          }
+
+          if (thumbnail != null) 
+          {
+            cvItem.Thumbnail = thumbnail;
+          }
+
+          cvItems.Add(cvItem);
+        }
+
+        model.CvEntries = cvItems;
       }
 
       return this.View(model);

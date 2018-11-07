@@ -12,7 +12,8 @@ namespace WebApp.Models.Data
         public String EmployerDescription { get; set; }
         public String Label { get; set; }
         public String Description { get; set; }
-        public int Attachment { get; set; }
+        public int? Attachment { get; set; }
+        public int? Thumbnail { get; set; }
         public String Type { get; set; }
     }
 }

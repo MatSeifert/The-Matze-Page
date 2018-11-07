@@ -39,7 +39,7 @@
       <div class="cv-item">
         <div class="timeline-dot">
           @{
-            switch(cv.Type) 
+            switch(cv.Entry.Type) 
             {
               case "job": 
                 <img src="~/images/heroicon-briefcase_g.svg">
@@ -57,33 +57,46 @@
           }
         </div>
         <div class="flex">
-          <div>
-            <img src="~/images/favicon.png" class="cv-item-img">
-          </div>
+          @if (cv.Thumbnail != null) 
+          {
+            <div class="cv-item-thumbnail">
+              <img src="~/images/@cv.Thumbnail.Url" class="cv-item-img" alt="@cv.Thumbnail.Label" title="@cv.Thumbnail.Label">
+            </div>
+          }
           <div class="cv-item-header">
-            <h2>@cv.Label</h2>
+            <h2>@cv.Entry.Label</h2>
             <div class="cv-employer">
-              <a href="@cv.EmployerUrl" target="_blank">@cv.EmployerLabel</a></div>
+              <a href="@cv.Entry.EmployerUrl" target="_blank">@cv.Entry.EmployerLabel</a></div>
             <div class="cv-date">
               @{
-                if (cv.EndDate == null) 
+                if (cv.Entry.EndDate == null) 
                 {
-                  <span>seit @cv.StartDate.ToString("MMMM yyyy")</span>
+                  <span>seit @cv.Entry.StartDate.ToString("MMMM yyyy")</span>
                 }
-                else if (cv.EndDate?.Month == cv.StartDate.Month)
+                else if (cv.Entry.EndDate?.Month == cv.Entry.StartDate.Month)
                 {
-                  <span>@cv.StartDate.ToString("MMMM yyyy")</span>
+                  <span>@cv.Entry.StartDate.ToString("MMMM yyyy")</span>
                 }
                 else {
-                  <span>@cv.StartDate.ToString("MMMM yyyy") bis @cv.EndDate?.ToString("MMMM yyyy")</span>
+                  <span>@cv.Entry.StartDate.ToString("MMMM yyyy") bis @cv.Entry.EndDate?.ToString("MMMM yyyy")</span>
                 }
               }
             </div>
           </div>
         </div>
         <p>
-          @cv.Description
+          @cv.Entry.Description
         </p>
+        @if(cv.Attachment != null)
+        {
+          <div class="center offset-top-s">
+            <a href="~/files/@cv.Attachment.Url" alt="@cv.Attachment.Label" target="_blank">
+              <button class="btn">
+                @ViewBag.UiStrings["download.certificate"]
+              </button>
+            </a>
+          </div>
+        }
       </div>
     }
   </div>
