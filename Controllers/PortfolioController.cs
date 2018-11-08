@@ -14,19 +14,17 @@ namespace WebApp.Controllers
   public class PortfolioController : Controller 
   {
     private string ConnectionString { get; set; }
-    private Dictionary<string, string> UiStrings { get; set; }
 
     public PortfolioController()
     {
       this.ConnectionString = Utils.GetConnectionString();
-      this.UiStrings = Utils.GetUiStrings("de");
     }
 
-    public async Task<IActionResult> Index() 
+    public async Task<IActionResult> Index(string lang) 
     {
       var model = new PortfolioViewModel();
-      ViewBag.UiStrings = this.UiStrings;
-      ViewBag.Title = this.UiStrings["title.portfolio"];
+      Utils.CheckOrRefreshUiStrings(lang);
+      ViewBag.Title = Utils.GetUiString("title.portfolio");
       ViewBag.ActiveLink = 2;
 
       return this.View(model);

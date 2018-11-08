@@ -1,7 +1,9 @@
 @model WebApp.Models.HomeViewModel
 
+@using WebApp.Helper
+
 <div class="section latest-blog-posts">
-    <h1><span>@ViewBag.UiStrings["headline.latestPosts"]</span></h1>
+    <h1><span>@Utils.GetUiString("headline.latestPosts")</span></h1>
     <div class="grid grid-1-1-1 blog offset-top-m">
 
         @foreach(var p in Model.LatestPosts) {
@@ -18,7 +20,7 @@
                 </div>
                 <a href='@Url.Action("post", "blog", new { id = p.Post.Id })'>
                     <div>
-                        <span class="post-date mobile">@ViewBag.UiStrings["blog.postedAt"] @p.Post.Date.ToString("dd. MMMM")</span>
+                        <span class="post-date mobile">@Utils.GetUiString("blog.postedAt") @p.Post.Date.ToString("dd. MMMM")</span>
                         <h2>@p.Post.Title</h2>
                     </div>
                 </a>
@@ -28,8 +30,8 @@
     </div>
 
     <div class="center">
-        <a href='@Url.Action("index", "blog")' title='@ViewBag.UiStrings["allPosts"]'>
-            <button class="btn offset-top-m offset-mobile-none">@ViewBag.UiStrings["allPosts"]</button>
+        <a href='@Url.Action("index", "blog")' title='@Utils.GetUiString("allPosts")'>
+            <button class="btn offset-top-m offset-mobile-none">@Utils.GetUiString("allPosts")</button>
         </a>
     </div>
 </div>

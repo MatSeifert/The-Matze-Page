@@ -1,5 +1,7 @@
 @model WebApp.Models.AboutMeViewModel
 
+@using WebApp.Helper
+
 @await Html.PartialAsync("_header", Model)
 
 <div class="wrapper about-me">
@@ -8,21 +10,21 @@
       <img src="~/images/profile_colored.png" alt="Profilbild">
     </div>
     <div class="quote">
-      @ViewBag.UiStrings["aboutMe.quote"]
+      @Utils.GetUiString("aboutMe.quote")
     </div>
   </div>
 </div>
 
 <div class="section-rotated-background about-me">
   <div class="wrapper">
-    <h1><span>@ViewBag.UiStrings["headline.aboutMe"]</span></h1>
+    <h1><span>@Utils.GetUiString("headline.aboutMe")</span></h1>
     <div class="grid grid-2-1">
       <div class="offset-right-m">
-        @ViewBag.UiStrings["aboutMe.description"]
+        @Utils.GetUiString("aboutMe.description")
       </div>
       <div class="offset-left-m direct-contact">
-        <button class="btn btn-primary">@ViewBag.UiStrings["projectrequest"]</button>
-        <div class="headline-sidelined">@ViewBag.UiStrings["directContact"]</div>
+        <button class="btn btn-primary">@Utils.GetUiString("projectrequest")</button>
+        <div class="headline-sidelined">@Utils.GetUiString("directContact")</div>
         <div><img src="~/images/heroicon-call_b.svg" alt="Call Icon"> 01525 5911161</div>
         <div><img src="~/images/heroicon-at-symbol_b.svg" alt="Mail Icon"> matthe.seifert@gmail.com</div>
       </div>
@@ -31,7 +33,7 @@
 </div>
 
 <div class="wrapper offset-top-m">
-  <h1><span>@ViewBag.UiStrings["headline.carreer"]</span></h1>
+  <h1><span>@Utils.GetUiString("headline.carreer")</span></h1>
 
   <div class="cv-wrapper">
     @foreach(var cv in Model.CvEntries)
@@ -92,7 +94,7 @@
           <div class="center offset-top-s">
             <a href="~/files/@cv.Attachment.Url" alt="@cv.Attachment.Label" target="_blank">
               <button class="btn">
-                @ViewBag.UiStrings["download.certificate"]
+                @Utils.GetUiString("download.certificate")
               </button>
             </a>
           </div>
@@ -105,34 +107,34 @@
 <div class="section-rotated-background rotated-gradient offset-top-l">
   <div class="wrapper wrapper-dark offset-top-m">
     <h1>
-      <span>@ViewBag.UiStrings["headline.techstack"]</span></h1>
+      <span>@Utils.GetUiString("headline.techstack")</span></h1>
       <div class="grid grid-1-1-1-1 overwidth">
         <div class="tech-stack">
           <img src="~/images/skill_csharp.svg" alt="C#">
           <h2>C#, .NET, .NET Core</h2>
           <p>
-            @ViewBag.UiStrings["techstack.csharp"]
+            @Utils.GetUiString("techstack.csharp")
           </p>
         </div>
         <div class="tech-stack">
           <img src="~/images/skill_javascript.svg" alt="JavaScript">
           <h2>JavaScript, TypeScript</h2>
           <p>
-            @ViewBag.UiStrings["techstack.javascript"]
+            @Utils.GetUiString("techstack.javascript")
           </p>
         </div>
         <div class="tech-stack">
           <img src="~/images/skill_html.svg" alt="HTML">
           <h2>HTML 5</h2>
           <p>
-            @ViewBag.UiStrings["techstack.html"]
+            @Utils.GetUiString("techstack.html")
           </p>
         </div>
         <div class="tech-stack">
           <img src="~/images/skill_css.svg" alt="CSS">
           <h2>CSS, Less, SASS, Stylus</h2>
           <p>
-            @ViewBag.UiStrings["techstack.css"]
+            @Utils.GetUiString("techstack.css")
           </p>
         </div>
       </div>

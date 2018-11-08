@@ -19,19 +19,16 @@ namespace WebApp.Controllers
     {
         private string ConnectionString { get; set; }
 
-        private Dictionary<string, string> UiStrings { get; set; }
-
         public BlogController()
         {
             this.ConnectionString = Utils.GetConnectionString();
-            this.UiStrings = Utils.GetUiStrings("de");
         }
 
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index(int? id, string lang)
         {
             var model = new BlogAllViewModel();
-            ViewBag.UiStrings = this.UiStrings;
-            ViewBag.Title = this.UiStrings["title.blog"];
+            Utils.CheckOrRefreshUiStrings(lang);
+            ViewBag.Title = Utils.GetUiString("title.blog");
             ViewBag.ActiveLink = 1;
 
             using (var db = new MysqlDbContext(this.ConnectionString))
@@ -62,10 +59,11 @@ namespace WebApp.Controllers
             return this.View(model);
         }
 
-        public async Task<IActionResult> Post(int id) 
+        public async Task<IActionResult> Post(int id, string lang) 
         {
             var model = new BlogPostViewModel();
-            ViewBag.UiStrings = this.UiStrings;
+            Utils.CheckOrRefreshUiStrings(lang);
+            ViewBag.Title = Utils.GetUiString("title.blog");
             ViewBag.ActiveLink = 1;
 
             var postItem = new BlogItem();
@@ -81,7 +79,7 @@ namespace WebApp.Controllers
                 postItem.Post = post;
                 postItem.TitleImage = titleImage;
 
-                ViewBag.Title = $"{post.Title} | {this.UiStrings["title.blog"]} ";
+                ViewBag.Title = $"{post.Title} | {Utils.GetUiString("title.blog")} ";
             }
 
             model.Post = postItem;
@@ -91,11 +89,11 @@ namespace WebApp.Controllers
 
         [HttpGet]
         [Authorize]
-        public IActionResult CreatePost()
+        public IActionResult CreatePost(string lang)
         {
-            ViewBag.UiStrings = this.UiStrings;
+            Utils.CheckOrRefreshUiStrings(lang);
+            ViewBag.Title = Utils.GetUiString("title.blog.create");
             ViewBag.ActiveLink = 1;
-            ViewBag.Title = this.UiStrings["title.blog.create"];
 
             return this.View();
         }

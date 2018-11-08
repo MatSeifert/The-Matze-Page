@@ -1,7 +1,8 @@
 @model WebApp.Models.BlogPostViewModel
 
-@await Html.PartialAsync("_adminTools")
+@using WebApp.Helper
 
+@await Html.PartialAsync("_adminTools")
 @await Html.PartialAsync("_header", Model)
 
 <div class="blogpost-featured">
@@ -17,7 +18,7 @@
                 <span>@Model.Post.Post.Title</span>
             </h1>
             <div class="bold blogpost-content-date">
-                <img src="~/images/icon_posted-black.png" alt="Post Icon"> @ViewBag.UiStrings["blog.postedAt"] @Model.Post.Post.Date.ToString("dd. MMMM yyyy")
+                <img src="~/images/icon_posted-black.png" alt="Post Icon"> @Utils.GetUiString("blog.postedAt") @Model.Post.Post.Date.ToString("dd. MMMM yyyy")
             </div>
 
             <div class="blogpost-featured-snippet bold">@Model.Post.Post.Snippet</div>

@@ -1,16 +1,18 @@
+@using WebApp.Helper
+
 <div class="mobile bottom-menu">
   <div class="realign">
     <div class="grid grid-mobile grid-1-1-2-1-1">
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "aboutme")'>
           <img src="~/images/heroicon-user.svg" alt="Über mich">
-          Über mich
+          @Utils.GetUiString("menu.aboutMe")
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "blog")'>
           <img src="~/images/heroicon-edit.svg" alt="Blog">
-          Blog
+          @Utils.GetUiString("menu.blog")
         </a>
       </div>
       <div class="bottom-menu--item logo">
@@ -22,20 +24,20 @@
         <div class="mobile-xs">
           <a href='@Url.Action("index", "home")'>
           <img src="~/images/heroicon-home.svg" alt="Start">
-          Home
+          @Utils.GetUiString("menu.home")
         </a>
         </div>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "portfolio")'>
           <img src="~/images/heroicon-desktop.svg" alt="Portfolio">
-          Portfolio
+          @Utils.GetUiString("menu.portfolio")
         </a>
       </div>
       <div class="bottom-menu--item">
         <a href='@Url.Action("index", "contact")'>
           <img src="~/images/heroicon-at-symbol.svg" alt="Kontakt">
-          Kontakt
+          @Utils.GetUiString("menu.contact")
         </a>
       </div>
     </div>

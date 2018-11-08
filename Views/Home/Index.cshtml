@@ -1,5 +1,7 @@
 ﻿@model WebApp.Models.HomeViewModel
 
+@using WebApp.Helper
+
 @await Html.PartialAsync("_header-main", Model)
 
 <div class="wrapper main-content grid grid-1-2">
@@ -40,7 +42,7 @@
             modernen Designarbeiten entwickle ich auch Software im Bereich Web und Mobile, sowohl Frontend als auch Backend.
         
             <h2 class="offset-top-m">
-                @ViewBag.UiStrings["hireMe"]
+                @Utils.GetUiString("hireMe")
             </h2>
         </div>
     </div>
@@ -77,12 +79,12 @@
       </div>
       <div class="offset-left-xl offset-mobile-none">
           <button class="btn btn-primary offset-right-m">
-            <span>@ViewBag.UiStrings["contactMe"]</span>
+            <span>@Utils.GetUiString("contactMe")</span>
           </button>
           <button class="btn">
-            <span class="desktop tablet">@ViewBag.UiStrings["download.cv"]</span>
+            <span class="desktop tablet">@Utils.GetUiString("download.cv")</span>
             <span class="mobile">
-                <img src="~/images/icon-download.svg" alt="Download" id="download-icon"> @ViewBag.UiStrings["cv"]
+                <img src="~/images/icon-download.svg" alt="Download" id="download-icon"> @Utils.GetUiString("cv")
             </span>
           </button>
       </div>

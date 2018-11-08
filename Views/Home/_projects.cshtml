@@ -1,9 +1,11 @@
 @model WebApp.Models.HomeViewModel
 
+@using WebApp.Helper
+
 <div class="section-rotated-background">
     <div class="wrapper">
         <div class="section">
-            <h1><span>@ViewBag.UiStrings["headline.projects"]</span></h1>
+            <h1><span>@Utils.GetUiString("headline.projects")</span></h1>
             <div class="grid grid-1-1">
                 <div class="project-item">
                     <img src="images/laptop_m.png" class="laptop" alt="Screenshot des Projektes">
@@ -18,7 +20,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor.
                     </p>
-                    <button class="btn btn-primary offset-top-s">@ViewBag.UiStrings["discoverProject"]</button>
+                    <button class="btn btn-primary offset-top-s">@Utils.GetUiString("discoverProject")</button>
                 </div>
             </div>
         </div>
@@ -26,5 +28,5 @@
 </div>
 
 <div class="center">
-    <button class="btn offset-top-m">@ViewBag.UiStrings["allProjects"]</button>
+    <button class="btn offset-top-m">@Utils.GetUiString("allProjects")</button>
 </div>

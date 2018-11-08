@@ -1,26 +1,28 @@
 @model WebApp.Models.HomeViewModel
 
+@using WebApp.Helper
+
 <div class="header">
   <div class="rotated-background">
     <div class="background-img">
       <div class="realign">
         <div class="wrapper">
           <div class="header-nav grid grid-1-1-1-1-1">
-            <a href='@Url.Action("index", "aboutme")' class="menu-link">@ViewBag.UiStrings["menu.aboutMe"]</a>
-            <a href='@Url.Action("index", "blog")' class="menu-link">@ViewBag.UiStrings["menu.blog"]</a>
+            <a href='@Url.Action("index", "aboutme")' class="menu-link">@Utils.GetUiString("menu.aboutMe")</a>
+            <a href='@Url.Action("index", "blog")' class="menu-link">@Utils.GetUiString("menu.blog")</a>
             <div class="logo-background">
               <div>
                 <a href='@Url.Action("index", "home")'><img src="~/images/logo.svg" alt="Logo" class="logo"></a>
               </div>
             </div>
-            <a href='@Url.Action("index", "portfolio")' class="menu-link">@ViewBag.UiStrings["menu.portfolio"]</a>
-            <a href='@Url.Action("index", "contact")' class="menu-link">@ViewBag.UiStrings["menu.contact"]</a>
+            <a href='@Url.Action("index", "portfolio")' class="menu-link">@Utils.GetUiString("menu.portfolio")</a>
+            <a href='@Url.Action("index", "contact")' class="menu-link">@Utils.GetUiString("menu.contact")</a>
           </div>
 
           <div class="introduction">
-            <div class="intro-s">@ViewBag.UiStrings["header.greeting"]</div>
+            <div class="intro-s">@Utils.GetUiString("header.greeting")</div>
             <div class="intro-l">@Model.CoreData.FirstName @Model.CoreData.LastName</div>
-            <div class="intro-sub">@ViewBag.UiStrings["header.skills"]</div>
+            <div class="intro-sub">@Utils.GetUiString("header.skills")</div>
           </div>
         </div>
       </div>
