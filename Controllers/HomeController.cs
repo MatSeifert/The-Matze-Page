@@ -48,8 +48,6 @@ namespace WebApp.Controllers
                 }
 
                 model.LatestPosts = blogItems;
-
-                ViewBag.CoreData = model.CoreData;
             }
 
             return this.View(model);

@@ -33,9 +33,6 @@ namespace WebApp.Controllers
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
-                // Coredata for footer
-                ViewBag.CoreData = await db.CoreData.FirstOrDefaultAsync();
-
                 // Get Posts from DB
                 var posts = await db.Posts.ToListAsync();
                 var blogItems = new List<BlogItem>();
@@ -70,9 +67,6 @@ namespace WebApp.Controllers
 
             using (var db = new MysqlDbContext(this.ConnectionString))
             {
-                // Coredata for footer
-                ViewBag.CoreData = await db.CoreData.FirstOrDefaultAsync();
-
                 var post = await db.Posts.SingleOrDefaultAsync(b => b.Id == id);
                 var titleImage = await db.Media.SingleOrDefaultAsync(i => i.Id == post.TitleImage);
                 // TODO: add gallery
