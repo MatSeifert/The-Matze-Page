@@ -341,6 +341,16 @@ h2 {
 }
 
 /* Header styles */
+#sticky-header {
+    position: absolute;
+    top: -150px;
+    transition: top 0.2s;
+}
+
+#sticky-header.slide-down {
+    top: 0;
+}
+
 .header {
     overflow: hidden;
     padding-bottom: 4%;

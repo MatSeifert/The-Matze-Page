@@ -2,6 +2,10 @@
 
 @using WebApp.Helper
 
+<div id="sticky-header">
+    @await Html.PartialAsync("_header", Model)
+</div>
+
 @await Html.PartialAsync("_header-main", Model)
 
 <div class="wrapper main-content grid grid-1-2">
@@ -98,3 +102,14 @@
 <div class="wrapper">
     @await Html.PartialAsync("_blog", Model)
 </div>
+
+<script>
+    $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 300) {
+        $('#sticky-header').addClass('slide-down');
+    } else {
+        $('#sticky-header').removeClass('slide-down');
+    }
+    });
+</script>
