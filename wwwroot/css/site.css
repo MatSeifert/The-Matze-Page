@@ -6,6 +6,10 @@
     font-variant-ligatures: none;
 }
 
+body {
+    color: #4D534F;
+}
+
 .mobile, .mobile.flex, .mobile-xs {
     display: none;
 }
@@ -20,12 +24,12 @@
 }
 
 .wrapper h1 {
-    color: #5B5B5B;
+    color: #4D534F;
     letter-spacing: 1px;
 }
 
 .wrapper h1 span {
-    background-image: linear-gradient(to right, #C1DBAC 0%, #C1DBAC 100%);
+    background-image: linear-gradient(to right, #C4E6D3 0%, #C4E6D3 100%);
 }
 
 a {
@@ -89,7 +93,7 @@ h1 span {
 
 h2 {
     font-size: 24px;
-    color: #5B5B5B;
+    color: #4D534F;
     line-height: 140%;
 }
 
@@ -154,7 +158,7 @@ h2 {
 }
 
 .seperator {
-    border-top: 1px solid #efefef;
+    border-top: 1px solid #F2F2F2;
     padding-top: 40px;
 }
 
@@ -254,7 +258,7 @@ h2 {
 }
 
 .btn-primary {
-    background:  linear-gradient(to right, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+    background:  linear-gradient(to right, #28A35F 0%,#70B42F 50%,#C8C400 100%);
     border: none;
     color: #fff;
 }
@@ -272,7 +276,7 @@ h2 {
 
 .btn.btn-light:hover {
     background: #fff;
-    color: #5B5B5B;
+    color: #616663;
 }
 
 .btn img {
@@ -413,7 +417,7 @@ h2 {
 }
 
 .header .rotated-background {
-    background: linear-gradient(160deg, #08A24D 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
+    background: linear-gradient(160deg, #28A35F 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
     transform: rotate(4deg);
     width: calc(100% + 60px);
     margin-left: -30px;
@@ -492,7 +496,7 @@ h2 {
 .main-content {
     position: relative;
     margin-top: -230px;
-    color: #5b5b5b;
+    color: #616663;
 }
 
 .description-wrapper {
@@ -541,7 +545,7 @@ h2 {
 
 /* rotated section */
 .section-rotated-background {
-    background: #ECF9F1;
+    background: #E2ECE7;
     transform: rotate(-1deg);
     width: calc(100% + 60px);
     margin-left: -30px;
@@ -610,7 +614,7 @@ p.tags {
     opacity: 0;
     position: absolute;
     top: 0;
-    background: linear-gradient(160deg, #08A24D 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
+    background: linear-gradient(160deg, #28A35F 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
     width: 100%;
     height: 100%;
     color: #fff;
@@ -678,7 +682,7 @@ p.tags {
 }
 
 .footer .rotated-background {
-    background: linear-gradient(110deg, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+    background: linear-gradient(110deg, #28A35F 0%,#70B42F 50%,#C8C400 100%);
     transform: rotate(4deg);
     width: calc(100% + 60px);
     margin-left: -30px;
@@ -747,7 +751,7 @@ p.tags {
 }
 
 .admin-panel li {
-    background: linear-gradient(100deg, #2AA35C 0%,#70B42F 35%,#C3C302 100%);
+    background: linear-gradient(100deg, #28A35F 0%,#70B42F 35%,#C8C400 100%);
     width: 48px;
     height: 48px;
     margin-bottom: 20px;
@@ -762,7 +766,7 @@ p.tags {
 }
 
 .admin-panel li:hover {
-    background: #2CA45B;
+    background: #28A35F;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
@@ -864,11 +868,11 @@ p.tags {
 }
 
 .blogpost-content a:hover h2, .blog-post a:hover h2 {
-    color: #08A24D;
+    color: #28A35F;
 }
 
 .blogpost-thumbnail a {
-    background: linear-gradient(160deg, #08A24D 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
+    background: linear-gradient(160deg, #28A35F 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
     display: block;
 }
 
@@ -902,7 +906,7 @@ p.tags {
     font-family: 'Abril Fatface', serif;
     font-size: 48px;
     text-align: center;
-    color: #5B5B5B;
+    color: #616663;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -916,18 +920,18 @@ p.tags {
 }
 
 .direct-contact .headline-sidelined {
-    color: #ABABAB;
+    color: #ADB3B0;
     padding: 30px 0 10px 0;
 }
 
 .direct-contact .headline-sidelined:before, .direct-contact .headline-sidelined:after {
     width: 22%;
-    border-color: #CCC;
+    border-color: #C6CCC9;
     top: 45px;
 }
 
 .direct-contact div:not(.headline-sidelined) {
-    color: #5B5B5B;
+    color: #616663;
 }
 
 .direct-contact img {
@@ -939,7 +943,7 @@ p.tags {
 .cv-wrapper {
     margin-top: 20px;
     width: 50%;
-    border-right: 4px solid #EEE;
+    border-right: 4px solid #F2F2F2;
 }
 
 .cv-item {
@@ -955,17 +959,17 @@ p.tags {
 
 .cv-item:nth-child(even) {
     margin-left: 100%;
-    border-right: 4px solid #08A24D;
+    border-right: 4px solid #28A35F;
     padding-left: 50px;
 }
 
 .cv-item:nth-child(odd) {
-    border-left: 4px solid #08A24D;
+    border-left: 4px solid #28A35F;
     padding-right: 50px;
 }
 
 .cv-item .timeline-dot {
-    border: 3px solid #08A24D;
+    border: 3px solid #28A35F;
     background: #FFF;
     width: 38px;
     height: 38px;
@@ -985,7 +989,7 @@ p.tags {
     content:"\A";
     border-style: solid;
     border-width: 10px 15px 10px 0;
-    border-color: transparent #08A24D transparent transparent;
+    border-color: transparent #28A35F transparent transparent;
     position: absolute;
     left: -15px;
     top: 6px;
@@ -995,7 +999,7 @@ p.tags {
     content: "\A";
     border-style: solid;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #08A24D;
+    border-color: transparent transparent transparent #28A35F;
     position: absolute;
     right: -15px;
     top: 6px;
@@ -1041,23 +1045,23 @@ p.tags {
 }
 
 .cv-employer a {
-    color: #08A24D;
+    color: #28A35F;
     font-size: 16px;
     font-weight: 400;
     transition: color 0.3s;
 }  
 
 .cv-employer a:hover {
-    color: #5B5B5B;
+    color: #616663;
 }
 
 .cv-date span {
-    color: #ABABAB;
+    color: #ADB3B0;
     font-size: 14px;
 }
 
 .section-rotated-background.rotated-gradient {
-    background: linear-gradient(110deg, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+    background: linear-gradient(110deg, #28A35F 0%,#70B42F 50%,#C8C400 100%);
     transform: rotate(2deg);
 }
 
@@ -1459,7 +1463,7 @@ p.tags {
         font-weight: 500;
         letter-spacing: 1px;
         font-size: 13px;
-        color: #999;
+        color: #616663;
         padding: 5px 0;
     }
 
@@ -1487,7 +1491,7 @@ p.tags {
 
     /* Mobile  Menu */
     .bottom-menu {
-        background:  linear-gradient(to right, #2AA35C 0%,#70B42F 50%,#C3C302 100%);
+        background:  linear-gradient(to right, #28A35F 0%,#70B42F 50%,#C8C400 100%);
         position: fixed;
         bottom: -10px;
         width: calc(100% + 10px);
