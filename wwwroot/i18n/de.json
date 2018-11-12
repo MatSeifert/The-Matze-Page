@@ -1,6 +1,7 @@
 {
     "lang": "de",
-    "aboutMe.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velitesse cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecat cupidatat non proident, sunt in culpa qui officiadeserunt mollit anim id est laborum.",
+    "aboutMe.description.design": "Ein Produkt oder eine Dienstleistung ist oft nur so gut, wie sie präsentiert wird. ",
+    "aboutMe.description.development": "Als Softwareentwickler bin ich immer auf der Suche nach neuen Herausforderungen und spannenden Aufgaben. In einer Branche, in der sich Technologien stetig weiterentwickeln, eröffnen sich täglich neue Möglichkeiten ein Problem zu lösen.",
     "aboutMe.quote": "Herausragende Designs fallen ganz besonders dann auf, wenn sie fehlen.",
     "allPosts": "Weitere Beiträge",
     "allProjects": "ALle Projekte",
@@ -21,7 +22,7 @@
     "download.cv": "CV herunterladen",
     "header.greeting": "Hi, ich bin",
     "header.skills": "Entwickler & Designer",
-    "headline.aboutMe": "Was mich auszeichnet",
+    "headline.aboutMe": "Was in mir steckt",
     "headline.BackendDevelopment": "Backend Entwicklung",
     "headline.carreer": "Karriere & Ausbildung",
     "headline.disclaimer": "Rechtliches",

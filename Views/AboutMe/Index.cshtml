@@ -20,7 +20,11 @@
     <h1><span>@Utils.GetUiString("headline.aboutMe")</span></h1>
     <div class="grid grid-2-1">
       <div class="offset-right-m">
-        @Utils.GetUiString("aboutMe.description")
+        <h2>Der Entwickler in mir</h2>
+        @Utils.GetUiString("aboutMe.description.development")
+
+        <h2>Der Designer in mir</h2>
+        @Utils.GetUiString("aboutMe.description.design")
       </div>
       <div class="offset-left-m direct-contact">
         <button class="btn btn-primary">@Utils.GetUiString("projectrequest")</button>
@@ -32,117 +36,8 @@
   </div>
 </div>
 
-<div class="wrapper offset-top-m">
-  <h1><span>@Utils.GetUiString("headline.carreer")</span></h1>
+@await Html.PartialAsync("_cv", Model)
 
-  <div class="cv-wrapper">
-    @foreach(var cv in Model.CvEntries)
-    {
-      <div class="cv-item">
-        <div class="timeline-dot">
-          @{
-            switch(cv.Entry.Type) 
-            {
-              case "job": 
-                <img src="~/images/heroicon-briefcase_g.svg">
-                break;
-              case "training": 
-                <img src="~/images/heroicon-certificate_g.svg">
-                break;
-              case "education": 
-                <img src="~/images/heroicon-education_g.svg">
-                break;
-              default: 
-                <img src="~/images/heroicon-briefcase_g.svg">
-                break;
-            }
-          }
-        </div>
-        <div class="flex">
-          @if (cv.Thumbnail != null) 
-          {
-            <div class="cv-item-thumbnail">
-              <img src="~/images/@cv.Thumbnail.Url" class="cv-item-img" alt="@cv.Thumbnail.Label" title="@cv.Thumbnail.Label">
-            </div>
-          }
-          <div class="cv-item-header">
-            <h2>@cv.Entry.Label</h2>
-            <div class="cv-employer">
-              <a href="@cv.Entry.EmployerUrl" target="_blank">@cv.Entry.EmployerLabel</a></div>
-            <div class="cv-date">
-              @{
-                if (cv.Entry.EndDate == null) 
-                {
-                  <span>seit @cv.Entry.StartDate.ToString("MMMM yyyy")</span>
-                }
-                else if (cv.Entry.EndDate?.Month == cv.Entry.StartDate.Month)
-                {
-                  <span>@cv.Entry.StartDate.ToString("MMMM yyyy")</span>
-                }
-                else {
-                  <span>@cv.Entry.StartDate.ToString("MMMM yyyy") bis @cv.Entry.EndDate?.ToString("MMMM yyyy")</span>
-                }
-              }
-            </div>
-          </div>
-        </div>
-        <p>
-          @cv.Entry.Description
-        </p>
-        @if(cv.Attachment != null)
-        {
-          <div class="center offset-top-s">
-            <a href="~/files/@cv.Attachment.Url" alt="@cv.Attachment.Label" target="_blank">
-              <button class="btn">
-                @Utils.GetUiString("download.certificate")
-              </button>
-            </a>
-          </div>
-        }
-      </div>
-    }
-  </div>
-</div>
+@await Html.PartialAsync("_techstack")
 
-<div class="section-rotated-background rotated-gradient offset-top-l">
-  <div class="wrapper wrapper-dark offset-top-m">
-    <h1>
-      <span>@Utils.GetUiString("headline.techstack")</span></h1>
-      <div class="grid grid-1-1-1-1 overwidth">
-        <div class="tech-stack">
-          <img src="~/images/skill_csharp.svg" alt="C#">
-          <h2>C#, .NET, .NET Core</h2>
-          <p>
-            @Utils.GetUiString("techstack.csharp")
-          </p>
-        </div>
-        <div class="tech-stack">
-          <img src="~/images/skill_javascript.svg" alt="JavaScript">
-          <h2>JavaScript, TypeScript</h2>
-          <p>
-            @Utils.GetUiString("techstack.javascript")
-          </p>
-        </div>
-        <div class="tech-stack">
-          <img src="~/images/skill_html.svg" alt="HTML">
-          <h2>HTML 5</h2>
-          <p>
-            @Utils.GetUiString("techstack.html")
-          </p>
-        </div>
-        <div class="tech-stack">
-          <img src="~/images/skill_css.svg" alt="CSS">
-          <h2>CSS, Less, SASS, Stylus</h2>
-          <p>
-            @Utils.GetUiString("techstack.css")
-          </p>
-        </div>
-      </div>
-  </div>
-</div>
-
-<div class="wrapper">
-  <h1>
-    <span>Letzte Sektion</span>
-  </h1>
-</div>
+@await Html.PartialAsync("_testimonials")
