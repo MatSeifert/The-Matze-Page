@@ -1123,7 +1123,7 @@ p.tags {
 
 .testimonial-content {
     display: flex;
-    border-right: 4px solid #44B055;
+    border-right: 4px solid #28A35F;
     padding-right: 20px;
     border-radius: 4px;
     position: relative;
@@ -1153,7 +1153,7 @@ p.tags {
 .testimonial-author {
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #44B055;
+    color: #28A35F;
     font-weight: 500;
 }
 
@@ -1173,7 +1173,7 @@ p.tags {
 }
 
 .grid.grid-1-3.testimonial .testimonial-content {
-    border-left: 4px solid #44B055;
+    border-left: 4px solid #28A35F;
     border-right: none;
     margin-left: -50px;
     padding-left: 50px;
