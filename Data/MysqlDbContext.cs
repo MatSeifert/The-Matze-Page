@@ -20,6 +20,7 @@ namespace WebApp.Models.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Media> Media { get; set; }
         public DbSet<Cv> Cv { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
           => optionBuilder.UseMySql(ConnectionString);

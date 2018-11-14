@@ -32,9 +32,14 @@ namespace WebApp.Controllers
 
       using (var db = new MysqlDbContext(this.ConnectionString))
       {
+        // CV
         var cvEntries = await db.Cv.ToListAsync();
         cvEntries = cvEntries.OrderByDescending(c => c.StartDate).ToList();
         var cvItems = new List<CvItem>();
+        
+        // Testimonials
+        var testimonials = await db.Testimonials.ToListAsync();
+        var testimonialItems = new List<TestimonialItem>();
 
         foreach(var cv in cvEntries) 
         {
@@ -57,7 +62,22 @@ namespace WebApp.Controllers
           cvItems.Add(cvItem);
         }
 
+        foreach(var t in testimonials)
+        {
+          var tItem = new TestimonialItem();
+          tItem.Testimonial = t;
+
+          var image = await db.Media.FirstOrDefaultAsync(i => i.Id == t.Image);
+
+          if (image != null) {
+            tItem.Image = image;
+          }
+
+          testimonialItems.Add(tItem);
+        }
+
         model.CvEntries = cvItems;
+        model.Testimonials = testimonialItems;
       }
 
       return this.View(model);
