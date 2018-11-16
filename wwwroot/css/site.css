@@ -113,6 +113,10 @@ h2 {
     text-align: center;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .offset-top-s {
     margin-top: 20px;
 }
@@ -256,7 +260,7 @@ h2 {
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 3px;
-    background: #fff;
+    background: transparent;
     border: 1px solid #28A35F;
     color: #28A35F;
 }
