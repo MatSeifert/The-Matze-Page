@@ -1195,6 +1195,32 @@ p.tags {
     justify-content: center;
 }
 
+/* Portfolio Styles */
+.portfolio-header .header .rotated-background {
+    background-color: transparent;
+    background: none;
+}
+
+.portfolio-featured-item {
+    max-height: 600px;
+    overflow: hidden;
+    transform: rotate(-3deg);
+    margin-top: -3%;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+
+.portfolio-featured-item .realign {
+    transform: rotate(3deg);
+    background: #000;
+}
+
+.portfolio-featured-item img {
+    width: 100%;
+    filter: blur(10px);
+    opacity: 0.25;
+}
+
 /* Responsive Styles */
 @media ( max-width: 1250px ) {
     /* Overrides */

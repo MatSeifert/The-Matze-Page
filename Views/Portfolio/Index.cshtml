@@ -2,6 +2,25 @@
 
 @using WebApp.Helper
 
-@await Html.PartialAsync("_header", Model)
+<div class="portfolio-header" id="portfolio-header">
+    @await Html.PartialAsync("_header", Model)
+</div>
 
-<div>Dis is my work!</div>
+@await Html.PartialAsync("_featured-item")
+
+<div style="height: 800px;" class="wrapper">
+    <h1>
+        <span>Text</span>
+    </h1>
+</div>
+
+<script>
+    $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 400) {
+        $('#portfolio-header').removeClass('portfolio-header');
+    } else {
+        $('#portfolio-header').addClass('portfolio-header');
+    }
+    });
+</script>
