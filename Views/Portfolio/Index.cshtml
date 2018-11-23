@@ -8,16 +8,16 @@
 
 @await Html.PartialAsync("_featured-item")
 
-<div style="height: 800px;" class="wrapper">
+<div style="height: 800px; margin-top: 560px;" class="wrapper">
     <h1>
-        <span>Text</span>
+        <span>Case Studies</span>
     </h1>
 </div>
 
 <script>
     $(document).scroll(function() {
     var y = $(this).scrollTop();
-    if (y > 400) {
+    if (y > 50) {
         $('#portfolio-header').removeClass('portfolio-header');
     } else {
         $('#portfolio-header').addClass('portfolio-header');

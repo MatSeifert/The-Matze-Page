@@ -803,7 +803,7 @@ p.tags {
     margin-top: 675px;
 }
 
-.blogpost-featured {
+.blogpost-featured, .portfolio-featured {
     position: absolute;
     top: 0;
     z-index: 0;
@@ -813,7 +813,8 @@ p.tags {
     color: #fff;
 }
 
-.blogpost-featured .blogpost-featured-rotated {
+.blogpost-featured .blogpost-featured-rotated,
+.portfolio-featured .portfolio-featured-rotated {
     position: relative;
     transform: rotate(-3deg);
     overflow: hidden;
@@ -823,9 +824,19 @@ p.tags {
     margin-left: -30px;
 }
 
+.portfolio-featured .portfolio-featured-rotated {
+    transform: rotate(3deg);
+    margin-top: -3%;
+}
+
 .blogpost-featured .blogpost-featured-rotated img.hero-shot {
     width: 100%;
-    margin-top: -20%;
+
+}
+
+.portfolio-featured .portfolio-featured-rotated img.hero-shot.blur.realign {
+    width: 100%;
+    transform: rotate(-3deg);
 }
 
 .blogpost-featured .blogpost-featured-gradient {
@@ -835,6 +846,18 @@ p.tags {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.portfolio-featured .portfolio-featured-overlay {
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    transform: rotate(-3deg);
+    padding-top: 200px;
+    height: 120%;
 }
 
 .blogpost-featured .blogpost-featured-gradient .wrapper {
@@ -1197,28 +1220,7 @@ p.tags {
 
 /* Portfolio Styles */
 .portfolio-header .header .rotated-background {
-    background-color: transparent;
     background: none;
-}
-
-.portfolio-featured-item {
-    max-height: 600px;
-    overflow: hidden;
-    transform: rotate(-3deg);
-    margin-top: -3%;
-    width: calc(100% + 60px);
-    margin-left: -30px;
-}
-
-.portfolio-featured-item .realign {
-    transform: rotate(3deg);
-    background: #000;
-}
-
-.portfolio-featured-item img {
-    width: 100%;
-    filter: blur(10px);
-    opacity: 0.25;
 }
 
 /* Responsive Styles */
