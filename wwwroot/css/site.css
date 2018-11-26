@@ -947,6 +947,17 @@ p.tags {
     margin-top: 150px;
 }
 
+.colored-img-wrapper {
+    position: relative;
+}
+
+.colored-img-wrapper img {
+    max-width: 450px;
+    z-index: 1;
+    position: absolute;
+    top: -119px;
+}
+
 .about-me .quote {
     font-family: 'Abril Fatface', serif;
     font-size: 48px;
@@ -955,7 +966,7 @@ p.tags {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 50px;
+    padding: 50px 50px 100px 50px;
     letter-spacing: 2px;
 }
 
