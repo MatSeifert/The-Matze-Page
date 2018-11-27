@@ -1384,6 +1384,16 @@ p.tags {
     .blogpost-featured-gradient .wrapper {
         padding: 0 100px;
     }
+
+    /* About Me Page */
+    .wrapper.about-me .quote {
+        font-size: 36px;
+    }
+
+    .colored-img-wrapper img {
+        max-width: 350px;
+        top: -65px;
+    }
 }
 
 @media ( max-width: 1000px ) {
@@ -1456,6 +1466,36 @@ p.tags {
     /* Blog */
     .blog-page {
         margin-top: 60%;
+    }
+
+    /* About Me */
+    .wrapper.about-me {
+        padding: 0;
+    }
+
+    .wrapper.about-me .quote {
+        font-size: 28px;
+        padding: 0 25px 75px 25px;
+        min-height: 207px;
+    }
+
+    .colored-img-wrapper img {
+        max-width: 250px;
+        top: -73px;
+    }    
+
+    div.about-me div.grid.grid-2-1 {
+        display: block;
+        margin-right: 0;
+        padding: 0 30px;
+    }
+
+    div.about-me div.grid.grid-2-1 div.offset-right-m {
+        margin-right: 0;
+    }
+
+    div.about-me div.grid.grid-2-1 div.direct-contact {
+        padding: 40px 0;
     }
 }
 
