@@ -975,6 +975,11 @@ p.tags {
     padding: 40px 0;
 }
 
+.direct-contact button {
+    width: 100%;
+    margin: 20px 0;
+}
+
 .direct-contact .headline-sidelined {
     color: #ADB3B0;
     padding: 30px 0 10px 0;
@@ -1414,6 +1419,10 @@ p.tags {
     .section-rotated-background .overwidth div.tech-stack:first-child {
         margin-bottom: 40px;
     }
+
+    .tech-stack p {
+        text-align: center;
+    }
 }
 
 @media ( max-width: 1000px ) {
@@ -1582,6 +1591,14 @@ p.tags {
     .testimonial:last-child {
         margin-bottom: 40px;
     }
+
+    .direct-contact {
+        margin-right: 40px;
+    }
+
+    .direct-contact .headline-sidelined:before, .direct-contact .headline-sidelined:after {
+        width: calc(50% - 90px);
+    }
 }
 
 @media ( max-width: 750px ) {
@@ -1598,7 +1615,12 @@ p.tags {
         background: #FFF;
     }
 
-    .header-nav {
+    .header-nav,
+    .cv-item-thumbnail,
+    .testimonial-image,    
+    .testimonial-image img,
+    .testimonial-link,
+    .testimonial-quote:before {
         display: none;
     }
 
@@ -1895,6 +1917,23 @@ p.tags {
     .blog-main-page .blogpost-featured-content {
         padding: 0;
     }
+
+    .wrapper.about-me {
+        margin-top: 50px;
+    }
+
+    .colored-img-wrapper {
+        display: none;
+    }
+
+    .section-rotated-background .overwidth {
+        display: block;
+    }
+
+    .section-rotated-background .overwidth div.tech-stack:not(:last-child) {
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 30px; 
+    }
 }
 
 @media ( max-width: 350px ) {
@@ -1925,5 +1964,27 @@ p.tags {
 
     .blogpost-featured-content button {
         margin: 40px 0;
+    }
+
+    .cv-item,
+    .testimonial-content {
+        border-right: none !important;
+        border-left: none !important;
+        padding-right: 0 !important;
+    }
+
+    .testimonial-content {
+        padding-left: 0 !important;
+    }
+
+    .cv-item p,
+    .testimonial-author-details,
+    .cv-wrapper button.btn {
+        font-size: 14px;
+    }
+
+    .direct-contact {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
