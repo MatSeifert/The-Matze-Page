@@ -1235,8 +1235,39 @@ p.tags {
 }
 
 /* Portfolio Styles */
+.portfolio-featured .portfolio-featured-rotated {
+    max-height: 650px;
+}
+
 .portfolio-header .header .rotated-background {
     background: none;
+}
+
+.portfolio-featured-image {
+    padding: 20px 40px 0 0;
+}
+
+.portfolio-featured-image img {
+    width: 100%;
+}
+
+.portfolio-featured-snippet {
+    padding: 30px 0 0 20px;
+}
+
+.portfolio-featured-snippet div {
+    color: rgba(255,255,255,0.3);
+    font-size: 18px;
+}
+
+.portfolio-featured-snippet h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.portfolio-featured-snippet p {
+    max-height: 190px;
+    overflow: hidden;
 }
 
 /* Responsive Styles */

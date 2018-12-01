@@ -29,5 +29,10 @@ namespace WebApp.Controllers
 
       return this.View(model);
     }
+
+    public async Task<IActionResult> CaseStudy() 
+    {
+      return this.View();
+    }
   }
 }
