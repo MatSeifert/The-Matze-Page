@@ -80,5 +80,35 @@ namespace WebApp.Helper
 
             return Configuration["DevSettings:DebugUrl"];
         }
+
+        // Gets the string file for a portfolio item or case study the given language
+        public static Dictionary<string, string> GetPortfolioItem(string itemName, string lang)
+        {
+            // Fallback to german
+            lang = String.IsNullOrWhiteSpace(lang) ? "de" : lang; 
+
+            if (String.IsNullOrWhiteSpace(itemName)) 
+            {
+                return null;
+            }
+
+            using (StreamReader reader = File.OpenText($"wwwroot/i18n/portfolio/{lang}/{itemName}.json")) 
+            {
+                string content = reader.ReadToEnd();
+
+                return JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+            }
+        }
+
+        // Get specific String from dictionary, return default as fallback to prevent exceptions
+        public static String GetStringFromDictionary(Dictionary<string, string> source, string key)
+        {
+             if (!source.ContainsKey(key))
+            {
+                return $"n/a: {key}";
+            }
+
+            return source[key];
+        }
     }
 }
