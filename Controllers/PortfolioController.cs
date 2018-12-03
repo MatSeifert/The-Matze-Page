@@ -27,12 +27,23 @@ namespace WebApp.Controllers
       ViewBag.Title = Utils.GetUiString("title.portfolio");
       ViewBag.ActiveLink = 2;
 
+      using (var db = new MysqlDbContext(this.ConnectionString)) 
+      {
+        var featuredItem = await db.Portfolio.FirstOrDefaultAsync(p => p.IsFeatured);
+      }
+
       return this.View(model);
     }
 
-    public async Task<IActionResult> CaseStudy() 
+    public async Task<IActionResult> CaseStudy(string id, string lang) 
     {
-      return this.View();
+      var model = new CaseStudyViewModel();
+      Utils.CheckOrRefreshUiStrings(lang);
+      ViewBag.Title = Utils.GetUiString($"title.portfolio.{id}");
+      ViewBag.ActiveLink = 2;
+      model.Name = id;
+
+      return this.View(model);
     }
   }
 }

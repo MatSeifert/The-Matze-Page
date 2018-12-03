@@ -1,0 +1,65 @@
+@model WebApp.Models.CaseStudyViewModel
+
+@using WebApp.Helper
+
+<!-- FÜR BILDNACHWEIS: <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+
+<div class="portfolio-header" id="portfolio-header">
+    @await Html.PartialAsync("_header", Model)
+</div>
+
+<div class="casestudy">
+    <div class="casestudy-rotated">
+        <img src="~/images/portfolio/look4keys/desktop.png" alt="" class="hero-shot blur realign">
+        <div class="casestudy-overlay">
+            <div class="wrapper">
+                <div class="casestudy-title">look4keys</div>
+                <div class="casestudy-subtitle">Komplettes Redesign einer Preisvergleichsseite für Spiele-Keys</div>
+                <img src="~/images/portfolio/look4keys/preview.png" class="caststudy-preview">
+                <div class="casestudy-scrollformore">
+                    <img src="~/images/heroicon-arrow-down.svg" alt="scroll for more">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: calc(100vh + 120px);" class="wrapper">
+    <div class="grid grid-3-1">
+        <div class="offset-right-l justify">
+            <p>Im stetig wachsenden Markt der digitalen Vertiebsplattformen haben sich in der Vergangenheit zahlreiche sogenannte Keyshops etabliert, welche digitale Produkte, oftmals Games, zu günstigeren Konditionen anbieten, als der reguläre Handel. Dies gelingt unter anderem dadurch, dass lediglich der Freischaltschlüssel eines Produktes verkauft wird, jedoch keine Verpackung oder ähnliches Material. Mit diesem Schlüssel kann das Produkt anschließend bei verschiedenen Plattformen aktiviert und genutzt werden.</p>
+            <p class="offset-top-s">Die Seite look4keys bietet ihren Nutzern die Möglichkeit, sich schnell und unkompliziert eine Preisübersicht bei diesen Keyshops zu verschaffen. 2018 übernahm ich die Verantwortung für das komplett runderneuerte und überarbeitete Design der Seite. Besonderes Augenmerk sollte auf der Seriosität und einem simplen Bedienkonzept der Seite liegen, um den Kern der Seite mehr in den Fokus zu rücken. Dem Nutzer sollte es so einfach wie möglich gemacht werden, den günstigsten Preis für sein gewünschtes Produkt zu finden und diesen bei Bedarf mit anderen Anbietern zu vergleichen, um anschließend eine Kaufentscheidung von der look4keys Webseite aus zu treffen.</p>
+
+
+        </div>
+        <div class="flex flex-col">
+            <div class="casestudy-projectinfo projectinfo-year">
+                <img src="~/images/heroicon-calendar.svg" alt="calendar icon">
+                <span class="val">2018</span>
+                <span>Projektjahr</span>
+            </div>
+            <div class="casestudy-projectinfo projectinfo-coffee">
+                <img src="~/images/heroicon-coffee.svg" alt="coffee icon">
+                <span class="val">27</span>
+                <span style="max-width: 150px;">Verbrauchte Tassen Kaffee</span>
+            </div>
+            <div class="casestudy-projectinfo projectinfo-screens">
+                <img src="~/images/heroicon-image_black.svg" alt="screen icon">
+                <span class="val">24</span>
+                <span>erstellte Screens</span>
+            </div>
+            <div>
+                <span class="tag">Design</span>
+                <span class="tag">UI</span>
+                <span class="tag">Web</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper offset-top-m">
+    <h1>
+        <span>Problemanalyse</span>
+    </h1>
+</div>
