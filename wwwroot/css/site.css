@@ -165,6 +165,10 @@ h2 {
     margin-bottom: 40px;
 }
 
+.offset-bottom-l {
+    margin-bottom: 80px;
+}
+
 .seperator {
     border-top: 1px solid #F2F2F2;
     padding-top: 40px;
@@ -258,6 +262,51 @@ h2 {
 
 .blur {
     filter: blur(10px);
+}
+
+.quote {
+    font-family: 'Abril Fatface', serif;
+    font-size: 40px;
+    text-align: center;
+    color: #616663;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    line-height: 140%;
+}
+
+.relative {position: relative}
+.z0{z-index:0}
+.z1{z-index:1}
+
+/* defaults for sections */
+div.section-light {
+    background: #E2ECE7;
+}
+
+div.rotated-2deg-neg {
+    transform: rotate(-2deg);
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+
+div.realign-2deg-neg {
+    transform: rotate(2deg);
+    padding: 1px 0;
+    margin: 40px 0;
+}
+
+div.rotated-2deg {
+    transform: rotate(2deg);
+    width: calc(100% + 60px);
+    margin-left: -30px;
+}
+
+div.realign-2deg {
+    transform: rotate(-2deg);
+    padding: 1px 0;
+    margin: 40px 0;
 }
 
 /* Button styles */
@@ -1368,6 +1417,35 @@ p.tags {
     font-size: 18px;
     margin-top: -10px;
     line-height: 130%;
+}
+
+.hero-headline {
+    font-size: 100px;
+    font-family: 'Abril Fatface', serif;
+    text-align: center;
+}
+
+.l4k-hero-branding {
+    background: url('../images/stockimage_meet01.jpg');
+    background-size: 100%;
+    margin-top: -120px;
+    height: 700px;
+}
+
+.l4k-hero-branding > .overlay {
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+}
+
+.l4k-hero-branding > .overlay > .realign-2deg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.l4k-hero-branding .hero-headline {
+    color: #fff;
 }
 
 /* Responsive Styles */
