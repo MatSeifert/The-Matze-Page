@@ -22,15 +22,10 @@
             </div>
 
             <div class="blogpost-featured-snippet bold">@Model.Post.Post.Snippet</div>
-            <div id="content">@Model.Post.Post.Content</div>
+            <div id="md-content">@Model.Post.Post.Content</div>
         </div>
         <div id="1">
 
         </div>
     </div>
 </div>
-
-<script>
-    var converter = new showdown.Converter();
-    $('#content').html(converter.makeHtml($('#content').text()));
-</script>
