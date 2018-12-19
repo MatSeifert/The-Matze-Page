@@ -955,7 +955,7 @@ div.realign-2deg {
 .portfolio-featured .portfolio-featured-rotated,
 .casestudy .casestudy-rotated {
   position: relative;
-  transform: rotate(-3deg);
+  @include prefix(transform, rotate(-3deg), ms moz webkit);
   overflow: hidden;
   max-height: 600px;
   margin-bottom: 3%;
@@ -965,28 +965,44 @@ div.realign-2deg {
 
 .portfolio-featured .portfolio-featured-rotated,
 .casestudy .casestudy-rotated {
-  transform: rotate(3deg);
+  @include prefix(transform, rotate(3deg), ms moz webkit);
   margin-top: -3%;
 }
 
-.blogpost-featured .blogpost-featured-rotated img.hero-shot {
-  width: 100%;
+.blogpost-featured {
+  .blogpost-featured-rotated img.hero-shot {
+    width: 100%;
+  }
 
+  .blogpost-featured-gradient {
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .wrapper {
+      @include prefix(transform, rotate(3deg), ms moz webkit);
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+    }
+  }
+  
+  h1 {
+    color: #fff;
+
+    span {
+      background-image: linear-gradient(to right, rgba(52, 102, 11, 0.5) 0%, rgba(52, 102, 11, 0.5) 100%);
+    }
+  }
 }
 
 .portfolio-featured .portfolio-featured-rotated img.hero-shot.blur.realign,
 .casestudy .casestudy-rotated img.hero-shot.blur.realign {
   width: 100%;
-  transform: rotate(-3deg);
-}
-
-.blogpost-featured .blogpost-featured-gradient {
-height: 100%;
-background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 100%);
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+  @include prefix(transform, rotate(-3deg), ms moz webkit);
 }
 
 .portfolio-featured .portfolio-featured-overlay,
@@ -997,24 +1013,9 @@ width: 100%;
   top: 0;
   left: 0;
   width: 100%;  
-  transform: rotate(-3deg);
-  padding-top: 200px;
+  @include prefix(transform, rotate(-3deg), ms moz webkit);
+  padding-top: $defaultOffset * 10;
   height: 120%;
-}
-
-.blogpost-featured .blogpost-featured-gradient .wrapper {
-  transform: rotate(3deg);
-  display: flex;
-  align-items: flex-end;
-  height: 100%;
-}
-
-.blogpost-featured h1 {
-  color: #fff;
-}
-
-.blogpost-featured h1 span {
-  background-image: linear-gradient(to right, rgba(52, 102, 11, 0.5) 0%, rgba(52, 102, 11, 0.5) 100%);
 }
 
 .blogpost-featured-content {
@@ -1027,11 +1028,11 @@ width: 100%;
   font-size: 24px;
   opacity: 0.8;
   letter-spacing: 1px;
-}
 
-.blogpost-featured-date img {
-  width: 26px;
-  margin-right: 5px;
+  img {
+    width: 26px;
+    margin-right: 5px;    
+  }
 }
 
 .blogpost-featured-snippet {
@@ -1049,39 +1050,41 @@ width: 100%;
   overflow: hidden;
 }
 
-.blogpost-content , .blog-post a h2 {
+.blogpost-content, .blog-post a h2 {
   line-height: 130%;
   transition: color 0.3s;
 }
 
 .blogpost-content a:hover h2, .blog-post a:hover h2 {
-  color: #28A35F;
+  color: $p500;
 }
 
-.blogpost-thumbnail a {
-  background: linear-gradient(160deg, #28A35F 0%,#5CB039 25%, #92BB20 50%,#C8C400 75%, #FFC800 100%);
-  display: block;
-}
+.blogpost-thumbnail {
+  a {
+    background: $gradient_l;
+    display: block;
+  }
 
-.blogpost-thumbnail img {
-  height: 100%;
-  max-height: 235px;
-  transition: transform 0.3s, opacity 0.3s;
-}
+  img {
+    height: 100%;
+    max-height: 235px;
+    transition: transform 0.3s, opacity 0.3s;
 
-.blogpost-thumbnail img:hover {
-  transform: scale(1.2);
-  opacity: 0.3;
+    &:hover {
+      @include prefix(transform, scale(1.2), ms moz webkit);
+      opacity: 0.3;
+    }
+  }
 }
 
 .blogpost-content-date {
   opacity: 0.3;
   font-size: 18px;
-  padding-bottom: 20px;
-}
+  padding-bottom: $defaultOffset;
 
-.blogpost-content-date img {
-  width: 18px;
+  img {
+    width: 18px;
+  }
 }
 
 /* Abotu Me Page */
@@ -1101,10 +1104,10 @@ width: 100%;
 }
 
 .about-me .quote {
-  font-family: 'Abril Fatface', serif;
+  font-family: $abril;
   font-size: 48px;
   text-align: center;
-  color: #616663;
+  color: $n800;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1114,32 +1117,32 @@ width: 100%;
 
 .section-rotated-background.about-me {
   margin-top: -10px;
-  padding: 40px 0;
+  padding: ($defaultOffset * 2) 0;
 }
 
 .direct-contact button {
   width: 100%;
-  margin: 20px 0;
+  margin: $defaultOffset 0;
 }
 
 .direct-contact .headline-sidelined {
-  color: #ADB3B0;
+  color: $n500;
   padding: 30px 0 10px 0;
 }
 
 .direct-contact .headline-sidelined:before, .direct-contact .headline-sidelined:after {
   width: 22%;
-  border-color: #C6CCC9;
+  border-color: $n400;
   top: 45px;
 }
 
 .direct-contact div:not(.headline-sidelined) {
-  color: #616663;
+  color: $n800;
 }
 
 .direct-contact img {
   opacity: 0.6;
-  width: 20px;
+  width: $defaultOffset;
   margin-top: -1px;
 }
 
