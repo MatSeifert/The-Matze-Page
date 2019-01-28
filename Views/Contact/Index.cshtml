@@ -2,6 +2,61 @@
 
 @using WebApp.Helper
 
-@await Html.PartialAsync("_header", Model)
+<div class="transparent-header" id="transparent-header">
+  @await Html.PartialAsync("_header", Model)
+</div>
 
-<div>Contact Me!</div>
+<div class="header">
+  <div class="rotated-background contact">
+    <div class="realign">
+      <div class="wrapper">
+        <div class="grid grid-1-1">
+          <div>
+            <img src="~/images/contact_project.svg">
+          </div>
+          <div class="flex flex-col">
+            <div class="quote center">
+              Sie haben bereits konkrete Pläne oder eine großartige Idee?
+            </div>
+            <div class="center">
+              <button class="btn btn-light">Projektanfrage senden</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="wrapper offset-top-m">
+  <h1>
+    <span>Kontaktieren Sie mich</span>
+  </h1>
+
+  <div class="grid grid-1-1 offset-top-m offset-bottom-l">
+    <div>
+      <form class="contact-form">
+        <div class="grid grid-1-1">
+          <div><input type="text" placeholder="Vorname"></div>
+          <div><input type="text" placeholder="Nachname"></div>
+        </div>
+        <input type="text" placeholder="E-Mail Adresse">
+        <input type="text" placeholder="Betreff">
+        <textarea placeholder="Ihre Nachricht"></textarea>
+        <div class="offset-bottom-s">
+          <input type="checkbox" id="#privacy" name="privacy">
+          <label for="privacy">Datenschutzbestimmung gelesen</label>
+        </div>
+        <button class="btn btn-primary">
+          Abschicken 
+        </button>
+        <button class="btn" style="float: right">
+          Formular zurücksetzen
+        </button>
+      </form>
+    </div>
+    <div class="sendmail-logo">
+      <img src="~/images/contact_sendmail.svg">
+    </div>
+  </div>
+</div>

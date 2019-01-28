@@ -1398,7 +1398,7 @@ div.realign-2deg {
   }
 }
 
-.portfolio-header {
+.transparent-header {
   .header {
     .rotated-background {
       background: none;
@@ -1599,6 +1599,83 @@ div.realign-2deg {
       }
     }
   }
+}
+
+/* Contact Page adjustments */
+.rotated-background.contact {
+  max-height: 700px;
+  margin-top: -5%;
+  transform: rotate(2deg);
+
+  .realign {
+    transform: rotate(-2deg);
+  }
+
+  .grid.grid-1-1 {
+    padding-top: 200px;
+
+    img {
+      width: 100%;
+    }
+
+    .flex {
+      .center {
+        text-align: center;
+      }
+    }
+
+    .quote {
+      margin: auto;
+      max-width: 450px;
+      color: #FFF;
+    }
+  }
+}
+
+.contact-form {
+  input, textarea {
+    margin: 20px 20px 20px 0;
+    width: 100%;
+  }
+
+  div.grid.grid-1-1 {
+    div:first-child {
+      margin-right: 20px;
+    }
+
+    div:last-child {
+      margin-left: 20px;
+    }
+  }
+}
+
+div.sendmail-logo {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    max-width: 750px;
+  }
+}
+
+/* Forms -- general */
+input, textarea {
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: 1px solid $n300;
+  background: $n100;
+
+  &::placeholder {
+    color: $n400;
+  }
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-left: 20px;
 }
 
 /* Responsive Styles */
