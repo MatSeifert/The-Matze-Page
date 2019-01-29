@@ -269,6 +269,14 @@ a {
   &.grid-3-1 {
     @include gridPrefix(3fr 1fr);
   }
+
+  &.grid-4-1 {
+    @include gridPrefix(4fr 1fr);
+  }
+
+  &.grid-5-1 {
+    @include gridPrefix(5fr 1fr);
+  }
 }
 
 .v-padding-m {
@@ -1712,6 +1720,38 @@ input:checked + label:before {
   content: url(../images/checkmark.svg);
   background: $p500;
   border-color: $p500;
+}
+
+/* Quotes */
+.quote-large {
+  font-family: $abril;
+
+  .quotation-mark {
+    font-family: inherit;
+    font-size: 300px;
+    line-height: 25%;
+    margin-top: 150px;
+    color: $n400;
+  }
+
+  .quote {
+    color: $n900;
+    font-size: 75px;
+  }
+
+  .quote-author {
+    letter-spacing: 5px;
+    color: $n500;
+    font-size: 32px;
+
+    &:before {
+      content: " ";
+      display: block;
+      border-top: 1px solid $n600;
+      max-width: 180px;
+      margin: 50px auto;
+    }
+  }
 }
 
 /* Responsive Styles */
