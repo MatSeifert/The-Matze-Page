@@ -16,10 +16,10 @@
           </div>
           <div class="flex flex-col">
             <div class="quote center">
-              Sie haben bereits konkrete Pläne oder eine großartige Idee?
+              @Utils.GetUiString("contact.projectRequestDescription")
             </div>
             <div class="center">
-              <button class="btn btn-light">Projektanfrage senden</button>
+              <button class="btn btn-light">@Utils.GetUiString("contact.projectRequest")</button>
             </div>
           </div>
         </div>
@@ -30,28 +30,28 @@
 
 <div class="wrapper offset-top-m">
   <h1>
-    <span>Kontaktieren Sie mich</span>
+    <span>@Utils.GetUiString("headline.contactMe")</span>
   </h1>
 
   <div class="grid grid-1-1 offset-top-m offset-bottom-l">
     <div>
       <form class="contact-form">
         <div class="grid grid-1-1">
-          <div><input type="text" placeholder="Vorname"></div>
-          <div><input type="text" placeholder="Nachname"></div>
+          <div><input type="text" placeholder='@Utils.GetUiString("input.firstName")'></div>
+          <div><input type="text" placeholder='@Utils.GetUiString("input.lastName")'></div>
         </div>
-        <input type="text" placeholder="E-Mail Adresse">
-        <input type="text" placeholder="Betreff">
-        <textarea placeholder="Ihre Nachricht"></textarea>
+        <input type="email" placeholder='@Utils.GetUiString("input.email")'>
+        <input type="text" placeholder='@Utils.GetUiString("input.subject")'>
+        <textarea placeholder='@Utils.GetUiString("input.message")'></textarea>
         <div class="offset-bottom-s">
-          <input type="checkbox" id="#privacy" name="privacy">
-          <label for="privacy">Datenschutzbestimmung gelesen</label>
+          <input type="checkbox" id="privacy">
+          <label for="privacy">@Utils.GetUiString("input.confirmPrivacy")</label>
         </div>
-        <button class="btn btn-primary">
-          Abschicken 
+        <button type="submit" class="btn btn-primary">
+          @Utils.GetUiString("input.submit") 
         </button>
         <button class="btn" style="float: right">
-          Formular zurücksetzen
+          @Utils.GetUiString("input.reset")
         </button>
       </form>
     </div>

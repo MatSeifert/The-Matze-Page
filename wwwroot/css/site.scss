@@ -977,6 +977,7 @@ div.realign-2deg {
 .blogpost-featured {
   .blogpost-featured-rotated img.hero-shot {
     width: 100%;
+    margin-top: -20%;
   }
 
   .blogpost-featured-gradient {
@@ -1574,13 +1575,13 @@ div.realign-2deg {
 .l4k__new-logo--description {
   position: relative;
   overflow: hidden;
-  transform: rotate(-2deg);
+  @include prefix(transform, rotate(-2deg), ms moz webkit);
   width: calc(100% + 60px);
   margin-left: -30px;
 
   img {
     width: 100%;
-    transform: rotate(2deg);
+    @include prefix(transform, rotate(2deg), ms moz webkit);
     margin-top: -5%;
     position: absolute;
     z-index: -1;
@@ -1591,7 +1592,7 @@ div.realign-2deg {
     padding: ($defaultOffset * 4) 0;
 
     .grid {
-      transform: rotate(2deg);
+      @include prefix(transform, rotate(2deg), ms moz webkit);
       color: #fff;
 
       p {
@@ -1605,10 +1606,10 @@ div.realign-2deg {
 .rotated-background.contact {
   max-height: 700px;
   margin-top: -5%;
-  transform: rotate(2deg);
+  @include prefix(transform, rotate(2deg), ms moz webkit);
 
   .realign {
-    transform: rotate(-2deg);
+    @include prefix(transform, rotate(-2deg), ms moz webkit);
   }
 
   .grid.grid-1-1 {
@@ -1665,17 +1666,52 @@ div.sendmail-logo {
 input, textarea {
   padding: 5px 20px;
   border-radius: 25px;
-  border: 1px solid $n300;
+  border: 1px solid;
+  border-color: $n300;
   background: $n100;
+  outline: none;
+  transition: background 0.2s, border-color 0.2s;
 
   &::placeholder {
     color: $n400;
   }
+
+  &:focus {
+    border-color: $p500;
+    background: $p100;
+  }
 }
 
 input[type="checkbox"] {
-  width: auto;
-  margin-left: 20px;
+  width: 0px;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 400;
+
+  &:before {
+    content: ' ';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: $n100;
+    border: 1px solid;
+    border-color: $n300;
+    transition: background 0.2s, border-color 0.2s;
+    position: absolute;  
+    left: -20px;
+    top: 3px;
+  }
+}
+
+input:checked + label:before {
+  content: url(../images/checkmark.svg);
+  background: $p500;
+  border-color: $p500;
 }
 
 /* Responsive Styles */
