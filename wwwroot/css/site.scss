@@ -1610,6 +1610,53 @@ div.realign-2deg {
   }
 }
 
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.font-preview_anton {
+  font-size: 200px;
+  color: $p500;
+  text-transform: uppercase;
+  display: block;
+  line-height: 100%;
+  margin-bottom: $defaultOffset * 2;
+}
+
+.muli {
+  font-family: 'Muli', sans-serif;
+}
+
+.font-preview_muli {
+  font-size: 250px;
+  color: $n900;
+  display: block;
+  line-height: 100%;
+}
+
+tr.l4k-h1 > td {
+  font-size: 36px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+tr.l4k-h2 > td {
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+tr.l4k-h3 > td {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+tr.l4k-meta > td {
+  color: $n500;
+}
+
+
 /* Contact Page adjustments */
 .rotated-background.contact {
   max-height: 700px;
@@ -1667,6 +1714,34 @@ div.sendmail-logo {
     right: 0;
     z-index: -1;
     max-width: 750px;
+  }
+}
+
+/* Tables -- general */
+table {
+  width: 100%;
+
+  th {
+    text-transform: uppercase;
+    color: $n500;
+    letter-spacing: 1px;
+    border-bottom: 2px solid $n400;
+    padding-bottom: $defaultOffset;
+
+    &.right {
+      text-align: right;
+    }
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+  }
+
+  td {
+    padding-top: $defaultOffset;
+    font-family: inherit;
   }
 }
 
