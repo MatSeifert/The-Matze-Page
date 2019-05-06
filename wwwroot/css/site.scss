@@ -1746,6 +1746,11 @@ table {
 }
 
 /* Forms -- general */
+input {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 input, textarea {
   padding: 5px 20px;
   border-radius: 25px;
@@ -1756,12 +1761,41 @@ input, textarea {
   transition: background 0.2s, border-color 0.2s;
 
   &::placeholder {
-    color: $n400;
+    color: $n500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   &:focus {
+    border-color: $p200;
+    background: $p200;
+
+    &::placeholder {
+      color: $p300;
+    }
+  }
+
+  &.valid {
     border-color: $p500;
-    background: $p100;
+    position: relative;
+
+    &:after {
+      content: 'valid';
+      width: 100%;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+div.valid {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    content: url(./../images/checkmark.svg);
   }
 }
 

@@ -37,7 +37,7 @@
     <div>
       <form class="contact-form">
         <div class="grid grid-1-1">
-          <div><input type="text" placeholder='@Utils.GetUiString("input.firstName")'></div>
+          <div id="firstName-wrapper"><input type="text" placeholder='@Utils.GetUiString("input.firstName")' id="firstName"></div>
           <div><input type="text" placeholder='@Utils.GetUiString("input.lastName")'></div>
         </div>
         <input type="email" placeholder='@Utils.GetUiString("input.email")'>
@@ -47,7 +47,7 @@
           <input type="checkbox" id="privacy">
           <label for="privacy">@Utils.GetUiString("input.confirmPrivacy")</label>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" id="sbmt">
           @Utils.GetUiString("input.submit") 
         </button>
         <button class="btn" style="float: right">
@@ -60,3 +60,5 @@
     </div>
   </div>
 </div>
+
+<script src="~/js/formValidation.js"></script>
