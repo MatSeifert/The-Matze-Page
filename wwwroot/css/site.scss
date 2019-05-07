@@ -23,6 +23,17 @@ $n700: #79807C;
 $n800: #616663;
 $n900: #4D534F;
 
+$e100: #FFA6B7;
+$e200: #FF758F;
+$e300: #FF5473;
+$e400: #F03255;
+$e500: #D20127;
+$e600: #BD0224;
+$e700: #A4011F;
+$e800: #840119;
+$e900: #5E0112;
+
+
 /* Config Params */
 $contentWidth: 1200px;
 $defaultOffset: 20px;
@@ -1778,24 +1789,39 @@ input, textarea {
   &.valid {
     border-color: $p500;
     position: relative;
+  }
 
-    &:after {
-      content: 'valid';
-      width: 100%;
-      position: absolute;
-      right: 0;
-    }
+  &.invalid {
+    border-color: $e400;
+    position: relative;
   }
 }
 
-div.valid {
-  position: relative;
+span.validation-info {
+  display: none;
 
-  &:after {
+  &.valid {
+    display: block;
     position: absolute;
-    right: 20px;
-    top: 25px;
-    content: url(./../images/checkmark.svg);
+    top: 26px;
+    right: 15px;
+    background: url(../images/validation_valid.svg);
+    width: 32px;
+    height: 32px;
+  }
+
+  &.invalid {
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 15px;
+    background: url(../images/validation_invalid.svg);
+    width: 32px;
+    height: 32px;
+
+    &:after {
+      // reserverd for error message
+    }
   }
 }
 

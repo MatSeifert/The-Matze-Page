@@ -28,20 +28,39 @@ function validate(type, content) {
     }
 }
 
-// Listen to changes on FirstName Field
-$('#firstName').blur(function() {
-    if (validate(validationType.NAME, $('#firstName').val())) {
-        $('#firstName').addClass('valid');
-        $('#firstName-wrapper').addClass('valid');
-    } else {
-        $('#firstName').addClass('invalid');
-        $('#firstName-wrapper').addClass('invalid');
+function handleStyles(field, validationType) {
+    if (!$(`#${field}`).val().length) {
+        // Reset to default for emtpy inputs
+        removeClasses(field);
+        return;
     }
-})
-// Reset FirstName Styles
-$('#firstName').focus(function() {
-    $('#firstName').removeClass('invalid');
-    $('#firstName-wrapper').removeClass('invalid');
-    $('#firstName').removeClass('valid');
-    $('#firstName-wrapper').removeClass('valid');
-})
+
+    if (validate(validationType, $(`#${field}`).val())) {
+        $(`#${field}`).addClass('valid');
+        $(`#${field}-validation-info`).addClass('valid');
+    } else {
+        $(`#${field}`).addClass('invalid');
+        $(`#${field}-validation-info`).addClass('invalid');
+    }
+}
+
+function removeClasses(field) {
+    $(`#${field}`).removeClass('invalid');
+    $(`#${field}-validation-info`).removeClass('invalid');
+    $(`#${field}`).removeClass('valid');
+    $(`#${field}-validation-info`).removeClass('valid');
+}
+
+// Listen to changes
+$('#firstName').blur(function() {handleStyles('firstName', validationType.NAME);})
+$('#lastName').blur(function() {handleStyles('lastName', validationType.NAME);})
+$('#email').blur(function() {handleStyles('email', validationType.NAME);})
+$('#subject').blur(function() {handleStyles('subject', validationType.NAME);})
+$('#message').blur(function() {handleStyles('message', validationType.NAME);})
+
+// Reset Styles onFocus
+$('#firstName').focus(function() {removeClasses('firstName');})
+$('#lastName').focus(function() {removeClasses('lastName');})
+$('#email').focus(function() {removeClasses('email');})
+$('#subject').focus(function() {removeClasses('subject');})
+$('#message').focus(function() {removeClasses('message');})
