@@ -1825,6 +1825,34 @@ span.validation-info {
   }
 }
 
+button#submit {
+  &.disabled {
+    color: rgba(255,255,255,0.5);
+    background: $n500;
+  }
+
+  &.submit-button_20p {
+    color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 10%, #C8C400 20%, $n500 20%);    
+  }
+  &.submit-button_40p {
+    color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 20%, #C8C400 40%, $n500 20%);    
+  }
+  &.submit-button_60p {
+    color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 30%, #C8C400 60%, $n500 20%);    
+  }
+  &.submit-button_80p {
+    color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 40%, #C8C400 80%, $n500 20%);    
+  }
+  &.enabled {
+    color: #fff;
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 50%, #C8C400 100%);    
+  }
+}
+
 input[type="checkbox"] {
   width: 0px;
 }
