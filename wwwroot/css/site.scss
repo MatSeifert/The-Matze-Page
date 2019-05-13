@@ -770,7 +770,7 @@ div.realign-2deg {
     }
 
     h2 {
-      padding: 10px 0 30px 0;
+      padding: 5px 0 10px 0;
     }
   }
 }
@@ -1346,47 +1346,45 @@ div.realign-2deg {
 
 .testimonial-image img {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: $defaultOffset;
+  margin-top: $defaultOffset / 4;
 }
 
 .testimonial-quote{
   &:before {
-    content: "\201E";
+    content: "\201C";
     font-family: $abril;
-    color: $n200;
-    font-size: 200px;
+    color: $p200;
+    font-size: 250px;
     position: absolute;
-    top: -70px;
-    left: 210px;
+    top: 70px;
+    left: -20px;
     z-index: -1;
   }
 
   p {
+    font-family: Merriweather;
+    font-style: italic;
+    letter-spacing: 1px;
     padding-top: 10px;
   }
 }
 
 .testimonial-author {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: $p500;
   font-weight: 500;
-
-  &:before {
-    content: "\2014";
-    margin-right: 8px;
-  }
 }
 
 .testimonial-author-details {
-  color: $n500;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: $n700;
+  font-size: 16px;
 }
 
-.grid.grid-1-3.testimonial{ 
+.grid.grid-1-2.testimonial{ 
   .testimonial-quote:before {
     left: $defaultOffset;
   }
@@ -1394,13 +1392,8 @@ div.realign-2deg {
   .testimonial-content {
     border-left: 4px solid $p500;
     border-right: none;
-    margin-left: -50px;
-    padding-left: 50px;
-  }
-
-  .testimonial-image {
-    margin-left: $defaultOffset * 2;
-    margin-right: 0;
+    margin-left: -40px;
+    padding-left: 40px;
   }
 }
 
@@ -1766,7 +1759,7 @@ input, textarea {
   padding: 5px 20px;
   border-radius: 25px;
   border: 1px solid;
-  border-color: $n300;
+  border-color: $n400;
   background: $n100;
   outline: none;
   transition: background 0.2s, border-color 0.2s;
@@ -1829,23 +1822,28 @@ button#submit {
   &.disabled {
     color: rgba(255,255,255,0.5);
     background: $n500;
+    border: 1px solid rgba(255,255,255,0.5);
   }
 
-  &.submit-button_20p {
+  &.submit-button_17p {
     color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 10%, #C8C400 20%, $n500 20%);    
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 8%, #C8C400 17%, $n500 20%);    
   }
-  &.submit-button_40p {
+  &.submit-button_33p {
     color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 20%, #C8C400 40%, $n500 20%);    
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 16%, #C8C400 33%, $n500 20%);    
   }
-  &.submit-button_60p {
+  &.submit-button_50p {
     color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 30%, #C8C400 60%, $n500 20%);    
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 25%, #C8C400 50%, $n500 20%);    
   }
-  &.submit-button_80p {
+  &.submit-button_67p {
     color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 40%, #C8C400 80%, $n500 20%);    
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 33%, #C8C400 67%, $n500 20%);    
+  }
+  &.submit-button_83p {
+    color: rgba(255,255,255,0.5);
+    background: linear-gradient(90deg, #28A35F 0%, #70B42F 41%, #C8C400 83%, $n500 20%);    
   }
   &.enabled {
     color: #fff;

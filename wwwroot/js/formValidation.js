@@ -8,27 +8,36 @@ const validationType = {
     TEXT: 'text'
 }
 
-let submitButtonLevel = 0;
+var state = {
+    firstname: false,
+    lastName: false,
+    email: false,
+    subject: false,
+    message: false,
+    privacy: false
+}
 
 function invokeButtonUpdate() {
-    console.log('Buttonlevel: ' + submitButtonLevel)
     // remove previous class
     $('#submit').removeClass();
 
     switch(submitButtonLevel) {
         case 1:
-            $('#submit').addClass('btn submit-button_20p');
+            $('#submit').addClass('btn submit-button_17p');
             break;
         case 2: 
-            $('#submit').addClass('btn submit-button_40p');
+            $('#submit').addClass('btn submit-button_33p');
             break;
         case 3: 
-            $('#submit').addClass('btn submit-button_60p');
+            $('#submit').addClass('btn submit-button_50p');
             break;
         case 4: 
-            $('#submit').addClass('btn submit-button_80p');
+            $('#submit').addClass('btn submit-button_67p');
             break;
         case 5: 
+            $('#submit').addClass('btn submit-button_83p');
+            break;
+        case 6: 
             $('#submit').addClass('btn enabled');
             break;
         default: 
@@ -102,6 +111,7 @@ function removeClasses(field) {
 }
 
 // TODO: Invoke submit button default state
+invokeButtonUpdate();
 
 // Listen to changes
 $('#firstName').blur(function() {handleStyles('firstName', validationType.NAME);})
