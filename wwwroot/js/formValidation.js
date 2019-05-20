@@ -1,15 +1,9 @@
-/**
- * This will be validated serverside again
- */
+const colors = ['#28A35F', '#70B42F', '#C8C400', '#efefef']
+const valTypes = {NAME: 'name', MAIL: 'mail', TEXT: 'text'}
 
-const validationType = {
-    NAME: 'name',
-    MAIL: 'mail',
-    TEXT: 'text'
-}
-
+// Default state
 var state = {
-    firstname: false,
+    firstName: false,
     lastName: false,
     email: false,
     subject: false,
@@ -17,112 +11,98 @@ var state = {
     privacy: false
 }
 
-function invokeButtonUpdate() {
-    // remove previous class
-    $('#submit').removeClass();
-
-    switch(submitButtonLevel) {
-        case 1:
-            $('#submit').addClass('btn submit-button_17p');
-            break;
-        case 2: 
-            $('#submit').addClass('btn submit-button_33p');
-            break;
-        case 3: 
-            $('#submit').addClass('btn submit-button_50p');
-            break;
-        case 4: 
-            $('#submit').addClass('btn submit-button_67p');
-            break;
-        case 5: 
-            $('#submit').addClass('btn submit-button_83p');
-            break;
-        case 6: 
-            $('#submit').addClass('btn enabled');
-            break;
-        default: 
-            $('#submit').addClass('btn disabled');
-            break;
-    }
+function setState(key, value) {
+    state[key] = value
+    setButtonLevel()
 }
 
-function validate(type, content) {
-    if (!type) {
-        return;
+function setButtonLevel() {
+    let validationLevel = 0
+
+    for (let field in state) {
+        state[field] ? validationLevel++ : null
     }
 
-    switch(type) {
-        case validationType.NAME:
-            let result = content.length >= 2 ? true : false;
-            return result;
-            break;
-
-        case validationType.TEXT:
-            return null;
-            break;
-
-        case validationType.MAIL: 
-            return null;
-            break;
-    }
+    setGradient((validationLevel / Object.keys(state).length) * 100)
 }
 
-function handleStyles(field, validationType) {
-    if (!$(`#${field}`).val().length) {
-        // Reset to default for emtpy inputs
-        removeClasses(field);
-        // Change Button Style
-        if (submitButtonLevel > 0) {
-            submitButtonLevel--;
-        }
-        invokeButtonUpdate();
-
-        return;
+function setGradient(maxLevel) {
+    if (maxLevel == 0) {
+        $('#submit').removeAttr("style").addClass('disabled')
+        return
     }
 
-    if (validate(validationType, $(`#${field}`).val())) {
-        $(`#${field}`).addClass('valid');
-        $(`#${field}-validation-info`).addClass('valid');
-        // Change Button Style
-        if (submitButtonLevel < 5) {
-            submitButtonLevel++;
-        }
-        invokeButtonUpdate();        
+    $('#submit').removeClass('disabled').css({
+        background: `linear-gradient(90deg, ${colors[0]} 0%, ${colors[1]} ${maxLevel/2}%, ${colors[2]} ${maxLevel}%, ${colors[3]} ${maxLevel}%)`
+    })
+}
+
+function setFieldStyles(fieldName, isValid) {
+    if (isValid) {
+        $(`#${fieldName}`).removeClass().addClass('valid')
+        $(`#${fieldName}-validation-info`).removeClass().addClass('validation-info valid')
     } else {
-        $(`#${field}`).addClass('invalid');
-        $(`#${field}-validation-info`).addClass('invalid');
-        // Change Button Style
-        if (submitButtonLevel > 0) {
-            submitButtonLevel--;
-        }
-        invokeButtonUpdate();
+        $(`#${fieldName}`).removeClass().addClass('invalid')
+        $(`#${fieldName}-validation-info`).removeClass().addClass('validation-info invalid')
+    }
+}
+
+function resetFieldStyles(fieldName) {
+    $(`#${fieldName}`).removeClass()
+    $(`#${fieldName}-validation-info`).removeClass()
+}
+
+function validate(validationType, fieldName) {
+    let validationResult = true
+
+    switch(validationType) {
+        case valTypes.NAME:
+            validationResult = $(`#${fieldName}`).val().length != 0 ? true : false
+            break
+        case valTypes.MAIL:
+            let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            validationResult = re.test($(`#${fieldName}`).val().toLowerCase())
+            break
+        case valTypes.TEXT:
+            validationResult = $(`#${fieldName}`).val().length > 3 ? true : false
+            break
     }
 
-    invokeButtonUpdate();
-}
+    if ($(`#${fieldName}`).val().length == 0) {
+        resetFieldStyles(fieldName)
+    } else {
+        setFieldStyles(fieldName, validationResult)
+    }
 
-function removeClasses(field) {
-    // TODO: Optimize with parameterless call
-    $(`#${field}`).removeClass('invalid');
-    $(`#${field}-validation-info`).removeClass('invalid');
-    $(`#${field}`).removeClass('valid');
-    $(`#${field}-validation-info`).removeClass('valid');
-    invokeButtonUpdate();
+    setState(fieldName, validationResult)
 }
-
-// TODO: Invoke submit button default state
-invokeButtonUpdate();
 
 // Listen to changes
-$('#firstName').blur(function() {handleStyles('firstName', validationType.NAME);})
-$('#lastName').blur(function() {handleStyles('lastName', validationType.NAME);})
-$('#email').blur(function() {handleStyles('email', validationType.NAME);})
-$('#subject').blur(function() {handleStyles('subject', validationType.NAME);})
-$('#message').blur(function() {handleStyles('message', validationType.NAME);})
+$('#firstName').blur(function() {validate(valTypes.NAME, 'firstName')})
+$('#lastName').blur(function() {validate(valTypes.NAME, 'lastName')})
+$('#email').blur(function() {validate(valTypes.MAIL, 'email')})
+$('#subject').blur(function() {validate(valTypes.TEXT, 'subject')})
+$('#message').blur(function() {validate(valTypes.TEXT, 'message')})
+$('#privacy').change(function() {
+    setState('privacy', $(this).is(':checked'))
+})
 
-// Reset Styles onFocus
-$('#firstName').focus(function() {removeClasses('firstName');})
-$('#lastName').focus(function() {removeClasses('lastName');})
-$('#email').focus(function() {removeClasses('email');})
-$('#subject').focus(function() {removeClasses('subject');})
-$('#message').focus(function() {removeClasses('message');})
+// Handle reset button
+$('#reset').click(function() {
+    state = {
+        firstName: false,
+        lastName: false,
+        email: false,
+        subject: false,
+        message: false,
+        privacy: false
+    }
+
+    for (let field in state) {
+        resetFieldStyles(field)
+    }
+
+    setButtonLevel()
+})
+
+setButtonLevel()

@@ -1819,35 +1819,11 @@ span.validation-info {
 }
 
 button#submit {
-  &.disabled {
-    color: rgba(255,255,255,0.5);
-    background: $n500;
-    border: 1px solid rgba(255,255,255,0.5);
-  }
+  box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.15);
 
-  &.submit-button_17p {
-    color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 8%, #C8C400 17%, $n500 20%);    
-  }
-  &.submit-button_33p {
-    color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 16%, #C8C400 33%, $n500 20%);    
-  }
-  &.submit-button_50p {
-    color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 25%, #C8C400 50%, $n500 20%);    
-  }
-  &.submit-button_67p {
-    color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 33%, #C8C400 67%, $n500 20%);    
-  }
-  &.submit-button_83p {
-    color: rgba(255,255,255,0.5);
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 41%, #C8C400 83%, $n500 20%);    
-  }
-  &.enabled {
-    color: #fff;
-    background: linear-gradient(90deg, #28A35F 0%, #70B42F 50%, #C8C400 100%);    
+  &.disabled {
+    color: rgb(255,255,255);
+    background: $n300;
   }
 }
 
