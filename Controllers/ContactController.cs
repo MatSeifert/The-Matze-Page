@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 using WebApp.Helper;
-using WebApp.Models;
 using WebApp.Models.Data;
 
 namespace WebApp.Controllers
@@ -20,14 +19,24 @@ namespace WebApp.Controllers
       this.ConnectionString = Utils.GetConnectionString();
     }
 
+    [HttpGet]
     public async Task<IActionResult> Index(string lang) 
     {
-      var model = new ContactViewModel();
       Utils.CheckOrRefreshUiStrings(lang);
       ViewBag.Title = Utils.GetUiString("title.contact");
       ViewBag.ActiveLink = 3;
 
-      return this.View(model);
+      return this.View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Index(MessageModel m) 
+    {
+      if (!ModelState.IsValid) {
+        return StatusCode(500) ;
+      }
+
+      return RedirectToAction("Index");
     }
   }
 }

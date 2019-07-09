@@ -1,9 +1,9 @@
-@model WebApp.Models.ContactViewModel
+@model WebApp.Models.Data.MessageModel
 
 @using WebApp.Helper
 
 <div class="transparent-header" id="transparent-header">
-  @await Html.PartialAsync("_header", Model)
+  <partial name="_header"/>
 </div>
 
 <div class="header">
@@ -35,32 +35,32 @@
 
   <div class="grid grid-1-1 offset-top-m offset-bottom-l">
     <div>
-      <form class="contact-form">
+      <form class="contact-form" asp-controller="Contact" asp-action="Index" method="post">
         <div class="grid grid-1-1">
           <div class="relative">
-            <input type="text" placeholder='@Utils.GetUiString("input.firstName")' id="firstName">
-            <span id="firstName-validation-info" class="validation-info"></span>
+            <input asp-for="@Model.FirstName" placeholder='@Utils.GetUiString("input.firstName")'>
+            <span id="FirstName-validation-info" class="validation-info"></span>
           </div>
           <div class="relative">
-            <input type="text" placeholder='@Utils.GetUiString("input.lastName")' id="lastName">
-            <span id="lastName-validation-info" class="validation-info"></span>
+            <input asp-for="@Model.LastName" placeholder='@Utils.GetUiString("input.lastName")'>
+            <span id="LastName-validation-info" class="validation-info"></span>
           </div>
         </div>
         <div class="relative">
-          <input type="email" placeholder='@Utils.GetUiString("input.email")' id="email">
-          <span id="email-validation-info" class="validation-info"></span>
+          <input asp-for="@Model.Email" placeholder='@Utils.GetUiString("input.email")'>
+          <span id="Email-validation-info" class="validation-info"></span>
         </div>
         <div class="relative">
-          <input type="text" placeholder='@Utils.GetUiString("input.subject")' id="subject">
-          <span id="subject-validation-info" class="validation-info"></span>
+          <input asp-for="@Model.Subject" placeholder='@Utils.GetUiString("input.subject")'>
+          <span id="Subject-validation-info" class="validation-info"></span>
         </div>
         <div class="relative">
-          <textarea placeholder='@Utils.GetUiString("input.message")' id="message"></textarea>
-          <span id="message-validation-info" class="validation-info"></span>
+          <textarea asp-for="@Model.Message" placeholder='@Utils.GetUiString("input.message")'></textarea>
+          <span id="Message-validation-info" class="validation-info"></span>
         </div>
         <div class="offset-bottom-s">
-          <input type="checkbox" id="privacy">
-          <label for="privacy">@Utils.GetUiString("input.confirmPrivacy")</label>
+          <input asp-for="@Model.Privacy">
+          <label for="Privacy">@Utils.GetUiString("input.confirmPrivacy")</label>
         </div>
         <button type="submit" class="btn btn-primary" id="submit">
           @Utils.GetUiString("input.submit") 

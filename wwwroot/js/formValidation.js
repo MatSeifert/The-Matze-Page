@@ -3,12 +3,12 @@ const valTypes = {NAME: 'name', MAIL: 'mail', TEXT: 'text'}
 
 // Default state
 var state = {
-    firstName: false,
-    lastName: false,
-    email: false,
-    subject: false,
-    message: false,
-    privacy: false
+    FirstName: false,
+    LastName: false,
+    Email: false,
+    Subject: false,
+    Message: false,
+    Privacy: false
 }
 
 function setState(key, value) {
@@ -78,13 +78,13 @@ function validate(validationType, fieldName) {
 }
 
 // Listen to changes
-$('#firstName').blur(function() {validate(valTypes.NAME, 'firstName')})
-$('#lastName').blur(function() {validate(valTypes.NAME, 'lastName')})
-$('#email').blur(function() {validate(valTypes.MAIL, 'email')})
-$('#subject').blur(function() {validate(valTypes.TEXT, 'subject')})
-$('#message').blur(function() {validate(valTypes.TEXT, 'message')})
-$('#privacy').change(function() {
-    setState('privacy', $(this).is(':checked'))
+$('#FirstName').blur(function() {validate(valTypes.NAME, 'FirstName')})
+$('#LastName').blur(function() {validate(valTypes.NAME, 'LastName')})
+$('#Email').blur(function() {validate(valTypes.MAIL, 'Email')})
+$('#Subject').blur(function() {validate(valTypes.TEXT, 'Subject')})
+$('#Message').blur(function() {validate(valTypes.TEXT, 'Message')})
+$('#Privacy').change(function() {
+    setState('Privacy', $(this).is(':checked'))
 })
 
 // Handle reset button
