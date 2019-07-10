@@ -27,29 +27,35 @@ function setButtonLevel() {
 }
 
 function setGradient(maxLevel) {
+    let submit = document.querySelector('#submit')
+
     if (maxLevel == 0) {
-        $('#submit').removeAttr("style").addClass('disabled')
+        submit.removeAttribute("style")
+        submit.classList.add('disabled')
         return
     }
 
-    $('#submit').removeClass('disabled').css({
-        background: `linear-gradient(90deg, ${colors[0]} 0%, ${colors[1]} ${maxLevel/2}%, ${colors[2]} ${maxLevel}%, ${colors[3]} ${maxLevel}%)`
-    })
+    submit.classList.remove('disabled')
+    submit.setAttribute('style', `background: linear-gradient(90deg, ${colors[0]} 0%, ${colors[1]} ${maxLevel/2}%, ${colors[2]} ${maxLevel}%, ${colors[3]} ${maxLevel}%)`)
 }
 
 function setFieldStyles(fieldName, isValid) {
     if (isValid) {
-        $(`#${fieldName}`).removeClass().addClass('valid')
-        $(`#${fieldName}-validation-info`).removeClass().addClass('validation-info valid')
+        document.querySelector(`#${fieldName}`).classList.remove('invalid')
+        document.querySelector(`#${fieldName}`).classList.add('valid')
+        document.querySelector(`#${fieldName}-validation-info`).classList.remove('invalid')
+        document.querySelector(`#${fieldName}-validation-info`).classList.add('valid')
     } else {
-        $(`#${fieldName}`).removeClass().addClass('invalid')
-        $(`#${fieldName}-validation-info`).removeClass().addClass('validation-info invalid')
+        document.querySelector(`#${fieldName}`).classList.remove('valid')
+        document.querySelector(`#${fieldName}`).classList.add('invalid')
+        document.querySelector(`#${fieldName}-validation-info`).classList.remove('valid')
+        document.querySelector(`#${fieldName}-validation-info`).classList.add('invalid')
     }
 }
 
 function resetFieldStyles(fieldName) {
-    $(`#${fieldName}`).removeClass()
-    $(`#${fieldName}-validation-info`).removeClass()
+    document.querySelector(`#${fieldName}`).classList.remove('valid', 'invalid')
+    document.querySelector(`#${fieldName}-validation-info`).classList.remove('valid', 'invalid')
 }
 
 function validate(validationType, fieldName) {
@@ -57,18 +63,18 @@ function validate(validationType, fieldName) {
 
     switch(validationType) {
         case valTypes.NAME:
-            validationResult = $(`#${fieldName}`).val().length != 0 ? true : false
+            validationResult = document.querySelector(`#${fieldName}`).value.length != 0 ? true : false
             break
         case valTypes.MAIL:
             let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            validationResult = re.test($(`#${fieldName}`).val().toLowerCase())
+            validationResult = re.test(document.querySelector(`#${fieldName}`).value.toLowerCase())
             break
         case valTypes.TEXT:
-            validationResult = $(`#${fieldName}`).val().length > 3 ? true : false
+            validationResult = document.querySelector(`#${fieldName}`).value.length > 3 ? true : false
             break
     }
 
-    if ($(`#${fieldName}`).val().length == 0) {
+    if (document.querySelector(`#${fieldName}`).value.length == 0) {
         resetFieldStyles(fieldName)
     } else {
         setFieldStyles(fieldName, validationResult)
@@ -78,24 +84,24 @@ function validate(validationType, fieldName) {
 }
 
 // Listen to changes
-$('#FirstName').blur(function() {validate(valTypes.NAME, 'FirstName')})
-$('#LastName').blur(function() {validate(valTypes.NAME, 'LastName')})
-$('#Email').blur(function() {validate(valTypes.MAIL, 'Email')})
-$('#Subject').blur(function() {validate(valTypes.TEXT, 'Subject')})
-$('#Message').blur(function() {validate(valTypes.TEXT, 'Message')})
-$('#Privacy').change(function() {
-    setState('Privacy', $(this).is(':checked'))
+document.querySelector('#FirstName').addEventListener('blur', () => {validate(valTypes.NAME, 'FirstName')})
+document.querySelector('#LastName').addEventListener('blur', () => {validate(valTypes.NAME, 'LastName')})
+document.querySelector('#Email').addEventListener('blur', () => {validate(valTypes.MAIL, 'Email')})
+document.querySelector('#Subject').addEventListener('blur', () => {validate(valTypes.TEXT, 'Subject')})
+document.querySelector('#Message').addEventListener('blur', () => {validate(valTypes.TEXT, 'Message')})
+document.querySelector('#Privacy').addEventListener('change', (event) => {
+    setState('Privacy', event.target.value)
 })
 
 // Handle reset button
-$('#reset').click(function() {
+document.querySelector('#reset').addEventListener('click', () => {
     state = {
-        firstName: false,
-        lastName: false,
-        email: false,
-        subject: false,
-        message: false,
-        privacy: false
+        FirstName: false,
+        LastName: false,
+        Email: false,
+        Subject: false,
+        Message: false,
+        Privacy: false
     }
 
     for (let field in state) {
