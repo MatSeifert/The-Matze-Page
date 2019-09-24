@@ -33,7 +33,6 @@ $e700: #A4011F;
 $e800: #840119;
 $e900: #5E0112;
 
-
 /* Config Params */
 $contentWidth: 1200px;
 $defaultOffset: 20px;
@@ -1817,10 +1816,11 @@ span.validation-info {
   }
 }
 
-button#submit {
-  box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.15);
+button[type="button"]#submit {
+  cursor: not-allowed;
 
   &.disabled {
+    box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.15);
     color: rgb(255,255,255);
     background: $n300;
   }

@@ -29,6 +29,8 @@ function setButtonLevel() {
 function setGradient(maxLevel) {
     let submit = document.querySelector('#submit')
 
+    submit.type = maxLevel == 100 ? 'submit' : 'button'
+
     if (maxLevel == 0) {
         submit.removeAttribute("style")
         submit.classList.add('disabled')
@@ -90,7 +92,7 @@ document.querySelector('#Email').addEventListener('blur', () => {validate(valTyp
 document.querySelector('#Subject').addEventListener('blur', () => {validate(valTypes.TEXT, 'Subject')})
 document.querySelector('#Message').addEventListener('blur', () => {validate(valTypes.TEXT, 'Message')})
 document.querySelector('#Privacy').addEventListener('change', (event) => {
-    setState('Privacy', event.target.value)
+    setState('Privacy', event.target.checked)
 })
 
 // Handle reset button
