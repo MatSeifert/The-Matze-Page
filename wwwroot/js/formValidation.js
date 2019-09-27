@@ -3,8 +3,7 @@ const valTypes = {NAME: 'name', MAIL: 'mail', TEXT: 'text'}
 
 // Default state
 var state = {
-    FirstName: false,
-    LastName: false,
+    Name: false,
     Email: false,
     Subject: false,
     Message: false,
@@ -47,17 +46,26 @@ function setFieldStyles(fieldName, isValid) {
         document.querySelector(`#${fieldName}`).classList.add('valid')
         document.querySelector(`#${fieldName}-validation-info`).classList.remove('invalid')
         document.querySelector(`#${fieldName}-validation-info`).classList.add('valid')
+        document.querySelector(`#${fieldName}-label`).classList.remove('invalid')
+        document.querySelector(`#${fieldName}-label`).classList.add('valid')
     } else {
         document.querySelector(`#${fieldName}`).classList.remove('valid')
         document.querySelector(`#${fieldName}`).classList.add('invalid')
         document.querySelector(`#${fieldName}-validation-info`).classList.remove('valid')
         document.querySelector(`#${fieldName}-validation-info`).classList.add('invalid')
+        document.querySelector(`#${fieldName}-label`).classList.remove('valid')
+        document.querySelector(`#${fieldName}-label`).classList.add('invalid')
     }
 }
 
 function resetFieldStyles(fieldName) {
     document.querySelector(`#${fieldName}`).classList.remove('valid', 'invalid')
     document.querySelector(`#${fieldName}-validation-info`).classList.remove('valid', 'invalid')
+    // resset textarea size
+    document.querySelector(`#Message`).setAttribute('style', 'height:74px;overflow-y:hidden;');
+    // reset label color
+    document.querySelector(`#${fieldName}-label`).classList.remove('valid')
+    document.querySelector(`#${fieldName}-label`).classList.remove('invalid')
 }
 
 function validate(validationType, fieldName) {
@@ -86,8 +94,7 @@ function validate(validationType, fieldName) {
 }
 
 // Listen to changes
-document.querySelector('#FirstName').addEventListener('blur', () => {validate(valTypes.NAME, 'FirstName')})
-document.querySelector('#LastName').addEventListener('blur', () => {validate(valTypes.NAME, 'LastName')})
+document.querySelector('#Name').addEventListener('blur', () => {validate(valTypes.NAME, 'Name')})
 document.querySelector('#Email').addEventListener('blur', () => {validate(valTypes.MAIL, 'Email')})
 document.querySelector('#Subject').addEventListener('blur', () => {validate(valTypes.TEXT, 'Subject')})
 document.querySelector('#Message').addEventListener('blur', () => {validate(valTypes.TEXT, 'Message')})
@@ -98,8 +105,7 @@ document.querySelector('#Privacy').addEventListener('change', (event) => {
 // Handle reset button
 document.querySelector('#reset').addEventListener('click', () => {
     state = {
-        FirstName: false,
-        LastName: false,
+        Name: false,
         Email: false,
         Subject: false,
         Message: false,

@@ -36,27 +36,33 @@
   <div class="grid grid-1-1 offset-top-m offset-bottom-l">
     <div>
       <form class="contact-form" asp-controller="Contact" asp-action="Index" method="post">
-        <div class="grid grid-1-1">
-          <div class="relative">
-            <input asp-for="@Model.FirstName" placeholder='@Utils.GetUiString("input.firstName")'>
-            <span id="FirstName-validation-info" class="validation-info"></span>
-          </div>
-          <div class="relative">
-            <input asp-for="@Model.LastName" placeholder='@Utils.GetUiString("input.lastName")'>
-            <span id="LastName-validation-info" class="validation-info"></span>
-          </div>
+        <div class="relative">
+          <label asp-for="@Model.Name" class="no-check" id="Name-label">@Utils.GetUiString("input.name")</label>
+          <input asp-for="@Model.Name">
+          <span id="Name-validation-info" class="validation-info">
+            <span class="validation-info-text">Test</span>
+          </span>
         </div>
         <div class="relative">
-          <input asp-for="@Model.Email" placeholder='@Utils.GetUiString("input.email")'>
-          <span id="Email-validation-info" class="validation-info"></span>
+          <label asp-for="@Model.Email" class="no-check" id="Email-label">@Utils.GetUiString("input.email")</label>
+          <input asp-for="@Model.Email">
+          <span id="Email-validation-info" class="validation-info">
+            <span class="validation-info-text">Bitte geben Sie eine gültige E-Mail Adresse an!</span>
+          </span>
         </div>
         <div class="relative">
-          <input asp-for="@Model.Subject" placeholder='@Utils.GetUiString("input.subject")'>
-          <span id="Subject-validation-info" class="validation-info"></span>
+          <label asp-for="@Model.Subject" class="no-check" id="Subject-label">@Utils.GetUiString("input.subject")</label>
+          <input asp-for="@Model.Subject">
+          <span id="Subject-validation-info" class="validation-info">
+            <span class="validation-info-text">Bitte nehemen Sie sich etwas Zeit für einen aussagekräftigeren Betreff! </span>
+          </span>
         </div>
         <div class="relative">
-          <textarea asp-for="@Model.Message" placeholder='@Utils.GetUiString("input.message")'></textarea>
-          <span id="Message-validation-info" class="validation-info"></span>
+          <label asp-for="@Model.Message" class="no-check" id="Message-label">@Utils.GetUiString("input.message")</label>
+          <textarea asp-for="@Model.Message"></textarea>
+          <span id="Message-validation-info" class="validation-info">
+            <span class="validation-info-text">Bitte teilen Sie mir Ihr Anliegen etwas ausführlicher mit!</span>
+          </span>
         </div>
         <div class="offset-bottom-s">
           <input asp-for="@Model.Privacy">

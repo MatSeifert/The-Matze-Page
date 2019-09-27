@@ -23,6 +23,7 @@ $n700: #79807C;
 $n800: #616663;
 $n900: #4D534F;
 
+$e050: #FDCBD4;
 $e100: #FFA6B7;
 $e200: #FF758F;
 $e300: #FF5473;
@@ -1695,6 +1696,7 @@ tr.l4k-meta > td {
   input, textarea {
     margin: 20px 20px 20px 0;
     width: 100%;
+    padding-right: 50px; /* leave some room for the validation checkmark */
   }
 
   div.grid.grid-1-1 {
@@ -1784,35 +1786,60 @@ input, textarea {
 
   &.invalid {
     border-color: $e400;
+    color: $e500;
+    background: $e050;
     position: relative;
   }
 }
 
 span.validation-info {
   display: none;
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
 
   &.valid {
     display: block;
-    position: absolute;
-    top: 26px;
-    right: 15px;
     background: url(../images/validation_valid.svg);
-    width: 32px;
-    height: 32px;
   }
 
   &.invalid {
     display: block;
-    position: absolute;
-    top: 26px;
-    right: 15px;
     background: url(../images/validation_invalid.svg);
-    width: 32px;
-    height: 32px;
 
     &:after {
       // reserverd for error message
     }
+  }
+}
+
+span.validation-info.valid > span.validation-info-text {
+  display: none;
+}
+
+span.validation-info.invalid > span.validation-info-text {
+  margin-left: 60px;
+  background: $e400;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  min-width: 250px;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: -7px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
+
+  &:before {
+    content: "\a";
+    border-style: solid;
+    border-width: 6px 10px 6px 0;
+    border-color: transparent #f03255 transparent transparent;
+    position: absolute;
+    left: 50px;
+    top: 12px;
   }
 }
 
@@ -1836,7 +1863,24 @@ label {
   padding-left: 20px;
   font-weight: 400;
 
-  &:before {
+  &.no-check {
+    font-size: 14px;
+    color: $n700;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 -18px 0px;
+    letter-spacing: .75px;
+  }
+
+  &.no-check.invalid {
+    color: $e400;
+  }
+
+  &.no-check.valid {
+    color: $p500;
+  }
+
+  &:not(.no-check):before {
     content: ' ';
     display: inline-block;
     width: 25px;
@@ -1852,7 +1896,7 @@ label {
   }
 }
 
-input:checked + label:before {
+input:checked + label:not(.no-check):before {
   content: url(../images/checkmark.svg);
   background: $p500;
   border-color: $p500;
