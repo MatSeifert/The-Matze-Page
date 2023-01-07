@@ -1,0 +1,184 @@
+// Variables
+backgroundColor = #131615
+primaryColor = #0ACD76
+secondaryColor = #0C62D2
+tintedWhite = #C1CBC6
+defaultGradiend = linear-gradient(to right, primaryColor, #3BD1E7, secondaryColor)
+defaultFontSize = 20px
+
+// Font Definition
+@font-face {
+    font-family Figtree
+    src: url('./figtree.ttf')
+}
+
+// Styles
+body
+    background backgroundColor
+    color white
+    font-family Figtree, sans-serif
+    font-size defaultFontSize
+    position relative
+    margin 0
+    padding 0
+
+a
+    color white
+    text-decoration none
+    font-weight 500
+
+    &:visited
+        color white    
+
+h1 
+   margin 0
+   font-size 1.2em
+   position relative
+
+   &:after
+        content ''
+        width 2em
+        height 3px
+        display block
+        position absolute
+        bottom -.5em
+        background defaultGradiend
+
+.text-color-primary
+    color primaryColor
+
+.text-glow-primary 
+    text-shadow 0 0 1em rgba(primaryColor, .4)    
+
+.text-color-secondary
+    color secondaryColor
+
+.text-glow-secondary    
+    text-shadow 0 0 1em rgba(secondaryColor, .4)
+
+.btn
+    padding 1em 1.5em
+    background transparent
+    color tintedWhite
+    font-size 1em
+    font-family Figtree, sans-serif
+    font-weight 800
+    letter-spacing: .1em
+    text-transform uppercase
+    border 3px solid tintedWhite
+    border-top-left-radius 1em
+    border-top-right-radius 1em
+    border-bottom-right-radius 1em
+    cursor pointer
+
+    &.btn-primary
+        border-color primaryColor
+        color primaryColor
+        position relative
+        transition all .4s ease-in-out
+
+        &:hover
+            border-color tintedWhite
+            color white
+
+        &:before, &:after
+            content ''
+            display block
+            background-color transparent
+            position absolute
+            width 75%
+            height 4em
+            transform rotate(10deg)
+            border-radius 50%
+            z-index -1
+            filter blur(1em)
+            opacity 0
+            transition all .4s ease-in-out
+
+        &:before
+            top 0
+            left 0
+
+        &:after
+            bottom 0
+            right 0    
+
+        &:hover:before
+            content ''
+            display block
+            background-color primaryColor
+            position absolute
+            top -1.25em
+            left .5em
+            width 75%
+            height 4em
+            transform rotate(10deg)
+            border-radius 50%
+            z-index -1
+            filter blur(1em)
+            opacity .3
+
+        &:hover:after
+            content ''
+            display block
+            background-color secondaryColor
+            position absolute
+            bottom -1em
+            right .5em
+            width 60%
+            height 5em
+            transform rotate(-23deg)
+            border-radius 50%
+            z-index -1
+            filter blur(1em)
+            opacity .3
+
+main
+    padding 5em
+    position relative
+    z-index 1
+    min-height calc(100vh - 10em)
+    overflow hidden
+
+    &:before
+        content ''
+        width 80vw
+        height 100vh
+        background primaryColor
+        opacity .4
+        display block
+        position absolute
+        top calc(-50vh - 100px)
+        border-radius 50%
+        z-index -1
+        filter blur(5em)
+
+    &:after
+        content ''
+        width 100vw
+        height 120vh
+        background secondaryColor
+        opacity .3
+        display block
+        position absolute
+        right -50vw
+        top -60vh
+        border-radius 50%
+        z-index -1
+        filter blur(5em)
+        transform rotate(-45deg)   
+
+#header
+    display flex
+    align-items center
+
+    h1
+        margin-right 5em
+
+    .navigation-bar
+        margin 0
+        list-style-type none
+        display flex
+
+        li.navigation-item
+            margin-right 2.5em
