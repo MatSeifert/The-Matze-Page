@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import FrontPage from '../components/FrontPage.vue'
+  import LandingPage from '../components/LandingPage.vue'
+  import Header from '../components/Header.vue'
 </script>
 
 <template>
   <main>
-    <FrontPage/>
+    <Header/>
+    <LandingPage/>
   </main>
 </template>

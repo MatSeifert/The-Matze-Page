@@ -28,7 +28,36 @@ a
     font-weight 500
 
     &:visited
-        color white    
+        color white
+
+    &:before, &:after
+        content ''
+        position absolute
+        height 1em
+        border-radius 50%
+        background-color transparent
+        filter blur(.5em)
+        z-index -1
+        opacity .8
+        transition background-color .3s ease-in-out
+
+    &:before
+        width 120%
+        right -1em
+        bottom -.15em
+        transform rotate(10deg)
+
+    &:after
+        width 80%
+        height 1em
+        left -.5em
+        transform rotate(-5deg)
+
+    &:hover:before
+        background-color secondaryColor
+
+    &:hover:after
+        background-color primaryColor        
 
 h1 
    margin 0
@@ -43,6 +72,9 @@ h1
         position absolute
         bottom -.5em
         background defaultGradiend
+        border-top-left-radius 2px
+        border-top-right-radius 2px
+        border-bottom-right-radius 2px
 
 .text-color-primary
     color primaryColor
@@ -110,7 +142,7 @@ h1
             position absolute
             top -1.25em
             left .5em
-            width 75%
+            width 90%
             height 4em
             transform rotate(10deg)
             border-radius 50%
@@ -125,13 +157,19 @@ h1
             position absolute
             bottom -1em
             right .5em
-            width 60%
+            width 80%
             height 5em
             transform rotate(-23deg)
             border-radius 50%
             z-index -1
             filter blur(1em)
             opacity .3
+
+.gap-top-m
+    margin-top 3em
+
+.gap-bottom-xl
+    margin-bottom 8em    
 
 main
     padding 5em
