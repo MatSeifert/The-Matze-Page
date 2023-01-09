@@ -3,8 +3,7 @@
         <img src="../assets/images/logo.svg" id="logo">
         <div class="text-color-primary hero-text-large" id="hero-text-develop">develop</div>
         <div class="text-color-secondary hero-text-large" id="hero-text-design">de<span>sign</span></div>
-        <div id="hero-text-url">matze.dev</div>
-        <div class="hero-text-small" id="hero-subtext">where <span class="text-color-primary text-glow-primary">develop</span>ment meets <span class="text-color-secondary text-glow-secondary">design</span></div>
+        <div class="hero-text-small" id="hero-subtext"><span class="text-color-primary text-glow-primary">develop</span>ment meets <span class="text-color-secondary text-glow-secondary">design</span></div>
         <button class="btn btn-primary">
             Projektanfrage
         </button>
@@ -12,6 +11,8 @@
 </template>
 
 <style lang="stylus" scoped>
+    @import '../assets/config.styl'
+
     .hero
         text-align center
         
@@ -34,13 +35,9 @@
             span
                 letter-spacing .19em        
 
-        #hero-text-url
-            opacity .8
-            margin-bottom 1em
-            font-weight 100
-
-        #hero-subtext 
-            color #C1CBC6
+        #hero-subtext
+            margin-top 2em 
+            color tintedWhite
 
             span
                 font-weight 900
