@@ -6,7 +6,7 @@
         </div>
         <div id="aboutMeText">
             <div id="aboutMeQuote">
-                Gutes Design fällt besonders dann auf, wenn es fehlt.
+                Gutes <span>design</span> fällt besonders dann auf, wenn es fehlt.
             </div>
             Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit 5 Jahren als Software Entwickler mit Schwerpunkt Frontend in Dresden. Neben meiner Leidenschaft für Programmierung, der ich Vollzeit nachgehe, bin ich auch (gar nicht so) insgeheim Feuer und Flamme für alles Rund ums Thema UI Design. Daher habe ich mich 2018 nebenberuflich mit dieser zweiten Passion selbstständig gemacht und biete vor allem meine Fähigkeiten als Designer an. Hast Du Interesse daran, mit mir zu arbeiten? Ich freue mich schon darauf zu hören, wie ich auch Deinem Projekt helfen kann!
         </div>
@@ -15,6 +15,9 @@
 
 <style lang="stylus" scoped>
     @import '../assets/config.styl'
+
+    h1
+        padding-top 1em    
 
     #aboutMeContent
         max-width 70em
@@ -59,6 +62,11 @@
         position relative
         text-align left
         letter-spacing .03em
+
+        span
+            font-family Figtree, sans-serif
+            color secondaryColor
+            font-weight 900
 
         &:before
             content '„'
