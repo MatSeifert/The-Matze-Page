@@ -27,6 +27,8 @@
 </template>
 
 <style lang="stylus" scoped>
+    @import '../../assets/config.styl'
+
     .stat-item
         width calc(33% - 5em)
         height 2em
@@ -35,12 +37,13 @@
         font-size 2em
         font-weight 700
         display flex
+        color primaryColor
 
     .stat-item_label
-        opacity .8
+        opacity .6
 
      .tag
-        font-size .4em
+        font-size .5em
         margin 0.5em 1em 0.5em 0
 
 </style>

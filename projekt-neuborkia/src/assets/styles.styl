@@ -1,6 +1,8 @@
 @import './config.styl'
 
 // Styles
+
+
 body
     background backgroundColor
     color white
@@ -45,7 +47,10 @@ a
         background-color secondaryColor
 
     &:hover:after
-        background-color primaryColor        
+        background-color primaryColor
+
+    &.no-hover-effect:after, &.no-hover-effect:before
+        display none         
 
 h1 
    font-size 1.2em
@@ -220,7 +225,8 @@ main
         margin 0
 
     h2
-        font-size 2em    
+        font-size 1.7em
+        margin-top .2em
 
     h3
         font-size 1em

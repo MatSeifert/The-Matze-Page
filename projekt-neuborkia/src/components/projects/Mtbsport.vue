@@ -28,9 +28,11 @@
                 Herzensangelegenheit.
 
                 <div class="gap-top-m">
-                    <button class="btn btn-primary">
-                        Livedemo
-                    </button>
+                    <a href="https://mtbsport-haenel.de/" target="_blank" alt="Zur Website von MTB Sport Hänel" class="no-hover-effect">
+                        <button class="btn btn-primary">
+                            zur website
+                        </button>
+                    </a>
                 </div>
 
             </p>
@@ -47,14 +49,37 @@
 <style lang="stylus" scoped>
     .flex
         gap 5em
+        position relative
+        overflow hidden
+        border-radius 1em
+        border 1px solid rgba(#fff, .1)
+
+        &:after
+            content ''
+            display block
+            position absolute
+            z-index 0
+            width 100%
+            height 100%
+            background black
+            opacity .3
 
     .project-abstract
         width 40%
+        padding 3em
+        z-index 1
+        line-height 1.5em
 
     .project-stats
         width 60%
+        padding 3em
         display flex
         flex-wrap wrap
-        gap 5em
         align-content start
+        z-index 1
+
+        > div
+            margin-left 5em
+            height 8em
+
 </style>
