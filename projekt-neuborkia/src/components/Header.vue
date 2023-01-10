@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {RouterLink } from 'vue-router'
+    import { RouterLink } from 'vue-router'
     import IconDribbble from './icons/IconDribbble.vue'
     import IconStackoverflow from './icons/IconStackoverflow.vue'
     import IconGithub from './icons/IconGithub.vue'
@@ -46,6 +46,9 @@
                 }
             }
         },
+        props: {
+            isLandingpage: Boolean
+        },
         components: {
             IconDribbble,
             IconStackoverflow,
@@ -57,10 +60,14 @@
 
 <template>
     <div id="header">
-        <h1>matthias seifert</h1>
+        <h1>
+            <RouterLink tag="span" :to="{path: '/'}">
+                matthias seifert
+            </RouterLink>
+        </h1>
         <ul :class="navBarClass">
             <li v-for="link in links" :key="link.id" :class="navItemClass">
-                <RouterLink tag="a" :to="{path: '', hash: `#${link.id}`}">
+                <RouterLink tag="a" :to="{path: '/', hash: `#${link.id}`}">
                     {{ link.i18n.de }}
                 </RouterLink>
             </li>

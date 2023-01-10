@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Tag from './elements/tag.vue'
+    import Tag from './elements/Tag.vue'
+    import { RouterLink } from 'vue-router'
 
     export default {
         props: {
@@ -24,9 +25,11 @@
                 <h1>{{ project.title }}</h1>
                 <h2>{{ project.subTitle }}</h2>
             </div>
-            <button class="btn btn-primary">
-                Details
-            </button>
+            <RouterLink tag="button" :to="{path: `/project/${project.id}`}">
+                <button class="btn btn-primary">
+                    Details
+                </button>
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -79,7 +82,10 @@
         .project-info
             padding 1.5em 1.5em
 
-        button
+        a
             margin-left auto
             max-height 3.5em
+
+            &:before, &:after
+                display none
 </style>
