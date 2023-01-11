@@ -20,7 +20,7 @@
         <div v-else class="stat-item_value">
             <Tag v-for="tag of value" :label="tag" :type="tag"/>
         </div>
-        <div class="stat-item_label">
+        <div v-if="!!label" class="stat-item_label">
             {{ label }}
         </div>
     </div>
@@ -29,18 +29,16 @@
 <style lang="stylus" scoped>
     @import '../../assets/config.styl'
 
-    .stat-item
-        width calc(33% - 5em)
-        height 2em
-
     .stat-item_value
         font-size 2em
         font-weight 700
         display flex
         color primaryColor
+        white-space nowrap
 
     .stat-item_label
         opacity .6
+        white-space nowrap
 
      .tag
         font-size .5em

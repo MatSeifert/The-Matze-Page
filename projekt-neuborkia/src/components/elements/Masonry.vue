@@ -35,7 +35,6 @@
             width calc(50% - 2em)
             margin-bottom 4em
 
-
             img
                 width 100%
                 border-radius 1em

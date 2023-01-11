@@ -22,12 +22,14 @@
         border-top-left-radius .5em
         border-top-right-radius .5em
         border-bottom-right-radius .5em
+        border 1px solid rgba(#fff, .2)
+        box-sizing border-box
         position relative
         font-weight 500
         box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
 
         &.design
-            background #001735
+            background linear-gradient(to top, #001735, #022553)
             color #B1C2D9
             padding-left 2em
 
@@ -42,7 +44,7 @@
                 top .35em
         
         &.development
-            background #032415
+            background linear-gradient(to top, #032415, #003C20)
             color #AED6C4
             padding-left 2em
 
