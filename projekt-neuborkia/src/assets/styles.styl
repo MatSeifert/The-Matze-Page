@@ -107,61 +107,68 @@ h1
         position relative
         transition all .4s ease-in-out
 
-        &:hover
-            border-color tintedWhite
-            color white
+    &.btn-secondary
+        border none
+        color primaryColor
+        position relative            
+        transition all .4s ease-in-out
 
-        &:before, &:after
-            content ''
-            display block
-            background-color transparent
-            position absolute
-            width 75%
-            height 4em
-            transform rotate(10deg)
-            border-radius 50%
-            z-index -1
-            filter blur(1em)
-            opacity 0
-            transition all .4s ease-in-out
+    &.btn-primary:hover, &.btn-secondary:hover
+        border-color tintedWhite
+        color white
+        background rgba(#fff, .05)
 
-        &:before
-            top 0
-            left 0
+    &.btn-primary:before, &.btn-primary:after, &.btn-secondary:before, &.btn-secondary:after
+        content ''
+        display block
+        background-color transparent
+        position absolute
+        width 75%
+        height 4em
+        transform rotate(10deg)
+        border-radius 50%
+        z-index -1
+        filter blur(1em)
+        opacity 0
+        transition all .4s ease-in-out
 
-        &:after
-            bottom 0
-            right 0    
+    &.btn-primary:before, &.btn-secondary:before,
+        top 0
+        left 0
 
-        &:hover:before
-            content ''
-            display block
-            background-color primaryColor
-            position absolute
-            top -1.25em
-            left .5em
-            width 90%
-            height 4em
-            transform rotate(10deg)
-            border-radius 50%
-            z-index -1
-            filter blur(1em)
-            opacity .3
+    &:after
+        bottom 0
+        right 0    
 
-        &:hover:after
-            content ''
-            display block
-            background-color secondaryColor
-            position absolute
-            bottom -1em
-            right .5em
-            width 80%
-            height 5em
-            transform rotate(-23deg)
-            border-radius 50%
-            z-index -1
-            filter blur(1em)
-            opacity .3
+    &:hover:before
+        content ''
+        display block
+        background-color primaryColor
+        position absolute
+        top -1.25em
+        left .5em
+        width 90%
+        height 4em
+        transform rotate(10deg)
+        border-radius 50%
+        z-index -1
+        filter blur(1em)
+        opacity .3
+
+    &:hover:after
+        content ''
+        display block
+        background-color secondaryColor
+        position absolute
+        bottom -1em
+        right .5em
+        width 80%
+        height 5em
+        transform rotate(-23deg)
+        border-radius 50%
+        z-index -1
+        filter blur(1em)
+        opacity .3    
 
 .gap-top-s 
     margin-top 1em
@@ -237,6 +244,12 @@ main
 
 // Projects
 .project-abstract
+    z-index 1
+    line-height 1.5em
+    flex 2 2 0
+    max-width 30em
+    margin-right 8em
+
     h2, h3
         margin 0
 
@@ -252,3 +265,28 @@ main
 
     p
         margin-top 2em
+
+.project-overview
+    border-radius 2em
+    background rgba(#000, .35)
+    border 1px solid rgba(#fff, .1)
+    padding 3em
+
+.project-stats
+    display flex
+    flex-direction column
+    gap 3em
+    align-content start
+    z-index 1
+    flex 1 1 0
+    max-width 12em
+    margin-right 3em
+
+.project-showcase
+    z-index 1
+    flex 2 2 0
+
+    img
+        width 100%
+        margin-top -2em
+        margin-left 1.5em      

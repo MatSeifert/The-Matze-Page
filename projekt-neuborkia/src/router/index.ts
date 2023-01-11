@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import ProjectView from "../views/ProjectView.vue"
-import ImpressumView from "../views/ImpressumView.vue"
+import ProjectView from "../views/ProjectView.vue";
+import ImpressumView from "../views/ImpressumView.vue";
 import PrivacyView from "../views/PrivacyView.vue";
 
 const router = createRouter({
@@ -16,35 +16,34 @@ const router = createRouter({
       path: "/project/:id",
       name: "project",
       component: ProjectView,
-      props: true
+      props: true,
     },
     {
       path: "/impressum",
       name: "impressum",
-      component: ImpressumView
+      component: ImpressumView,
     },
     {
       path: "/datenschutz",
       name: "privacy",
-      component: PrivacyView
-    }
+      component: PrivacyView,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     }
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth'
-      }
-    }
-    else {
+        behavior: "smooth",
+      };
+    } else {
       return {
-        behavior: 'smooth'
-      }
+        behavior: "smooth",
+      };
     }
-  }
+  },
 });
 
 export default router;
