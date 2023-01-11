@@ -6,26 +6,19 @@ export default {
   data() {
     return {
       projects: {
-        timetracking: {
-          id: "timetracking",
-          year: "2022",
-          tags: [TAG_DESIGN],
-          title: "Redesign",
-          subTitle: "TimeTracking Zeiterfassungs-App",
-        },
-        factsHub: {
-          id: "factshub",
-          year: "2022",
-          tags: [TAG_DESIGN],
-          title: "UI Design",
-          subTitle: "FactsHub Unit Test Plattform",
-        },
         mtbsport: {
           id: "mtbsport",
           year: "2022",
           tags: [TAG_DESIGN, TAG_DEV],
           title: "Design und Umsetzung",
           subTitle: "Homepage für MTB Sport Hänel",
+        },
+        timetracking: {
+          id: "timetracking",
+          year: "2022",
+          tags: [TAG_DESIGN],
+          title: "Redesign",
+          subTitle: "Zeiterfassungs Tool",
         },
         podicons: {
           id: "podicons",
