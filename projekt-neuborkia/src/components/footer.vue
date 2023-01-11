@@ -2,7 +2,7 @@
     <footer>
         <div class="disclaimer">&copy; {{ new Date().getFullYear() }} - Matthias Seifert - matze.dev</div>
         <a href="/impressum">impressum</a>
-        <a href="/privacy">datenschutz</a>
+        <a href="/datenschutz">datenschutz</a>
     </footer>
 </template>
 

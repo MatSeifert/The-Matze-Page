@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Timetracking from '../components/projects/timetracking.vue'
+    import Timetracking from '../components/projects/Timetracking.vue'
     import Mtbsport from '../components/projects/Mtbsport.vue'
 
     import { 

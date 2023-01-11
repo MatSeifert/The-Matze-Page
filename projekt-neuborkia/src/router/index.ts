@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ProjectView from "../views/ProjectView.vue"
+import ImpressumView from "../views/ImpressumView.vue"
+import PrivacyView from "../views/PrivacyView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +17,16 @@ const router = createRouter({
       name: "project",
       component: ProjectView,
       props: true
+    },
+    {
+      path: "/impressum",
+      name: "impressum",
+      component: ImpressumView
+    },
+    {
+      path: "/datenschutz",
+      name: "privacy",
+      component: PrivacyView
     }
   ],
   scrollBehavior(to, from, savedPosition) {

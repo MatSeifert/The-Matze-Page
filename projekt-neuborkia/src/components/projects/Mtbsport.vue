@@ -1,17 +1,21 @@
 <script lang="ts">
     import ProjectStatItem from '../elements/ProjectStatItem.vue'
+    import Masonry from '../elements/Masonry.vue'
     import { TAG_DESIGN, TAG_DEV } from '@/helper/const';
+    import { RouterLink } from 'vue-router'
 
     export default {
         data() {
             return {
                 tags: [
                     TAG_DESIGN, TAG_DEV
-                ]
+                ],
+                projectName: 'mtbsport'
             }
         },
         components: {
-            ProjectStatItem
+            ProjectStatItem,
+            Masonry
         }
     }
 </script>
@@ -44,6 +48,14 @@
             <ProjectStatItem :value="tags" :label="'Tags'" />
         </div>
     </div>
+
+    <Masonry :projectName="projectName" :imageCount="7"/>
+
+    <RouterLink tag="button" :to="{path: `/#projects`}" class="no-hover-effect">
+        <button class="btn btn-primary">
+            Zurück zur Übersicht
+        </button>
+    </RouterLink>
 </template>
 
 <style lang="stylus" scoped>
