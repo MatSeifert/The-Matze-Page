@@ -6,8 +6,12 @@ import IconGithub from "./icons/IconGithub.vue";
 import IconMastodon from "./icons/IconMastodon.vue";
 
 export default {
+  props: {
+    isLandingpage: Boolean,
+  },
   data() {
     return {
+      scrollPosition: 0,
       navBarClass: "navigation-bar",
       navItemClass: "navigation-item",
       links: {
@@ -47,9 +51,6 @@ export default {
       },
     };
   },
-  props: {
-    isLandingpage: Boolean,
-  },
   components: {
     IconDribbble,
     IconStackoverflow,
@@ -85,6 +86,10 @@ export default {
         </a>
       </li>
     </ul>
+
+    <!-- <div class="floating-menu" style="background: red" v-if="scrollPosition > 100">
+      Menü 2
+    </div> -->
   </div>
 </template>
 
@@ -128,4 +133,8 @@ svg
 
     &:hover:before
         background-color #0ACD76
+
+.floating-menu
+  position fixed
+  top 0        
 </style>

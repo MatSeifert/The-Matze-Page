@@ -6,12 +6,19 @@ export default {
   data() {
     return {
       projects: {
+        florianschick: {
+          id: "florianschick",
+          year: "2023",
+          tags: [TAG_DESIGN],
+          title: "Redesign",
+          subTitle: "Website für Schick Software"
+        },
         mtbsport: {
           id: "mtbsport",
           year: "2022",
           tags: [TAG_DESIGN, TAG_DEV],
           title: "Design und Umsetzung",
-          subTitle: "Homepage für MTB Sport Hänel",
+          subTitle: "Website für MTB Sport Hänel",
         },
         timetracking: {
           id: "timetracking",

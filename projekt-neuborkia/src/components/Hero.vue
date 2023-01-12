@@ -11,7 +11,9 @@
       <span class="text-color-primary text-glow-primary">develop</span>ment
       meets <span class="text-color-secondary text-glow-secondary">design</span>
     </div>
-    <button class="btn btn-primary">Projektanfrage</button>
+    <a href="mailto:matthe.seifert@gmail.com?subject=Projektanfrage via matze.dev&body=Hi Matze%0D%0Dich möchte mit dir über folgendes Projekt von mir sprechen:%0D%0D" class="no-hover-effect">
+      <button class="btn btn-primary">Projektanfrage</button>
+    </a>
   </div>
 </template>
 
