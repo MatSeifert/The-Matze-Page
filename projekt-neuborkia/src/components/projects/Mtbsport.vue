@@ -54,10 +54,8 @@ export default {
   <Masonry :projectName="projectName" :imageCount="7" />
 
   <RouterLink
-    tag="button"
-    :to="{ path: `/#projects` }"
-    class="no-hover-effect block text-center"
-  >
+    :to="{  path: '/', hash: '#projects' }"
+    class="no-hover-effect block text-center">
     <button class="btn btn-primary">Zurück zur Übersicht</button>
   </RouterLink>
 </template>

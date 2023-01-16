@@ -8,14 +8,14 @@
       <div id="aboutMeQuote">
         Gutes <span>design</span> fällt besonders dann auf, wenn es fehlt.
       </div>
-      Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit 5
+      <p>Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit 5
       Jahren als Software Entwickler mit Schwerpunkt Frontend in Dresden. Neben
       meiner Leidenschaft für Programmierung, der ich Vollzeit nachgehe, bin ich
       auch (gar nicht so) insgeheim Feuer und Flamme für alles Rund ums Thema UI
       Design. Daher habe ich mich 2018 nebenberuflich mit dieser zweiten Passion
       selbstständig gemacht und biete vor allem meine Fähigkeiten als Designer
       an. Hast Du Interesse daran, mit mir zu arbeiten? Ich freue mich schon
-      darauf zu hören, wie ich auch Deinem Projekt helfen kann!
+      darauf zu hören, wie ich auch Deinem Projekt helfen kann!</p>
     </div>
   </div>
 </template>

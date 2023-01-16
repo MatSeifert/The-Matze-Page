@@ -8,8 +8,12 @@ import IconProjects from "./icons/IconProjects.vue"
 import IconAboutMe from './icons/IconAboutMe.vue'
 
 export default {
+  props: {
+    isLandingpage: Boolean,
+  },
   data() {
     return {
+      scrollPosition: 0,
       navBarClass: "navigation-bar",
       navItemClass: "navigation-item",
       links: {
@@ -48,9 +52,6 @@ export default {
         },
       },
     };
-  },
-  props: {
-    isLandingpage: Boolean,
   },
   components: {
     IconDribbble,

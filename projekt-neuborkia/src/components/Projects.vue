@@ -18,7 +18,7 @@ export default {
           year: "2022",
           tags: [TAG_DESIGN, TAG_DEV],
           title: "Design und Umsetzung",
-          subTitle: "Homepage für MTB Sport Hänel",
+          subTitle: "Website für MTB Sport Hänel",
         },
         timetracking: {
           id: "timetracking",
