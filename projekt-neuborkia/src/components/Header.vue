@@ -180,7 +180,7 @@ svg
     bottom 1em
     left 1em
     z-index 2
-    background linear-gradient(to bottom, #191919, #0c0c0c)
+    background linear-gradient(176deg, #292929 0%, #0c0c0c 60%)
     box-shadow 0px 0px 45px 5px rgba(secondaryColor ,0.2)
     width calc(100% - 2em)
     border-top-left-radius 1.5em
