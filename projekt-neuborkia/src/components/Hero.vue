@@ -49,4 +49,17 @@
 
     button
         margin 5em 0 10em 0
+
+@media screen and (max-width: 820px)
+  .hero
+    #logo
+      width 6em
+      margin 3em 0
+
+    .hero-text-large
+      font-size 5em
+      font-weight 900
+
+    .hero-text-small
+        font-size 1em
 </style>

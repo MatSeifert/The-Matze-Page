@@ -6,6 +6,13 @@ export default {
   data() {
     return {
       projects: {
+        schicksoftware: {
+          id: "schicksoftware",
+          year: "2023",
+          tags: [TAG_DESIGN],
+          title: "Redesign",
+          subTitle: "Homepage für Schick Software"
+        },
         mtbsport: {
           id: "mtbsport",
           year: "2022",

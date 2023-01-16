@@ -52,4 +52,9 @@ footer
 
         &:hover
             opacity 1
+
+@media screen and (max-width: 1440px)            
+  footer
+    width calc(100% + 10em)
+    margin-left -5em
 </style>

@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       tags: [TAG_DESIGN, TAG_DEV],
-      projectName: "mtbsport",
+      projectName: "schicksoftware",
     };
   },
   components: {
@@ -22,18 +22,18 @@ export default {
   <div class="project-overview gap-top-l">
     <div class="flex">
       <article class="project-abstract">
-        <h2>Website Design und Umsetzung</h2>
-        <h3>Mountainbike Sport Axel Hänel</h3>
+        <h2>Redesign der Homepage</h2>
+        <h3>Florian Schick Softwareentwicklung</h3>
         <p>
-          Bei Axel bekommt man einen persönlich zugeschnittenen Service rund um
-          sein Bike. Während man beim Fachhändler nur sehr selten eine wirklich
-          personalisierte Beratung erhält, ist das Thema Mountainbiking für Axel
-          eine absolute Herzensangelegenheit.
+          Florian Schick ist Berater und Softwareentwickler mit vielen Jahren Erfahrung in 
+          verschiedenen Projekten. Er unterstützt seine Kunden hierbei nicht nur bei der
+          Umsetzung spannender neuer Software-Ideen, sondern hilft auch dabei, bestehende
+          Herausforderungen erfolgreich zu meistern. 
         </p>
       </article>
       <div class="project-stats">
-        <ProjectStatItem :value="'4 Monate'" :label="'Projektzeitraum'" />
-        <ProjectStatItem :value="2022" :label="'Jahr'" />
+        <ProjectStatItem :value="'4 Wochen'" :label="'Projektzeitraum'" />
+        <ProjectStatItem :value="2023" :label="'Jahr'" />
       </div>
       <div class="project-showcase">
         <img :src="`/src/assets/images/projects/${projectName}/showcase.png`" />
@@ -41,7 +41,7 @@ export default {
     </div>
     <div class="flex gap-top-s">
       <a
-        href="https://mtbsport-haenel.de/"
+        href="https://www.schick-software.de/"
         target="_blank"
         class="no-hover-effect"
       >

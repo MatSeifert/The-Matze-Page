@@ -15,7 +15,7 @@ export default {
 <template>
   <div v-if="!!project" class="project-box">
     <div class="project-title-image">
-      <img :src="`./src/assets/images/title_${project.id}.png`" />
+      <img :src="`./src/assets/images/projects/${project.id}/title.png`" />
       <div class="project-tags">
         <Tag v-for="tag of project.tags" :label="tag" :type="tag" />
       </div>
@@ -86,4 +86,20 @@ h2
 
         &:before, &:after
             display none
+
+@media screen and (max-width: 1919px)
+  .project-box
+    flex 0 0 calc(50% - 2em)
+
+@media screen and (max-width: 1440px)
+  .project-box
+      flex 0 0 100%
+
+@media screen and (max-width: 820px)
+  .project-box .project-info
+    flex-direction column
+
+    a
+      margin 1.5em auto 0 auto
+
 </style>

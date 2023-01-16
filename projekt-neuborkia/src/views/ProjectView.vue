@@ -2,12 +2,14 @@
 import Timetracking from '../components/projects/Timetracking.vue'
 import Mtbsport from '../components/projects/Mtbsport.vue'
 import Podicons from '../components/projects/Podicons.vue'
+import SchickSoftware from '../components/projects/SchickSoftware.vue'
 
 import {
   PROJECT_TIMETRACKING,
   PROJECT_FACTSHUB,
   PROJECT_MTSPORT,
   PROJECT_PODICONS,
+  PROJECT_SCHICKSOFTWARE
 } from "../helper/const.js";
 
 export default {
@@ -20,12 +22,14 @@ export default {
       factshub: PROJECT_FACTSHUB,
       mtbsport: PROJECT_MTSPORT,
       podicons: PROJECT_PODICONS,
+      schicksoftware: PROJECT_SCHICKSOFTWARE
     };
   },
   components: {
     Timetracking,
     Mtbsport,
-    Podicons
+    Podicons,
+    SchickSoftware
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -37,4 +41,5 @@ export default {
   <Timetracking v-if="id == timetracking" />
   <Mtbsport v-else-if="id == mtbsport" />
   <Podicons v-else-if="id == podicons" />
+  <SchickSoftware v-else-if="id == schicksoftware" />
 </template>

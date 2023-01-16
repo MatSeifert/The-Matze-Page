@@ -101,4 +101,21 @@ img
     line-height 1.5em
     margin-left 6em
     text-align justify
+
+
+@media screen and (max-width: 1440px)
+  #aboutMeContent
+      flex-direction column-reverse
+      max-width 30em
+      margin-top 6em
+
+      #aboutMeText
+        margin-left 0
+
+      img
+          margin-top 4em
+
+@media screen and (max-width: 720px)
+  #aboutMeQuote
+    font-size 2em        
 </style>

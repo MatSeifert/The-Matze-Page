@@ -192,6 +192,12 @@ h1
 .flex
     display flex
 
+    &.flex-col
+        flex-direction column
+
+    &.center-h
+        align-items center
+
 main
     padding 4em 5em 2em 5em
     position relative
@@ -289,4 +295,16 @@ main
     img
         width 100%
         margin-top -2em
-        margin-left 1.5em      
+        margin-left 1.5em
+
+@media screen and (max-width: 1440px)
+    main 
+        padding-bottom 7em
+
+@media screen and (max-width: 620px)        
+    body
+        font-size 16px
+
+    main
+        padding-left 2em
+        padding-right 2em
