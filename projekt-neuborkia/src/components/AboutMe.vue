@@ -35,27 +35,26 @@ h1
         content ''
         position absolute
         border-radius 50%
-        filter blur(5em)
 
     &:before
         z-index -1
-        width 100em
-        height 30em
-        background secondaryColor
-        top -5em
-        left -20em
+        width 150em
+        height 50em
+        background secondaryBlur
+        top -20em
+        left -45em
         transform rotate(15deg)
-        opacity .3
+        opacity .4
 
     &:after
-        width 50em
-        height 25em
-        background primaryColor
+        width 100em
+        height 40em
+        background primaryBlur
         transform rotate(-25deg)
         opacity .4
         z-index -2
-        bottom .5em
-        left -10em
+        top 0
+        left -40em
 
 img
     width 30em

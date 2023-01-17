@@ -1,4 +1,11 @@
+<script setup lang="ts">
+  import Header from "../components/Header.vue";
+  import Footer from "../components/Footer.vue";
+</script>
+
 <template>
+  <Header />
+
   <h1>Datenschutzerklärung</h1>
 
   <div class="usercontent">
@@ -220,6 +227,8 @@
 
     <p>Stand: Januar 2023</p>
   </div>
+
+  <Footer />
 </template>
 
 <style lang="stylus" scoped>

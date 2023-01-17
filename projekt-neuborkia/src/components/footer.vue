@@ -38,10 +38,9 @@ footer
         right 0
         margin auto
         border-radius 50%
-        background primaryColor
+        background primaryBlur
         z-index -1
-        filter blur(1em)
-        opacity .05
+        opacity .1
 
     a
         display inline-block

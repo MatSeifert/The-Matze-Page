@@ -27,18 +27,18 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-@import '../../assets/config.styl'
+  @import '../../assets/config.styl'
 
-.stat-item_value
-    font-size 2em
-    font-weight 700
-    display flex
-    color primaryColor
-    white-space nowrap
+  .stat-item_value
+      font-size 2em
+      font-weight 700
+      display flex
+      color primaryColor
+      white-space nowrap
 
-.stat-item_label
-    opacity .6
-    white-space nowrap
+  .stat-item_label
+      opacity .6
+      white-space nowrap
 
  .tag
     font-size .5em

@@ -1,4 +1,11 @@
+<script setup lang="ts">
+  import Header from "../components/Header.vue";
+  import Footer from "../components/Footer.vue";
+</script>
+
 <template>
+  <Header />
+
   <h1>Impressum</h1>
   <div class="impressum">
     <div class="disclaimer">Angaben nach §5 TMG</div>
@@ -9,6 +16,8 @@
     <div class="mail">matthe.seifert@gmail.com</div>
     <div class="phone">01525 5911161</div>
   </div>
+
+  <Footer />
 </template>
 
 <style lang="stylus" scoped>

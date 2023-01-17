@@ -72,23 +72,22 @@ h1
         position absolute
         z-index -1
         border-radius 50%
-        filter blur(3em)
 
     &:before
-        width 60vw
-        height 30em
-        background secondaryColor
-        right -20vw
-        top -5em
-        opacity .3
+        width 120vw
+        height 60em
+        background secondaryBlur
+        right -40vw
+        top -20em
+        opacity .4
         transform rotate(-15deg)
 
     &:after
-        width 90vw
-        height 30em
-        background primaryColor
-        right -40vw
-        top 10em
-        opacity .3
+        width 150vw
+        height 40em
+        background primaryBlur
+        right -80vw
+        top 5em
+        opacity .4
         transform rotate(10deg)
 </style>
