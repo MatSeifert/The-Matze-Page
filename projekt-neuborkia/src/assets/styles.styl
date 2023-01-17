@@ -202,6 +202,15 @@ h1
     &.center-h
         align-items center
 
+    &.space-between
+        justify-content space-between
+
+    &.wrap
+        flex-wrap wrap
+
+    &.gap-3
+        gap 3em
+
 main
     padding 4em 5em 2em 5em
     position relative
@@ -266,6 +275,7 @@ main
     h2
         font-size 1.7em
         margin-top .2em
+        line-height 1.2em
 
     h3
         font-size 1em
@@ -290,20 +300,78 @@ main
     z-index 1
     flex 1 1 0
     max-width 12em
-    margin-right 3em
 
 .project-showcase
     z-index 1
     flex 2 2 0
 
     img
-        width 100%
+        width 30em
         margin-top -2em
-        margin-left 1.5em
+        float right
+
+.project-box-m
+    display none        
+
+@media screen and (max-width: 1800px)
+    .project-abstract
+        margin-right 3em
+
+@media screen and (max-width: 1600px)
+    .project-overview > div
+        flex-direction column
+
+        .project-stats, .project-showcase
+            display none
+
+        .project-box-m
+            display flex
+
+            .project-stats-m
+                justify-content center
+                gap 4em
+
+            .project-showcase-m
+                width 100%
+                text-align center
+
+    .link-tags
+        flex-direction row !important
 
 @media screen and (max-width: 1440px)
     main 
         padding-bottom 7em
+
+@media screen and (max-width: 1200px)
+    .project-box-m
+        flex-direction column
+
+        .project-stats-m
+            flex-direction row
+            justify-content flex-start !important
+            margin 2em 0
+
+        .project-showcase-m 
+            text-align left !important
+
+            img
+                width 100%
+                max-width 30em
+
+@media screen and (max-width: 1000px)
+    .project-abstract
+        margin-right 0
+
+    .project-overview > div .project-box-m .project-stats-m
+        gap 3em !important
+
+    .link-tags
+        flex-direction column-reverse !important
+        gap 1em
+        align-items center
+
+    .link-target-wrapper
+        justify-content center !important
 
 @media screen and (max-width: 620px)        
     body
@@ -312,3 +380,7 @@ main
     main
         padding-left 2em
         padding-right 2em
+
+@media screen and (max-width: 400px)
+    body 
+        font-size 14px        

@@ -203,6 +203,7 @@ svg
       list-style-type none
       display flex
       justify-content space-evenly
+      padding 0
 
       svg
         width 1.25em

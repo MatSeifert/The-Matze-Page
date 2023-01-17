@@ -46,6 +46,23 @@ export default {
 
     &.small .masonry-image-wrapper
       width calc(20% - 2em)
-      background rgba(#f00, .05)
+      background rgba(#000, .5)
       border-radius 1em
+
+@media screen and (max-width: 1400px)
+  .masonry.small .masonry-image-wrapper
+    width calc(25% - 2em)
+
+@media screen and (max-width: 1200px)
+  .masonry .masonry-image-wrapper
+    width 100%
+
+@media screen and (max-width: 1000px)
+  .masonry.small .masonry-image-wrapper
+    width calc(33% - 2em)
+
+
+@media screen and (max-width: 700px)
+  .masonry.small .masonry-image-wrapper
+    width calc(50% - 2em)       
 </style>

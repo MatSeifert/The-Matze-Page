@@ -1,5 +1,5 @@
 <script lang="ts">
-import ProjectStatItem from "../elements/ProjectStatItem.vue";
+import ProjectHeader from '../elements/ProjectHeader.vue'
 import Masonry from "../elements/Masonry.vue";
 import { TAG_DESIGN } from "@/helper/const";
 import { RouterLink } from "vue-router";
@@ -12,34 +12,22 @@ export default {
     };
   },
   components: {
-    ProjectStatItem,
+    ProjectHeader,
     Masonry,
   },
 };
 </script>
 
 <template>
-  <div class="project-overview gap-top-l">
-    <div class="flex">
-      <article class="project-abstract">
-        <h2>Design eines Iconsets</h2>
-        <h3>Praxis für Podologie</h3>
-        <p>
-          Eine podologische Praxis kümmert sich voll und ganz um das Wohl der Füße, wobei
-          neben der medizinischen Behandlungen auch die Fußpflege eine große Rolle spielt. 
-          Für das Redesign der eigenen Homepage entstand dieses sehr spezifische Iconset,
-          welches sich ebenfalls voll und ganz den Füßen und deren Gesundheit widmet.
-        </p>
-      </article>
-      <div class="project-stats">
-        <ProjectStatItem :value="'2 Wochen'" :label="'Projektzeitraum'" />
-        <ProjectStatItem :value="2018" :label="'Jahr'" />
-      </div>
-      <div class="project-showcase">
-        <ProjectStatItem :value="tags" />
-      </div>
-    </div>
-  </div>
+
+  <ProjectHeader :projectName="projectName"
+                 :headline="'Design eines Iconsets'"
+                 :subHeadline="'Praxis für Podologie'"
+                 :abstract="'Eine podologische Praxis kümmert sich voll und ganz um das Wohl der Füße, wobei neben der medizinischen Behandlungen auch die Fußpflege eine große Rolle spielt. Für das Redesign der eigenen Homepage entstand dieses sehr spezifische Iconset, welches sich ebenfalls voll und ganz den Füßen und deren Gesundheit widmet.'"
+                 :timespan="'2 Wochen'"
+                 :year="'2018'"
+                 :tags="tags"
+                 :noShowcase="true" />
 
   <Masonry :projectName="projectName" :imageCount="10" :fileType="'png'" :classes="'small'"/>
 
