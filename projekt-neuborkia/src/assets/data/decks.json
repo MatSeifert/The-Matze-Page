@@ -15,7 +15,7 @@
                 "team-rocket_dark-charmeleon": 1,
                 "base_charizard": 1,
                 "base_vulpix": 2,
-                "base_ninteails": 1,
+                "base_ninetales": 1,
                 "fossil_magmar": 1,
                 "base_voltorb": 1,
                 "team-rocket_voltorb": 1,
@@ -58,33 +58,28 @@
         "deckEnergyTypes": [
             "grass", "water"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "pokemon-go_mewtu",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "base_bulbasaur": 3,
+                "base_ivysaur": 2,
+                "base_venusaur": 1,
+                "jungle_venonat": 2,
+                "jungle_venomoth": 1,
+                "jungle_pinsir": 1,
+                "base_poliwag": 3,
+                "base_poliwhirl": 2,
+                "base_poliwrath": 1,
+                "base_magicarp": 2,
+                "base_gyarados": 1,
+                "fossil_lapras": 1
             },
             "trainer": {
                 "base_gust-of-wind": 2,
                 "base_switch": 2,
                 "base_potion": 2,
                 "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
+                "base_lass": 1,
                 "base_pokedex": 1,
                 "base_pluspower": 1,
                 "base_energy-retrieval": 1,
@@ -98,8 +93,8 @@
                 "jungle_pokeball": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
+                "grass": 10,
+                "water": 10
             }
         }
     },
@@ -150,8 +145,8 @@
                 "jungle_pokeball": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
+                "water": 10,
+                "fire": 10
             }
         }
     },
