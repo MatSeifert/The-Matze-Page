@@ -39,7 +39,7 @@
             <TcgDeckTypeIconS v-if="deckType == 's'" />
         </div>
         <div class="deck-type-name">
-            <div :class="`upper-name ${deckTypes[deckType]}`">
+            <div :class="`upper-name ${deckTypes[deckType].toLowerCase()}`">
                 {{ deckTypes[deckType] }}
             </div>
             <div class="lower-name"> Deck </div>
@@ -51,9 +51,10 @@
     .deck-type
         display flex
         padding 0 .25em
-        background linear-gradient(to bottom, #EDEDED, #CBCBCB)
+        background linear-gradient(to bottom, #353535, #1E1E1E)
         width 8em
         height 2.5em
+        border 2px solid rgba(#fff, .2)
         border-radius 5em
 
         .deck-type-abb
@@ -66,13 +67,15 @@
 
         .deck-type-name
             text-transform uppercase
-            color #131615
             margin-left .5em
 
             .upper-name
                 font-weight 900
                 font-size .73em
                 margin-top .5em
+
+                &.savage
+                    letter-spacing .08em
 
             .lower-name
                 font-weight 900

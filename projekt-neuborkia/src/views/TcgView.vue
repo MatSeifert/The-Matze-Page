@@ -1,6 +1,6 @@
 <script lang="ts">
-    import decks from '../assets/data/decks'
-    import TcgDeckType from '../components/tcg/TcgDeckType'
+    import decks from '../assets/data/decks.json'
+    import TcgDeckBox from '../components/tcg/TcgDeckBox.vue'
 
     export default {
         data() {
@@ -9,29 +9,20 @@
             }
         },
         components: {
-            TcgDeckType
+            TcgDeckBox
         }
     }
 </script>
 
 <template>
     <div class="tcg-decks">
-        <div v-for="deck in decks" :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
-            <h1>{{ deck.deckName }}</h1>
-
-            <div>
-                <TcgDeckType :deckType="deck.deckType" />
-            </div>
-        </div>
+        <TcgDeckBox v-for="deck in decks" :deck="deck"/>       
     </div>
 </template>
 
 <style lang="stylus" scoped>
     .tcg-decks
         display flex
-        justify-content space-between
-
-        .tcg-deck-card
-            width calc(33% - 2em)
-            border 1px solid #fff
+        flex-wrap wrap
+        gap 6em
 </style>
