@@ -32,7 +32,8 @@ const router = createRouter({
     {
       path: "/tcg/:id?",
       name: "tcg",
-      component: TcgView
+      component: TcgView,
+      props: true
     }
   ],
   scrollBehavior(to, from, savedPosition) {

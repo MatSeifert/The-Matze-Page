@@ -2,20 +2,23 @@
     import { RouterLink } from 'vue-router'
     import TcgDeckType from './TcgDeckType.vue'
     import TcgEnergyType from './TcgEnergyType.vue'
+    import IconCaretLeft from '../icons/IconCaretLeft.vue'
 
     export default {
         props: {
-            deck: Object
+            deck: Object,
+            noLink: Boolean
         },
         components: {
             TcgDeckType,
-            TcgEnergyType
+            TcgEnergyType,
+            IconCaretLeft
         }
     }
 </script>
 
 <template>
-    <RouterLink v-if="!!deck" :to="{ path: `/tcg/${deck.deckId}`}">
+    <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}">
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
             <h1>{{ deck.deckName }}</h1>
 
@@ -29,6 +32,23 @@
             </div>
         </div>
     </RouterLink>
+    <div v-else :class="`tcg-deck-card ${deck?.deckEnergyTypes[0]}`">
+        <RouterLink :to="{ path: `/tcg`}" class="tcg-backlink">
+            <h1>
+                <IconCaretLeft />
+                {{ deck?.deckName }}
+            </h1>
+        </RouterLink>
+
+        <img class="tcg-deck-pate" :src="`/src/assets/images/tcg/deckpaten/${deck?.deckId}.svg`" :alt="`Deckpate ${deck?.deckName}`"/>
+
+        <div class="tcg-deck-type-energy">
+            <TcgDeckType :deckType="deck?.deckType" />
+            <div class="tcg-deck-energy">
+                <TcgEnergyType v-for="energy in deck?.deckEnergyTypes" :energyType="energy" />
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="stylus" scoped>
@@ -40,8 +60,15 @@
         &:before, &:after
             display none
 
-        &:hover
+        &:not(.tcg-backlink):hover
             transform scale(1.2)
+
+        &.tcg-backlink:hover svg
+            margin-left -.25em
+            margin-right .25em
+
+        svg
+            transition all .1s ease-in-out
 
     h1
         font-size 2.5em
@@ -50,6 +77,9 @@
 
         &:after
             display none
+
+        svg
+            width .65em    
 
     .tcg-deck-card
         border 1px solid rgba(#fff, .25)
