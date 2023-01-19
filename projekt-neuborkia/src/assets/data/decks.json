@@ -296,5 +296,60 @@
                 "sm1-168": 20
             }
         }
+    },
+    "ur-dialga-s": {
+        "deckId": "ur-dialga-s",
+        "deckName": "Ur-Dialga",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "steel", "water"
+        ],
+        "deckSleeves": "silver-tempest_alola-vulpix",
+        "deckContent": {
+            "pokemon": {
+                "swsh10-113": 2,
+                "swshp-SWSH255": 1,
+                "swsh10-114": 2,
+                "swshp-SWSH204": 1,
+                "swsh12-120": 1,
+                "pgo-45": 1,
+                "swsh8-188": 1,
+                "pgo-46": 1,
+                "pgo-15": 2,
+                "bw8-24": 1,
+                "pgo-16": 2,
+                "pgo-17": 1,
+                "swsh12-39": 1,
+                "swsh7-37": 1,
+                "swsh12-40": 1,
+                "swsh10-45": 1
+            },
+            "trainer": {
+                "sm1-128": 1,
+                "sm1-120": 1,
+                "bw2-91": 1,
+                "pgo-64": 1,
+                "sm5-133": 1,
+                "bw1-104": 1,
+                "swsh8-228": 1,
+                "swsh6-130": 1,
+                "bw4-86": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "xy1-123": 1,
+                "sm3-128": 1,
+                "bw1-92": 1,
+                "swsh9-135": 1,
+                "xy1-116": 1,
+                "swsh7-160": 1,
+                "swsh7-144": 1,
+                "swsh6-158": 1,
+                "swsh4-165": 1
+            },
+            "energy": {
+                "sm1-171": 10,
+                "sm1-166": 10
+            }
+        }
     }
 }

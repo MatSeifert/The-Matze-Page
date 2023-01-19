@@ -15,7 +15,7 @@
         },
         computed: {
             getImage() {
-                return _.get(this.info, ['data', 'data', 'images', 'large'])
+                return _.get(this.info, ['data', 'images', 'large'])
             }
         },
         mounted() {
@@ -28,7 +28,7 @@
             const url = `https://api.pokemontcg.io/v2/cards/${this.cardName}`
 
             axios.get(url, config)
-                 .then(response => (this.info = response))
+                 .then(response => (this.info = response.data))
                  .catch(error => console.log(error))
         }
     }
@@ -46,7 +46,7 @@
 <style lang="stylus" scoped>
     .card-wrapper
         position relative
-        width calc(25% - 5em)
+        width calc(20% - 5em)
 
         img.card
             width 100%
