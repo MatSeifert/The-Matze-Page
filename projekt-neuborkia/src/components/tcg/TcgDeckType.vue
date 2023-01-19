@@ -77,6 +77,14 @@
                 &.savage
                     letter-spacing .08em
 
+                &.advanced
+                    font-size .6em
+                    letter-spacing -.05em
+                    margin-bottom .1em
+
+                &.basic
+                    letter-spacing .34em
+
             .lower-name
                 font-weight 900
                 letter-spacing .15em
