@@ -15,7 +15,7 @@
         },
         computed: {
             getDeck() {
-                return _.get(decks, [this.id], {})
+                return _.get(decks, [`${this.id}`], {})
             }
         },
         components: {

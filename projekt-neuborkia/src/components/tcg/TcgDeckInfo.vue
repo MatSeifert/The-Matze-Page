@@ -31,17 +31,17 @@
     </div>
     <div class="card-list energy">
         <TcgCard v-for="(amount, name) in deck.deckContent?.energy"
-                 :cardName="`base_energy-${name}`"
+                 :cardName="`${name}`"
                  :amount="4" />
     </div>
 </template>
 
 <style lang="stylus" scoped>
     .card-list
+        width calc(100% + 5em)
         margin 5em 0
         display flex
         flex-wrap wrap
-        justify-content space-between
         gap 5em
 
         &.energy

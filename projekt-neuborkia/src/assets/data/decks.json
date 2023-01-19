@@ -9,45 +9,45 @@
         "deckSleeves": "lost-origin_giratina",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninetales": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "base1-46": 2,
+                "base5-50": 1,
+                "base1-24": 1,
+                "base5-32": 1,
+                "base1-4": 1,
+                "base1-68": 2,
+                "base1-12": 1,
+                "base3-39": 1,
+                "base1-67": 1,
+                "base5-69": 1,
+                "base1-21": 1,
+                "base2-60": 1,
+                "base1-58": 1,
+                "base3-29": 1,
+                "base1-20": 1,
+                "base2-51": 2,
+                "base2-4": 1
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base5-81": 1,
+                "base1-87": 1,
+                "base1-84": 1,
+                "base1-81": 1,
+                "base3-60": 1,
+                "base1-90": 1,
+                "base5-79": 1,
+                "base3-61": 1,
+                "base1-88": 1,
+                "base3-59": 1,
+                "base1-92": 1,
+                "base2-64": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
+                "base1-98": 10,
+                "base1-100": 10
             }
         }
     },
@@ -61,40 +61,40 @@
         "deckSleeves": "pokemon-go_mewtu",
         "deckContent": {
             "pokemon": {
-                "base_bulbasaur": 3,
-                "base_ivysaur": 2,
-                "base_venusaur": 1,
-                "jungle_venonat": 2,
-                "jungle_venomoth": 1,
-                "jungle_pinsir": 1,
-                "base_poliwag": 3,
-                "base_poliwhirl": 2,
-                "base_poliwrath": 1,
-                "base_magicarp": 2,
-                "base_gyarados": 1,
-                "fossil_lapras": 1
+                "base1-44": 3,
+                "base1-30": 2,
+                "base1-15": 1,
+                "base2-63": 2,
+                "base2-29": 1,
+                "base2-25": 1,
+                "base1-59": 3,
+                "base1-38": 2,
+                "base1-13": 1,
+                "base1-35": 2,
+                "base1-6": 1,
+                "base1-25": 1
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "base_lass": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base1-75": 1,
+                "base1-87": 1,
+                "base1-84": 1,
+                "base1-81": 1,
+                "base3-60": 1,
+                "base1-90": 1,
+                "base5-79": 1,
+                "base3-61": 1,
+                "base1-88": 1,
+                "base3-59": 1,
+                "base1-92": 1,
+                "base2-64": 1
             },
             "energy": {
-                "grass": 10,
-                "water": 10
+                "base1-99": 10,
+                "base1-102": 10
             }
         }
     },
@@ -103,50 +103,46 @@
         "deckName": "Turtok",
         "deckType": "v",
         "deckEnergyTypes": [
-            "water", "fire"
+            "water", "fighting"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "brilliant-stars_arceus",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "base1-63": 3,
+                "base1-42": 2,
+                "base1-2": 1,
+                "base1-35": 1,
+                "base5-47": 1,
+                "base1-6": 1,
+                "base3-2": 1,
+                "base1-52": 3,
+                "base1-34": 2,
+                "base1-8": 1,
+                "base1-62": 2,
+                "base3-41": 1,
+                "base1-7": 1
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base1-80": 1,
+                "base1-90": 1,
+                "base3-61": 1,
+                "base1-81": 1,
+                "base5-79": 1,
+                "base1-87": 1,
+                "base2-64": 1,
+                "base3-60": 1,
+                "base1-92": 1,
+                "base1-88": 1,
+                "base1-77": 1,
+                "base3-59": 1
             },
             "energy": {
-                "water": 10,
-                "fire": 10
+                "base1-102": 10,
+                "base1-97": 10
             }
         }
     },
@@ -157,48 +153,41 @@
         "deckEnergyTypes": [
             "psychic"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "astral-radiance_darkrai",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "base1-43": 3,
+                "base1-32": 2,
+                "base1-1": 1,
+                "base1-50": 2,
+                "base3-33": 1,
+                "base1-29": 2,
+                "base3-20": 1,
+                "base3-55": 3,
+                "base3-43": 2,
+                "base1-31": 3
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 1,
+                "base1-92": 1,
+                "base5-77": 1,
+                "base1-89": 1,
+                "base1-81": 1,
+                "base1-90": 1,
+                "base1-77": 1,
+                "base3-60": 1,
+                "base5-79": 1,
+                "base1-85": 1,
+                "base2-64": 1,
+                "base1-87": 1,
+                "base1-73": 1,
+                "base1-74": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
+                "base1-101": 20
             }
         }
     },
@@ -209,48 +198,48 @@
         "deckEnergyTypes": [
             "dragon", "water", "electric"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "celebrations",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "pgo-49": 2,
+                "swshp-SWSH235": 1,
+                "swshp-SWSH236": 1,
+                "pgo-81": 1,
+                "swsh10-46": 1,
+                "pgo-15": 3,
+                "pgo-16": 2,
+                "pgo-17": 1,
+                "swsh10-37": 1,
+                "swsh11-54": 2,
+                "swsh4-52": 1,
+                "mcd19-6": 1,
+                "mcd22-7": 1,
+                "swsh11-53": 1,
+                "pgo-29": 1
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "pgo-64": 2,
+                "pgo-70": 2,
+                "swsh11-167": 1,
+                "swsh4-157": 1,
+                "swsh6-142": 1,
+                "swsh35-53": 1,
+                "swsh6-146": 1,
+                "swsh10-137": 1,
+                "swsh11-164": 1,
+                "swsh10-159": 1,
+                "swsh1-176": 1,
+                "swsh9-149": 1,
+                "swsh10-153": 1,
+                "pgo-69": 1,
+                "pgo-66": 1,
+                "swsh1-158": 1,
+                "swsh11-171": 1,
+                "swsh9-151": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
+                "sm1-166": 10,
+                "sm1-167": 10
             }
         }
     },
@@ -261,776 +250,50 @@
         "deckEnergyTypes": [
             "psychic"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "pokemon-go_mewtu",
         "deckContent": {
             "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
+                "pgo-72": 1,
+                "pgo-30": 1,
+                "swshp-SWSH229": 1,
+                "pgo-31": 2,
+                "swsh11-69": 1,
+                "xy2-38": 1,
+                "swsh9-60": 2,
+                "swsh9-61": 1,
+                "swsh4-70": 1,
+                "swsh9tg-TG06": 1,
+                "pgo-32": 2,
+                "pgo-33": 1,
+                "swsh9-56": 1,
+                "sm35-38": 1,
+                "swsh11-71": 1,
+                "pgo-34": 1,
+                "swsh9-66": 1
             },
             "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
+                "swsh6-130": 1,
+                "swsh11-159": 1,
+                "swsh8-228": 1,
+                "swsh35-67": 1,
+                "swsh9-140": 1,
+                "swsh9-130": 1,
+                "swsh11-164": 1,
+                "swsh35-65": 1,
+                "pgo-66": 2,
+                "swsh6-140": 1,
+                "swsh10-153": 1,
+                "swsh9-135": 1,
+                "swsh1-160": 1,
+                "swsh5-129": 1,
+                "swsh9-150": 1,
+                "swsh7-150": 1,
+                "swsh5-126": 1,
+                "swsh9-146": 1,
+                "swsh9-151": 1
             },
             "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "glurak-s": {
-        "deckId": "glurak-s",
-        "deckName": "Glurak",
-        "deckType": "s",
-        "deckEnergyTypes": [
-            "fire", "grass"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "rayquaza-s": {
-        "deckId": "rayquaza-s",
-        "deckName": "Rayquaza",
-        "deckType": "s",
-        "deckEnergyTypes": [
-            "dragon", "fire", "electric"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "wulaosu-s": {
-        "deckId": "wulaosu-s",
-        "deckName": "Wulaosu",
-        "deckType": "s",
-        "deckEnergyTypes": [
-            "fighting", "dark"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "ur-dialga-s": {
-        "deckId": "ur-dialga-s",
-        "deckName": "Ur-Dialga",
-        "deckType": "s",
-        "deckEnergyTypes": [
-            "steel", "water"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "legios-a": {
-        "deckId": "legios-a",
-        "deckName": "Legios",
-        "deckType": "a",
-        "deckEnergyTypes": [
-            "fighting", "psychic"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "raikou-a": {
-        "deckId": "raikou-a",
-        "deckName": "Raikou",
-        "deckType": "a",
-        "deckEnergyTypes": [
-            "electric", "steel"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "hisui-silvarro-s": {
-        "deckId": "hisui-silvarro-s",
-        "deckName": "Hisui-Silvarro",
-        "deckType": "s",
-        "deckEnergyTypes": [
-            "fighting"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "galar-lavados-a": {
-        "deckId": "galar-lavados-a",
-        "deckName": "Galar-Lavados",
-        "deckType": "a",
-        "deckEnergyTypes": [
-            "dark", "fire"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "gortrom-a": {
-        "deckId": "gortrom-a",
-        "deckName": "Gortrom",
-        "deckType": "a",
-        "deckEnergyTypes": [
-            "grass", "electric"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "hisui-tornupto-b": {
-        "deckId": "hisui-tornupto-b",
-        "deckName": "Hisui-Tornupto",
-        "deckType": "b",
-        "deckEnergyTypes": [
-            "psychic", "fire"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "hisui-admurai-b": {
-        "deckId": "hisui-admurai-b",
-        "deckName": "Hisui-Admurai",
-        "deckType": "b",
-        "deckEnergyTypes": [
-            "dark", "water"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "heatran-b": {
-        "deckId": "heatran-b",
-        "deckName": "Heatran",
-        "deckType": "b",
-        "deckEnergyTypes": [
-            "steel", "fire"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "viridium-b": {
-        "deckId": "viridium-b",
-        "deckName": "Viridium",
-        "deckType": "b",
-        "deckEnergyTypes": [
-            "grass", "fighting"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
-            }
-        }
-    },
-    "darkrai-b": {
-        "deckId": "darkrai-b",
-        "deckName": "Darkrai",
-        "deckType": "b",
-        "deckEnergyTypes": [
-            "dark", "psychic"
-        ],
-        "deckSleeves": "lost-origin_giratina",
-        "deckContent": {
-            "pokemon": {
-                "base_charmander": 2,
-                "team-rocket_charmander": 1,
-                "base_charmeleon": 1,
-                "team-rocket_dark-charmeleon": 1,
-                "base_charizard": 1,
-                "base_vulpix": 2,
-                "base_ninteails": 1,
-                "fossil_magmar": 1,
-                "base_voltorb": 1,
-                "team-rocket_voltorb": 1,
-                "base_electrode": 1,
-                "jungle_pikachu": 1,
-                "base_pikachu": 1,
-                "fossil_raichu": 1,
-                "base_electabuzz": 1,
-                "jungle_eevee": 2,
-                "jungle_jolteon": 1
-            },
-            "trainer": {
-                "base_gust-of-wind": 2,
-                "base_switch": 2,
-                "base_potion": 2,
-                "base_bill": 2,
-                "team-rocket_full-heal-energy": 1,
-                "base_pokedex": 1,
-                "base_pluspower": 1,
-                "base_energy-retrieval": 1,
-                "fossil_gambler": 1,
-                "base_super-potion": 1,
-                "team-rocket_sleep": 1,
-                "fossil_recycle": 1,
-                "base_professor-oak": 1,
-                "fossil_energy-search": 1,
-                "base_energy-removal": 1,
-                "jungle_pokeball": 1
-            },
-            "energy": {
-                "fire": 10,
-                "electric": 10
+                "sm1-168": 20
             }
         }
     }

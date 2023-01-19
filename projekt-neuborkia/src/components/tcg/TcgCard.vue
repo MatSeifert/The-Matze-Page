@@ -1,17 +1,45 @@
 <script lang="ts">
+    import axios from 'axios'
+    import _ from 'lodash'
+    import apiConfig from '../../assets/apiConfig.json'
+
     export default {
         props: {
             cardName: String,
             amount: Number
+        },
+        data() {
+            return {
+                info: {} as Object
+            }
+        },
+        computed: {
+            getImage() {
+                return _.get(this.info, ['data', 'data', 'images', 'large'])
+            }
+        },
+        mounted() {
+            const config = {
+                headers: {
+                    'X-Api-Key': _.get(apiConfig, ['apiKey'])
+                }
+            }
+
+            const url = `https://api.pokemontcg.io/v2/cards/${this.cardName}`
+
+            axios.get(url, config)
+                 .then(response => (this.info = response))
+                 .catch(error => console.log(error))
         }
     }
 </script>
 
 <template>
     <div class="card-wrapper">
+        <img src="/src/assets/images/tcg/loading.png" alt="Card loading" class="card loading" />
         <img v-for="i in amount" 
              :class="`card card-${i}`"
-             :src="`/src/assets/images/tcg/decks/${cardName}.png`" />
+             :src="getImage" />
     </div>
 </template>
 
@@ -52,4 +80,8 @@
                 width 85%
                 z-index -3
                 left 7.5%
+
+            &.loading
+                position absolute
+                z-index -4
 </style>
