@@ -238,8 +238,8 @@
                 "swsh9-151": 1
             },
             "energy": {
-                "sm1-166": 10,
-                "sm1-167": 10
+                "swsh12pt5-154": 10,
+                "swsh12pt5-155": 10
             }
         }
     },
@@ -293,7 +293,7 @@
                 "swsh9-151": 1
             },
             "energy": {
-                "sm1-168": 20
+                "swsh12pt5-156": 20
             }
         }
     },
@@ -347,8 +347,141 @@
                 "swsh4-165": 1
             },
             "energy": {
-                "sm1-171": 10,
-                "sm1-166": 10
+                "swsh12pt5-159": 10,
+                "swsh12pt5-154": 10
+            }
+        }
+    },
+    "wulaosu-s": {
+        "deckId": "wulaosu-s",
+        "deckName": "Wulaosu",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "fighting", "dark"
+        ],
+        "deckSleeves": "chilling-reign_schimmelreiter-coronospa",
+        "deckContent": {
+            "pokemon": {
+                "swsh5-85": 3,
+                "swsh9tg-TG29": 2,
+                "pgo-73": 1,
+                "bw8-76": 1,
+                "swsh9-78": 1,
+                "smp-SM54": 1,
+                "swsh7-82": 1,
+                "bw9-76": 1,
+                "bw9-75": 1,
+                "bw3-77": 1,
+                "bw3-78": 1,
+                "sm4-61": 1,
+                "sm4-62": 1,
+                "swsh6-101": 1,
+                "swsh10-88": 1,
+                "swsh10-90": 1,
+                "swsh10-97": 1
+            },
+            "trainer": {
+                "bw2-91": 1,
+                "sm1-120": 1,
+                "sm1-128": 1,
+                "xy2-94": 1,
+                "swsh10-144": 1,
+                "swsh8-224": 1,
+                "swsh6-145": 1,
+                "swsh8-228": 1,
+                "swsh9-140": 1,
+                "sm5-125": 1,
+                "swsh6-129": 1,
+                "sm4-96": 1,
+                "swsh35-58": 1,
+                "swsh35-59": 1,
+                "sm1-134": 1,
+                "bw1-92": 1,
+                "xy8-146": 1,
+                "sm2-120": 1,
+                "swsh5-141": 1,
+                "swsh4-164": 1
+            },
+            "energy": {
+                "swsh12pt5-157": 10,
+                "swsh12pt5-158": 10
+            }
+        }
+    },
+    "glurak-s": {
+        "deckId": "glurak-s",
+        "deckName": "Glurak",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "fire", "grass"
+        ],
+        "deckSleeves": "charizard-upc_glurak",
+        "deckContent": {
+            "pokemon": {
+                "swsh9-17": 2,
+                "swshp-SWSH260": 1,
+                "swshp-SWSH261": 1,
+                "swshp-SWSH262": 1,
+                "pgo-11": 1,
+                "sm35-12": 1,
+                "swsh6-23": 1,
+                "bw3-21": 1,
+                "xy11-25": 1,
+                "pgo-1": 2,
+                "swshp-SWSH231": 1,
+                "pgo-2": 2,
+                "sm35-2": 1,
+                "pgo-3": 1,
+                "swsh10-2": 2,
+                "swsh10-3": 1,
+                "swsh6-6": 1
+            },
+            "trainer": {
+                "bw2-91": 1,
+                "sm1-120": 1,
+                "pgo-65": 1,
+                "sm1-128": 1,
+                "bw4-86": 1,
+                "xy2-93": 1,
+                "swsh6-129": 1,
+                "swsh6-145": 1,
+                "sm3-116": 1,
+                "swsh6-130": 1,
+                "swsh9-147": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "xy1-123": 1,
+                "bw1-92": 1,
+                "xy1-116": 1,
+                "bw8-123": 1,
+                "sm2-118": 1,
+                "swsh6-158": 1,
+                "xy3-103": 1 
+            },
+            "energy": {
+                "swsh12pt5-153": 10,
+                "swsh12pt5-152": 10
+            }
+        }
+    },
+    "rayquaza-s": {
+        "deckId": "rayquaza-s",
+        "deckName": "Rayquaza",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "dragon", "fire", "electric"
+        ],
+        "deckSleeves": "fusion-strike_mew",
+        "deckContent": {
+            "pokemon": {
+
+            },
+            "trainer": {
+
+            },
+            "energy": {
+                "swsh12pt5-153": 10,
+                "swsh12pt5-155": 10
             }
         }
     }

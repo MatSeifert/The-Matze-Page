@@ -15,6 +15,8 @@
         },
         computed: {
             getImage() {
+                console.log(this.info)
+
                 return _.get(this.info, ['data', 'images', 'large'])
             }
         },
