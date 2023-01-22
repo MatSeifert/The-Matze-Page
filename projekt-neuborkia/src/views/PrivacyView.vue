@@ -6,7 +6,7 @@
 <template>
   <Header />
 
-  <h1>Datenschutzerklärung</h1>
+  <h1>datenschutzerklärung</h1>
 
   <div class="usercontent">
     <p>Ich freue mich über Dein Interesse an meienr Webseite. Der Schutz Deiner

@@ -32,7 +32,7 @@ export default {
                  :buttonLabelSecondary="'Github Projekt'" />
 
   <Masonry :projectName="projectName" :imageCount="7" />
-  <Masonry :projectName="projectName" :imageCount="4" :title="'Design System'" :fileNamePrefix="'ds_'" />
+  <Masonry :projectName="projectName" :imageCount="4" :title="'design system'" :fileNamePrefix="'ds_'" />
 
   <RouterLink
     :to="{  path: '/', hash: '#projects' }"

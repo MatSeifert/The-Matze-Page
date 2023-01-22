@@ -11,7 +11,7 @@
 
 <template>
     <div :class="`tcg-energy ${energyType}`">
-        <img :src="`/src/assets/images/tcg/energy/${energyType}.svg`" :alt="`Energy Typ: ${energyType}`"/>
+        <img :src="`../images/tcg/energy/${energyType}.svg`" :alt="`Energy Typ: ${energyType}`"/>
     </div>
 </template>
 

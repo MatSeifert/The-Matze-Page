@@ -3,6 +3,7 @@
     import decks from '../assets/data/decks.json'
     import TcgDeckBox from '../components/tcg/TcgDeckBox.vue'
     import TcgDeckInfo from '../components/tcg/TcgDeckInfo.vue'
+    import Footer from "../components/Footer.vue"
 
     export default {
         props: {
@@ -20,7 +21,8 @@
         },
         components: {
             TcgDeckBox,
-            TcgDeckInfo
+            TcgDeckInfo,
+            Footer
         }
     }
 </script>
@@ -32,6 +34,8 @@
     <div v-else>
         <TcgDeckInfo :deck="getDeck" />
     </div>
+
+    <Footer />
 </template>
 
 <style lang="stylus" scoped>

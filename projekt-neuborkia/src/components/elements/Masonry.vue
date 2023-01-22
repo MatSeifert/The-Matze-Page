@@ -10,14 +10,14 @@ export default {
   },
   data() {
     return {
-      filePath: `/src/assets/images/projects/${this.projectName}/masonry/`,
+      filePath: `../images/projects/${this.projectName}/masonry/`,
     };
   },
 };
 </script>
 
 <template>
-  <h1>{{ title || 'Gallerie' }}</h1>
+  <h1>{{ title || 'gallerie' }}</h1>
   <div :class="`masonry ${classes}`">
     <div v-for="image in imageCount" class="masonry-image-wrapper">
       <img :src="`${filePath}${fileNamePrefix || ''}${image}.${fileType || 'jpg'}`" />

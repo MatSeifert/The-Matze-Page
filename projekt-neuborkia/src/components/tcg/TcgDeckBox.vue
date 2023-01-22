@@ -22,7 +22,7 @@
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
             <h1>{{ deck.deckName }}</h1>
 
-            <img class="tcg-deck-pate" :src="`/src/assets/images/tcg/deckpaten/${deck.deckId}.svg`" :alt="`Deckpate ${deck.deckName}`"/>
+            <img class="tcg-deck-pate" :src="`../images/tcg/deckpaten/${deck.deckId}.svg`" :alt="`Deckpate ${deck.deckName}`"/>
 
             <div class="tcg-deck-type-energy">
                 <TcgDeckType :deckType="deck.deckType" />
@@ -40,7 +40,7 @@
             </h1>
         </RouterLink>
 
-        <img class="tcg-deck-pate" :src="`/src/assets/images/tcg/deckpaten/${deck?.deckId}.svg`" :alt="`Deckpate ${deck?.deckName}`"/>
+        <img class="tcg-deck-pate" :src="`../images/tcg/deckpaten/${deck?.deckId}.svg`" :alt="`Deckpate ${deck?.deckName}`"/>
 
         <div class="tcg-deck-type-energy">
             <TcgDeckType :deckType="deck?.deckType" />

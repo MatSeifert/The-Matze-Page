@@ -6,7 +6,7 @@ import PrivacyView from "../views/PrivacyView.vue";
 import TcgView from '../views/TcgView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",

@@ -1,4 +1,5 @@
 <script lang="ts">
+    import _ from 'lodash'
     import TcgDeckTypeIconV from './icons/TcgDeckTypeIconV.vue'
     import TcgDeckTypeIconB from './icons/TcgDeckTypeIconB.vue'
     import TcgDeckTypeIconA from './icons/TcgDeckTypeIconA.vue'
@@ -21,6 +22,13 @@
                 }
             }
         },
+        methods: {
+            getDeckType(toLower: Boolean) {
+                return toLower ? 
+                    _.get(this.deckTypes, [this.deckType]).toLowerCase() : 
+                    _.get(this.deckTypes, [this.deckType])
+            }
+        },
         components: {
             TcgDeckTypeIconV,
             TcgDeckTypeIconB,
@@ -39,8 +47,8 @@
             <TcgDeckTypeIconS v-if="deckType == 's'" />
         </div>
         <div class="deck-type-name">
-            <div :class="`upper-name ${deckTypes[deckType].toLowerCase()}`">
-                {{ deckTypes[deckType] }}
+            <div :class="`upper-name ${getDeckType(true)}`">
+                {{ getDeckType(false) }}
             </div>
             <div class="lower-name"> Deck </div>
         </div>

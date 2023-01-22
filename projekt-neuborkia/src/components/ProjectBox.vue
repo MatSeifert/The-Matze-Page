@@ -1,21 +1,27 @@
 <script lang="ts">
-import Tag from "./elements/Tag.vue";
-import { RouterLink } from "vue-router";
+  import _ from 'lodash'
+  import Tag from "./elements/Tag.vue";
+  import { RouterLink } from "vue-router";
 
-export default {
-  props: {
-    project: Object,
-  },
-  components: {
-    Tag,
-  },
-};
+  export default {
+    props: {
+      project: Object,
+    },
+    computed: {
+      getImage() {
+        return `./images/projects/${_.get(this.project, ['id'])}/title.png`
+      }
+    },
+    components: {
+      Tag,
+    },
+  };
 </script>
 
 <template>
-  <div v-if="!!project" class="project-box">
+  <div v-if="!!project && !project.hide" class="project-box">
     <div class="project-title-image">
-      <img :src="`./src/assets/images/projects/${project.id}/title.png`" />
+      <img :src="getImage" />
       <div class="project-tags">
         <Tag v-for="tag of project.tags" :label="tag" :type="tag" />
       </div>

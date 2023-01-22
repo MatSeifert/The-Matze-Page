@@ -18,7 +18,7 @@ export default {
       {{ value }}
     </div>
     <div v-else class="stat-item_value">
-      <Tag v-for="tag of value" :label="tag" :type="tag" />
+      <Tag v-for="tag of value" :label="`${tag}`" :type="`${tag}`" />
     </div>
     <div v-if="!!label" class="stat-item_label">
       {{ label }}

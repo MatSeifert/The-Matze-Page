@@ -1,0 +1,523 @@
+{
+    "glurak-v": {
+        "deckId": "glurak-v",
+        "deckName": "Glurak",
+        "deckType": "v",
+        "deckEnergyTypes": [
+            "fire", "electric"
+        ],
+        "deckSleeves": "lost-origin_giratina",
+        "deckContent": {
+            "pokemon": {
+                "base1-46": 2,
+                "base5-50": 1,
+                "base1-24": 1,
+                "base5-32": 1,
+                "base1-4": 1,
+                "base1-68": 2,
+                "base1-12": 1,
+                "base3-39": 1,
+                "base1-67": 1,
+                "base5-69": 1,
+                "base1-21": 1,
+                "base2-60": 1,
+                "base1-58": 1,
+                "base3-29": 1,
+                "base1-20": 1,
+                "base2-51": 2,
+                "base2-4": 1
+            },
+            "trainer": {
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base5-81": 1,
+                "base1-87": 1,
+                "base1-84": 1,
+                "base1-81": 1,
+                "base3-60": 1,
+                "base1-90": 1,
+                "base5-79": 1,
+                "base3-61": 1,
+                "base1-88": 1,
+                "base3-59": 1,
+                "base1-92": 1,
+                "base2-64": 1
+            },
+            "energy": {
+                "base1-98": 10,
+                "base1-100": 10
+            }
+        }
+    },
+    "bisaflor-v": {
+        "deckId": "bisaflor-v",
+        "deckName": "Bisaflor",
+        "deckType": "v",
+        "deckEnergyTypes": [
+            "grass", "water"
+        ],
+        "deckSleeves": "pokemon-go_mewtu",
+        "deckContent": {
+            "pokemon": {
+                "base1-44": 3,
+                "base1-30": 2,
+                "base1-15": 1,
+                "base2-63": 2,
+                "base2-29": 1,
+                "base2-25": 1,
+                "base1-59": 3,
+                "base1-38": 2,
+                "base1-13": 1,
+                "base1-35": 2,
+                "base1-6": 1,
+                "base1-25": 1
+            },
+            "trainer": {
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base1-75": 1,
+                "base1-87": 1,
+                "base1-84": 1,
+                "base1-81": 1,
+                "base3-60": 1,
+                "base1-90": 1,
+                "base5-79": 1,
+                "base3-61": 1,
+                "base1-88": 1,
+                "base3-59": 1,
+                "base1-92": 1,
+                "base2-64": 1
+            },
+            "energy": {
+                "base1-99": 10,
+                "base1-102": 10
+            }
+        }
+    },
+    "turtok-v": {
+        "deckId": "turtok-v",
+        "deckName": "Turtok",
+        "deckType": "v",
+        "deckEnergyTypes": [
+            "water", "fighting"
+        ],
+        "deckSleeves": "brilliant-stars_arceus",
+        "deckContent": {
+            "pokemon": {
+                "base1-63": 3,
+                "base1-42": 2,
+                "base1-2": 1,
+                "base1-35": 1,
+                "base5-47": 1,
+                "base1-6": 1,
+                "base3-2": 1,
+                "base1-52": 3,
+                "base1-34": 2,
+                "base1-8": 1,
+                "base1-62": 2,
+                "base3-41": 1,
+                "base1-7": 1
+            },
+            "trainer": {
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 2,
+                "base1-80": 1,
+                "base1-90": 1,
+                "base3-61": 1,
+                "base1-81": 1,
+                "base5-79": 1,
+                "base1-87": 1,
+                "base2-64": 1,
+                "base3-60": 1,
+                "base1-92": 1,
+                "base1-88": 1,
+                "base1-77": 1,
+                "base3-59": 1
+            },
+            "energy": {
+                "base1-102": 10,
+                "base1-97": 10
+            }
+        }
+    },
+    "gengar-v": {
+        "deckId": "gengar-v",
+        "deckName": "Gengar",
+        "deckType": "v",
+        "deckEnergyTypes": [
+            "psychic"
+        ],
+        "deckSleeves": "astral-radiance_darkrai",
+        "deckContent": {
+            "pokemon": {
+                "base1-43": 3,
+                "base1-32": 2,
+                "base1-1": 1,
+                "base1-50": 2,
+                "base3-33": 1,
+                "base1-29": 2,
+                "base3-20": 1,
+                "base3-55": 3,
+                "base3-43": 2,
+                "base1-31": 3
+            },
+            "trainer": {
+                "base1-93": 2,
+                "base1-95": 2,
+                "base1-94": 2,
+                "base1-91": 1,
+                "base1-92": 1,
+                "base5-77": 1,
+                "base1-89": 1,
+                "base1-81": 1,
+                "base1-90": 1,
+                "base1-77": 1,
+                "base3-60": 1,
+                "base5-79": 1,
+                "base1-85": 1,
+                "base2-64": 1,
+                "base1-87": 1,
+                "base1-73": 1,
+                "base1-74": 1
+            },
+            "energy": {
+                "base1-101": 20
+            }
+        }
+    },
+    "dragoran-s": {
+        "deckId": "dragoran-s",
+        "deckName": "Dragoran",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "dragon", "water", "electric"
+        ],
+        "deckSleeves": "celebrations",
+        "deckContent": {
+            "pokemon": {
+                "pgo-49": 2,
+                "swshp-SWSH235": 1,
+                "swshp-SWSH236": 1,
+                "pgo-81": 1,
+                "swsh10-46": 1,
+                "pgo-15": 3,
+                "pgo-16": 2,
+                "pgo-17": 1,
+                "swsh10-37": 1,
+                "swsh11-54": 2,
+                "swsh4-52": 1,
+                "mcd19-6": 1,
+                "mcd22-7": 1,
+                "swsh11-53": 1,
+                "pgo-29": 1
+            },
+            "trainer": {
+                "pgo-64": 2,
+                "pgo-70": 2,
+                "swsh11-167": 1,
+                "swsh4-157": 1,
+                "swsh6-142": 1,
+                "swsh35-53": 1,
+                "swsh6-146": 1,
+                "swsh10-137": 1,
+                "swsh11-164": 1,
+                "swsh10-159": 1,
+                "swsh1-176": 1,
+                "swsh9-149": 1,
+                "swsh10-153": 1,
+                "pgo-69": 1,
+                "pgo-66": 1,
+                "swsh1-158": 1,
+                "swsh11-171": 1,
+                "swsh9-151": 1
+            },
+            "energy": {
+                "swsh12pt5-154": 10,
+                "swsh12pt5-155": 10
+            }
+        }
+    },
+    "mewtu-s": {
+        "deckId": "mewtu-s",
+        "deckName": "Mewtu",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "psychic"
+        ],
+        "deckSleeves": "pokemon-go_mewtu",
+        "deckContent": {
+            "pokemon": {
+                "pgo-72": 1,
+                "pgo-30": 1,
+                "swshp-SWSH229": 1,
+                "pgo-31": 2,
+                "swsh11-69": 1,
+                "xy2-38": 1,
+                "swsh9-60": 2,
+                "swsh9-61": 1,
+                "swsh4-70": 1,
+                "swsh9tg-TG06": 1,
+                "pgo-32": 2,
+                "pgo-33": 1,
+                "swsh9-56": 1,
+                "sm35-38": 1,
+                "swsh11-71": 1,
+                "pgo-34": 1,
+                "swsh9-66": 1
+            },
+            "trainer": {
+                "swsh6-130": 1,
+                "swsh11-159": 1,
+                "swsh8-228": 1,
+                "swsh35-67": 1,
+                "swsh9-140": 1,
+                "swsh9-130": 1,
+                "swsh11-164": 1,
+                "swsh35-65": 1,
+                "pgo-66": 2,
+                "swsh6-140": 1,
+                "swsh10-153": 1,
+                "swsh9-135": 1,
+                "swsh1-160": 1,
+                "swsh5-129": 1,
+                "swsh9-150": 1,
+                "swsh7-150": 1,
+                "swsh5-126": 1,
+                "swsh9-146": 1,
+                "swsh9-151": 1
+            },
+            "energy": {
+                "swsh12pt5-156": 20
+            }
+        }
+    },
+    "ur-dialga-s": {
+        "deckId": "ur-dialga-s",
+        "deckName": "Ur-Dialga",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "steel", "water"
+        ],
+        "deckSleeves": "silver-tempest_alola-vulpix",
+        "deckContent": {
+            "pokemon": {
+                "swsh10-113": 2,
+                "swshp-SWSH255": 1,
+                "swsh10-114": 2,
+                "swshp-SWSH204": 1,
+                "swsh12-120": 1,
+                "pgo-45": 1,
+                "swsh8-188": 1,
+                "pgo-46": 1,
+                "pgo-15": 2,
+                "bw8-24": 1,
+                "pgo-16": 2,
+                "pgo-17": 1,
+                "swsh12-39": 1,
+                "swsh7-37": 1,
+                "swsh12-40": 1,
+                "swsh10-45": 1
+            },
+            "trainer": {
+                "sm1-128": 1,
+                "sm1-120": 1,
+                "bw2-91": 1,
+                "pgo-64": 1,
+                "sm5-133": 1,
+                "bw1-104": 1,
+                "swsh8-228": 1,
+                "swsh6-130": 1,
+                "bw4-86": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "xy1-123": 1,
+                "sm3-128": 1,
+                "bw1-92": 1,
+                "swsh9-135": 1,
+                "xy1-116": 1,
+                "swsh7-160": 1,
+                "swsh7-144": 1,
+                "swsh6-158": 1,
+                "swsh4-165": 1
+            },
+            "energy": {
+                "swsh12pt5-159": 10,
+                "swsh12pt5-154": 10
+            }
+        }
+    },
+    "wulaosu-s": {
+        "deckId": "wulaosu-s",
+        "deckName": "Wulaosu",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "fighting", "dark"
+        ],
+        "deckSleeves": "chilling-reign_schimmelreiter-coronospa",
+        "deckContent": {
+            "pokemon": {
+                "swsh5-85": 3,
+                "swsh9tg-TG29": 2,
+                "pgo-73": 1,
+                "bw8-76": 1,
+                "swsh9-78": 1,
+                "smp-SM54": 1,
+                "swsh7-82": 1,
+                "bw9-76": 1,
+                "bw9-75": 1,
+                "bw3-77": 1,
+                "bw3-78": 1,
+                "sm4-61": 1,
+                "sm4-62": 1,
+                "swsh6-101": 1,
+                "swsh10-88": 1,
+                "swsh10-90": 1,
+                "swsh10-97": 1
+            },
+            "trainer": {
+                "bw2-91": 1,
+                "sm1-120": 1,
+                "sm1-128": 1,
+                "xy2-94": 1,
+                "swsh10-144": 1,
+                "swsh8-224": 1,
+                "swsh6-145": 1,
+                "swsh8-228": 1,
+                "swsh9-140": 1,
+                "sm5-125": 1,
+                "swsh6-129": 1,
+                "sm4-96": 1,
+                "swsh35-58": 1,
+                "swsh35-59": 1,
+                "sm1-134": 1,
+                "bw1-92": 1,
+                "xy8-146": 1,
+                "sm2-120": 1,
+                "swsh5-141": 1,
+                "swsh4-164": 1
+            },
+            "energy": {
+                "swsh12pt5-157": 10,
+                "swsh12pt5-158": 10
+            }
+        }
+    },
+    "glurak-s": {
+        "deckId": "glurak-s",
+        "deckName": "Glurak",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "fire", "grass"
+        ],
+        "deckSleeves": "charizard-upc_glurak",
+        "deckContent": {
+            "pokemon": {
+                "swsh9-17": 2,
+                "swshp-SWSH260": 1,
+                "swshp-SWSH261": 1,
+                "swshp-SWSH262": 1,
+                "pgo-11": 1,
+                "sm35-12": 1,
+                "swsh6-23": 1,
+                "bw3-21": 1,
+                "xy11-25": 1,
+                "pgo-1": 2,
+                "swshp-SWSH231": 1,
+                "pgo-2": 2,
+                "sm35-2": 1,
+                "pgo-3": 1,
+                "swsh10-2": 2,
+                "swsh10-3": 1,
+                "swsh6-6": 1
+            },
+            "trainer": {
+                "bw2-91": 1,
+                "sm1-120": 1,
+                "pgo-65": 1,
+                "sm1-128": 1,
+                "bw4-86": 1,
+                "xy2-93": 1,
+                "swsh6-129": 1,
+                "swsh6-145": 1,
+                "sm3-116": 1,
+                "swsh6-130": 1,
+                "swsh9-147": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "xy1-123": 1,
+                "bw1-92": 1,
+                "xy1-116": 1,
+                "bw8-123": 1,
+                "sm2-118": 1,
+                "swsh6-158": 1,
+                "xy3-103": 1 
+            },
+            "energy": {
+                "swsh12pt5-153": 10,
+                "swsh12pt5-152": 10
+            }
+        }
+    },
+    "rayquaza-s": {
+        "deckId": "rayquaza-s",
+        "deckName": "Rayquaza",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "dragon", "fire", "electric"
+        ],
+        "deckSleeves": "fusion-strike_mew",
+        "deckContent": {
+            "pokemon": {
+                "swsh7-110": 3,
+                "swsh12tg-TG29": 1,
+                "swsh7-111": 1,
+                "swsh12-57": 1,
+                "sm2-11": 2,
+                "swsh2-31": 1,
+                "sm2-12": 1,
+                "swsh11-25": 1,
+                "swsh2-33": 1,
+                "swsh9-21": 1,
+                "xy12-35": 1,
+                "sm4-30": 1,
+                "swsh12-50": 1,
+                "swsh12-51": 1,
+                "sm7-49": 1,
+                "swsh12-52": 1,
+                "swsh10-51": 1
+            },
+            "trainer": {
+                "swshp-SWSH228": 1,
+                "bw5-91": 1,
+                "bw2-91": 1,
+                "sm1-128": 1,
+                "swsh6-129": 1,
+                "swsh11-159": 1,
+                "bw8-118": 1,
+                "xy2-94": 1,
+                "xy1-122": 1,
+                "sm5-125": 1,
+                "swsh8-224": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "swsh7-150": 1,
+                "sm3-128": 1,
+                "xy1-119": 1,
+                "swsh7-160": 1,
+                "swsh7-161": 1,
+                "swsh6-158": 1,
+                "swsh6-159": 1
+            },
+            "energy": {
+                "swsh12pt5-153": 10,
+                "swsh12pt5-155": 10
+            }
+        }
+    }
+}

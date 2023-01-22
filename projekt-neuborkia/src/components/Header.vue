@@ -278,6 +278,9 @@ export default {
       flex-direction column
       gap 2em
 
+      #social
+        font-size 1.5em
+
       h1 
         margin 0
 
