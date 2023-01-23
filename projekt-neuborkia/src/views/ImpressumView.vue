@@ -47,20 +47,20 @@
       margin-bottom 2em
 
     .website:before
-      content url('src/assets/images/heroicons/globe.svg')
+      content url('../images/heroicons/globe.svg')
 
     .name:before
-      content url('src/assets/images/heroicons/person.svg')
+      content url('../images/heroicons/person.svg')
 
     .address#firstline:before
-      content url('src/assets/images/heroicons/home.svg')  
+      content url('../images/heroicons/home.svg')  
 
     .address#secondline:before  
       content: ''
 
     .mail:before
-      content url('src/assets/images/heroicons/mail.svg')  
+      content url('../images/heroicons/mail.svg')  
 
     .phone:before
-      content url('src/assets/images/heroicons/phone.svg')        
+      content url('../images/heroicons/phone.svg')        
 </style>
