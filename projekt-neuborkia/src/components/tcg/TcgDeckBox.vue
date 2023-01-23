@@ -7,7 +7,8 @@
     export default {
         props: {
             deck: Object,
-            noLink: Boolean
+            noLink: Boolean,
+            filter: String
         },
         components: {
             TcgDeckType,
@@ -18,7 +19,8 @@
 </script>
 
 <template>
-    <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}">
+    <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}"
+        :class="filter == 'all' || filter == deck?.deckType ? '' : 'hide'">
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
             <h1>{{ deck.deckName }}</h1>
 
@@ -57,6 +59,9 @@
         width calc(33% - 4em)
         transition all .2s ease-in-out
 
+        &.hide
+            display none
+
         &:before, &:after
             display none
 
@@ -89,6 +94,7 @@
         overflow hidden
         position relative
         height 12em
+        box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
         &:before
             content ''
@@ -144,4 +150,12 @@
                 display flex
                 gap .5em
                 margin-left auto
+
+    @media screen and (max-width: 1600px)
+        a
+            width calc(50% - 4em)
+
+    @media screen and (max-width: 1100px)
+        a
+            width 100%        
 </style>

@@ -17,18 +17,21 @@
 </script>
 
 <template>
-    <TcgDeckBox :deck="deck" :noLink="true" />
+    <TcgDeckBox :deck="deck" :noLink="true" :filter="'all'" />
     
+    <h1 class="gap-top-m">pokémon</h1>
     <div class="card-list">
         <TcgCard v-for="(amount, name) in deck.deckContent?.pokemon"
                  :cardName="`${name}`"
                  :amount="amount" />
     </div>
+    <h1>trainer</h1>
     <div class="card-list">
         <TcgCard v-for="(amount, name) in deck.deckContent?.trainer"
                  :cardName="`${name}`"
                  :amount="amount" />
     </div>
+    <h1>energie</h1>
     <div class="card-list energy">
         <TcgCard v-for="(amount, name) in deck.deckContent?.energy"
                  :cardName="`${name}`"
@@ -39,7 +42,7 @@
 <style lang="stylus" scoped>
     .card-list
         width calc(100% + 5em)
-        margin 5em 0
+        margin 3em 0 6em 0
         display flex
         flex-wrap wrap
         gap 5em
