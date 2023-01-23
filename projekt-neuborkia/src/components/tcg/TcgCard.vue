@@ -38,7 +38,7 @@
 
 <template>
     <div class="card-wrapper">
-        <img src="/src/assets/images/tcg/loading.png" alt="Card loading" class="card loading" />
+        <img v-if="!getImage" src="/src/assets/images/tcg/loading.png" alt="Card loading" class="card loading" />
         <img v-for="i in amount" 
              :class="`card card-${i}`"
              :src="getImage" />
@@ -53,7 +53,7 @@
         img.card
             width 100%
             border-radius .8em
-            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
             transition all .1s
 
             &:hover
@@ -83,7 +83,19 @@
                 z-index -3
                 left 7.5%
 
-            &.loading
-                position absolute
-                z-index -4
+    @media screen and (max-width: 1919px)
+        .card-wrapper
+            width calc(25% - 5em)
+
+    @media screen and (max-width: 1400px)
+        .card-wrapper
+            width calc(33% - 5em)
+
+    @media screen and (max-width: 1000px)
+        .card-wrapper
+            width calc(50% - 5em)
+
+    @media screen and (max-width: 700px)
+        .card-wrapper
+            width calc(100% - 5em)
 </style>
