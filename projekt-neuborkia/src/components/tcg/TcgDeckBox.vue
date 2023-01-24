@@ -79,6 +79,7 @@
         font-size 2.5em
         font-weight 800
         margin 0
+        z-index 1
 
         &:after
             display none

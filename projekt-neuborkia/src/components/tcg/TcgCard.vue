@@ -95,6 +95,9 @@
         .card-wrapper
             width calc(50% - 5em)
 
+            img.card:hover
+                transform none
+
     @media screen and (max-width: 700px)
         .card-wrapper
             width calc(100% - 5em)

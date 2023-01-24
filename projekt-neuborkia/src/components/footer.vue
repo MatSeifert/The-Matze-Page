@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="disclaimer">
-      &copy; {{ new Date().getFullYear() }} - Matthias Seifert - matze.dev
+      &copy; {{ new Date().getFullYear() }} - Matthias Seifert <a href="https://www.matze.dev/" alt="Matze.dev Homepage">matze.dev</a>
     </div>
     <a href="/impressum">impressum</a>
     <a href="/datenschutz">datenschutz</a>

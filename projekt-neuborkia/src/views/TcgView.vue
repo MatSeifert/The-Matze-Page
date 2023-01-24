@@ -42,6 +42,9 @@
             TcgDeckTypeIconB,
             TcgDeckTypeIconA,
             TcgDeckTypeIconS
+        },
+        mounted() {
+            window.scrollTo(0, 0);
         }
     }
 </script>
