@@ -16,7 +16,7 @@
       selbstständig gemacht und biete vor allem meine Fähigkeiten als Designer
       an. Hast Du Interesse daran, mit mir zu arbeiten? Ich freue mich schon
       darauf zu hören, wie ich auch Deinem Projekt helfen kann!</p>
-      <a href="mailto:matthe.seifert@gmail.com?subject=Projektanfrage via matze.dev&body=Hi Matze%0D%0Dich möchte mit dir über folgendes Projekt von mir sprechen:%0D%0D" class="no-hover-effect gap-top-m inline-block">
+      <a href="mailto:hallo@matze.dev?subject=Projektanfrage via matze.dev&body=Hi Matze%0D%0Dich möchte mit dir über folgendes Projekt von mir sprechen:%0D%0D" class="no-hover-effect gap-top-m inline-block">
         <button class="btn btn-primary">projektanfrage</button>
       </a>
     </div>
