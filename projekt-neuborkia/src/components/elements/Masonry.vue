@@ -1,23 +1,29 @@
 <script lang="ts">
-export default {
-  props: {
-    projectName: String,
-    imageCount: Number,
-    title: String,
-    fileNamePrefix: String,
-    fileType: String,
-    classes: String
-  },
-  data() {
-    return {
-      filePath: `../images/projects/${this.projectName}/masonry/`,
-    };
-  },
-};
+  import PhotoFrame from '@/components/elements/PhotoFrame.vue'
+
+  export default {
+    props: {
+      projectName: String,
+      imageCount: Number,
+      title: String,
+      fileNamePrefix: String,
+      fileType: String,
+      classes: String
+    },
+    data() {
+      return {
+        filePath: `../images/projects/${this.projectName}/masonry/`,
+      };
+    },
+    components: {
+      PhotoFrame
+    }
+  };
 </script>
 
 <template>
   <h1>{{ title || 'gallerie' }}</h1>
+  <PhotoFrame :images="['1', '2']" :activeImage="2" />
   <div :class="`masonry ${classes}`">
     <div v-for="image in imageCount" class="masonry-image-wrapper">
       <img :src="`${filePath}${fileNamePrefix || ''}${image}.${fileType || 'jpg'}`" />
