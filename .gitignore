@@ -1,4 +1,5 @@
 appsettings.json
 /bin/*
 /obj/*
+/backup/*
 *.map

@@ -1,6 +1,6 @@
 <script lang="ts">
-import ProjectHeader from '../elements/ProjectHeader.vue'
-import Masonry from "../elements/Masonry.vue";
+import ProjectHeader from '@/components/elements/ProjectHeader.vue'
+import Masonry from "@/components/elements/Masonry.vue";
 import { TAG_DESIGN } from "@/helper/const";
 import { RouterLink } from "vue-router";
 

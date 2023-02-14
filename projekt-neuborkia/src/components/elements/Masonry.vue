@@ -23,7 +23,7 @@
 
 <template>
   <h1>{{ title || 'gallerie' }}</h1>
-  <PhotoFrame :images="['1', '2']" :activeImage="2" />
+  <!-- <PhotoFrame :images="['1', '2']" :activeImage="2" /> -->
   <div :class="`masonry ${classes}`">
     <div v-for="image in imageCount" class="masonry-image-wrapper">
       <img :src="`${filePath}${fileNamePrefix || ''}${image}.${fileType || 'jpg'}`" />

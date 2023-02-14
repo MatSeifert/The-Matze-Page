@@ -24,100 +24,100 @@
 </template>
 
 <style lang="stylus" scoped>
-@import '../assets/config.styl'
+  @import '../assets/config.styl'
 
-h1
-    padding-top 1em
+  h1
+      padding-top 1em
 
-#aboutMeContent
-    max-width 70em
-    position relative
-    align-items center
-
-    &:before, &:after
-        content ''
-        position absolute
-        border-radius 50%
-
-    &:before
-        z-index -1
-        width 150em
-        height 50em
-        background secondaryBlur
-        top -20em
-        left -45em
-        transform rotate(15deg)
-        opacity .4
-
-    &:after
-        width 100em
-        height 40em
-        background primaryBlur
-        transform rotate(-25deg)
-        opacity .4
-        z-index -2
-        top 0
-        left -40em
-
-img
-    width 30em
-
-#aboutMeQuote
-    font-family DM Serif Display
-    font-size 3em
-    line-height 1em
-    margin-bottom 1em
-    max-width 10em
-    position relative
-    text-align left
-    letter-spacing .03em
-
-    span
-        font-family Figtree, sans-serif
-        color secondaryColor
-        font-weight 900
-
-    &:before
-        content '„'
-        color primaryColor
-        font-size 5em
-        position absolute
-        z-index -1
-        top -.35em
-        left -.15em
-        opacity .3
-        filter blur(.005em)
-
-    &:after
-        content '“'
-        color secondaryColor
-        font-size 5em
-        position absolute
-        z-index -1
-        top .7em
-        left 1em
-        opacity .4
-        filter blur(.005em)
-
-#aboutMeText
-    line-height 1.5em
-    margin-left 6em
-    text-align justify
-
-
-@media screen and (max-width: 1440px)
   #aboutMeContent
-      flex-direction column-reverse
-      max-width 30em
-      margin-top 6em
+      max-width 70em
+      position relative
+      align-items center
 
-      #aboutMeText
-        margin-left 0
+      &:before, &:after
+          content ''
+          position absolute
+          border-radius 50%
 
-      img
-          margin-top 4em
+      &:before
+          z-index -1
+          width 150em
+          height 50em
+          background secondaryBlur
+          top -20em
+          left -45em
+          transform rotate(15deg)
+          opacity .4
 
-@media screen and (max-width: 720px)
+      &:after
+          width 100em
+          height 40em
+          background primaryBlur
+          transform rotate(-25deg)
+          opacity .4
+          z-index -2
+          top 0
+          left -40em
+
+  img
+      width 30em
+
   #aboutMeQuote
-    font-size 2em        
+      font-family DM Serif Display
+      font-size 3em
+      line-height 1em
+      margin-bottom 1em
+      max-width 10em
+      position relative
+      text-align left
+      letter-spacing .03em
+
+      span
+          font-family Figtree, sans-serif
+          color secondaryColor
+          font-weight 900
+
+      &:before
+          content '„'
+          color primaryColor
+          font-size 5em
+          position absolute
+          z-index -1
+          top -.35em
+          left -.15em
+          opacity .3
+          filter blur(.005em)
+
+      &:after
+          content '“'
+          color secondaryColor
+          font-size 5em
+          position absolute
+          z-index -1
+          top .7em
+          left 1em
+          opacity .4
+          filter blur(.005em)
+
+  #aboutMeText
+      line-height 1.5em
+      margin-left 6em
+      text-align justify
+
+
+  @media screen and (max-width: 1440px)
+    #aboutMeContent
+        flex-direction column-reverse
+        max-width 30em
+        margin-top 6em
+
+        #aboutMeText
+          margin-left 0
+
+        img
+            margin-top 4em
+
+  @media screen and (max-width: 720px)
+    #aboutMeQuote
+      font-size 2em        
 </style>

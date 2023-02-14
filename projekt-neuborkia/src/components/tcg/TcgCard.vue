@@ -1,7 +1,7 @@
 <script lang="ts">
     import axios from 'axios'
     import _ from 'lodash'
-    import apiConfig from '../../assets/apiConfig.json'
+    import apiConfig from '@/assets/apiConfig.json'
 
     export default {
         props: {
