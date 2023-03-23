@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ProjectStatItem from "../elements/ProjectStatItem.vue";
+    import ProjectStatItem from "@/components/elements/ProjectStatItem.vue";
 
     export default {
         props: {

@@ -1,6 +1,6 @@
 <script lang="ts">
     import _ from 'lodash' 
-    import decks from '../assets/data/decks.json'
+    import decks from '@/../public/data/decks.json'
     import TcgDeckBox from '../components/tcg/TcgDeckBox.vue'
     import TcgDeckInfo from '../components/tcg/TcgDeckInfo.vue'
     import Footer from "../components/Footer.vue"
