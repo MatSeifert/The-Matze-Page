@@ -1082,5 +1082,63 @@
                 "swsh12pt5-153": 10
             }
         }
+    },
+    "evoli-a": {
+        "deckId": "evoli-a",
+        "deckName": "Evoli",
+        "deckType": "a",
+        "deckEnergyTypes": [
+            "colorless", "dark", "grass", "water"
+        ],
+        "deckSleeves": "celebrations",
+        "deckContent": {
+            "pokemon": {
+                "swsh12pt5-108": 1,
+                "swshp-SWSH203": 1,
+                "swsh12pt5-13": 1,
+                "swsh12pt5-38": 1,
+                "swsh7-125": 1,
+                "pgo-54": 1,
+                "sv1-164": 1,
+                "sv1-147": 1,
+                "swsh7-132": 1,
+                "swsh12-142": 1,
+                "swsh12-143": 1,
+                "sv1-129": 1,
+                "sv1-128": 1,
+                "swsh7-102": 1,
+                "bw2-66": 1,
+                "swsh8-171": 1,
+                "swsh10-13": 1,
+                "sv1-2": 1,
+                "bw2-28": 1,
+                "bw4-36": 1,
+                "swsh9-43": 1
+            },
+            "trainer": {
+                "swsh12pt5-150": 1,
+                "swsh9-130": 1,
+                "swsh12pt5-131": 1,
+                "swsh8-226": 1,
+                "swsh3-159": 1,
+                "sv1-181": 1,
+                "sm1-123": 1,
+                "sv1-185": 1,
+                "sv1-196": 1,
+                "swsh5-124": 1,
+                "swsh12pt5-127": 1,
+                "swsh12pt5-128": 2,
+                "swsh12pt5-125": 1,
+                "swsh12pt5-144": 1,
+                "swsh12pt5-139": 1,
+                "sv1-197": 1,
+                "sv1-167": 1
+            },
+            "energy": {
+                "swsh12pt5-152": 7,
+                "swsh12pt5-154": 7,
+                "swsh12pt5-158": 7
+            }
+        }
     }
 }

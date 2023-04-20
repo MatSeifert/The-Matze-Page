@@ -135,6 +135,9 @@
         &.dark:before
             background radial-gradient(#535870, transparent 70%)
 
+        &.colorless:before
+            background radial-gradient(#c4bead, transparent 70%)
+
         .tcg-deck-pate
             position absolute
             top 1em
