@@ -196,6 +196,12 @@ h1
 .inline-block
     display inline-block
 
+.grid
+    display grid
+
+    &.col-2
+        grid-template-columns 1fr 1fr
+
 .flex
     display flex
 
@@ -213,6 +219,10 @@ h1
 
     &.gap-3
         gap 3em
+
+.blur
+    filter blur(1em)
+    transition filter .2s
 
 main
     padding 4em 5em 2em 5em
@@ -375,6 +385,12 @@ main
     .link-target-wrapper
         justify-content center !important
 
+    .tcg-filters
+        flex-direction column
+
+        .tcg-filter_wrapper
+            height 60px
+
 @media screen and (max-width: 620px)        
     body
         font-size 16px
@@ -382,6 +398,10 @@ main
     main
         padding-left 2em
         padding-right 2em
+
+    .tcg-type-filter_reset svg
+         margin-top 1.1em !important
+
 
 @media screen and (max-width: 400px)
     body 

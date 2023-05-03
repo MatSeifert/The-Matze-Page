@@ -8,19 +8,31 @@
         props: {
             deck: Object,
             noLink: Boolean,
-            filter: String
+            filter: String,
+            typeFilter: Array
         },
         components: {
             TcgDeckType,
             TcgEnergyType,
             IconCaretLeft
+        },
+        methods: {
+            energyTypeIsVisible: function(deckEnergyTypes: [string]) {
+                if (!this.typeFilter || !this.typeFilter.length) return true
+
+                for(const energyType of this.typeFilter) {
+                    if(deckEnergyTypes.indexOf(energyType as string) != -1) return true
+                }
+
+                return false
+            }
         }
     }
 </script>
 
 <template>
     <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}"
-        :class="filter == 'all' || filter == deck?.deckType ? '' : 'hide'">
+        :class="(filter == 'all' || filter == deck?.deckType) && energyTypeIsVisible(deck?.deckEnergyTypes) ? '' : 'hide'">
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
             <h1>{{ deck.deckName }}</h1>
 
@@ -29,7 +41,7 @@
             <div class="tcg-deck-type-energy">
                 <TcgDeckType :deckType="deck.deckType" />
                 <div class="tcg-deck-energy">
-                    <TcgEnergyType v-for="energy in deck.deckEnergyTypes" :energyType="energy" />
+                    <TcgEnergyType v-for="energy in deck.deckEnergyTypes" :energyType="energy as string" />
                 </div>
             </div>
         </div>
@@ -47,7 +59,7 @@
         <div class="tcg-deck-type-energy">
             <TcgDeckType :deckType="deck?.deckType" />
             <div class="tcg-deck-energy">
-                <TcgEnergyType v-for="energy in deck?.deckEnergyTypes" :energyType="energy" />
+                <TcgEnergyType v-for="energy in deck?.deckEnergyTypes" :energyType="energy as string" />
             </div>
         </div>
     </div>
