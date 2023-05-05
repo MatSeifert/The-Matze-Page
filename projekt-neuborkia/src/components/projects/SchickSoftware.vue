@@ -23,7 +23,7 @@ export default {
                  :headline="'Redesign der Homepage'"
                  :subHeadline="'Florian Schick Softwareentwicklung'"
                  :abstract="'Florian Schick ist Berater und Softwareentwickler mit vielen Jahren Erfahrung in verschiedenen Projekten. Er unterstützt seine Kunden hierbei nicht nur bei der Umsetzung spannender neuer Software-Ideen, sondern hilft auch dabei, bestehende Herausforderungen erfolgreich zu meistern. '"
-                 :timespan="'4 Wochen'"
+                 :timespan="'3 Monate'"
                  :year="'2023'"
                  :tags="tags"
                  :linkTarget="'https://www.schick-software.de/'" />

@@ -7,7 +7,6 @@ export default {
     return {
       projects: {
         schicksoftware: {
-          hide: true,
           id: "schicksoftware",
           year: "2023",
           tags: [TAG_DESIGN],
