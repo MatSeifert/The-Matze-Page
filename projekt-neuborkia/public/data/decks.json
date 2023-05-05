@@ -1261,10 +1261,43 @@
         "deckSleeves": "pokemon-go_mewtu",
         "deckContent": {
             "pokemon": {
-
+                "swshp-SWSH279": 1,
+                "swsh6-42": 2,
+                "swsh6-41": 3,
+                "sm3-31": 1,
+                "swsh11-36": 1,
+                "sm3-30": 1,
+                "sm3-29": 2,
+                "swsh45-20": 1,
+                "swsh45-27": 1,
+                "swsh45-26": 1,
+                "swsh8-80": 1,
+                "swsh8-51": 1,
+                "swsh8-50": 2,
+                "swsh12pt5gg-GG07": 1,
+                "pgo-23": 1
             },
             "trainer": {
-
+                "swsh12pt5-130": 1,
+                "swsh12pt5-131": 1,
+                "swsh6-145": 1,
+                "swsh9-132": 1,
+                "swsh12-152": 1,
+                "swsh7-149": 1,
+                "swsh12-166": 1,
+                "swsh9-145": 1,
+                "sm1-123": 1,
+                "sm1-134": 1,
+                "swsh12pt5-132": 1,
+                "swsh12pt5-144": 1,
+                "sm1-116": 1,
+                "swsh7-150": 1,
+                "swsh12pt5-139": 1,
+                "swsh12pt5-128": 1,
+                "swsh12pt5-141": 1,
+                "swsh7-160": 1,
+                "swsh9-151": 1,
+                "swsh8-242": 1
             },
             "energy": {
                 "swsh12pt5-154": 20
@@ -1392,10 +1425,43 @@
         "deckSleeves": "scarlet-violet_miraidon",
         "deckContent": {
             "pokemon": {
-
+                "sv1-54": 1,
+                "sv1-53": 2,
+                "svp-3": 1,
+                "sv1-52": 2,
+                "swsh7-42": 3,
+                "swsh7-89": 2,
+                "swsh7-90": 1,
+                "sm1-74": 1,
+                "swsh12-99": 1,
+                "swsh12-100": 1,
+                "sv1-121": 1,
+                "swsh11-94": 1,
+                "svp-12": 1,
+                "sv1-51": 1,
+                "swsh7-43": 1
             },
             "trainer": {
-
+                "sv1-180": 1,
+                "swsh12pt5-131": 1,
+                "pgo-64": 1,
+                "sv1-189": 1,
+                "sv1-198": 1,
+                "swsh10-144": 1,
+                "sv1-175": 1,
+                "sv1-179": 1,
+                "sm1-123": 1,
+                "swsh12pt5-132": 1,
+                "swsh9-150": 1,
+                "sv1-172": 1,
+                "sv1-171": 1,
+                "swsh35-61": 1,
+                "swsh10-145": 1,
+                "swsh12pt5-144": 1,
+                "swsh12pt5-125": 1,
+                "swsh6-152": 1,
+                "swsh9-151": 1,
+                "swsh11-160": 1
             },
             "energy": {
                 "swsh12pt5-154": 12,

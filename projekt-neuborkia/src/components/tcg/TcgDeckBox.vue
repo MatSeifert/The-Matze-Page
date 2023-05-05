@@ -26,6 +26,11 @@
 
                 return false
             }
+        },
+        mounted() {
+            if (this.deck) {
+                window.scrollTo(0, 0);
+            }
         }
     }
 </script>
