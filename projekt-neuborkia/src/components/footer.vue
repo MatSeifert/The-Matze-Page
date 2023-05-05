@@ -1,10 +1,11 @@
 <template>
   <footer>
     <div class="disclaimer">
-      &copy; {{ new Date().getFullYear() }} - Matthias Seifert <a href="https://www.matze.dev/" alt="Matze.dev Homepage">matze.dev</a>
+      &copy; {{ new Date().getFullYear() }} - Matthias Seifert <span class="dot-divider">•</span> <a href="https://www.matze.dev/" alt="Matze.dev Homepage">www.matze.dev</a>
     </div>
     <a href="/impressum">impressum</a>
     <a href="/datenschutz">datenschutz</a>
+    <a href="/tcg">tcg decks</a>
   </footer>
 </template>
 
@@ -17,6 +18,9 @@
       position relative
       overflow hidden
       padding-bottom 2em
+
+      > a
+        font-size .9em
 
       &:before
           content ''
@@ -51,6 +55,13 @@
 
           &:hover
               opacity 1
+
+      span.dot-divider
+        display inline-block
+        margin 0 0 0 .5em
+
+        + a
+          margin-left .5em
 
   @media screen and (max-width: 1440px)            
     footer

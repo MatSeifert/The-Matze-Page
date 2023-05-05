@@ -1468,5 +1468,105 @@
                 "swsh12pt5-157": 8
             }
         }
+    },
+    "eisenrad-a": {
+        "deckId": "eisenrad-a",
+        "deckName": "Eisenrad",
+        "deckType": "a",
+        "deckEnergyTypes": [
+            "steel", "psychic"
+        ],
+        "deckSleeves": "",
+        "deckContent": {
+            "pokemon": {
+                "sv1-248": 1,
+                "swsh3-118": 1,
+                "svp-4": 1,
+                "sv1-86": 1,
+                "sv1-234": 1
+            },
+            "trainer": {
+
+            },
+            "energy": {
+                "swsh12pt5-159": 12,
+                "swsh12pt5-156": 8
+            }
+        }
+    },
+    "garados-a": {
+        "deckId": "garados-a",
+        "deckName": "Garados",
+        "deckType": "a",
+        "deckEnergyTypes": [
+            "water", "dark"
+        ],
+        "deckSleeves": "",
+        "deckContent": {
+            "pokemon": {
+                "sv1-45": 1,
+                "swsh12-173": 1,
+                "swsh10-98": 1,
+                "swsh10-94": 1,
+                "pgo-18": 1
+            },
+            "trainer": {
+
+            },
+            "energy": {
+                "swsh12pt5-154": 12,
+                "swsh12pt5-158": 8
+            }
+        }
+    },
+    "regieleki-a": {
+        "deckId": "regieleki-a",
+        "deckName": "Regieleki",
+        "deckType": "a",
+        "deckEnergyTypes": [
+            "electric", "grass"
+        ],
+        "deckSleeves": "",
+        "deckContent": {
+            "pokemon": {
+                "swsh12-57": 1,
+                "swshp-SWSH280": 1,
+                "sv1-19": 1,
+                "swsh4-20": 1,
+                "pgo-4": 1
+            },
+            "trainer": {
+                "sv1-255": 1
+            },
+            "energy": {
+                "swsh12pt5-154": 12,
+                "swsh12pt5-158": 8
+            }
+        }
+    },
+    "regidrago-a": {
+        "deckId": "regidrago-a",
+        "deckName": "Regidrago",
+        "deckType": "a",
+        "deckEnergyTypes": [
+            "dragon", "grass", "fire"
+        ],
+        "deckSleeves": "",
+        "deckContent": {
+            "pokemon": {
+                "swsh12-135": 1,
+                "swshp-SWSH281": 1,
+                "swsh7-21": 1,
+                "swsh11-137": 1,
+                "swsh10-27": 1
+            },
+            "trainer": {
+
+            },
+            "energy": {
+                "swsh12pt5-152": 12,
+                "swsh12pt5-153": 8
+            }
+        }
     }
 }
