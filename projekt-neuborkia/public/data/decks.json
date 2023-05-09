@@ -6,7 +6,8 @@
         "deckEnergyTypes": [
             "fire", "electric"
         ],
-        "deckSleeves": "lost-origin_giratina",
+        "deckSleeves": "champions-path_glurak",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "base1-46": 2,
@@ -59,6 +60,7 @@
             "grass", "water"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "base1-44": 3,
@@ -106,6 +108,7 @@
             "water", "fighting"
         ],
         "deckSleeves": "brilliant-stars_arceus",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "base1-63": 3,
@@ -154,6 +157,7 @@
             "psychic"
         ],
         "deckSleeves": "astral-radiance_darkrai",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "base1-43": 3,
@@ -199,6 +203,7 @@
             "dragon", "water", "electric"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "pgo-49": 2,
@@ -251,6 +256,7 @@
             "psychic"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "pgo-72": 1,
@@ -305,6 +311,7 @@
             "steel", "water"
         ],
         "deckSleeves": "silver-tempest_alola-vulpix",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh10-113": 2,
@@ -360,6 +367,7 @@
             "fighting", "dark"
         ],
         "deckSleeves": "chilling-reign_schimmelreiter-coronospa",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh5-85": 3,
@@ -416,6 +424,7 @@
             "fire", "grass"
         ],
         "deckSleeves": "charizard-upc_glurak",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh9-17": 2,
@@ -472,6 +481,7 @@
             "dragon", "fire", "electric"
         ],
         "deckSleeves": "fusion-strike_mew",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh7-110": 3,
@@ -528,6 +538,7 @@
             "fighting", "psychic"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh45sv-SV115": 1,
@@ -585,6 +596,7 @@
             "grass", "electric"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh8-22": 1,
@@ -643,6 +655,7 @@
             "fighting"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh10-83": 2,
@@ -699,6 +712,7 @@
             "dark", "water"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh10-41": 2,
@@ -756,6 +770,7 @@
             "psychic", "fire"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh10-23": 3,
@@ -808,6 +823,7 @@
             "electric", "steel"
         ],
         "deckSleeves": "shining-fates_evoli",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh9-48": 1,
@@ -865,6 +881,7 @@
             "dark", "fire"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh6-97": 1,
@@ -920,6 +937,7 @@
             "grass", "fighting"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh8-15": 1,
@@ -978,6 +996,7 @@
             "dark", "psychic"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh11-120": 1,
@@ -1032,6 +1051,7 @@
             "steel", "fire"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
                 "swsh9-100": 1,
@@ -1091,6 +1111,7 @@
             "colorless", "dark", "grass", "water"
         ],
         "deckSleeves": "celebrations",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swsh12pt5-108": 1,
@@ -1149,6 +1170,7 @@
             "fire"
         ],
         "deckSleeves": "crown-zenith_lucario",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swshp-SWSH278": 1,
@@ -1203,6 +1225,7 @@
             "grass"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swshp-SWSH277": 1,
@@ -1259,6 +1282,7 @@
             "water"
         ],
         "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swshp-SWSH279": 1,
@@ -1312,6 +1336,7 @@
             "fire", "psychic"
         ],
         "deckSleeves": "scarlet-violet_koraidon",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "sv1-38": 1,
@@ -1366,6 +1391,7 @@
             "grass", "dark"
         ],
         "deckSleeves": "scarlet-violet_miraidon",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "sv1-15": 1,
@@ -1423,6 +1449,7 @@
             "water", "fighting"
         ],
         "deckSleeves": "scarlet-violet_miraidon",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "sv1-54": 1,
@@ -1476,7 +1503,8 @@
         "deckEnergyTypes": [
             "steel", "psychic"
         ],
-        "deckSleeves": "",
+        "deckSleeves": "zyrus",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "sv1-248": 1,
@@ -1532,7 +1560,8 @@
         "deckEnergyTypes": [
             "water", "dark"
         ],
-        "deckSleeves": "",
+        "deckSleeves": "sophora",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "sv1-44": 2,
@@ -1587,17 +1616,48 @@
         "deckEnergyTypes": [
             "electric", "grass"
         ],
-        "deckSleeves": "",
+        "deckSleeves": "lost-origin_giratina",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swsh12-57": 1,
                 "swshp-SWSH280": 1,
-                "sv1-19": 1,
                 "swsh4-20": 1,
-                "pgo-4": 1
+                "sv1-16": 1,
+                "sv1-17": 1,
+                "sv1-19": 1,
+                "pgo-4": 1,
+                "swsh12pt5gg-GG34": 1,
+                "sv1-66": 1,
+                "xy11-38": 1,
+                "sv1-67": 1,
+                "swsh7-55": 1,
+                "swsh3-57": 1,
+                "sv1-80": 1,
+                "swsh12pt5-56": 1,
+                "sv1-5": 3,
+                "sv1-6": 2
             },
             "trainer": {
-                "sv1-255": 1
+                "swsh12pt5-130": 1,
+                "swsh12pt5-131": 1,
+                "sm1-128": 1,
+                "swsh45-57": 1,
+                "swsh9-145": 1,
+                "swsh11-167": 1,
+                "swsh6-145": 1,
+                "sv1-255": 1,
+                "swsh8-224": 1,
+                "sv1-183": 1,
+                "swsh12pt5-132": 1,
+                "swsh12pt5-146": 1,
+                "bw10-80": 2,
+                "swsh12pt5-128": 1,
+                "swsh5-125": 1,
+                "sm2-130": 1,
+                "swsh9-135": 1,
+                "swsh7-161": 1,
+                "swsh11-171": 1
             },
             "energy": {
                 "swsh12pt5-154": 12,
@@ -1612,17 +1672,51 @@
         "deckEnergyTypes": [
             "dragon", "grass", "fire"
         ],
-        "deckSleeves": "",
+        "deckSleeves": "pokemon-go_mewtu",
+        "creationDate": "2023-05-09",
         "deckContent": {
             "pokemon": {
                 "swsh12-135": 1,
                 "swshp-SWSH281": 1,
                 "swsh7-21": 1,
                 "swsh11-137": 1,
-                "swsh10-27": 1
+                "swsh10-27": 1,
+                "sv1-21": 2,
+                "sv1-20": 1,
+                "sv1-200": 1,
+                "sv1-22": 1,
+                "sv1-23": 1,
+                "swsh12pt5-12": 1,
+                "swsh12-13": 1,
+                "sm4-13": 1,
+                "pgo-13": 1,
+                "pgo-14": 1,
+                "swsh8-29": 1,
+                "swsh12-17": 1,
+                "swsh8-31": 1,
+                "swsh12pt5-21": 1
             },
             "trainer": {
-
+                "swsh12pt5gg-GG61": 1,
+                "xy9-112": 1,
+                "swsh9-130": 1,
+                "sm1-128": 1,
+                "swsh12pt5-126": 1,
+                "sv1-183": 1,
+                "swsh11-164": 1,
+                "sm3-116": 1,
+                "swsh7-152": 1,
+                "swsh8-224": 1,
+                "sv1-181": 1,
+                "swsh12pt5-132": 1,
+                "sv1-196": 1,
+                "xy1-123": 1,
+                "bw1-92": 1,
+                "sm4-92": 1,
+                "swsh7-142": 1,
+                "sm2-130": 1,
+                "swsh9-144": 1,
+                "swsh3-174": 1
             },
             "energy": {
                 "swsh12pt5-152": 12,

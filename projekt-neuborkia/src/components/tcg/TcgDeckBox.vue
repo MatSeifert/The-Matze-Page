@@ -25,6 +25,12 @@
                 }
 
                 return false
+            },
+            isNew: function(creationDate: string, currentDate: Date) {
+                const createdAt = new Date(creationDate)
+                const compareDate = new Date(currentDate.setMonth(currentDate.getMonth() - 3))
+                
+                return compareDate <= createdAt 
             }
         },
         mounted() {
@@ -39,7 +45,9 @@
     <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}"
         :class="(filter == 'all' || filter == deck?.deckType) && energyTypeIsVisible(deck?.deckEnergyTypes) ? '' : 'hide'">
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
-            <h1>{{ deck.deckName }}</h1>
+            <h1>
+                <span class="tcg-deck_new" v-if="isNew(deck.creationDate, new Date())">Neu</span> {{ deck.deckName }}
+            </h1>
 
             <img class="tcg-deck-pate" :src="`../images/tcg/deckpaten/${deck.deckId}.svg`" :alt="`Deckpate ${deck.deckName}`"/>
 
@@ -97,6 +105,9 @@
         font-weight 800
         margin 0
         z-index 1
+        display flex
+        gap .5em
+        align-items center
 
         &:after
             display none
@@ -171,6 +182,19 @@
                 display flex
                 gap .5em
                 margin-left auto
+
+    span.tcg-deck_new
+        display inline-block
+        background green
+        font-size .5em
+        padding .25em .75em
+        border-radius 2em
+        text-transform uppercase
+        font-weight 800
+        color #fff
+        background #ff2c51
+        border 2px solid rgba(#fff, .5)
+        box-shadow 0px 0px 20px 5px rgba(255,44,81,0.85)
 
     @media screen and (max-width: 1600px)
         a
