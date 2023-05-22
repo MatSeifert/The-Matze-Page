@@ -35,7 +35,7 @@
     01159 Dresden <br/> 
     Telefon: 0152 559 111 61 <br/> 
     Internet: www.matze.dev <br/> 
-    E-Mail: matthe.seifert@gmail.com <br/>
+    E-Mail: hallo@matze.dev<br/>
 
     <h2>Um­fang der Ver­ar­bei­tung per­so­nen­be­zo­ge­ner Da­ten</h2>
     <p>Ich verarbeite personenbezogene Daten meiner Nutzer grundsätzlich nur,
@@ -200,8 +200,8 @@
     </ul>
     In meinem Fall ist die zuständige Aufsicht:
 
-    <p><strong>Der Sächsische Datenschutzbeauftragte</strong></p>
-    <strong>Andreas Schurig</strong> <br/>
+    <p><strong>Die Sächsische Datenschutzbeauftragte</strong></p>
+    <strong>Juliane Hundert</strong> <br/>
     Devrientstraße 1 <br/>
     01067 Dresden <br/>
     Telefon: 03 51/85471-101 <br/>
