@@ -427,7 +427,8 @@
         "creationDate": "2022-08-01",
         "deckContent": {
             "pokemon": {
-                "swsh9-17": 2,
+                "swsh9-17": 1,
+                "swsh9-153": 1,
                 "swshp-SWSH260": 1,
                 "swshp-SWSH261": 1,
                 "swshp-SWSH262": 1,
@@ -1721,6 +1722,120 @@
             "energy": {
                 "swsh12pt5-152": 12,
                 "swsh12pt5-153": 8
+            }
+        }
+    },
+    "flunkifer-s": {
+        "deckId": "flunkifer-s",
+        "deckName": "Flunkifer",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "psychic", "dark"
+        ],
+        "deckSleeves": "",
+        "creationDate": "2023-05-15",
+        "deckContent": {
+            "pokemon": {
+                "swsh12-200": 1,
+                "swsh12-71": 1,
+                "swsh12-70": 3,
+                "swsh11-123": 1,
+                "swsh6-54": 2,
+                "swsh6-98": 1,
+                "swsh12-114": 1,
+                "sm8-105": 1,
+                "swsh12-115": 1,
+                "swsh7-113": 2,
+                "swsh3-108": 1,
+                "bw9-77": 1,
+                "swsh7-114": 1,
+                "swsh3-110": 1,
+                "swsh12pt5-67": 1,
+                "swsh7-67": 1
+            },
+            "trainer": {
+                "sm1-120": 1,
+                "sm1-128": 1,
+                "bw1-101": 1,
+                "sv1-179": 1,
+                "swsh12pt5-124": 1,
+                "swsh6-142": 1,
+                "swsh45-57": 1,
+                "swsh12-159": 1,
+                "swsh12pt5-137": 1,
+                "swsh12pt5-146": 1,
+                "sm1-134": 1,
+                "xy8-146": 1,
+                "sv1-171": 1,
+                "sm2-130": 1,
+                "swsh11-139": 1,
+                "swsh7-142": 1,
+                "swsh7-148": 1,
+                "sv1-193": 1,
+                "swsh12-168": 1,
+                "sm4-93": 1
+            },
+            "energy": {
+                "swsh12pt5-156": 12,
+                "swsh12pt5-158": 8
+            }
+        }
+    },
+    "silembrim-s": {
+        "deckId": "silembrim-s",
+        "deckName": "Silembrim",
+        "deckType": "s",
+        "deckEnergyTypes": [
+            "psychic", "water"
+        ],
+        "deckSleeves": "",
+        "creationDate": "2023-05-15",
+        "deckContent": {
+            "pokemon": {
+                "swsh12pt5gg-GG47": 2,
+                "swshp-SWSH055": 2,
+                "swsh12pt5-65": 1,
+                "swsh12pt5gg-GG39": 1,
+                "swsh12-81": 1,
+                "swsh5-60": 1,
+                "xy2-42": 1,
+                "sm3-60": 1,
+                "swsh12-82": 1,
+                "sm2-48": 1,
+                "sv1-42": 1,
+                "sv1-43": 1,
+                "swsh10-43": 1,
+                "swsh11-44": 1,
+                "swsh10-44": 1,
+                "pgo-24": 1,
+                "pgo-23": 1,
+                "swsh12pt5-35": 1
+            },
+            "trainer": {
+                "sm1-120": 1,
+                "pgo-64": 1,
+                "swsh45-60": 1,
+                "sv1-179": 1,
+                "sv1-175": 1,
+                "swsh45-57": 1,
+                "swsh7-149": 1,
+                "swsh6-142": 1,
+                "swsh12pt5-137": 1,
+                "swsh12pt5-146": 1,
+                "sm1-134": 1,
+                "xy8-146": 1,
+                "sm1-116": 1,
+                "swsh6-140": 1,
+                "sm2-130": 1,
+                "swsh7-142": 1,
+                "swsh7-148": 1,
+                "sv1-174": 1,
+                "swsh12-168": 1,
+                "sm12-187": 1
+            },
+            "energy": {
+                "swsh12pt5-156": 12,
+                "swsh12pt5-154": 8
             }
         }
     }

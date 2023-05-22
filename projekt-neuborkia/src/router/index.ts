@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import ProjectView from "../views/ProjectView.vue";
-import ImpressumView from "../views/ImpressumView.vue";
-import PrivacyView from "../views/PrivacyView.vue";
+import { createRouter, createWebHistory } from "vue-router"
+import HomeView from "../views/HomeView.vue"
+import ProjectView from "../views/ProjectView.vue"
+import ImpressumView from "../views/ImpressumView.vue"
+import PrivacyView from "../views/PrivacyView.vue"
 import TcgView from '../views/TcgView.vue'
+import TcgPlayView from '../views/TcgPlayView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,6 +35,11 @@ const router = createRouter({
       name: "tcg",
       component: TcgView,
       props: true
+    },
+    {
+      path: "/tcg/play",
+      name: "play-tcg",
+      component: TcgPlayView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
