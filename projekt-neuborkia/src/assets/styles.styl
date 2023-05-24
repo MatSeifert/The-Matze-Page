@@ -50,7 +50,25 @@ a
         background-color primaryColor
 
     &.no-hover-effect:after, &.no-hover-effect:before
-        display none         
+        display none
+
+    &.play-tcg
+        width 2.5em
+        height 2.5em
+        padding .5em
+        border-radius 50%
+        background primaryColor
+        display block
+        position fixed
+        z-index 1
+        bottom 3em
+        right 2em
+        box-shadow 0 0 15px 8px rgba(primaryColor, .35)
+        transition all .2s
+
+        &:hover
+            background secondaryColor
+            box-shadow 0 0 15px 8px rgba(secondaryColor, .65)
 
 h1 
    font-size 1.2em
