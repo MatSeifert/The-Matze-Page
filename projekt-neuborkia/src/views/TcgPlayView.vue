@@ -70,10 +70,10 @@ export default {
                 if(addDamage) {
                     relevantMon.damage += 10
                 } else {
-                    if (relevantMon.damage - damageAmount < 0) {
+                    if (relevantMon.damage - 10 < 0) {
                         relevantMon.damage = 0
                     } else {
-                        relevantMon.damage -= damageAmount
+                        relevantMon.damage -= 10
                     }
                 }
             }
