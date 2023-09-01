@@ -7,8 +7,21 @@ import StatusParalyzed from '@/components/tcg/icons/StatusParalyzed.vue'
 import StatusConfused from '@/components/tcg/icons/StatusConfused.vue'
 import PowerGx from '@/components/tcg/icons/PowerGx.vue'
 import PowerVstar from '@/components/tcg/icons/PowerVstar.vue'
+import HeroiconExtend from '@/components/icons/heroicons/HeroiconExtend.vue'
+import HeroiconMinimize from '@/components/icons/heroicons/HeroiconsMinimize.vue'
+import { ref } from 'vue'
+import { useFullscreen } from '@vueuse/core'
 
 export default {
+    setup() {
+        const el = ref(null)
+        const { toggle, isFullscreen } = useFullscreen(el)
+
+        return {
+            toggle,
+            isFullscreen
+        }
+    },
     data() {
         return {
             active: {
@@ -31,7 +44,8 @@ export default {
             STATUS_COFUSED: 'confused',
             POWER_GX: 'gx',
             POWER_VSTAR: 'vstar',
-            selectedDamageAdder: 10
+            selectedDamageAdder: 10,
+            switchDialogActive: false
         }
     },
     methods: {
@@ -56,10 +70,10 @@ export default {
                 if(addDamage) {
                     relevantMon.damage += 10
                 } else {
-                    if (relevantMon.damage - damageAmount < 0) {
+                    if (relevantMon.damage - 10 < 0) {
                         relevantMon.damage = 0
                     } else {
-                        relevantMon.damage -= damageAmount
+                        relevantMon.damage -= 10
                     }
                 }
             }
@@ -82,8 +96,6 @@ export default {
                     this.active.confused = !this.active.confused
                     break
             }
-
-            console.log(this.active.poisoned)
         },
         togglePower(powerType: string) {
             switch (powerType) {
@@ -108,11 +120,8 @@ export default {
                 paralyzed: false,
                 confused: false
             })
-
-            console.log(this.bench)
         },
         getBenchedInfo(index: number, prop: string) {
-            console.log(index)
             const relevantMon = this.bench[index];
 
             if(!relevantMon) {
@@ -128,9 +137,10 @@ export default {
         setDamageAdder(adder: number) {
             this.selectedDamageAdder = adder
         },
-        knockOut(position?: number) {
-            if (position !== undefined || position !== null) {
-                this.bench.splice(position as number, 1)
+        knockOut(position: number) {
+            if (position > -1) {
+                // benched mon was knocked out
+                this.bench.splice(position, 1)
             } else {
                 this.active = {
                     damage: 0,
@@ -142,9 +152,16 @@ export default {
                 }
 
                 this.selectedDamageAdder = 10
+
+                if(this.bench.length == 1) {
+                    // switch last remaining mon in automatically
+                    this.switchOut(0, true)
+                } else if(this.bench.length != 0) {
+                    this.switchDialogActive = true
+                }
             }
         },
-        switchOut(index: number) {
+        switchOut(index: number, activeMonWasKnockedOut: boolean) {
             // cannot switch out, if the bench or the given spot is empty
             if (!this.bench.length || !this.bench[index]) return
 
@@ -160,7 +177,12 @@ export default {
             temp.confused = false
 
             this.bench.splice(index, 1)
-            this.bench.push(temp)
+
+            if (!activeMonWasKnockedOut) {
+                this.bench.push(temp)
+            } else {
+                this.switchDialogActive = false
+            }
         }
     },
     components: {
@@ -170,14 +192,23 @@ export default {
         StatusParalyzed,
         StatusConfused,
         PowerGx,
-        PowerVstar
+        PowerVstar,
+        HeroiconExtend,
+        HeroiconMinimize
     }
 }
 </script>
 
 <template>
-    <div class="play-area">
-        <div class="active-area">
+    <div class="toggle-fullscreen" @click="toggle">
+        <HeroiconExtend v-if="!isFullscreen"/>
+        <HeroiconMinimize v-if="isFullscreen"/>
+    </div>
+    <div v-if="switchDialogActive" class="switch-dialog">
+        Wähle das neue aktive Pokémon
+    </div>
+    <div class="play-area" ref="el">
+        <div :class="`active-area ${switchDialogActive ? 'blur' : ''}`">
             <div class="active-mon">
                 <div class="damage-bar">
                     <div @click="addDamage(-1, false)">-</div>
@@ -189,7 +220,7 @@ export default {
                 </div>
                 <div class="damage">{{ active.damage }}</div>
                 <div class="action-bar">
-                    <div class="knocked-out" @click="knockOut()">
+                    <div class="knocked-out" @click="knockOut(-1)">
                         besiegt
                     </div>
                 </div>
@@ -223,8 +254,8 @@ export default {
         <div class="bench">
             <div :class="`benched-mon ${bench[b - 1] ? 'assigned' : 'empty'}`" v-for="b in 5">
                 <div v-if="bench[b - 1]">
-                    <div class="bench-action" @click="switchOut(b - 1)">
-                        tausch
+                    <div class="bench-action" @click="switchOut(b - 1, switchDialogActive)">
+                        {{ switchDialogActive ? 'auswählen' : 'tausch' }}
                     </div>
 
                     <div class="bench-hp-bar">
@@ -246,11 +277,28 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
+    .toggle-fullscreen
+        position fixed
+        top 2em
+        right 2em
+        cursor pointer
+
+        svg
+            width 1.5em
+
     .play-area
+        display flex
+        flex-direction column
+        justify-content space-around
+        height calc(100vh - 10em)
+
         .active-area
             display flex
             gap 5em
             justify-content center
+
+            &.blur
+                filter blur(10px)
         
             .active-mon
                 width 5em
@@ -539,4 +587,78 @@ export default {
 
                                 &:before
                                     background #ff0054
+
+    .switch-dialog
+        position absolute
+        z-index 1
+        width 100%
+        height 50vh
+        background linear-gradient(to bottom, rgba(0, 0, 0, .5) 75%, rgba(0, 0, 0, 0) 100%)
+        display flex
+        align-items center
+        justify-content center
+        font-size 3em
+        font-weight 800
+        top 0
+        left 0
+
+    @media screen and (max-width: 1600px)            
+        .play-area
+            font-size 14px
+
+            .bench
+                margin-top 2em
+
+    @media screen and (max-width: 1200px)    
+        .play-area
+                font-size 12px
+
+    @media screen and (max-width: 1000px)    
+        .play-area
+                font-size 10px
+                margin-top -5em
+
+    @media screen and (max-width: 1000px)    
+        .play-area
+            margin-top -8em
+            font-size 8px
+            width calc(100% + 20em)
+            margin-left -10em
+
+            .active-area
+                gap 10em
+
+                .active-mon .damage-bar
+                    font-size .5em
+
+                .active-mon .action-bar
+                    font-size .6em
+                
+                .active-mon-status
+                    gap 1em 
+                    max-width 15%
+                    flex-wrap wrap
+                    flex-direction row
+                    
+                    .status
+                        width 5em
+                        height 5em
+
+            .bench 
+                .benched-mon.assigned 
+                    .bench-action
+                        font-size .6em
+
+                    .bench-hp-bar
+                        gap .75em
+                        width auto
+                        
+                        .add-bench-damage
+                            background #000
+                            border 1px solid rgba(255, 255, 255, .5)
+                            width 3em
+                            height 3em
+
+        .switch-dialog
+            font-size 1.5em
 </style>

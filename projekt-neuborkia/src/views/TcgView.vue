@@ -1,17 +1,18 @@
 <script lang="ts">
     import _ from 'lodash' 
     import decks from '@/../public/data/decks.json'
-    import TcgDeckBox from '../components/tcg/TcgDeckBox.vue'
-    import TcgDeckInfo from '../components/tcg/TcgDeckInfo.vue'
-    import Footer from "../components/Footer.vue"
-    import TcgDeckTypeIconV from '../components/tcg/icons/TcgDeckTypeIconV.vue'
-    import TcgDeckTypeIconB from '../components/tcg/icons/TcgDeckTypeIconB.vue'
-    import TcgDeckTypeIconA from '../components/tcg/icons/TcgDeckTypeIconA.vue'
-    import TcgDeckTypeIconS from '../components/tcg/icons/TcgDeckTypeIconS.vue'
-    import TcgEnergyType from '../components/tcg/TcgEnergyType.vue'
-    import HeroiconCheck from '../components/icons/heroicons/HeroiconCheck.vue'
-    import HeroiconXMark from '../components/icons/heroicons/HeroiconXMark.vue'
-    import HeroiconTrash from '../components/icons/heroicons/HeroiconTrash.vue'
+    import TcgDeckBox from '@/components/tcg/TcgDeckBox.vue'
+    import TcgDeckInfo from '@/components/tcg/TcgDeckInfo.vue'
+    import Footer from "@/components/Footer.vue"
+    import TcgDeckTypeIconV from '@/components/tcg/icons/TcgDeckTypeIconV.vue'
+    import TcgDeckTypeIconB from '@/components/tcg/icons/TcgDeckTypeIconB.vue'
+    import TcgDeckTypeIconA from '@/components/tcg/icons/TcgDeckTypeIconA.vue'
+    import TcgDeckTypeIconS from '@/components/tcg/icons/TcgDeckTypeIconS.vue'
+    import TcgEnergyType from '@/components/tcg/TcgEnergyType.vue'
+    import HeroiconCheck from '@/components/icons/heroicons/HeroiconCheck.vue'
+    import HeroiconXMark from '@/components/icons/heroicons/HeroiconXMark.vue'
+    import HeroiconTrash from '@/components/icons/heroicons/HeroiconTrash.vue'
+    import TcgPlayIcon from '@/components/tcg/icons/TcgPlayIcon.vue'
 
     export default {
         props: {
@@ -51,7 +52,8 @@
             TcgEnergyType,
             HeroiconCheck,
             HeroiconXMark,
-            HeroiconTrash
+            HeroiconTrash,
+            TcgPlayIcon
         },
         methods: {
             toggleTypeFilter: function (type: string | null) {
@@ -171,6 +173,10 @@
         <div :class="`tcg-decks ${typeFilterOverlayActive ? 'blur' : null}`">
             <TcgDeckBox v-for="deck in decksSorted" :deck="deck" :filter="filter" :typeFilter="typeFilter"/>       
         </div>
+
+        <RouterLink :to="{ path: '/tcg/play'}" :class="'play-tcg no-hover-effect'">
+            <TcgPlayIcon />
+        </RouterLink>
     </div>
 
     <div v-else>
