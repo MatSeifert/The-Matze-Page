@@ -37,19 +37,27 @@ export default {
         dribbble: {
           id: "dribbble",
           linkTarget: "https://dribbble.com/thematze",
+          altText: "Link zum dribbble Profil von Matthias",
+          ariaLabel: "Besuche mein UI und UX Portfolio auf dribbble"
         },
         github: {
           id: "github",
           linkTarget: "https://github.com/MatSeifert",
+          altText: "Link zum GitHub Profil von Matthias",
+          ariaLabel: "Stöbere auf GitHub in meinen Projekten"
         },
         stackoverflow: {
           id: "stackoverflow",
           linkTarget:
             "https://stackoverflow.com/users/3775858/matthias-seifert",
+          altText: "Link zum StackOverflow Profil von Matthias",
+          ariaLabel: "Schau auf meiner StackOverflow Seite, wie andere mir geholfen haben oder aber ich anderen helfen konnte"
         },
         mastodon: {
           id: "mastodon",
           linkTarget: "https://mastodon.social/@einMATZEmalig",
+          altText: "Link zum Mastodon Profil von Matthias",
+          ariaLabel: "Plaudere mit mir auf Mastodon oder stöbere in meinen Beiträgen"
         },
       },
     };
@@ -84,8 +92,8 @@ export default {
         :key="platform.id"
         :class="navItemClass"
       >
-        <a :href="platform.linkTarget" target="_blank">
-          <IconDribbble v-if="platform.id == 'dribbble'" />
+        <a :href="platform.linkTarget" target="_blank" :aria-label="platform.ariaLabel">
+          <IconDribbble v-if="platform.id == 'dribbble'" :alt="platform.altText"/>
           <IconStackoverflow v-if="platform.id == 'stackoverflow'" />
           <IconGithub v-if="platform.id == 'github'" />
           <IconMastodon v-if="platform.id == 'mastodon'" />
@@ -105,9 +113,9 @@ export default {
         </RouterLink>
       </li>
       <li class="navigation-mobile_center">
-        <RouterLink tag="a" :to="{ path: '/', hash: '#intro' }">
+        <RouterLink tag="a" :to="{ path: '/', hash: '#intro' }" aria-label="Link zur Startseite">
           <div>
-            <img src="../assets/images/logo_black.svg" />
+            <img src="../assets/images/logo_black.svg" alt="matze.dev Logo" />
           </div>
         </RouterLink>
       </li>

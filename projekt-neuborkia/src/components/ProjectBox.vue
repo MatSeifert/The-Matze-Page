@@ -9,7 +9,7 @@
     },
     computed: {
       getImage() {
-        return `./images/projects/${_.get(this.project, ['id'])}/title.png`
+        return `./images/projects/${_.get(this.project, ['id'])}/title.webp`
       }
     },
     components: {
@@ -21,7 +21,7 @@
 <template>
   <div v-if="!!project && !project.hide" class="project-box">
     <div class="project-title-image">
-      <img :src="getImage" />
+      <img :src="getImage" :alt="`Titelbild zum Projekt ${project.title} - ${project.subTitle}`"/>
       <div class="project-tags">
         <Tag v-for="tag of project.tags" :label="tag" :type="tag" />
       </div>

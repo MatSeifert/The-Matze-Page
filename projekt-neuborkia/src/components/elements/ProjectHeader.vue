@@ -37,7 +37,7 @@
         <ProjectStatItem :value="year" :label="'Jahr'" />
       </div>
       <div class="project-showcase">
-        <img v-if="!noShowcase" :src="`../images/projects/${projectName}/showcase.png`" />
+        <img v-if="!noShowcase" :src="`../images/projects/${projectName}/showcase.webp`" />
       </div>
       <div class="project-box-m">
         <div class="project-stats-m flex flex-col">
@@ -45,7 +45,7 @@
             <ProjectStatItem :value="year" :label="'Jahr'" />
         </div>
         <div class="project-showcase-m">
-            <img v-if="!noShowcase" :src="`../images/projects/${projectName}/showcase.png`" />
+            <img v-if="!noShowcase" :src="`../images/projects/${projectName}/showcase.webp`" />
         </div>
       </div>
     </div>

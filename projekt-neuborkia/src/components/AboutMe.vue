@@ -1,14 +1,25 @@
+<script lang="ts">
+export default {
+  computed: {
+    calcYears() {
+      const currentYear = new Date().getFullYear()
+      return currentYear - 2017;
+    }
+  }
+};
+</script>
+
 <template>
   <h1 id="aboutMe">über mich</h1>
   <div class="flex gap-top-m gap-bottom-xl" id="aboutMeContent">
     <div>
-      <img src="../assets/images/profilePicture.png" />
+      <img src="../assets/images/profilePicture.webp" alt="Profilbild von Matthias"/>
     </div>
     <div id="aboutMeText">
       <div id="aboutMeQuote">
         Gutes <span>design</span> fällt besonders dann auf, wenn es fehlt.
       </div>
-      <p>Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit 5
+      <p>Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit {{ calcYears }}
       Jahren als Software Entwickler mit Schwerpunkt Frontend in Dresden. Neben
       meiner Leidenschaft für Programmierung, der ich Vollzeit nachgehe, bin ich
       auch (gar nicht so) insgeheim Feuer und Flamme für alles Rund ums Thema UI

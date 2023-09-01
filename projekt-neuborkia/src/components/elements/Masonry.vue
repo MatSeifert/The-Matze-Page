@@ -1,6 +1,4 @@
 <script lang="ts">
-  import PhotoFrame from '@/components/elements/PhotoFrame.vue'
-
   export default {
     props: {
       projectName: String,
@@ -14,9 +12,6 @@
       return {
         filePath: `../images/projects/${this.projectName}/masonry/`,
       };
-    },
-    components: {
-      PhotoFrame
     }
   };
 </script>

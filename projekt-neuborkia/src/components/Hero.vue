@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <img src="../assets/images/logo.svg" id="logo" />
+    <img src="../assets/images/logo.svg" id="logo" alt="matze.dev Logo"/>
     <div class="text-color-primary hero-text-large" id="hero-text-develop">
       develop
     </div>
