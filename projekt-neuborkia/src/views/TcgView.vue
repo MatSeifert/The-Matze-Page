@@ -22,6 +22,7 @@
             return {
                 decks: decks,
                 filter: 'all',
+                showOnlyNew: false,
                 typeFilterOverlayActive: false,
                 typeFilter: [] as string[]
             }
@@ -115,6 +116,12 @@
                     <HeroiconTrash/>
                 </span>
             </div>
+
+            <div :class="`tcg-filter_wrapper tcg-only-new ${showOnlyNew ? 'active' : ''}`">
+                <div class="tcg-filter" @click="showOnlyNew = !showOnlyNew">
+                    Neu
+                </div>
+            </div>
         </div>
 
         <div class="tcg-type-filter_background" v-if="typeFilterOverlayActive"/>
@@ -171,7 +178,7 @@
         </div>
 
         <div :class="`tcg-decks ${typeFilterOverlayActive ? 'blur' : null}`">
-            <TcgDeckBox v-for="deck in decksSorted" :deck="deck" :filter="filter" :typeFilter="typeFilter"/>       
+            <TcgDeckBox v-for="deck in decksSorted" :deck="deck" :filter="filter" :typeFilter="typeFilter" :onlyNew="showOnlyNew"/>       
         </div>
 
         <RouterLink :to="{ path: '/tcg/play'}" :class="'play-tcg no-hover-effect'">
@@ -214,6 +221,20 @@
 
             .tcg-filter
                 padding 0 1em 0 2em
+
+        &.tcg-only-new
+            width auto
+
+            .tcg-filter
+                padding 0 2em 0 2em
+
+            &.active
+                box-shadow 0px 0px 20px 5px rgba(255,44,81,0.85)
+                border 2px solid rgba(#fff, .6)
+
+                .tcg-filter
+                    background #ff2c51
+                    color #fff
 
         .tcg-filter
             flex 1
