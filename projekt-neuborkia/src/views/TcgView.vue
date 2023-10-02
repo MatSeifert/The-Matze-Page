@@ -84,8 +84,8 @@
     <div v-if="!id">
         <div class="tcg-filters">
             <div class="tcg-filter_wrapper">
-                <div :class="`tcg-filter ${filter == 'all' ? 'active' : ''}`" @click="filter = 'all'">
-                    Alle
+                <div :class="`tcg-filter ${filter == 'all' ? 'active' : ''} tcg-decks-all`" @click="filter = 'all'">
+                    Alle <span>{{ Object.keys(decks).length }}</span>
                 </div>
                 <div :class="`tcg-filter ${filter == 'v' ? 'active' : ''}`" @click="filter = 'v'"> 
                     <TcgDeckTypeIconV :fill="filter == 'v' ? undefined : 'rgba(255, 255, 255, .2)'"
@@ -249,6 +249,17 @@
             justify-content center
             position relative
             overflow hidden
+
+            &.tcg-decks-all > span
+                display inline-block
+                font-size 65%
+                margin 0 0 0 .75em
+                padding .15em .35em
+                color #ccc
+                font-weight 600
+                background #555
+                border 1px solid #777
+                border-radius .25em
 
             &:not(.active):hover:before
                 content ''

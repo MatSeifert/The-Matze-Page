@@ -18,6 +18,9 @@
             IconCaretLeft
         },
         methods: {
+            deckTypeIsVisible: function(filter: string, deck: any) {
+                return (filter == 'all' || filter == deck?.deckType || (deck?.deckType == 'aplus' && (filter == 'a' || filter == 's')))
+            },
             energyTypeIsVisible: function(deckEnergyTypes: [string]) {
                 if (!this.typeFilter || !this.typeFilter.length) return true
 
@@ -47,7 +50,7 @@
 
 <template>
     <RouterLink v-if="!!deck && !noLink" :to="{ path: `/tcg/${deck.deckId}`}"
-        :class="(filter == 'all' || filter == deck?.deckType) && energyTypeIsVisible(deck?.deckEnergyTypes) && oldDecksVisible(deck.creationDate) ? '' : 'hide'">
+        :class="deckTypeIsVisible(filter || '', deck) && energyTypeIsVisible(deck?.deckEnergyTypes) && oldDecksVisible(deck.creationDate) ? '' : 'hide'">
         <div :class="`tcg-deck-card ${deck.deckEnergyTypes[0]}`">
             <h1>
                 <span class="tcg-deck_new" v-if="isNew(deck.creationDate, new Date())">Neu</span> {{ deck.deckName }}

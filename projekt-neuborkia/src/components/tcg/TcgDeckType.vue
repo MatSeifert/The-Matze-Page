@@ -4,6 +4,7 @@
     import TcgDeckTypeIconB from './icons/TcgDeckTypeIconB.vue'
     import TcgDeckTypeIconA from './icons/TcgDeckTypeIconA.vue'
     import TcgDeckTypeIconS from './icons/TcgDeckTypeIconS.vue'
+    import TcgDeckTypeIconAplus from './icons/TcgDeckTypeIconAplus.vue'
 
     export default {
         props: {
@@ -18,6 +19,7 @@
                     v: "Vintage",
                     b: "Basic",
                     a: "Advanced",
+                    aplus: "Advanced⁺",
                     s: "Savage"
                 }
             }
@@ -33,7 +35,8 @@
             TcgDeckTypeIconV,
             TcgDeckTypeIconB,
             TcgDeckTypeIconA,
-            TcgDeckTypeIconS
+            TcgDeckTypeIconS,
+            TcgDeckTypeIconAplus
         }
     }
 </script>
@@ -44,6 +47,7 @@
             <TcgDeckTypeIconV v-if="deckType == 'v'" />
             <TcgDeckTypeIconB v-if="deckType == 'b'" />
             <TcgDeckTypeIconA v-if="deckType == 'a'" />
+            <TcgDeckTypeIconAplus v-if="deckType == 'aplus'" />
             <TcgDeckTypeIconS v-if="deckType == 's'" />
         </div>
         <div class="deck-type-name">
