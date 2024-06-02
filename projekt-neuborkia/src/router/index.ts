@@ -5,6 +5,7 @@ import ImpressumView from "../views/ImpressumView.vue"
 import PrivacyView from "../views/PrivacyView.vue"
 import TcgView from '../views/TcgView.vue'
 import TcgPlayView from '../views/TcgPlayView.vue'
+import ChatView from "@/views/ChatView.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -40,6 +41,11 @@ const router = createRouter({
       path: "/tcg/play",
       name: "play-tcg",
       component: TcgPlayView
+    },
+    {
+      path: "/chat",
+      name: "chat",
+      component: ChatView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
