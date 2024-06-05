@@ -4,11 +4,11 @@ import Tag from "./Tag.vue";
 export default {
   props: {
     value: [String, Number, Array],
-    label: String,
+    label: String
   },
   components: {
-    Tag,
-  },
+    Tag
+  }
 };
 </script>
 
@@ -27,20 +27,27 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-  @import '../../assets/config.styl'
+@import '../../assets/config.styl'
 
-  .stat-item_value
-      font-size 2em
-      font-weight 700
-      display flex
-      color primaryColor
-      white-space nowrap
+.stat-item_value
+  font-size 2em
+  font-weight 700
+  display flex
+  color primaryColor
+  white-space nowrap
 
-  .stat-item_label
-      opacity .6
-      white-space nowrap
-
- .tag
+  .shimmer
     font-size .5em
-    margin 0.5em 1em 0.5em 0
+
+    &:after
+      width calc(100% + .5em)
+      height 100%
+      left -.25em
+      opacity .35
+      border-radius 33%
+      filter blur(18px)
+
+.stat-item_label
+  opacity .6
+  white-space nowrap
 </style>
