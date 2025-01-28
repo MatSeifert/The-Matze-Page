@@ -1,11 +1,12 @@
-import { createRouter, createWebHistory } from "vue-router"
-import HomeView from "../views/HomeView.vue"
-import ProjectView from "../views/ProjectView.vue"
-import ImpressumView from "../views/ImpressumView.vue"
-import PrivacyView from "../views/PrivacyView.vue"
-import TcgView from '../views/TcgView.vue'
-import TcgPlayView from '../views/TcgPlayView.vue'
-import ChatView from "@/views/ChatView.vue"
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import ProjectView from "../views/ProjectView.vue";
+import ImpressumView from "../views/ImpressumView.vue";
+import PrivacyView from "../views/PrivacyView.vue";
+import TcgView from "../views/TcgView.vue";
+import TcgPlayView from "../views/TcgPlayView.vue";
+import ChatView from "@/views/ChatView.vue";
+import CobblemonView from "@/views/CobblemonView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,23 +14,23 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: HomeView
     },
     {
       path: "/project/:id",
       name: "project",
       component: ProjectView,
-      props: true,
+      props: true
     },
     {
       path: "/impressum",
       name: "impressum",
-      component: ImpressumView,
+      component: ImpressumView
     },
     {
       path: "/datenschutz",
       name: "privacy",
-      component: PrivacyView,
+      component: PrivacyView
     },
     {
       path: "/tcg/:id?",
@@ -46,6 +47,11 @@ const router = createRouter({
       path: "/chat",
       name: "chat",
       component: ChatView
+    },
+    {
+      path: "/cobblemon",
+      name: "cobblemon",
+      component: CobblemonView
     }
   ],
   scrollBehavior(to, from, savedPosition) {
@@ -55,14 +61,14 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: "smooth",
+        behavior: "smooth"
       };
     } else {
       return {
-        behavior: "smooth",
+        behavior: "smooth"
       };
     }
-  },
+  }
 });
 
 export default router;
