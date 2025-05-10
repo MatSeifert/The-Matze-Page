@@ -77,7 +77,7 @@ export default {
 <template>
   <div id="header">
     <h1>
-      <RouterLink tag="span" :to="{ path: '/', hash: '#intro' }"> matthias seifert </RouterLink>
+      <RouterLink tag="span" :to="{ path: '/', hash: '#intro' }"> matthias wünsch </RouterLink>
     </h1>
     <ul :class="navBarClass" id="navigation-desktop">
       <li v-for="link in links" :key="link.id" :class="navItemClass">

@@ -10,7 +10,7 @@
   <div class="impressum">
     <div class="disclaimer">Angaben nach §5 TMG</div>
     <div class="website">www.matze.dev</div>
-    <div class="name">Matthias Seifert</div>
+    <div class="name">Matthias Wünsch</div>
     <div class="address" id="firstline">Reisewitzer Straße 5</div>
     <div class="address" id="secondline">01159 Dresden</div>
     <div class="mail">hallo@matze.dev</div>

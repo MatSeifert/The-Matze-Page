@@ -21,7 +21,7 @@
     Solche Daten werden nur dann erhoben, genutzt oder weitergegeben, wenn dafür
     eine rechtliche Grundlage oder eine entsprechende Einwilligung des
     Betroffenen vorliegt. Die vorliegende Datenschutzerklärung gilt für die
-    Internetpräsenz, die <em>Matthias Seifert</em> anbietet. Sollten aus
+    Internetpräsenz, die <em>Matthias Wünsch</em> anbietet. Sollten aus
     meinem Internetangebot Angebote anderer Anbieter erreichbar sein, so gilt
     für diese meine Datenschutzerklärung nicht.</p>
 
@@ -30,7 +30,7 @@
     DSGVO) und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie
     sonstiger datenschutzrechtlicher Bestimmungen ist:</p>
 
-    <strong>Matthias Seifert</strong> <br/>
+    <strong>Matthias Wünsch</strong> <br/>
     Reisewitzer Straße 5 <br/> 
     01159 Dresden <br/> 
     Telefon: 0152 559 111 61 <br/> 
