@@ -7,3 +7,4 @@ export const PROJECT_MTSPORT: string;
 export const PROJECT_PODICONS: string;
 export const PROJECT_SCHICKSOFTWARE: string;
 export const PROJECT_PLAINQUIRE: string;
+export const PROJECT_POMMERENINGCONSULTING: string;

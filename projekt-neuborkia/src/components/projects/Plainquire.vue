@@ -19,7 +19,7 @@ export default {
 
 <template>
   <ProjectHeader :projectName="projectName"
-                 :headline="'Design der Landing Page und Website'"
+                 :headline="'Design und Umsetzung der Website'"
                  :subHeadline="'Plainquire – C# Software Bibliothek'"
                  :abstract="'Mit Plainquire wird die Datenabfrage aus angebundenen Datenbanken spielend einfach. Statt mühsam Code in Datenabfragen zu übersetzen kann mit Plainquire direkt im Code eine Query zusammengebaut werden, in der beispielsweise auch direkt gefiltert oder sortiert werden kann.'"
                  :timespan="'2 Monate'"

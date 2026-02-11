@@ -7,3 +7,4 @@ export const PROJECT_MTSPORT = "mtbsport";
 export const PROJECT_PODICONS = "podicons";
 export const PROJECT_SCHICKSOFTWARE = "schicksoftware";
 export const PROJECT_PLAINQUIRE = "plainquire";
+export const PROJECT_POMMERENINGCONSULTING = "pommereningconsulting";

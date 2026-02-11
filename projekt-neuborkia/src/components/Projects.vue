@@ -6,6 +6,13 @@ export default {
   data() {
     return {
       projects: {
+        pommereningconsulting: {
+          id: "pommereningconsulting",
+          year: "2025",
+          tags: [TAG_DESIGN, TAG_DEV],
+          title: "Pommerening Consulting",
+          subTitle: "Design und Umsetzung der Website"
+        },
         plainquire: {
           id: "plainquire",
           year: "2024",

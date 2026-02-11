@@ -6,6 +6,7 @@ import Mtbsport from "@/components/projects/Mtbsport.vue";
 import Podicons from "@/components/projects/Podicons.vue";
 import SchickSoftware from "@/components/projects/SchickSoftware.vue";
 import Plainquire from "@/components/projects/Plainquire.vue";
+import PommereningConsulting from "@/components/projects/PommereningConsulting.vue";
 
 import {
   PROJECT_TIMETRACKING,
@@ -13,7 +14,8 @@ import {
   PROJECT_MTSPORT,
   PROJECT_PODICONS,
   PROJECT_SCHICKSOFTWARE,
-  PROJECT_PLAINQUIRE
+  PROJECT_PLAINQUIRE,
+  PROJECT_POMMERENINGCONSULTING
 } from "@/helper/const";
 
 export default {
@@ -27,7 +29,8 @@ export default {
       mtbsport: PROJECT_MTSPORT,
       podicons: PROJECT_PODICONS,
       schicksoftware: PROJECT_SCHICKSOFTWARE,
-      plainquire: PROJECT_PLAINQUIRE
+      plainquire: PROJECT_PLAINQUIRE,
+      pommereningconsulting: PROJECT_POMMERENINGCONSULTING
     };
   },
   components: {
@@ -37,7 +40,8 @@ export default {
     Mtbsport,
     Podicons,
     SchickSoftware,
-    Plainquire
+    Plainquire,
+    PommereningConsulting
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -53,7 +57,7 @@ export default {
   <Podicons v-else-if="id == podicons" />
   <SchickSoftware v-else-if="id == schicksoftware" />
   <Plainquire v-else-if="id == plainquire" />
-
+  <PommereningConsulting v-else-if="id == pommereningconsulting" />
 
   <Footer />
 </template>
