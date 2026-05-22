@@ -227,6 +227,9 @@ export default {
       border-top-left-radius 1.5em
       border-top-right-radius 1.5em
       border-bottom-right-radius 1.5em
+      border 1px solid rgba(#fff, .25)
+      border-top 1px solid rgba(#fff, .44)
+      border-bottom 1px solid rgba(#fff, .15)
 
       &:before
         content ''

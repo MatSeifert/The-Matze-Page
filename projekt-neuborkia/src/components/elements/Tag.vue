@@ -49,7 +49,8 @@ export default {
   border-top-left-radius .5em
   border-top-right-radius .5em
   border-bottom-right-radius .5em
-  border-top 1px solid rgba(#fff, .4)
+  border 1px solid rgba(#fff, .33)
+  border-top none
   box-sizing border-box
   position relative
   font-weight 500

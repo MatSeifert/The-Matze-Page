@@ -34,10 +34,14 @@
     .hero-text-small
         font-size 1.5em
 
+    #hero-text-develop
+      position relative
+
     #hero-text-design
         margin -1em 0 .25em .17em
         mix-blend-mode color-dodge
         white-space nowrap
+        position relative
 
         span
             letter-spacing .19em
@@ -45,6 +49,8 @@
     #hero-subtext
         margin-top 2em
         color tintedWhite
+        position relative
+        z-index 2
 
         span
             font-weight 900

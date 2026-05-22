@@ -13,8 +13,9 @@ export default {
 </script>
 
 <template>
-  <Hero />
 
+  <Hero />
   <AboutMe />
   <Projects />
+  
 </template>

@@ -48,31 +48,38 @@ export default {
 @import '../assets/config.styl'
 
 h1
-  margin 0 0 .25em 0
-  display: flex;
-  gap: .5em;
+  margin .25em 0 .25em 0
+  display flex
+  gap .5em
+  white-space nowrap
+  letter-spacing -.035em
+  font-size 1.1em
 
   &:after
     display none
 
   span.year-tag
-    background: rgba(10, 205, 118, 0.23)
+    background linear-gradient(rgba(#fff, .3), rgba(#fff, .15))
+    border-top 1px solid rgba(#fff, .4)
+    border-left 1px solid rgba(#fff, .25)
+    border-right 1px solid rgba(#fff, .25)
     padding .1em .5em
+    margin-top .1em
     border-radius 1em
-    color rgb(174, 214, 196)
+    color #fff
     font-weight 600
-    font-size .75em
+    font-size .66em
     display flex
     align-items center
+    letter-spacing 0
 
 h2
   opacity .8
-  font-size 1em
+  font-size .9em
   font-weight 500
   margin 0
 
 .project-box
-  background #0D0D0D
   border 1px solid rgba(#fff, .2)
   border-top 1px solid rgba(200, 200, 200, 0.4)
   border-radius 2em
@@ -84,18 +91,20 @@ h2
   height 20em
   overflow hidden
   box-shadow 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.16)
+  border-bottom-left-radius .25em
 
   .project-title-image
     background defaultGradient
     height 100%
     position relative
-    overflow hidden
+    z-index 0
 
     img
       position absolute
       top 0
       left 0
       width 100%
+      z-index -1
 
     .project-tags
       position absolute
@@ -103,7 +112,22 @@ h2
       right .5em
 
   .project-info
-    padding 1.5em 1.5em
+    padding 1.25em 1.5em
+    margin 0 .5em .5em .5em
+    opacity 1
+    position relative
+    background linear-gradient(rgba(#333, .6), rgba(#0D0D0D, .8))
+    box-shadow 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.16)
+    border 1px solid rgba(#fff, .33)
+    border-top 1px solid rgba(#fff, .66)
+    border-bottom 1px solid rgba(#fff, .15)
+    backdrop-filter blur(1em)
+    border-radius 1.66em
+    z-index 1
+    border-bottom-left-radius .25em
+
+    button
+      letter-spacing .03em
 
   a
     margin-left auto
@@ -121,9 +145,18 @@ h2
     flex 0 0 100%
 
 @media screen and (max-width: 820px)
-  .project-box .project-info
-    flex-direction column
+  .project-box
+    .project-info
+      font-size .8em
 
-    a
-      margin 1.5em auto 0 auto
+      a
+        font-size .9em
+
+@media screen and (max-width: 620px)
+  .project-box
+    .project-info
+      font-size 1em
+
+      a button
+        padding .75em
 </style>

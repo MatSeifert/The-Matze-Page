@@ -14,7 +14,8 @@
             timespan: String,
             year: String,
             tags: Array,
-            noShowcase: Boolean
+            noShowcase: Boolean,
+            openInNewTab: Boolean
         },
         components: {
             ProjectStatItem
@@ -60,7 +61,7 @@
         </a>
         <a v-if="!!linkTargetSecondary"
             :href="linkTargetSecondary"
-            target="_blank"
+            :target="openInNewTab ? '_blank' : ''"
             class="no-hover-effect"
           >
           <button class="btn btn-secondary">{{ buttonLabelSecondary }}</button>
@@ -72,7 +73,10 @@
 </template>
 
 <style lang="stylus" scoped>
-    .flex
-        justify-content space-between
-        position relative
+  .project-overview
+    border-bottom-left-radius .25em
+
+  .flex
+      justify-content space-between
+      position relative
 </style>
