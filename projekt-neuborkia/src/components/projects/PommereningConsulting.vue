@@ -28,7 +28,7 @@ export default {
                 :linkTarget="'https://pommerening-consulting.de/'"
                 :linkTargetSecondary="'#story'"
                 :openInNewTab="false"
-                :buttonLabelSecondary="'Story lesen'" />
+                :buttonLabelSecondary="'die story'" />
 
   <div class="story">
     <h1 id="story">story</h1>
@@ -66,7 +66,19 @@ export default {
     </div>
 
     <h3>Corporate Identity</h3>
-  
+    <p>
+      Eine Corporate Identity, die individuelle Identität, setzt sich aus verschiedenen Elementen zusammen, die alle auf ihre eigene Art wichtig sind. Dazu zählen Elemente, die direkt ins Auge
+      stechen, wie die Auswahl der Farben, aber auch subtilere Elemente, wie die Schriftart.
+    </p>
+
+    <h3>Design System</h3>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <h3>Technische Umsetzung</h3>
+    <p>Lorem ipsum dolor sit amet</p>
+
+    <h1>gallerie</h1>
+    <p>Lorem ipsum dolor sit amet</p>
   </div>
 
   <RouterLink
@@ -82,6 +94,9 @@ export default {
 
   .story
     margin-top 5em
+
+    h1
+      margin 8em 0 3em 0
 
     h2
       margin 2em 0 .75em 0
