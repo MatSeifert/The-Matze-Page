@@ -32,6 +32,13 @@ export default {
             en: "projects",
           },
         },
+        workflow:{
+          id: "workflow",
+          i18n: {
+            de: "workflow",
+            en: "workflow"
+          }
+        }
       },
       socialMedia: {
         dribbble: {
@@ -139,7 +146,7 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-  @import '../assets/config.styl'
+  @import '../styles/config.styl'
 
   h1 
     white-space nowrap

@@ -16,7 +16,7 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-@import '../../assets/config.styl'
+@import '../../styles/config.styl'
 
 .shimmer
   display inline-block

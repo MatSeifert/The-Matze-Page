@@ -120,8 +120,18 @@ export default {
 
     <h3>Design System</h3>
     <p>Da die Vision und die Identität nun klar ist, müssen diese eher kreativen Ansätze in klare technische Regeln und Anweisungen übersetzt werden. Hier kommt das bereits erwähnte
-      Design System zum tragen, das detailliert Eigenschaften wie Farbgebung, Schriftgrößen, UI-Elemente und deren jeweilige Bedeutung beschreibt.
+      Design System zum tragen, das detailliert Eigenschaften wie Farbgebung, Schriftgrößen, UI-Elemente und deren jeweilige Bedeutung beschreibt. Ein solches System ist hilfreich,
+      um sicherzustellen, dass UI Elemente und der gesamte UX-Workflow konsistent bleiben und nicht nur alles nach einem stimmigen Gesamtpaket aussieht, sondern sich auch so benutzen lässt.
+      Dabei spielen viele eng miteinander verzahnte Faktoren eine Rolle, die je nach Bedarf detaillierter oder auch weniger filigran ausgestaltet werden können.
     </p>
+    <h4>Formen &amp; UI-Elemente</h4>
+    <p>Man kommt schnell in Versuchung ein Design ganzeitlich umsetzen zu wollen, doch hierin liegt eine trügerische Sicherheit. Details wie Farben, die konkrete Festlegung
+      eines Iconsets und sogar Schriftarten spielen im grundlegenden Designprozess eine
+    </p>
+    <h4>Typographie</h4>
+    <p></p>
+    <h4>Farben</h4>
+    <p></p>
 
     <h3>Technische Umsetzung</h3>
     <p>Lorem ipsum dolor sit amet</p>
@@ -139,7 +149,7 @@ export default {
 </template>
 
 <style scoped lang="stylus">
-  @import '../../assets/config.styl'
+  @import '../../styles/config.styl'
 
   .story
     margin-top 5em

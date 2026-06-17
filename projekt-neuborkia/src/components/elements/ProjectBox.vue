@@ -1,6 +1,6 @@
 <script lang="ts">
 import _ from "lodash";
-import Tag from "./elements/Tag.vue";
+import Tag from "@/components/elements/Tag.vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -45,7 +45,7 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-@import '../assets/config.styl'
+@import '../../styles/config.styl'
 
 h1
   margin .25em 0 .25em 0

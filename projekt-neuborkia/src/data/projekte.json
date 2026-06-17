@@ -1,0 +1,44 @@
+{
+    "pommereningconsulting": {          
+        "id": "pommereningconsulting",
+        "year": "2025",
+        "tags": ["design", "dev"],
+        "title": "Pommerening Consulting",
+        "subTitl": "Design und Umsetzung der Website"
+    },
+    "plainquire": {
+        "id": "plainquire",
+        "year": "2024",
+        "tags": ["design"],
+        "title": "Plainquire",
+        "subTitle": "Design der Landing Page"
+    },
+    "schicksoftware": {
+        "id": "schicksoftware",
+        "year": "2023",
+        "tags": ["design"],
+        "title": "Schick Software",
+        "subTitle": "Design der Website"
+    },
+    "mtbsport": {
+        "id": "mtbsport",
+        "year": "2022",
+        "tags": ["design", "dev"],
+        "title": "MTB Sport Hänel",
+        "subTitle": "Design und Umsetzung der Website"
+    },
+    "timetracking": {
+        "id": "timetracking",
+        "year": "2022",
+        "tags": ["design"],
+        "title": "Time Tracking",
+        "subTitle": "Redesign der Webapp"
+    },
+    "podicons": {
+        "id": "podicons",
+        "year": "2019",
+        "tags": ["design"],
+        "title": "Podicons",
+        "subTitle": "Iconset für eine podologische Praxis"
+    }
+}

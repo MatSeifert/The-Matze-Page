@@ -27,7 +27,7 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-@import '../../assets/config.styl'
+@import '../../styles/config.styl'
 
 .stat-item_value
   font-size 2em

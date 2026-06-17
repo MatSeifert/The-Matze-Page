@@ -38,7 +38,3 @@ export default {
     <button class="btn btn-primary">Zurück zur Übersicht</button>
   </RouterLink>
 </template>
-
-<style scoped lang="stylus">
-
-</style>

@@ -13,7 +13,7 @@ export default {
   <h1 id="aboutMe">über mich</h1>
   <div class="flex gap-top-m gap-bottom-xl" id="aboutMeContent">
     <div>
-      <img src="../assets/images/profilePicture.webp" alt="Profilbild von Matthias"/>
+      <img src="../../assets/images/profilePicture.webp" alt="Profilbild von Matthias"/>
     </div>
     <div id="aboutMeText">
       <div id="aboutMeQuote">
@@ -35,7 +35,7 @@ export default {
 </template>
 
 <style lang="stylus" scoped>
-  @import '../assets/config.styl'
+  @import '../../styles/config.styl'
 
   h1
       padding-top 1em

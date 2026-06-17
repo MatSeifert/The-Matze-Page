@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <img src="../assets/images/logo.svg" id="logo" alt="matze.dev Logo"/>
+    <img src="../../assets/images/logo.svg" id="logo" alt="matze.dev Logo"/>
     <div class="text-color-primary hero-text-large" id="hero-text-develop">
       develop
     </div>
@@ -18,7 +18,7 @@
 </template>
 
 <style lang="stylus" scoped>
-@import '../assets/config.styl'
+@import '../../styles/config.styl'
 
 .hero
     text-align center

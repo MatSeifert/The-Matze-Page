@@ -10,7 +10,7 @@
 </template>
 
 <style lang="stylus" scoped>
-  @import '../assets/config.styl'
+  @import '../styles/config.styl'
 
   footer
       text-align center
