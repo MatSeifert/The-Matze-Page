@@ -52,23 +52,22 @@ export default {
 
       &:before
           z-index -1
-          width 150em
+          width 100vw
           height 50em
           background secondaryBlur
-          top -20em
-          left -45em
-          transform rotate(15deg)
+          top -5em
+          // left -45em
+          transform rotate(15deg) translateX(-45em)
           opacity .4
 
       &:after
-          width 100em
+          width 100vw
           height 40em
           background primaryBlur
-          transform rotate(-25deg)
+          transform rotate(-20deg) translateX(-40em) translateY(-10em)
           opacity .4
           z-index -2
           top 0
-          left -40em
 
   img
       width 30em

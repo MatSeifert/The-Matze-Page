@@ -244,10 +244,8 @@ h1
 
 main
   padding 4em 5em 2em 5em
-  position relative
   z-index 1
   min-height calc(100vh - 10em)
-  overflow hidden
 
   &:before
     content ''
@@ -267,14 +265,13 @@ main
     height 200vh
     background secondaryBlur
     opacity .4
+    position fixed
     display block
-    position absolute
-    right -40vw
-    top -90vh
+    top 0
     border-radius 50%
     z-index -1
-    //filter blur(5em)
-    transform rotate(-45deg)
+    pointer-events none
+    transform rotate(-45deg) translateX(55vw) translateY(-20vh)
 
 #header
   display flex

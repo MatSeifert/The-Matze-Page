@@ -22,6 +22,7 @@
 
 .hero
     text-align center
+    position relative
 
     #logo
         width 8em
@@ -39,7 +40,7 @@
 
     #hero-text-design
         margin -1em 0 .25em .17em
-        mix-blend-mode color-dodge
+        mix-blend-mode screen
         white-space nowrap
         position relative
 

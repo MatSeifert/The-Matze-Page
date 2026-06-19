@@ -4,7 +4,7 @@
   import Hero from "@/components/landingpage/Hero.vue";
   import AboutMe from "@/components/landingpage/AboutMe.vue";
   import Projects from "@/components/landingpage/Projects.vue";
-  import Workflow from "@/components/landingpage/Workflow.vue";
+  import Insights from "@/components/landingpage/Insights.vue";
 </script>
 
 <template>
@@ -12,6 +12,6 @@
   <Hero />
   <AboutMe />
   <Projects />
-  <Workflow />
+  <Insights />
   <Footer />
 </template>

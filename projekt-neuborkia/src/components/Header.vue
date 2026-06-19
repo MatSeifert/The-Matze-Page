@@ -1,5 +1,7 @@
-<script lang="ts">
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from "vue-router"
+import data from '@/data/mainMenu.json'
 import IconDribbble from "./icons/IconDribbble.vue"
 import IconStackoverflow from "./icons/IconStackoverflow.vue"
 import IconGithub from "./icons/IconGithub.vue"
@@ -8,81 +10,28 @@ import IconProjects from "./icons/IconProjects.vue"
 import IconAboutMe from './icons/IconAboutMe.vue'
 import IconCaretUp from './icons/IconCaretUp.vue'
 
-export default {
-  props: {
-    isLandingpage: Boolean,
-  },
-  data() {
-    return {
-      scrollPosition: 0,
-      navBarClass: "navigation-bar",
-      navItemClass: "navigation-item",
-      links: {
-        aboutMe: {
-          id: "aboutMe",
-          i18n: {
-            de: "über mich",
-            en: "about me",
-          },
-        },
-        projects: {
-          id: "projects",
-          i18n: {
-            de: "projekte",
-            en: "projects",
-          },
-        },
-        workflow:{
-          id: "workflow",
-          i18n: {
-            de: "workflow",
-            en: "workflow"
-          }
-        }
-      },
-      socialMedia: {
-        dribbble: {
-          id: "dribbble",
-          linkTarget: "https://dribbble.com/thematze",
-          altText: "Link zum dribbble Profil von Matthias",
-          ariaLabel: "Besuche mein UI und UX Portfolio auf dribbble"
-        },
-        github: {
-          id: "github",
-          linkTarget: "https://github.com/MatSeifert",
-          altText: "Link zum GitHub Profil von Matthias",
-          ariaLabel: "Stöbere auf GitHub in meinen Projekten"
-        },
-        stackoverflow: {
-          id: "stackoverflow",
-          linkTarget:
-            "https://stackoverflow.com/users/3775858/matthias-seifert",
-          altText: "Link zum StackOverflow Profil von Matthias",
-          ariaLabel: "Schau auf meiner StackOverflow Seite, wie andere mir geholfen haben oder aber ich anderen helfen konnte"
-        },
-        mastodon: {
-          id: "mastodon",
-          linkTarget: "https://mastodon.social/@einMATZEmalig",
-          altText: "Link zum Mastodon Profil von Matthias",
-          ariaLabel: "Plaudere mit mir auf Mastodon oder stöbere in meinen Beiträgen"
-        },
-      },
-    };
-  },
-  components: {
-    IconDribbble,
-    IconStackoverflow,
-    IconGithub,
-    IconMastodon,
-    IconProjects,
-    IconAboutMe,
-    IconCaretUp
-  },
-};
+const sticky = ref(false)
+const { navBarClass, navItemClass, links, socialMedia } = data;
+
+function handleScroll() {
+  if (window.scrollY > 50 && window.innerWidth > 900) {
+    sticky.value = true
+  } else {
+    sticky.value = false
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <div id="header">
+  <div id="header" :class="sticky ? 'sticky' : ''">
     <h1>
       <RouterLink tag="span" :to="{ path: '/', hash: '#intro' }"> matthias wünsch </RouterLink>
     </h1>
@@ -159,7 +108,27 @@ export default {
       &:hover
           opacity 1
 
-  #header .navigation-bar#social
+  #header
+    position sticky
+    top 2em
+    margin-top -2em
+    z-index 3
+    width calc(100vw - 13em)
+    transform translateX(-2em)
+    padding 1em 3em
+    border 1px solid transparent
+    transition all .2s
+
+    &.sticky
+      background rgba(#000, .33)
+      backdrop-filter blur(3em)
+      border-radius 100vh
+      border-bottom solid 1px rgba(#fff, .2)
+      border-left solid 1px rgba(#fff, .33)
+      border-right solid 1px rgba(#fff, .33)
+      border-top solid 1px rgba(#fff, .5)
+    
+    .navigation-bar#social
       margin-left auto
 
   svg

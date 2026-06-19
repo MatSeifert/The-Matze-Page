@@ -7,6 +7,7 @@ import TcgView from "../views/TcgView.vue";
 import TcgPlayView from "../views/TcgPlayView.vue";
 import ChatView from "@/views/ChatView.vue";
 import CobblemonView from "@/views/CobblemonView.vue";
+import InsightsView from "@/views/InsightsView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,6 +21,12 @@ const router = createRouter({
       path: "/project/:id",
       name: "project",
       component: ProjectView,
+      props: true
+    },
+    {
+      path: "/insights/:id",
+      name: "insight",
+      component: InsightsView,
       props: true
     },
     {
