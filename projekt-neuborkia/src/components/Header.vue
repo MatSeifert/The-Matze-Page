@@ -9,6 +9,9 @@ import IconMastodon from "./icons/IconMastodon.vue"
 import IconProjects from "./icons/IconProjects.vue"
 import IconAboutMe from './icons/IconAboutMe.vue'
 import IconCaretUp from './icons/IconCaretUp.vue'
+import HeroiconAboutMe from './icons/heroicons/HeroiconAboutMe.vue'
+import HeroiconProjects from './icons/heroicons/HeroiconProjects.vue'
+import HeroiconInsights from './icons/heroicons/HeroiconInsights.vue'
 
 const sticky = ref(false)
 const { navBarClass, navItemClass, links, socialMedia } = data;
@@ -32,12 +35,15 @@ onUnmounted(() => {
 
 <template>
   <div id="header" :class="sticky ? 'sticky' : ''">
-    <h1>
+    <h1 class="name-headline">
       <RouterLink tag="span" :to="{ path: '/', hash: '#intro' }"> matthias wünsch </RouterLink>
     </h1>
     <ul :class="navBarClass" id="navigation-desktop">
       <li v-for="link in links" :key="link.id" :class="navItemClass">
-        <RouterLink tag="a" :to="{ path: '/', hash: `#${link.id}` }">
+        <RouterLink tag="a" class="page-link" :to="{ path: '/', hash: `#${link.id}` }">
+          <HeroiconAboutMe v-if="link.id === 'aboutMe'"/>
+          <HeroiconProjects v-else-if="link.id === 'projects'" />
+          <HeroiconInsights v-else-if="link.id === 'insights'" />
           {{ link.i18n.de }}
         </RouterLink>
       </li>
@@ -115,18 +121,18 @@ onUnmounted(() => {
     z-index 3
     width calc(100vw - 13em)
     transform translateX(-2em)
-    padding 1em 3em
+    padding .75em 3em
     border 1px solid transparent
-    transition all .2s
+    transition all .4s
 
     &.sticky
       background rgba(#000, .33)
       backdrop-filter blur(3em)
       border-radius 100vh
-      border-bottom solid 1px rgba(#fff, .2)
-      border-left solid 1px rgba(#fff, .33)
-      border-right solid 1px rgba(#fff, .33)
-      border-top solid 1px rgba(#fff, .5)
+      border-bottom solid 1px rgba(#fff, .15)
+      border-left solid 1px rgba(#fff, .2)
+      border-right solid 1px rgba(#fff, .2)
+      border-top solid 1px rgba(#fff, .3)
     
     .navigation-bar#social
       margin-left auto

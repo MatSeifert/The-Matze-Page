@@ -5,9 +5,15 @@
         "subTitle": "Was ein gutes Design System leisten kann und warum es so wichtig ist",
         "abstract": "Ein sorgfältig ausgearbeitetes Design System ist ein wichtiges Werkzeug für eine benutzerfreundliche und ansprechende Website oder Anwendung. Es beinhaltet klare Regeln zu Farben, Größen, Abständen, Typographie und sogar ganze UI-Bausteine. Nicht nur Benutzer und Kunden profitieren von der daraus resultierenden visuellen Klarheit, auch Entwickler oder Content Moderatoren können auf eindeutige und nachvollziehbare Konventionen zurückgreifen, womit sie auch in Zukunft jederzeit nahtlos neue Ideen einpflegen können."
     },
+    "uipsychology": {
+        "id": "uipsychology",
+        "isReversed": true,
+        "title": "Psychologie im UI Design",
+        "subTitle": "Die Macht der Gewohnheit und wie „Dark Patterns“ mit ihr manipulieren",
+        "abstract": "Menschliche Gewohnheiten und vertraute Design-Konventionen können genutzt werden, um die kognitive Belastung zu minimiert und die intuitive Bedienung (Usability) sowie Kundenbindung zu maximieren. Dieselben psychologischen Mechanismen werden jedoch in Form von Dark Patterns missbraucht, um Nutzer durch manipulative Interfaces unbemerkt zu Handlungen gegen ihre eigenen Interessen zu verleiten. Erfolgreiches UI-Design bewegt sich daher im kritischen Spannungsfeld zwischen effizienter Conversion-Optimierung und digitaler Ethik."
+    },
     "spa": {
         "id": "spa",
-        "isReversed": true,
         "title": "Single Page Applications",
         "subTitle": "Funktionsweise, sowie Vor- und Nachteile moderner Web-Apps",
         "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur."

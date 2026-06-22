@@ -52,6 +52,16 @@ a
   &.no-hover-effect:after, &.no-hover-effect:before
     display none
 
+  &.text-link
+    background defaultGradient
+    background-clip text
+    color transparent
+    font-weight 700
+    transition all .3s
+
+    &:hover
+      color rgba(#fff, .5)
+
   &.play-tcg
     width 2.5em
     height 2.5em
@@ -71,24 +81,28 @@ a
       box-shadow 0 0 15px 8px rgba(secondaryColor, .65)
 
 h1
-  font-size 1.2em
+  font-size 10em
   position relative
+  font-weight 900
+  mix-blend-mode soft-light
+  text-align center
 
-  &:after
-    content ''
-    width 2em
-    height 3px
-    display block
-    position absolute
-    bottom -.5em
-    background defaultGradient
-    border-top-left-radius 2px
-    border-top-right-radius 2px
-    border-bottom-right-radius 2px
+  &.name-headline
+    font-size 1.2em
+    text-align left
+    mix-blend-mode unset
 
-  &#aboutMe, &#projects
-    padding-top 5em
-
+    &:after
+      content ''
+      width 2em
+      height 3px
+      display block
+      position absolute
+      bottom -.5em
+      background defaultGradient
+      border-top-left-radius 2px
+      border-top-right-radius 2px
+      border-bottom-right-radius 2px
 
 .text-color-primary
   color primaryColor
@@ -235,8 +249,41 @@ h1
   &.wrap
     flex-wrap wrap
 
+  &.gap-2
+    gap 2em
+
   &.gap-3
     gap 3em
+
+  > .flex-1-0-0
+    flex 1 0 0
+
+  > .width-1
+  flex 1 0 0
+
+  > .width-2
+    flex 2 0 0
+
+  > .width-3
+    flex 3 0 0
+
+  div.image
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    &.img-rounded > img
+      border-radius 2em
+
+    img
+      width 80%
+      max-width 32em
+
+    span.caption
+      font-size .75em
+      color rgba(#fff, .75)
+      padding 1em 0
 
 .blur
   filter blur(1em)
@@ -254,7 +301,7 @@ main
     background primaryBlur
     opacity .4
     display block
-    position absolute
+    position fixed
     top calc(-35vh - 100px);
     border-radius 50%
     z-index -1
@@ -287,6 +334,13 @@ main
 
     li.navigation-item
       margin-right 2.5em
+
+      > a.page-link
+        display flex
+        gap .5em
+      
+        svg
+          font-size 1.3em
 
 // Projects
 .project-abstract
@@ -347,6 +401,13 @@ ul
 
 .project-box-m
   display none
+
+.quote
+  width 66vw
+  margin 1.5em auto
+  font-size 3em
+  text-align center
+  font-family DM Serif Display
 
 @media screen and (max-width: 1800px)
   .project-abstract

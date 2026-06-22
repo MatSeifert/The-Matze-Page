@@ -29,7 +29,8 @@ export default {
 @import '../../styles/config.styl'
 
 h1
-  padding-top 1em
+  margin-bottom -.5em
+  margin-top .75em
 
 .project-wrapper
   gap 3em

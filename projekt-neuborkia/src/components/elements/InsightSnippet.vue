@@ -4,7 +4,8 @@ import { RouterLink } from "vue-router";
 
 export default {
     props: {
-        insight: Object
+        insight: Object,
+        hideImage: Boolean
     },
     computed: {
         getImage() {
@@ -16,10 +17,10 @@ export default {
 
 <template>
     <div :class="`insight flex ${insight?.isReversed ? 'reversed' : ''}`" v-if="!!insight">
-        <div class="insight-image">
+        <div class="insight-image" v-if="!hideImage">
             <img :src="getImage" :alt="`Titelbild zum Insight ${insight.title}`" />
         </div>
-        <div class="insight-info">
+        <div :class="`insight-info ${hideImage ? 'full-width': ''}`">
             <h2>{{ insight.title }}</h2>
             <h3>{{ insight.subTitle }}</h3>
             <p>{{ insight.abstract }}</p>
@@ -44,8 +45,9 @@ export default {
     padding 1em 3em
     margin-top 3em
     gap 3em
-    background #000
+    background rgba(#000, .5)
     position relative
+    backdrop-filter blur(.25em)
 
     &.reversed
         flex-direction row-reverse
@@ -55,6 +57,7 @@ export default {
             left unset
             top -33%
             right -33%
+            opacity .2
 
     > div.insight-background
         position absolute
@@ -77,13 +80,14 @@ export default {
             background primaryColor
             border-radius 50%
             filter blur(15em)
-            opacity .33
-
-
+            opacity .25
 
     > div.insight-image, > div.insight-info
         width 50%
         z-index 1
+
+        &.full-width
+            width 100%
 
         &.insight-image
             position relative
@@ -104,6 +108,7 @@ export default {
         h3
             opacity .66
             font-weight 600
+            line-height 1.4em
             margin 0 0 1.5em 0
 
     p

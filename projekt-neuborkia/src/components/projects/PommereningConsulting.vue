@@ -35,7 +35,7 @@ export default {
   
     <h2>Ende zu Ende Webentwicklung - Von der Skizze zur fertigen Seite</h2>
 
-    <div class="flex">
+    <div class="flex gap-2">
       <div class="text width-2 accent accent-1">
         <p>
           Für seine gleichnamige IT-Consulting Firma hat Frank Pommerening ein „Rundum sorglos“ Paket für den neuen Webauftritt des Unternehmens gesucht. Vom Logo, über die Konzeption des Designs 
@@ -60,7 +60,7 @@ export default {
       </div>
     </div>
 
-    <div class="flex">
+    <div class="flex gap-2">
       <div class="image width-2">
         <img src="@/assets/images/projects/pommereningconsulting/story/LogoVision.webp" />
         <span class="caption">Das Logo symbolisiert den direkten Austausch mit dem Kunden</span>
@@ -80,7 +80,7 @@ export default {
     </div>
 
     <h3>Corporate Identity</h3>
-    <div class="flex">
+    <div class="flex gap-2">
       <div class="text width-1">
         <p>
           Eine Corporate Identity, die individuelle Identität, ist ein Zusammenspiel aus Farben, Formen und bestimmten Regeln. Oftmals sind all diese Informationen in einem Design System,
@@ -155,7 +155,7 @@ export default {
     margin-top 5em
 
     h1
-      margin 8em 0 3em 0
+      margin 0 0 -.25em 0
 
     h2
       margin 2em 0 .75em 0
@@ -182,35 +182,6 @@ export default {
         color tintedWhite
 
     .flex
-      gap 2em
-
-      > .width-1
-        flex 1 0 0
-
-      > .width-2
-        flex 2 0 0
-
-      > .width-3
-        flex 3 0 0
-
-      div.image
-        display flex
-        flex-direction column
-        justify-content center
-        align-items center
-
-        &.img-rounded > img
-          border-radius 2em
-
-        img
-          width 80%
-          max-width 32em
-
-        span.caption
-          font-size .75em
-          color rgba(#fff, .75)
-          padding 1em 0
-
       div.text p
         flex 3 0 0
 

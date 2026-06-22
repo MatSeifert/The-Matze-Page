@@ -26,7 +26,8 @@ export default {
 @import '../../styles/config.styl'
 
 h1
-    padding-top 10em
+    margin-bottom -1.15em
+    margin-top 1em
 
 .insight-wrapper
     margin-top 10em

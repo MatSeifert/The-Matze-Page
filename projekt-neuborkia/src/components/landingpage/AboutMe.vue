@@ -16,9 +16,6 @@ export default {
       <img src="../../assets/images/profilePicture.webp" alt="Profilbild von Matthias"/>
     </div>
     <div id="aboutMeText">
-      <div id="aboutMeQuote">
-        Gutes <span>design</span> fällt besonders dann auf, wenn es fehlt.
-      </div>
       <p>Hi, ich heiße Matthias, aber nennt mich gern Matze! Ich arbeite seit {{ calcYears }}
       Jahren als Software Entwickler mit Schwerpunkt Frontend in Dresden. Neben
       meiner Leidenschaft für Programmierung, der ich Vollzeit nachgehe, bin ich
@@ -27,6 +24,9 @@ export default {
       selbstständig gemacht und biete vor allem meine Fähigkeiten als Designer
       an. Hast Du Interesse daran, mit mir zu arbeiten? Ich freue mich schon
       darauf zu hören, wie ich auch Deinem Projekt helfen kann!</p>
+      <div id="aboutMeQuote">
+        Gutes <span>design</span> fällt besonders dann auf, wenn es fehlt.
+      </div>
       <a href="mailto:hallo@matze.dev?subject=Projektanfrage via matze.dev&body=Hi Matze%0D%0Dich möchte mit dir über folgendes Projekt von mir sprechen:%0D%0D" class="no-hover-effect gap-top-m inline-block">
         <button class="btn btn-primary">projektanfrage</button>
       </a>
@@ -38,10 +38,11 @@ export default {
   @import '../../styles/config.styl'
 
   h1
-      padding-top 1em
+      padding-top 0
+      margin-bottom -.85em
+      margin-top 0
 
   #aboutMeContent
-      max-width 70em
       position relative
       align-items center
 
@@ -70,13 +71,13 @@ export default {
           top 0
 
   img
-      width 30em
+      width 35em
 
   #aboutMeQuote
       font-family DM Serif Display
       font-size 3em
       line-height 1em
-      margin-bottom 1em
+      margin 1.5em 0 .5em 0
       max-width 10em
       position relative
       text-align left
@@ -112,7 +113,9 @@ export default {
   #aboutMeText
       line-height 1.5em
       margin-left 6em
+      margin-top 3em
       text-align justify
+      max-width 40em
 
 
   @media screen and (max-width: 1440px)
