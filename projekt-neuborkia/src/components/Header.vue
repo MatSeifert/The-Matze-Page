@@ -9,9 +9,6 @@ import IconMastodon from "./icons/IconMastodon.vue"
 import IconProjects from "./icons/IconProjects.vue"
 import IconAboutMe from './icons/IconAboutMe.vue'
 import IconCaretUp from './icons/IconCaretUp.vue'
-import HeroiconAboutMe from './icons/heroicons/HeroiconAboutMe.vue'
-import HeroiconProjects from './icons/heroicons/HeroiconProjects.vue'
-import HeroiconInsights from './icons/heroicons/HeroiconInsights.vue'
 
 const sticky = ref(false)
 const { navBarClass, navItemClass, links, socialMedia } = data;
@@ -41,9 +38,6 @@ onUnmounted(() => {
     <ul :class="navBarClass" id="navigation-desktop">
       <li v-for="link in links" :key="link.id" :class="navItemClass">
         <RouterLink tag="a" class="page-link" :to="{ path: '/', hash: `#${link.id}` }">
-          <HeroiconAboutMe v-if="link.id === 'aboutMe'"/>
-          <HeroiconProjects v-else-if="link.id === 'projects'" />
-          <HeroiconInsights v-else-if="link.id === 'insights'" />
           {{ link.i18n.de }}
         </RouterLink>
       </li>
