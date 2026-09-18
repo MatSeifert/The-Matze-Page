@@ -54,6 +54,8 @@ h1
   white-space nowrap
   letter-spacing -.035em
   font-size 1.1em
+  mix-blend-mode unset
+  font-weight 600
 
   &:after
     display none

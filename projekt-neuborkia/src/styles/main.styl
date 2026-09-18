@@ -487,6 +487,48 @@ ul
     max-width 60em
     margin 5em auto
 
+.insight-hero
+  display flex
+  height 80vh
+
+  .hero-image
+    flex 1 0 0
+    position relative
+    display flex
+    align-items center
+
+    > img
+      position absolute
+      filter drop-shadow(0 0 3em rgba(primaryColor, 0.33))
+      pointer-events none
+      z-index 1
+      max-width 66em
+
+  .hero-text
+    flex 1 0 0
+    display flex
+    flex-direction column
+    justify-content center
+    align-items flex-end
+    max-width 50vw
+
+    h1
+      margin 0
+      font-size 12em
+      line-height .8em
+      font-weight 900
+      text-align right
+      mix-blend-mode soft-light
+      font-family DM Serif Display
+
+    
+    h2
+      font-size 1.5em
+      text-align right
+      margin-top 4em
+      opacity .66
+      width 66%
+    
 label
   font-weight 600
   font-size .8em

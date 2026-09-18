@@ -1,41 +1,41 @@
-<script lang="ts">
+<script setup lang="ts">
 import _ from "lodash";
 import { RouterLink } from "vue-router";
 
-export default {
-    props: {
-        insight: Object,
-        hideImage: Boolean
-    },
-    computed: {
-        getImage() {
-            return `./images/insights/${_.get(this.insight, ["id"])}.webp`;
-        }
-  },
-}
+const props = defineProps({
+    insight: Object,
+    hideImage: Boolean
+})
+
+const imageUrl = new URL(`../../assets/images/insights/${_.get(props.insight, ["id"])}.webp`, import.meta.url).href
 </script>
 
 <template>
-    <div :class="`insight flex ${insight?.isReversed ? 'reversed' : ''}`" v-if="!!insight">
-        <div class="insight-image" v-if="!hideImage">
-            <img :src="getImage" :alt="`Titelbild zum Insight ${insight.title}`" />
-        </div>
-        <div :class="`insight-info ${hideImage ? 'full-width': ''}`">
-            <h2>{{ insight.title }}</h2>
-            <h3>{{ insight.subTitle }}</h3>
-            <p>{{ insight.abstract }}</p>
-            <div class="flex">
-                <RouterLink tag="button" :to="{path: `/insights/${insight.id}`}">
-                    <button class="btn btn-primary">Weiterlesen</button>
-                </RouterLink>
+    <div class="insight-container">
+        <div :class="['insight flex', insight?.id, insight?.isReversed ? 'reversed' : '']" v-if="!!insight">
+            <div class="insight-image" v-if="!hideImage">
+                <img :src="imageUrl" :alt="`Titelbild zum Insight ${insight.title}`" />
             </div>
+            <div :class="`insight-info ${hideImage ? 'full-width' : ''}`">
+                <h2>{{ insight.title }}</h2>
+                <h3>{{ insight.subTitle }}</h3>
+                <p>{{ insight.abstract }}</p>
+                <div class="flex">
+                    <RouterLink tag="button" :to="{ path: `/insights/${insight.id}` }">
+                        <button class="btn btn-primary">Weiterlesen</button>
+                    </RouterLink>
+                </div>
+            </div>
+            <div class="insight-background"></div>
         </div>
-        <div class="insight-background"></div>
     </div>
 </template>
 
 <style lang="stylus" scoped>
 @import '../../styles/config.styl'
+
+.insight-container
+    container-type inline-size
 
 .insight
     border 1px solid rgba(#fff, .2)
@@ -116,10 +116,65 @@ export default {
         text-align justify
         hyphens auto
 
+    &.accessibility > div.insight-image > img
+        height 105%
+        left -2em
+
   a
     display inline-block
     margin 3em auto 3em auto
 
     &:before, &:after
       display none
+
+@container (width < 1200px)
+    .insight, 
+    .insight.reversed
+        flex-direction column
+        gap 0
+
+        > div.insight-image
+            width 100%
+            position relative
+
+            > img
+                position absolute
+                width 100%
+                height auto
+                top -4em
+
+        > div.insight-info
+            width 100%
+            margin-top 14em
+
+            > h2
+                text-shadow 0px 0px .25em #131616
+
+    // Insight-spezifische Styles
+    .insight.designsysteme
+        > div.insight-image > img
+            width 140%
+            left -3em
+            top -3em
+
+    .insight.uipsychology
+        > div.insight-image > img
+            width 120%
+            left -2em
+
+    .insight.color-theory
+        > div.insight-image > img
+            width 100%
+            left 0
+
+    .insight.typography
+        > div.insight-image > img
+            width 125%
+            left -2em
+
+    .insight.accessibility
+        > div.insight-image > img
+            height auto
+            width 125%
+            left -2.5em
 </style>

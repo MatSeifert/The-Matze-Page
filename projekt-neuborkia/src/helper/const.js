@@ -10,3 +10,4 @@ export const PROJECT_PLAINQUIRE = "plainquire"
 export const PROJECT_POMMERENINGCONSULTING = "pommereningconsulting"
 
 export const INSIGHT_DESIGNSYSTEME = "designsysteme"
+export const INSIGHT_UIPSYCHOLOGY = "uipsychology"

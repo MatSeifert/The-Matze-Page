@@ -10,3 +10,4 @@ export const PROJECT_PLAINQUIRE: string;
 export const PROJECT_POMMERENINGCONSULTING: string;
 
 export const INSIGHT_DESIGNSYSTEME: string;
+export const INSIGHT_UIPSYCHOLOGY: string;

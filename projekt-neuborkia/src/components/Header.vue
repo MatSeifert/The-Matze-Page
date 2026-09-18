@@ -10,14 +10,46 @@ import IconProjects from "./icons/IconProjects.vue"
 import IconAboutMe from './icons/IconAboutMe.vue'
 import IconCaretUp from './icons/IconCaretUp.vue'
 
+interface MenuLink {
+  id: string,
+  i18n: {
+    de: string,
+    en: string
+  },
+  lazy?: boolean,
+  linkTarget?: string
+}
+
+interface SocialMediaLink {
+  id: string,
+  linkTarget: string,
+  altText: string,
+  ariaLabel: string
+}
+
+interface NavData {
+  navBarClass: string,
+  navItemClass: String
+  links: MenuLink[],
+  socialMedia: SocialMediaLink[]
+}
+
 const sticky = ref(false)
-const { navBarClass, navItemClass, links, socialMedia } = data;
+const lazy = ref(false)
+const menuData = data as NavData;
+const { navBarClass, navItemClass, links, socialMedia } = menuData;
 
 function handleScroll() {
   if (window.scrollY > 50 && window.innerWidth > 900) {
     sticky.value = true
   } else {
     sticky.value = false
+  }
+
+  if (window.scrollY > 100) {
+    lazy.value = true
+  } else {
+    lazy.value = false
   }
 }
 
@@ -36,20 +68,17 @@ onUnmounted(() => {
       <RouterLink tag="span" :to="{ path: '/', hash: '#intro' }"> matthias wünsch </RouterLink>
     </h1>
     <ul :class="navBarClass" id="navigation-desktop">
-      <li v-for="link in links" :key="link.id" :class="navItemClass">
+      <li v-for="link in links" :key="link.id" :class="[navItemClass, link.lazy && lazy ? 'visible' : '']"
+        :id="link.lazy ? 'lazy' : undefined">
         <RouterLink tag="a" class="page-link" :to="{ path: '/', hash: `#${link.id}` }">
           {{ link.i18n.de }}
         </RouterLink>
       </li>
     </ul>
     <ul :class="navBarClass" id="social">
-      <li
-        v-for="platform in socialMedia"
-        :key="platform.id"
-        :class="navItemClass"
-      >
+      <li v-for="platform in socialMedia" :key="platform.id" :class="navItemClass">
         <a :href="platform.linkTarget" target="_blank" :aria-label="platform.ariaLabel">
-          <IconDribbble v-if="platform.id == 'dribbble'" :alt="platform.altText"/>
+          <IconDribbble v-if="platform.id == 'dribbble'" :alt="platform.altText" />
           <IconStackoverflow v-if="platform.id == 'stackoverflow'" />
           <IconGithub v-if="platform.id == 'github'" />
           <IconMastodon v-if="platform.id == 'mastodon'" />

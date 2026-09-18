@@ -4,7 +4,8 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "*.vue"
+    "*.vue",
+    "*.ts"
   ],
   "compilerOptions": {
     "baseUrl": ".",
@@ -14,13 +15,16 @@
       ]
     },
     "types": [
-      "node"
+      "node",
+      "webpack-env"
     ],
     "typeRoots": [
       "./types",
       "./node_modules/@types"
     ],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "references": [
     {

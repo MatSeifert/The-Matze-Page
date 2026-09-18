@@ -14,20 +14,21 @@
     },
     "colorTheory": {
         "id": "color-theory",
-        "title": "Pixel & Pigmente: Der UI-Farbguide",
+        "title": "Pixel & Pigmente – Der UI-Farbguide",
         "subTitle": "Mit der richtigen Farbwahl ist weniger oft mehr",
-        "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur."
+        "abstract": "Die Wahl der richtigen Farben gehört zu den wichtigsten Entscheidungen, die es im Designprozess zu treffen gilt. Von den Zahlreichen „ästhetischen Farbpaletten“ die online oft zu finden sind und auf den ersten Blick auch immer schön aussehen, ist bei der Erstellung ansprechender User Interfaces aber vor allem Eines zu halten: Abstand. Nicht selten braucht es keine drei oder vier verschiedenen Farben, sondern nur eine oder zwei, die man nur richtig zu nutzen wissen muss. Hier gibt uns die Natur selbst einige äußerst praktische Verwendungsbeispiele."
     },
     "typography": {
         "id": "typography",
+        "isReversed": true,
         "title": "Typografie auf den Punkt",
         "subTitle": "Schriftarten verstehen und einsetzen wie ein Font-Nerd",
-        "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur."
+        "abstract": "Schriftarten sind nur etwas für Nerds und am Ende sehen ohnehin alle fast identisch aus. Warum das zwar erstens richtig, zweitens jedoch völlig falsch ist, zeigt schon ein Blick auf die großen Unternehmen unserer Zeit. Die Nutzung von Standardschriftarten findet dort praktisch nicht statt, denn längst ist bekannt, wie wichtig die Schriftart für die eigene Markenidentität ist. Wer einmal seinen Blick für die feinen Details der Buchstaben und Symbole schärft, versteht schnell die riesigen Auswirkungen, die eine mit bedacht gewählte Schriftart mit sich bringen kann."
     },
     "accessibility": {
         "id": "accessibility",
-        "title": "Accessibility: Teilhabe ist nicht optional",
+        "title": "Accessibility ist nicht optional",
         "subTitle": "„Brauchen wir nicht“ ist ein Ausschlusskriterium",
-        "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur."
+        "abstract": "Leider wird die Beachtung der Zugänglichkeit nach wie vor oft als Ballast und unnötiger Aufwand abgetan. Doch damit schließt man nicht nur einen großen Teil seiner potenziellen Nutzer und Kunden aus, man trifft damit indirekt auch die Aussage, dass diese Menschen den Aufwand nicht wert sind. Dass die Umsetzung jedoch spätestens seit dem European Accessibility Act oftmals nicht mehr optional ist, wissen leider längst nicht alle. Doch wer von Anfang an inklusiv denkt, schafft großen Mehrwert ohne großen Aufwand. Denn Zugänglichkeit darf kein Privileg sein."
     }
 }

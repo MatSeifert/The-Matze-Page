@@ -70,9 +70,15 @@ const router = createRouter({
         el: to.hash,
         behavior: "smooth"
       };
-    } else {
+    }
+    if (to.path) {
       return {
-        behavior: "smooth"
+        top: 0
+      }
+    }
+    else {
+      return {
+        top: 0
       };
     }
   }

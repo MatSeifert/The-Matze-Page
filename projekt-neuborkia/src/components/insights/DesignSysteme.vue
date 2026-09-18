@@ -2,21 +2,38 @@
 import _ from 'lodash'
 import insights from '@/data/insights.json'
 import InsightSnippet from '@/components/elements/InsightSnippet.vue'
+import RecommendationBlock from './RecommendationBlock.vue'
+
+// Bilder
+import heroImage from '@/assets/images/insights/designsysteme.webp'
+import moodboardImage from '@/assets/images/insights/moodboard.webp'
+import wireframe1Image from '@/assets/images/insights/wireframe_01.webp'
+import wireframe2Image from '@/assets/images/insights/wireframe_02.webp'
+import wireframe3Image from '@/assets/images/insights/wireframe_03.webp'
+import wireframe4Image from '@/assets/images/insights/wireframe_04.webp'
+import wireframe5Image from '@/assets/images/insights/wireframe_05.webp'
+import colorsImage from '@/assets/images/insights/colors.webp'
+import colorSaturationImage from '@/assets/images/insights/color_saturation.webp'
+import typographyExampleImage from '@/assets/images/insights/typography-example.webp'
+import typographyHeroExampleImage from '@/assets/images/insights/typography_hero-example.webp'
+import ButtonDesignImage from '@/assets/images/insights/button-design.webp'
 
 const insight = _.get(insights, ['designsysteme'])
 const uipsychology = _.get(insights, ['uipsychology'])
 
-const getImage = () => {
-    return `../images/insights/designsysteme.webp`;
-}
 </script>
 
 <template>
-    <div class="designsystem-hero">
-        <img :src="getImage()">
-        <h1>{{ insight.title }}</h1>
-        <h2>{{ insight.subTitle }}</h2>
+    <div class="insight-hero designsysteme">
+        <div class="hero-image">
+            <img :src="heroImage" alt="Aufgeklappter Laptop mit symbolischem Design System.">
+        </div>
+        <div class="hero-text">
+            <h1>{{ insight.title }}</h1>
+            <h2>{{ insight.subTitle }}</h2>
+        </div>
     </div>
+
     <div class="designsystem-content insight-content">
 
         <div class="text">
@@ -170,7 +187,8 @@ const getImage = () => {
         </div>
 
         <div class="image">
-            <img :src="'../images/insights/moodboard.webp'" alt="" />
+            <img :src="moodboardImage"
+                alt="Beispielhaftes Moodboard mit Inspiration zu Design, Schriftarten und Farben" />
             <span class="caption">Ein klassisches Moodboard mit Inspirationen und ersten Ideen</span>
         </div>
 
@@ -190,12 +208,13 @@ const getImage = () => {
         <div class="image">
             <div class="flex gap-3">
                 <div class="image img-rounded masonry">
-                    <img :src="'../images/insights/wireframe_01.webp'" alt="" />
-                    <img :src="'../images/insights/wireframe_02.webp'" alt="" />
+                    <img :src="wireframe1Image" alt="" />
+                    <img :src="wireframe2Image" alt="" />
                 </div>
                 <div class="image img-rounded masonry">
-                    <img :src="'../images/insights/wireframe_04.webp'" alt="" />
-                    <img :src="'../images/insights/wireframe_03.webp'" alt="" />
+                    <img :src="wireframe3Image" alt="" />
+                    <img :src="wireframe4Image" alt="" />
+                    <img :src="wireframe5Image" alt="" />
                 </div>
             </div>
             <span class="caption">
@@ -283,7 +302,8 @@ const getImage = () => {
         </div>
 
         <div class="image">
-            <img :src="'../images/insights/colors.webp'" alt="" />
+            <img :src="colorsImage"
+                alt="Beispiel einer kompletten Farbpalette mit je 9 abgestuften Primär- und Sekundärfarben, sowie einigen Hinweisfarben und Verläufen" />
             <span class="caption">Konzeption der Farbpalette dieser Seite mit Primär- und Sekundärfarbe, sowie
                 Verläufen</span>
         </div>
@@ -294,16 +314,18 @@ const getImage = () => {
                 Sättigungswert eingestellt werden (Zur Farbabstimmung ist immer der HSL
                 Farbraum, statt beispielsweise RGB oder CMYK empfehlenswert) und je dunkler, desto mehr Sättigung wird
                 auch benötigt, damit die Farbe noch leicht durchscheint und man nicht
+            </p>
             <div class="image floating-image floating-left">
-                <img :src="'../images/insights/color_saturation.webp'" alt="" />
+                <img :src="colorSaturationImage" alt="Beispiel der Anwendung des Sättigungswertes bei Farben." />
                 <span class="caption">Wenig Sättigung bei helleren Farben - viel Sättigung bei dunklen Farben</span>
             </div>
-            bei mehreren Grautönen landet. Ganz pragmatisch lässt sich das auch mit echten Farben veranschaulichen:
-            Bei weiß reicht bereits ein kleiner Klecks von beispielsweise rot, um
-            ein sanftes Rosa zu erhalten. Startet man jedoch mit schwarz, muss reichlich rot dazugegeben werden,
-            damit der eigentliche Farbton tatsächlich durchschimmert. Oder aus der
-            anderen Richtung: Fügt man dem Rot schwarz hinzu, reicht schon eine kleine Menge und es wird signifikant
-            dunkler.
+            <p>
+                bei mehreren Grautönen landet. Ganz pragmatisch lässt sich das auch mit echten Farben veranschaulichen:
+                Bei weiß reicht bereits ein kleiner Klecks von beispielsweise rot, um
+                ein sanftes Rosa zu erhalten. Startet man jedoch mit schwarz, muss reichlich rot dazugegeben werden,
+                damit der eigentliche Farbton tatsächlich durchschimmert. Oder aus der
+                anderen Richtung: Fügt man dem Rot schwarz hinzu, reicht schon eine kleine Menge und es wird signifikant
+                dunkler.
             </p>
             <p>
                 Das Thema Farben, wie sie wirken, welche Primärfarbe möglicherweise am besten zu wem passt und was es
@@ -349,7 +371,7 @@ const getImage = () => {
             </p>
         </div>
         <div class="image">
-            <img :src="'../images/insights/typography-example.webp'" alt="" />
+            <img :src="typographyExampleImage" alt="Beispielhafte Auflistung verschiedener Schrifthierarchie-Stufen." />
             <span class="caption">Schriftarten sind ein mächtiges Kommunikations-Werkzeug</span>
         </div>
 
@@ -399,7 +421,8 @@ const getImage = () => {
         </div>
 
         <div class="image img-rounded">
-            <img :src="'../images/insights/typography_hero-example.webp'" alt="" />
+            <img :src="typographyHeroExampleImage"
+                alt="Ausnahmen bestätigen die Regel. Das Bild zeigt ein Beispiel einer Website mit sehr großem Text als Slogan." />
             <span class="caption">Für spezifische Szenarien, wie Hero-Captions ist auch besonders große Schrift
                 unproblematisch</span>
         </div>
@@ -481,29 +504,31 @@ const getImage = () => {
             </p>
 
             <h5>Buttons</h5>
-            <p>
+
             <div class="image floating-image floating-right">
-                <img :src="'../images/insights/button-design.webp'" alt="" />
+                <img :src="ButtonDesignImage"
+                    alt="Auszug aus einem Designsystem für Buttons mit Definitionen zu verschiedenen Hierarchie-Ebenen." />
                 <span class="caption">Eine detailliert ausgearbeitete Definition - ideal zur Erstellung
                     wiederverwendbarer
                     Komponenten</span>
             </div>
 
-            Bei Buttons verhält es sich ähnlich wie bei Text: Es gibt oftmals mehrere Hierarchie-Ebenen und
-            natürlich auch den Ein oder Anderen Spezielfall, der gegebenenfalls mit
-            bedacht werden sollte. Jedoch gibt es im Gegensatz zur Typologie deutlich weniger Abstufungen, in der
-            Regel reicht es aus einen Primär- und einen Sekundärbutton zu definieren.
-            Selten kann auch ein Tertiärbutton relevant sein, in vielen Fällen reichen aber zwei Versionen aus. Der
-            Gedanke dahinter ist, dass es in den allermeisten Fällen Aktionen gibt,
-            die der Benutzer bevorzug auswählt, bzw. auswählen soll. Editiert man beispielsweise Daten in einem
-            Formular ist es am wahrscheinlichsten, dass man danach auf speichern klicken
-            möchte, damit die Änderungen nicht verloren gehen und nicht etwa auf Abbrechen. Hier kann man dem User
-            einiges an kognitiver Arbeit ersparen, wenn man ihn nicht erst nach dem
-            entsprechenden Button suchen lässt, weil er optisch unter anderen Elementen untergeht. Oder noch
-            schlimmer: Es kommt zu Fehlklicks und statt zu speichern wird die ganze Arbeit
-            verworfen. Es sollte also jederzeit so einfach wie möglich sein zu erkennen, welcher Button in einer
-            Situation der präferierte ist, sei es der Speichern Button, oder auch ein
-            call-to-action Button, etwa um Kontakt aufzunehmen oder ein Produkt in den Warenkorb zu legen.
+            <p>
+                Bei Buttons verhält es sich ähnlich wie bei Text: Es gibt oftmals mehrere Hierarchie-Ebenen und
+                natürlich auch den Ein oder Anderen Spezielfall, der gegebenenfalls mit
+                bedacht werden sollte. Jedoch gibt es im Gegensatz zur Typologie deutlich weniger Abstufungen, in der
+                Regel reicht es aus einen Primär- und einen Sekundärbutton zu definieren.
+                Selten kann auch ein Tertiärbutton relevant sein, in vielen Fällen reichen aber zwei Versionen aus. Der
+                Gedanke dahinter ist, dass es in den allermeisten Fällen Aktionen gibt,
+                die der Benutzer bevorzug auswählt, bzw. auswählen soll. Editiert man beispielsweise Daten in einem
+                Formular ist es am wahrscheinlichsten, dass man danach auf speichern klicken
+                möchte, damit die Änderungen nicht verloren gehen und nicht etwa auf Abbrechen. Hier kann man dem User
+                einiges an kognitiver Arbeit ersparen, wenn man ihn nicht erst nach dem
+                entsprechenden Button suchen lässt, weil er optisch unter anderen Elementen untergeht. Oder noch
+                schlimmer: Es kommt zu Fehlklicks und statt zu speichern wird die ganze Arbeit
+                verworfen. Es sollte also jederzeit so einfach wie möglich sein zu erkennen, welcher Button in einer
+                Situation der präferierte ist, sei es der Speichern Button, oder auch ein
+                call-to-action Button, etwa um Kontakt aufzunehmen oder ein Produkt in den Warenkorb zu legen.
             </p>
             <p>
                 Ein besonders hervorgehobener Button ist auch dann sinnvoll, wenn ein Klick darauf eine destruktive
@@ -548,6 +573,7 @@ const getImage = () => {
                 groß sein, die üblichen Feldlabels durch den Placeholder Text zu ersetzen. Das spart einerseits Platz,
                 sorgt
                 für eine weniger zerstreute Gesamtoptik.
+            </p>
 
             <div class="flex gap-3 center-h gap-bottom-m">
                 <div class="width-1 flex flex-col">
@@ -568,18 +594,24 @@ const getImage = () => {
                 </div>
             </div>
 
-            Der höhere Platzbedarf wird direkt ersichtlich und auch die Anzeige der Labels oberhalb der Felder wirkt
-            zunächst möglicherweise, als würde man wertvollen Raum vergeuden. Problematisch wird es jedoch, wenn man
-            beginnt das Formular auszufüllen, da hierbei der Inhalt den Platzhaltertext überschreibt. Eine nachträgliche
-            Prüfung, ob alles korrekt ausgefüllt wurde, wird so schwierig bis unmöglich. Noch deutlicher wird diese
-            Problematik,
-            wenn das Auto-Fill Feature des Browsers aktiviert und genutzt wurde. Wenn alle Felder automatisch befüllt
-            wurden
-            muss man entweder darauf vertrauen, dass alles korrekt ausgewiesen und befüllt wurde, oder aber man löscht
-            den
-            Inhalt, um einen Blick auf den Platzhalter zu erhaschen. Das nachfolgende Beispiel zeigt, wie das Formular
-            oben
-            an seine Grenzen stößt, wenn es ausgefüllt wurde.
+            <p>
+                Der höhere Platzbedarf wird direkt ersichtlich und auch die Anzeige der Labels oberhalb der Felder wirkt
+                zunächst möglicherweise, als würde man wertvollen Raum vergeuden. Problematisch wird es jedoch, wenn man
+                beginnt das Formular auszufüllen, da hierbei der Inhalt den Platzhaltertext überschreibt. Eine
+                nachträgliche
+                Prüfung, ob alles korrekt ausgefüllt wurde, wird so schwierig bis unmöglich. Noch deutlicher wird diese
+                Problematik,
+                wenn das Auto-Fill Feature des Browsers aktiviert und genutzt wurde. Wenn alle Felder automatisch
+                befüllt
+                wurden
+                muss man entweder darauf vertrauen, dass alles korrekt ausgewiesen und befüllt wurde, oder aber man
+                löscht
+                den
+                Inhalt, um einen Blick auf den Platzhalter zu erhaschen. Das nachfolgende Beispiel zeigt, wie das
+                Formular
+                oben
+                an seine Grenzen stößt, wenn es ausgefüllt wurde.
+            </p>
 
             <div class="flex gap-3 center-h gap-bottom-m">
                 <div class="width-1 flex flex-col">
@@ -600,12 +632,15 @@ const getImage = () => {
                 </div>
             </div>
 
-            Wurde Kurt Pauls Name in die korrekten Felder eingetragen? Links ist das problemlos ersichtlich, rechts
-            könnte
-            das Feld für Vor- und Nachname aber auch vertauscht sein. Hybridlösungen, wie es beispielsweise bei Googles
-            Material Design vorkommt, wo das Label per Animation nach oben rutscht, aber sichtbar bleibt, funktionieren
-            natürlich auch und können ein eleganter Kompromiss sein. Das Feldlabel sollte jedoch niemals komplett
-            ausgeblendet werden.
+            <p>
+                Wurde Kurt Pauls Name in die korrekten Felder eingetragen? Links ist das problemlos ersichtlich, rechts
+                könnte
+                das Feld für Vor- und Nachname aber auch vertauscht sein. Hybridlösungen, wie es beispielsweise bei
+                Googles
+                Material Design vorkommt, wo das Label per Animation nach oben rutscht, aber sichtbar bleibt,
+                funktionieren
+                natürlich auch und können ein eleganter Kompromiss sein. Das Feldlabel sollte jedoch niemals komplett
+                ausgeblendet werden.
             </p>
             <p>
                 <strong>2. Das Design der Felder folgt dem Inhalt</strong> <br />
@@ -618,6 +653,7 @@ const getImage = () => {
                 welche Felder eingetragen werden sollen. Folgendes Beispiel könnte eine beliebige (vereinfachte)
                 Checkout Seite
                 eines Online-Shops bei einer Bestellung sein:
+            </p>
 
             <div class="flex flex-col gap-bottom-m">
                 <label for="firstName">Vorname</label>
@@ -650,13 +686,17 @@ const getImage = () => {
                 <input type="text" name="cardowner" />
             </div>
 
-            Bei einem Bestellvorgang kommen schnell einige Felder zusammen, schließlich müssen auch zahlreiche
-            Informationen
-            erfasst werden, damit die Bestellung bezahlt wird und letztlich auch verschickt werden kann. Um die Eingabe
-            der Daten
-            so komfortabel wie möglich zu machen gibt es einige Kniffe, wie das gesamte Formular ordentlich aufgebessert
-            werden
-            kann. </p>
+            <p>
+                Bei einem Bestellvorgang kommen schnell einige Felder zusammen, schließlich müssen auch zahlreiche
+                Informationen
+                erfasst werden, damit die Bestellung bezahlt wird und letztlich auch verschickt werden kann. Um die
+                Eingabe
+                der Daten
+                so komfortabel wie möglich zu machen gibt es einige Kniffe, wie das gesamte Formular ordentlich
+                aufgebessert
+                werden
+                kann.
+            </p>
             <p>
                 Zunächst sind aktuell alle Felder gleich breit, obwohl etwa eine Hausnummer oder die Postleitzahl sehr
                 wahrscheinlich
@@ -727,6 +767,7 @@ const getImage = () => {
                 Mit all diesen kleinen und großen Änderungen wird aus dem trostlosten und raumgreifenden Formular eine
                 gut nutzbare
                 und übersichtliche Eingabemaske, die man ggf. sogar noch mit kleinen Überschriften gruppieren kann.
+            </p>
 
             <div class="flex flex-col gap-bottom-m">
                 <h6>Benutzerkonto</h6>
@@ -803,7 +844,7 @@ const getImage = () => {
                     <input type="text" name="cardowner" />
                 </div>
             </div>
-            </p>
+
             <p>
                 <strong>3. Individualisierung darf nicht auf Kosten der Accessibility gehen</strong> <br />
                 Bis auf einige Ausnahmen wie Textbasierte Felder sind die meisten Formular-Elemente eigentlich
@@ -828,77 +869,54 @@ const getImage = () => {
                 sind für Screenreader ein wichtiges Werkzeug.
             </p>
             <p>
-                Dropdown-Menüs sind fast schon eine Wissenschaft für sich, denn die heutigen Implementierungen gehen weit über
-                eine simple Auswahlliste an Optionen hinaus. Sie bieten unter anderem Icons, gruppierbare Einträge, Mehrfachauswahlen,
-                oder das schon angedeutete type-ahead um eine große Auswahl an Möglichkeiten einzugrenzen, indem man die ersten 
-                Buchstaben in das Feld tippt. Hier gibt es im Grunde für jedes größere UI-Framework vorhandene Lösungen, die in
-                den meisten Fällen auch Accessibility-konform sind, weswegen hier durchaus auf bestehendes zurückgegriffen werden
-                darf, sofern man sich eine individualisierbare Lösung wünscht. Mehr zum Thema Accessibility, worauf es zu achten gilt und
+                Dropdown-Menüs sind fast schon eine Wissenschaft für sich, denn die heutigen Implementierungen gehen
+                weit über
+                eine simple Auswahlliste an Optionen hinaus. Sie bieten unter anderem Icons, gruppierbare Einträge,
+                Mehrfachauswahlen,
+                oder das schon angedeutete type-ahead um eine große Auswahl an Möglichkeiten einzugrenzen, indem man die
+                ersten
+                Buchstaben in das Feld tippt. Hier gibt es im Grunde für jedes größere UI-Framework vorhandene Lösungen,
+                die in
+                den meisten Fällen auch Accessibility-konform sind, weswegen hier durchaus auf bestehendes
+                zurückgegriffen werden
+                darf, sofern man sich eine individualisierbare Lösung wünscht. Mehr zum Thema Accessibility, worauf es
+                zu achten gilt und
                 welche gesetzlichen Regelungen es gibt, kann im Bereich <a class="no-hover-effect text-link"
                     href="/insights/accessibility" title="Accessibility: Teilhabe ist nicht optional"
-                    alt="Link zum weiterführenden Artikel „Accessibility: Teilhabe ist nicht optional“">„Accessibility: Teilhabe ist nicht optional“</a>
-                    nachgelesen werden.
+                    alt="Link zum weiterführenden Artikel „Accessibility: Teilhabe ist nicht optional“">„Accessibility:
+                    Teilhabe ist nicht optional“</a>
+                nachgelesen werden.
             </p>
         </div>
 
         <div class="text gap-top-l">
             <p>
-                Wie bereits erwähnt ist das natürlich kein Handbuch für die eine richtige und einzig wahre Vorgehensweise, aber
-                es fasst einige grundlegende Handlungsempfehlungen zusammen, die sich im Bereich UI/UX als Best Practice erwiesen
-                haben, oder einfach als Hilfestellung dienen, worauf bei der Erstellung geachtet werden sollte. Ein aus diesen
-                Bausteinen erarbeitetes und gut strukturiertes Design System hilft letztlich aber allen Beteiligten, sei es im
-                Entwicklungsprozess oder als Benutzer, denn es schafft Klarheit, Nachvollziehbarkeit sowie ein einheitliches
+                Wie bereits erwähnt ist das natürlich kein Handbuch für die eine richtige und einzig wahre
+                Vorgehensweise, aber
+                es fasst einige grundlegende Handlungsempfehlungen zusammen, die sich im Bereich UI/UX als Best Practice
+                erwiesen
+                haben, oder einfach als Hilfestellung dienen, worauf bei der Erstellung geachtet werden sollte. Ein aus
+                diesen
+                Bausteinen erarbeitetes und gut strukturiertes Design System hilft letztlich aber allen Beteiligten, sei
+                es im
+                Entwicklungsprozess oder als Benutzer, denn es schafft Klarheit, Nachvollziehbarkeit sowie ein
+                einheitliches
                 und wiedererkennbares Interface.
             </p>
         </div>
 
     </div>
 
-    <div class="recommended">
-        <h2>Weitere spannende Insights</h2>
-        <div class="flex gap-3">
-            <InsightSnippet key="uipsychology" :insight="uipsychology" :hideImage="true" />
-            <InsightSnippet key="uipsychology" :insight="uipsychology" :hideImage="true" />
-            <InsightSnippet key="uipsychology" :insight="uipsychology" :hideImage="true" />
-        </div>
-    </div>
+    <RecommendationBlock :recommended="['uipsychology', 'colorTheory', 'typography']" />
+
 </template>
 
 <style lang="stylus" scoped>
 @import '../../styles/config.styl'
 
-.designsystem-hero
-    position relative
-    height 80vh
-    display flex
-    flex-direction column
-    justify-content center
+.insight-hero.designsysteme .hero-image > img
+    width 166%
 
-    img
-        position absolute
-        left 0
-        height 95%
-        z-index 1
-        filter drop-shadow(0 0 10em rgba(primaryColor, 0.66))
-        pointer-events none
-
-    h1
-        margin 0
-        font-size 14em
-        line-height .8em
-        font-weight 900
-        text-align right
-        mix-blend-mode soft-light
-        font-family DM Serif Display
-
-        &:after
-            display none
-
-    h2
-        text-align right
-        margin-top 2em
-        opacity .66
-        
 .designsystem-content
     .gap-top
         margin-top 3em
@@ -917,11 +935,4 @@ const getImage = () => {
     .uppop
         font-weight 700
         text-transform uppercase
-
-.recommended
-    h2
-        margin-top 5em
-        margin-bottom 0
-        text-align center
-
 </style>
